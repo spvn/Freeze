@@ -115,7 +115,7 @@ Transform:
   - {fileID: 34298178}
   - {fileID: 1522961964}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!95 &14958560
 Animator:
   serializedVersion: 3
@@ -143,6 +143,7 @@ GameObject:
   - 33: {fileID: 34298181}
   - 23: {fileID: 34298180}
   - 64: {fileID: 34298179}
+  - 54: {fileID: 34298182}
   m_Layer: 0
   m_Name: pCube11
   m_TagString: Untagged
@@ -205,6 +206,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 34298177}
   m_Mesh: {fileID: 4300020, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &34298182
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 34298177}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &60333732
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +379,7 @@ GameObject:
   - 33: {fileID: 121525024}
   - 23: {fileID: 121525023}
   - 64: {fileID: 121525022}
+  - 54: {fileID: 121525025}
   m_Layer: 0
   m_Name: pCube9
   m_TagString: Untagged
@@ -425,6 +442,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 121525020}
   m_Mesh: {fileID: 4300016, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &121525025
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121525020}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &405289104
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +526,7 @@ GameObject:
   - 33: {fileID: 438786684}
   - 23: {fileID: 438786683}
   - 64: {fileID: 438786682}
+  - 54: {fileID: 438786685}
   m_Layer: 0
   m_Name: pCube5
   m_TagString: Untagged
@@ -556,6 +589,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 438786680}
   m_Mesh: {fileID: 4300008, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &438786685
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 438786680}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &463649426
 Prefab:
   m_ObjectHideFlags: 0
@@ -723,6 +771,7 @@ GameObject:
   - 33: {fileID: 570548520}
   - 23: {fileID: 570548519}
   - 64: {fileID: 570548518}
+  - 54: {fileID: 570548521}
   m_Layer: 0
   m_Name: pCube6
   m_TagString: Untagged
@@ -785,6 +834,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 570548516}
   m_Mesh: {fileID: 4300010, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &570548521
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570548516}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &630854104
 Prefab:
   m_ObjectHideFlags: 0
@@ -930,6 +994,7 @@ GameObject:
   - 33: {fileID: 1323902159}
   - 23: {fileID: 1323902158}
   - 64: {fileID: 1323902157}
+  - 54: {fileID: 1323902160}
   m_Layer: 0
   m_Name: pCube8
   m_TagString: Untagged
@@ -992,6 +1057,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 1323902155}
   m_Mesh: {fileID: 4300014, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &1323902160
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323902155}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1473441393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +1083,7 @@ GameObject:
   - 33: {fileID: 1473441397}
   - 23: {fileID: 1473441396}
   - 64: {fileID: 1473441395}
+  - 54: {fileID: 1473441398}
   m_Layer: 0
   m_Name: pCube4
   m_TagString: Untagged
@@ -1065,6 +1146,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 1473441393}
   m_Mesh: {fileID: 4300004, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &1473441398
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473441393}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1507770551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1245,7 @@ GameObject:
   - 33: {fileID: 1522961967}
   - 23: {fileID: 1522961966}
   - 64: {fileID: 1522961965}
+  - 54: {fileID: 1522961968}
   m_Layer: 0
   m_Name: pPlane1
   m_TagString: Untagged
@@ -1211,6 +1308,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 1522961963}
   m_Mesh: {fileID: 4300000, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &1522961968
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522961963}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1553422377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1479,7 @@ Transform:
   m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &1641150700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,6 +1651,7 @@ GameObject:
   - 33: {fileID: 1829655740}
   - 23: {fileID: 1829655739}
   - 64: {fileID: 1829655738}
+  - 54: {fileID: 1829655741}
   m_Layer: 0
   m_Name: pCube10
   m_TagString: Untagged
@@ -1601,6 +1714,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 1829655736}
   m_Mesh: {fileID: 4300018, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &1829655741
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1829655736}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1857897460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1740,7 @@ GameObject:
   - 33: {fileID: 1857897464}
   - 23: {fileID: 1857897463}
   - 64: {fileID: 1857897462}
+  - 54: {fileID: 1857897465}
   m_Layer: 0
   m_Name: pCube7
   m_TagString: Untagged
@@ -1674,6 +1803,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 1857897460}
   m_Mesh: {fileID: 4300012, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &1857897465
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1857897460}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1998782368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,6 +1829,7 @@ GameObject:
   - 33: {fileID: 1998782372}
   - 23: {fileID: 1998782371}
   - 64: {fileID: 1998782370}
+  - 54: {fileID: 1998782373}
   m_Layer: 0
   m_Name: pCube2
   m_TagString: Untagged
@@ -1747,6 +1892,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 81799696}
   m_GameObject: {fileID: 1998782368}
   m_Mesh: {fileID: 4300002, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
+--- !u!54 &1998782373
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998782368}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2003000470
 GameObject:
   m_ObjectHideFlags: 0
