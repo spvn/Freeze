@@ -19,6 +19,7 @@ public class scriptMovement : MonoBehaviour {
 
 	void OnTriggerEnter( Collider col )
 	{
+		Debug.Log ("TRIGGERED");
 		pausePath ();
 	}
 
