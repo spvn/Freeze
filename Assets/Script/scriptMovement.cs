@@ -37,4 +37,9 @@ public class scriptMovement : MonoBehaviour {
 	{
 		iTween.Resume ();
 	}
+	
+	void OnCollisionEnter(Collision col) {
+		Debug.Log (gameObject.name + " has collided with " + col.gameObject.name);
+		
+	}
 }
