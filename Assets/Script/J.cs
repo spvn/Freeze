@@ -15,7 +15,7 @@ public class J : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter(Collider col){
+	void OnCollisionEnter(Collision col){
 		Destroy (this.gameObject);
 	}
 }
