@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ScriptEnemy : MonoBehaviour {
-
+	public GameObject player;
 	bool shooting = false;
 	public GameObject bulletPrefab;
 
@@ -23,14 +23,21 @@ public class ScriptEnemy : MonoBehaviour {
 	}
 
 	void shootBullet(){
+		Vector3 bulletTargetPoint;
+
 		if (shooting) {
 			return;
 		}
 
 		shooting = true;
+
 		GameObject bullet = (GameObject)Instantiate (bulletPrefab);
+
 		bullet.transform.localPosition = new Vector3( this.transform.localPosition.x, this.transform.localPosition.y, this.transform.localPosition.z - 1.0f);
-		Debug.Log ("Instantiated bullet" + bullet.transform.localPosition.ToString());
+
+		bulletTargetPoint = player.transform.localPosition + player.transform.FindChild("Player").transform.localPosition;
+		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);
+
 		shooting = false;
 	}
 
