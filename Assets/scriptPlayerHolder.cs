@@ -18,14 +18,14 @@ public class scriptPlayerHolder : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		
-		if (transform.position == pathNodes[currNode].position) {
-			currNode++;
-		}
-		
-		if (!player.GetComponent<scriptMovement>().hasCollisionInFront) {
-			transform.position = Vector3.MoveTowards (transform.position, pathNodes[currNode].position, moveSpeed * Time.deltaTime);
+		if(!player.GetComponent<scriptMovement>().isFrozen){
+			if (transform.position == pathNodes[currNode].position) {
+				currNode++;
+			}
+			
+			if (!player.GetComponent<scriptMovement>().hasCollisionInFront) {
+				transform.position = Vector3.MoveTowards (transform.position, pathNodes[currNode].position, moveSpeed * Time.deltaTime);
+			}
 		}
 	}
 }

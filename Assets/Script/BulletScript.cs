@@ -4,6 +4,7 @@ using System.Collections;
 public class BulletScript : MonoBehaviour {
 	Vector3 targetPoint;
 	public float duration = 0.0000001f;
+	public scriptMovement playerMovement;
 
 	Vector3 bulletDirection = Vector3.zero;
 
@@ -20,7 +21,7 @@ public class BulletScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if ( bulletDirection != Vector3.zero ) {
+		if ( bulletDirection != Vector3.zero && !playerMovement.isFrozen) {
 			this.transform.localPosition += bulletDirection * Time.deltaTime * duration;
 		}
 	}

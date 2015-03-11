@@ -2,12 +2,14 @@
 using System.Collections;
 
 public class ScriptEnemy : MonoBehaviour {
+	public GameObject playerHolder;
+
 	public GameObject player;
 	bool shooting = false;
 	public GameObject bulletPrefab;
 
 	float timer = 0.0f;
-
+	float intervalShootTime = 1.0f;
 	// Use this for initialization
 	void Start () {
 		shootBullet ();
@@ -15,10 +17,12 @@ public class ScriptEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		timer += Time.deltaTime;
-		if (timer > 0.5f) {
-			timer = 0.0f;
-			shootBullet();
+		if (!player.GetComponent<scriptMovement>().isFrozen) {
+			timer += Time.deltaTime;
+			if (timer > intervalShootTime) {
+				timer = 0.0f;
+				shootBullet ();
+			}
 		}
 	}
 
@@ -35,8 +39,9 @@ public class ScriptEnemy : MonoBehaviour {
 
 		bullet.transform.localPosition = new Vector3( this.transform.localPosition.x, this.transform.localPosition.y, this.transform.localPosition.z - 1.0f);
 
-		bulletTargetPoint = player.transform.localPosition + player.transform.FindChild("Player").transform.localPosition;
+		bulletTargetPoint = playerHolder.transform.localPosition + player.transform.localPosition;
 		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);
+		bullet.GetComponent<BulletScript> ().playerMovement = player.GetComponent<scriptMovement>();
 
 		shooting = false;
 	}
