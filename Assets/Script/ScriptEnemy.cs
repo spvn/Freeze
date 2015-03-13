@@ -12,18 +12,23 @@ public class ScriptEnemy : MonoBehaviour {
 	float intervalShootTime = 1.0f;
 	// Use this for initialization
 	void Start () {
-		shootBullet ();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (!player.GetComponent<scriptMovement>().isFrozen) {
+		if (isFacingPlayer() && !player.GetComponent<scriptMovement>().isFrozen) {
 			timer += Time.deltaTime;
 			if (timer > intervalShootTime) {
 				timer = 0.0f;
 				shootBullet ();
 			}
 		}
+	}
+
+	bool isFacingPlayer()
+	{
+		return true;
 	}
 
 	void shootBullet(){
