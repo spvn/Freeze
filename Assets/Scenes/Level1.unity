@@ -403,6 +403,7 @@ GameObject:
   - 124: {fileID: 423131922}
   - 114: {fileID: 423131921}
   - 81: {fileID: 423131920}
+  - 114: {fileID: 423131925}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -421,7 +422,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1553422381}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!81 &423131920
 AudioListener:
   m_ObjectHideFlags: 0
@@ -498,6 +499,22 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+--- !u!114 &423131925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423131918}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc6bde01469c7b4badee5362f191d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  downsample: 1
+  blurSize: 1
+  blurIterations: 2
+  blurType: 0
+  blurShader: {fileID: 4800000, guid: f9d5fa183cd6b45eeb1491f74863cd91, type: 3}
 --- !u!1 &438786680
 GameObject:
   m_PrefabParentObject: {fileID: 100018, guid: 1ae9dbfc347e2a5488e5332909bb175f, type: 3}
@@ -683,6 +700,14 @@ Prefab:
       propertyPath: isFrozen
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 488546, guid: 89b9656034964b040bb53c902371b961, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481596, guid: 89b9656034964b040bb53c902371b961, type: 2}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 423131918}
     m_RemovedComponents:
     - {fileID: 5403728, guid: 89b9656034964b040bb53c902371b961, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 89b9656034964b040bb53c902371b961, type: 2}

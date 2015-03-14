@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.ImageEffects;
 
 public class scriptMovement : MonoBehaviour {
 	
@@ -13,6 +14,7 @@ public class scriptMovement : MonoBehaviour {
 	private float playerWidth;
 
 	public bool isFrozen;
+	public GameObject mainCamera;
 	
 	
 	// Use this for initialization
@@ -30,6 +32,7 @@ public class scriptMovement : MonoBehaviour {
 		}
 
 		if (!isFrozen) {
+			mainCamera.GetComponent<BlurOptimized>().enabled = false;
 			float horizontal = Input.GetAxis ("Horizontal") / 2;
 			
 			direction = new Vector3 (horizontal, 0, 0.0f);
@@ -50,6 +53,8 @@ public class scriptMovement : MonoBehaviour {
 			} else {
 				hasCollisionInFront = false;
 			}
+		} else {
+			mainCamera.GetComponent<BlurOptimized>().enabled = true;
 		}
 		
 	}
