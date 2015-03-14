@@ -28,7 +28,12 @@ public class ScriptEnemy : MonoBehaviour {
 
 	bool isFacingPlayer()
 	{
-		return true;
+		if (this.transform.localPosition.z > playerHolder.transform.localPosition.z - 1) {
+			Debug.Log("Enemy is facing player");
+			return true;
+		}
+
+		return false;
 	}
 
 	void shootBullet(){
