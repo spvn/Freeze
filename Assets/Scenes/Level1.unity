@@ -942,7 +942,6 @@ GameObject:
   - 23: {fileID: 1553422382}
   - 114: {fileID: 1553422380}
   - 143: {fileID: 1553422379}
-  - 114: {fileID: 1553422378}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -950,20 +949,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1553422378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1553422377}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99179a551213b3f4e8924812c6b01b95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  path: []
-  moveSpeed: 5
-  rotateSpeed: 2
 --- !u!143 &1553422379
 CharacterController:
   m_ObjectHideFlags: 0
