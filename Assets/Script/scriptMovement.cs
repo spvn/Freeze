@@ -7,6 +7,8 @@ public class scriptMovement : MonoBehaviour {
 	public float playerSpeed = 1.0f;
 	public bool hasCollisionInFront;
 	public float collisionDist = 0.51f;
+	public float rotateSpeed = 2.0f;
+	public Transform[] path;
 	
 	
 	private CharacterController controller;
@@ -15,6 +17,7 @@ public class scriptMovement : MonoBehaviour {
 
 	public bool isFrozen;
 	public GameObject mainCamera;
+	private int currNode = 0;
 	
 	
 	// Use this for initialization
@@ -36,8 +39,14 @@ public class scriptMovement : MonoBehaviour {
 			mainCamera.GetComponent<BlurOptimized>().enabled = false;
 			float horizontal = Input.GetAxis ("Horizontal");
 			
-			direction = new Vector3 (horizontal, 0, 0.0f);
+			direction = new Vector3 (horizontal, 0, 0);
 			direction = transform.rotation * direction;
+			Debug.Log ("BEFORE: " + direction);
+			
+			direction += Vector3.Normalize(path[currNode].position - transform.position);
+			
+			//direction = Vector3.Normalize(direction);
+			Debug.Log ("AFTER: " + direction);
 			controller.SimpleMove (direction * playerSpeed);
 			
 			
@@ -54,36 +63,33 @@ public class scriptMovement : MonoBehaviour {
 			} else {
 				hasCollisionInFront = false;
 			}
-		} else {
+		} 
+		
+		else {
 			mainCamera.GetComponent<BlurOptimized>().enabled = true;
 		}
 		
-	}
-
-	/*void OnTriggerEnter( Collider col )
-	{
-		Debug.Log ("TRIGGERED");
-		pausePath ();
-	}
-
-	void pausePath()
-	{
-		iTween.Pause ();
-	}
-
-	void onTriggerExit( Collider col )
-	{
-		Debug.Log ("Exited");
-		resumePath ();
-	}
-	
-	void resumePath()
-	{
-		iTween.Resume ();
-	}*/
-	
-	void OnCollisionEnter(Collision col) {
-		Debug.Log (gameObject.name + " has collided with " + col.gameObject.name);
+		
 		
 	}
+
+	void OnTriggerEnter( Collider col )
+	{	
+		GameObject.Destroy(col.gameObject);
+		Debug.Log("working");
+		currNode++;
+		Quaternion targetRotation = Quaternion.LookRotation (path[currNode].position - transform.position);
+		StartCoroutine(RotateTowards(targetRotation));
+	}
+	
+	IEnumerator RotateTowards(Quaternion targetRotation) {
+		
+		float t;
+		for (t = 0f; t<rotateSpeed; t+= Time.deltaTime ) {		
+			transform.rotation = Quaternion.Slerp (transform.rotation, targetRotation, t/rotateSpeed);
+			yield return null;
+		}
+		
+	}
+	
 }
