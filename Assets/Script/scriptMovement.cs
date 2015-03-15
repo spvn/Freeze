@@ -26,6 +26,7 @@ public class scriptMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		if (Input.GetKeyDown (KeyCode.W)) {
 			Debug.Log("Pressed Freeze " + isFrozen );
 			isFrozen = !isFrozen;
@@ -36,20 +37,20 @@ public class scriptMovement : MonoBehaviour {
 			float horizontal = Input.GetAxis ("Horizontal") / 2;
 			
 			direction = new Vector3 (horizontal, 0, 0.0f);
-			//transform.position += direction;
-		
+			direction = transform.rotation * direction;
 			controller.SimpleMove (direction * playerSpeed);
 			
 			
 			RaycastHit hit;
-			Ray checkCollisionRayLeft = new Ray (transform.position - new Vector3 (playerWidth / 2, 0, 0), transform.forward);
-			Ray checkCollisionRayRight = new Ray (transform.position + new Vector3 (playerWidth / 2, 0, 0), transform.forward);
-			Ray checkCollisionRayCenter = new Ray (transform.position, transform.forward);
+			Ray checkCollisionRayLeft = new Ray (transform.position - new Vector3 (playerWidth / 2, 0, 0) + transform.forward*0.5f, transform.forward);
+			Ray checkCollisionRayRight = new Ray (transform.position + new Vector3 (playerWidth / 2, 0, 0) + transform.forward*0.5f, transform.forward);
+			Ray checkCollisionRayCenter = new Ray (transform.position + transform.forward*0.5f , transform.forward);
 			
 			if (Physics.Raycast (checkCollisionRayLeft, out hit, collisionDist) 
 				|| Physics.Raycast (checkCollisionRayRight, out hit, collisionDist)
 				|| Physics.Raycast (checkCollisionRayCenter, out hit, collisionDist)) {
 				hasCollisionInFront = true;
+				Debug.Log (hit.collider.gameObject.name);
 			} else {
 				hasCollisionInFront = false;
 			}
