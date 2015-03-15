@@ -17,10 +17,11 @@ public class BulletScript : MonoBehaviour {
 	public void setBulletDirection(Vector3 targetVector)
 	{
 		targetPoint = targetVector;
-		bulletDirection = targetPoint - this.transform.localPosition;
+		bulletDirection = targetPoint - this.transform.position;
 		bulletDirection = transform.rotation * bulletDirection;
 		bulletDirection = Vector3.Normalize (bulletDirection);
-		Vector3 lineFirstPoint = this.transform.localPosition + (bulletDirection);
+
+		Vector3 lineFirstPoint = this.transform.position + (bulletDirection);
 		this.transform.localPosition = lineFirstPoint;
 		bulletLine.SetPosition (0, lineFirstPoint);
 		bulletLine.SetPosition (1, targetPoint);

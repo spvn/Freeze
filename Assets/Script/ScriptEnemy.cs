@@ -28,11 +28,12 @@ public class ScriptEnemy : MonoBehaviour {
 
 	bool isFacingPlayer()
 	{
-		Vector3 playerPos = playerHolder.transform.localPosition + player.transform.localPosition;
-		float distance = Vector3.Distance (this.transform.localPosition, playerPos);
-		Vector3 direction = playerPos - this.transform.localPosition;
+		Vector3 playerPos = player.transform.position;
+		float distance = Vector3.Distance (this.transform.position, playerPos) - 1;
+		Vector3 direction = playerPos - this.transform.position;
 	
-		if (Physics.Raycast(this.transform.localPosition, direction, distance)) {
+		Debug.DrawRay (this.transform.position, direction);
+		if (!Physics.Raycast(this.transform.position, direction, distance)) {
 			Debug.Log("Enemy is facing player");
 			return true;
 		}
@@ -53,7 +54,7 @@ public class ScriptEnemy : MonoBehaviour {
 
 		bullet.transform.localPosition = this.transform.localPosition;
 
-		bulletTargetPoint = playerHolder.transform.localPosition + player.transform.localPosition;
+		bulletTargetPoint = player.transform.position;
 		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);
 		bullet.GetComponent<BulletScript> ().playerMovement = player.GetComponent<scriptMovement>();
 

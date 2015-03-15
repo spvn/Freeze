@@ -500,7 +500,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11481596, guid: 89b9656034964b040bb53c902371b961, type: 2}
       propertyPath: playerSpeed
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11481596, guid: 89b9656034964b040bb53c902371b961, type: 2}
       propertyPath: collisionDist
