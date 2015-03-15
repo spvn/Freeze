@@ -34,7 +34,7 @@ public class scriptMovement : MonoBehaviour {
 
 		if (!isFrozen) {
 			mainCamera.GetComponent<BlurOptimized>().enabled = false;
-			float horizontal = Input.GetAxis ("Horizontal") / 2;
+			float horizontal = Input.GetAxis ("Horizontal");
 			
 			direction = new Vector3 (horizontal, 0, 0.0f);
 			direction = transform.rotation * direction;
@@ -42,9 +42,9 @@ public class scriptMovement : MonoBehaviour {
 			
 			
 			RaycastHit hit;
-			Ray checkCollisionRayLeft = new Ray (transform.position - new Vector3 (playerWidth / 2, 0, 0) + transform.forward*0.5f, transform.forward);
-			Ray checkCollisionRayRight = new Ray (transform.position + new Vector3 (playerWidth / 2, 0, 0) + transform.forward*0.5f, transform.forward);
-			Ray checkCollisionRayCenter = new Ray (transform.position + transform.forward*0.5f , transform.forward);
+			Ray checkCollisionRayLeft = new Ray (transform.position - new Vector3 (playerWidth / 2, 0, 0) + transform.forward*playerWidth, transform.forward);
+			Ray checkCollisionRayRight = new Ray (transform.position + new Vector3 (playerWidth / 2, 0, 0) + transform.forward*playerWidth, transform.forward);
+			Ray checkCollisionRayCenter = new Ray (transform.position + transform.forward*playerWidth , transform.forward);
 			
 			if (Physics.Raycast (checkCollisionRayLeft, out hit, collisionDist) 
 				|| Physics.Raycast (checkCollisionRayRight, out hit, collisionDist)
