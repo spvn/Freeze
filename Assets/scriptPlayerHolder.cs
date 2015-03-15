@@ -11,6 +11,7 @@ public class scriptPlayerHolder : MonoBehaviour {
 	private int currNode = 0;
 	private Transform player;
 	private bool isRotated = true;
+	private Vector3 targetVectorRotation;
 	
 	
 	// Use this for initialization
@@ -25,7 +26,13 @@ public class scriptPlayerHolder : MonoBehaviour {
 		if(!player.GetComponent<scriptMovement>().isFrozen){
 			if (transform.position == pathNodes[currNode].position) {
 				currNode++;
+				targetRotation = Quaternion.LookRotation (pathNodes[currNode].position - player.transform.position);
+			
 				
+				//player.transform.rotation = Quaternion.Slerp (player.transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+				targetVectorRotation = pathNodes[currNode].position - player.transform.position;
+				StartCoroutine(RotateTowards(targetRotation));
+
 			}
 			
 			if (!player.GetComponent<scriptMovement>().hasCollisionInFront) {
@@ -33,7 +40,17 @@ public class scriptPlayerHolder : MonoBehaviour {
 			}
 		}
 		
-		targetRotation = Quaternion.LookRotation (pathNodes[currNode].position - transform.position);
-		transform.rotation = Quaternion.Slerp (transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+		
+	}
+	
+	IEnumerator RotateTowards(Quaternion targetRotation) {
+		
+		float t;
+		for (t = 0f; t<rotateSpeed; t+= Time.deltaTime ) {		
+			player.transform.rotation = Quaternion.Slerp (player.transform.rotation, targetRotation, t/rotateSpeed);
+			Debug.Log (player.transform.rotation + " " + targetRotation);
+			yield return null;
+		}
+
 	}
 }
