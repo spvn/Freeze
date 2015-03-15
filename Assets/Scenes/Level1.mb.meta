@@ -30,6 +30,31 @@ ModelImporter:
     100044: transform5
     100046: transform6
     100048: transform7
+    100050: pCylinder10
+    100052: pCylinder11
+    100054: pCylinder8
+    100056: pCylinder9
+    100058: polySurface1
+    100060: polySurface1 1
+    100062: polySurface2
+    100064: polySurface3
+    100066: polySurface4
+    100068: polySurface5
+    100070: transform10
+    100072: transform11
+    100074: transform12
+    100076: transform13
+    100078: transform14
+    100080: transform15
+    100082: transform16
+    100084: transform8
+    100086: transform9
+    100088: polySurface6
+    100090: polySurface6 1
+    100092: polySurface7
+    100094: transform17
+    100096: transform18
+    100098: transform19
     400000: ambientLight1
     400002: ambientLight2
     400004: //RootNode
@@ -55,6 +80,31 @@ ModelImporter:
     400044: transform5
     400046: transform6
     400048: transform7
+    400050: pCylinder10
+    400052: pCylinder11
+    400054: pCylinder8
+    400056: pCylinder9
+    400058: polySurface1
+    400060: polySurface1 1
+    400062: polySurface2
+    400064: polySurface3
+    400066: polySurface4
+    400068: polySurface5
+    400070: transform10
+    400072: transform11
+    400074: transform12
+    400076: transform13
+    400078: transform14
+    400080: transform15
+    400082: transform16
+    400084: transform8
+    400086: transform9
+    400088: polySurface6
+    400090: polySurface6 1
+    400092: polySurface7
+    400094: transform17
+    400096: transform18
+    400098: transform19
     2300000: pPlane1
     2300002: pCylinder1
     2300004: pCylinder2
@@ -63,6 +113,9 @@ ModelImporter:
     2300010: pCylinder5
     2300012: pCylinder6
     2300014: pCylinder7
+    2300016: polySurface4
+    2300018: polySurface5
+    2300020: polySurface6
     3300000: pPlane1
     3300002: pCylinder1
     3300004: pCylinder2
@@ -71,6 +124,9 @@ ModelImporter:
     3300010: pCylinder5
     3300012: pCylinder6
     3300014: pCylinder7
+    3300016: polySurface4
+    3300018: polySurface5
+    3300020: polySurface6
     4300000: pPlane1
     4300002: pCylinder1
     4300004: pCylinder2
@@ -79,6 +135,9 @@ ModelImporter:
     4300010: pCylinder5
     4300012: pCylinder6
     4300014: pCylinder7
+    4300016: polySurface4
+    4300018: polySurface5
+    4300020: polySurface6
     6400000: pPlane1
     6400002: pCylinder1
     6400004: pCylinder2
@@ -87,6 +146,9 @@ ModelImporter:
     6400010: pCylinder5
     6400012: pCylinder6
     6400014: pCylinder7
+    6400016: polySurface4
+    6400018: polySurface5
+    6400020: polySurface6
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -31,9 +31,9 @@ public class ScriptEnemy : MonoBehaviour {
 		Vector3 playerPos = playerHolder.transform.localPosition + player.transform.localPosition;
 		float distance = Vector3.Distance (this.transform.localPosition, playerPos);
 		Vector3 direction = playerPos - this.transform.localPosition;
-
+	
 		if (Physics.Raycast(this.transform.localPosition, direction, distance)) {
-			//Debug.Log("Enemy is facing player");
+			Debug.Log("Enemy is facing player");
 			return true;
 		}
 
