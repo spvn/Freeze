@@ -18,7 +18,11 @@ public class BulletScript : MonoBehaviour {
 	{
 		targetPoint = targetVector;
 		bulletDirection = targetPoint - this.transform.localPosition;
-		bulletLine.SetPosition (0, this.transform.localPosition);
+		bulletDirection = transform.rotation * bulletDirection;
+		bulletDirection = Vector3.Normalize (bulletDirection);
+		Vector3 lineFirstPoint = this.transform.localPosition + (bulletDirection);
+		this.transform.localPosition = lineFirstPoint;
+		bulletLine.SetPosition (0, lineFirstPoint);
 		bulletLine.SetPosition (1, targetPoint);
 	}
 	// Update is called once per frame
@@ -27,9 +31,7 @@ public class BulletScript : MonoBehaviour {
 		if ( bulletDirection != Vector3.zero && !playerMovement.isFrozen) {
 			this.transform.localPosition += Vector3.Normalize(bulletDirection) * duration * Time.deltaTime;
 		}
-		if ( Mathf.Abs(this.transform.localPosition.z) > Mathf.Abs(playerMovement.gameObject.transform.parent.transform.localPosition.z - 1) ) {
-			Destroy(gameObject);
-		}
+
 	}
 
 	void OnCollisionEnter( Collision col )
