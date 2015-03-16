@@ -40,9 +40,9 @@ public class BulletScript : MonoBehaviour {
 	{	
 		Debug.Log ("Collided bullet " + col.gameObject.name + " at " + this.transform.localPosition.ToString());
 
-		if (col.gameObject.name != "PlayerHolder") {
-			Debug.Log("Deleted bullet");
-			Destroy(gameObject);
+		Destroy(gameObject);
+		if (col.gameObject.name == "Player") {
+			playerMovement.GameOver();
 		}
 	}
 

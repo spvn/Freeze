@@ -9,13 +9,14 @@ public class scriptMovement : MonoBehaviour {
 	public float collisionDist = 0.51f;
 	public float rotateSpeed = 2.0f;
 	public Transform[] path;
-	
+	public GameObject canvas;
 	
 	private CharacterController controller;
 	private Vector3 direction;
 	private float playerWidth;
 
 	public bool isFrozen;
+	public bool isGameOver = false;
 	public GameObject mainCamera;
 	private int currNode = 0;
 	private Vector3 forwardDirection;
@@ -33,9 +34,14 @@ public class scriptMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (Input.GetKeyDown (KeyCode.W)) {
+		if (!isGameOver && Input.GetKeyDown (KeyCode.W)) {
 			Debug.Log("Pressed Freeze " + isFrozen );
 			isFrozen = !isFrozen;
+
+			if(canvas.gameObject.transform.Find("StartingScreen").gameObject.activeSelf)
+			{
+				canvas.gameObject.transform.Find("StartingScreen").gameObject.SetActive(false);
+			}
 		}
 
 		if (!isFrozen) {
@@ -95,6 +101,18 @@ public class scriptMovement : MonoBehaviour {
 			yield return null;
 		}
 		
+	}
+
+	public void GameOver(){
+		canvas.gameObject.transform.Find("GameOverScreen").gameObject.SetActive (true);
+		isFrozen = true;
+		isGameOver = true;
+	}
+
+	public void RestartLevel()
+	{
+		Debug.Log ("Restarting");
+		Application.LoadLevel (Application.loadedLevel);
 	}
 	
 }
