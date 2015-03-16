@@ -32,23 +32,8 @@ public class BulletScript : MonoBehaviour {
 
 		if ( bulletDirection != Vector3.zero && !playerMovement.isFrozen) {
 			this.transform.localPosition += Vector3.Normalize(bulletDirection) * duration * Time.deltaTime;
-
-			if (reachedTarget()) {
-				Destroy (gameObject);
-			}
 		}
 
-	}
-
-	bool reachedTarget()
-	{
-		Vector3 toTarget = (targetPoint - transform.position).normalized;
-		Debug.DrawRay (this.transform.localPosition, toTarget);
-		if (Vector3.Dot(toTarget, transform.forward) > 0) {	
-			return false;
-		} else {
-			return true;
-		}
 	}
 
 	void OnCollisionEnter( Collision col )
@@ -59,5 +44,10 @@ public class BulletScript : MonoBehaviour {
 			Debug.Log("Deleted bullet");
 			Destroy(gameObject);
 		}
+	}
+
+	void OnTriggerEnter( Collider other )
+	{
+		Destroy (gameObject);
 	}
 }

@@ -62,7 +62,7 @@ public class scriptMovement : MonoBehaviour {
 				|| Physics.Raycast (checkCollisionRayRight, out hit, collisionDist)
 				|| Physics.Raycast (checkCollisionRayCenter, out hit, collisionDist)) {
 				hasCollisionInFront = true;
-				Debug.Log (hit.collider.gameObject.name);
+//				Debug.Log (hit.collider.gameObject.name);
 			} else {
 				hasCollisionInFront = false;
 			}
