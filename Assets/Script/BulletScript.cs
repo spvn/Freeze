@@ -30,8 +30,8 @@ public class BulletScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if ( bulletDirection != Vector3.zero && !playerMovement.isFrozen) {
-			this.transform.localPosition += Vector3.Normalize(bulletDirection) * duration * Time.deltaTime;
+		if ( !playerMovement.isGameOver && bulletDirection != Vector3.zero && !playerMovement.isFrozen) {
+			this.transform.localPosition += bulletDirection * duration * Time.deltaTime;
 		}
 
 	}
@@ -42,6 +42,7 @@ public class BulletScript : MonoBehaviour {
 
 		Destroy(gameObject);
 		if (col.gameObject.name == "Player") {
+			//Debug.Log("Bullet position: " + this.transform.localPosition +" hit player " + playerMovement.gameObject.transform.localPosition);
 			playerMovement.GameOver();
 		}
 	}
