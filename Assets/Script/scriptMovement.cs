@@ -18,6 +18,7 @@ public class scriptMovement : MonoBehaviour {
 	public bool isFrozen;
 	public GameObject mainCamera;
 	private int currNode = 0;
+	private Vector3 forwardDirection;
 	
 	
 	// Use this for initialization
@@ -25,6 +26,8 @@ public class scriptMovement : MonoBehaviour {
 		controller = GetComponent<CharacterController>();
 		playerWidth = GetComponent<MeshRenderer>().bounds.size.x;
 		isFrozen = true;
+		forwardDirection = Vector3.Normalize (path[0].position - transform.position);
+		Debug.Log ("forward: " + forwardDirection);
 	}
 	
 	// Update is called once per frame
@@ -43,7 +46,7 @@ public class scriptMovement : MonoBehaviour {
 			direction = transform.rotation * direction;
 			Debug.Log ("BEFORE: " + direction);
 			
-			direction += Vector3.Normalize(path[currNode].position - transform.position);
+			direction += forwardDirection;
 			
 			//direction = Vector3.Normalize(direction);
 			Debug.Log ("AFTER: " + direction);
@@ -78,8 +81,10 @@ public class scriptMovement : MonoBehaviour {
 		GameObject.Destroy(col.gameObject);
 		Debug.Log("working");
 		currNode++;
+		forwardDirection = Vector3.Normalize (path[currNode].position - path[currNode-1].position);
 		Quaternion targetRotation = Quaternion.LookRotation (path[currNode].position - transform.position);
 		StartCoroutine(RotateTowards(targetRotation));
+		
 	}
 	
 	IEnumerator RotateTowards(Quaternion targetRotation) {
