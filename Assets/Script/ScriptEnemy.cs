@@ -34,7 +34,7 @@ public class ScriptEnemy : MonoBehaviour {
 	
 		Debug.DrawRay (this.transform.position, direction);
 		if (!Physics.Raycast(this.transform.position, direction, distance)) {
-			Debug.Log("Enemy is facing player");
+//			Debug.Log("Enemy is facing player");
 			return true;
 		}
 
@@ -61,4 +61,23 @@ public class ScriptEnemy : MonoBehaviour {
 		shooting = false;
 	}
 
+	void OnMouseDown(){
+		if (withinMeleeRange ()) {
+			Destroy (gameObject);
+		}
+
+	}
+
+	bool withinMeleeRange()
+	{
+		if (Vector3.Distance (player.transform.position, this.transform.position) < 2.0f) {
+			return true;
+		}
+		return false;
+	}
+
+	IEnumerator Fall()
+	{
+		yield return null;
+	}
 }

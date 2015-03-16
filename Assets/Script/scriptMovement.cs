@@ -44,12 +44,12 @@ public class scriptMovement : MonoBehaviour {
 			
 			direction = new Vector3 (horizontal, 0, 0);
 			direction = transform.rotation * direction;
-			Debug.Log ("BEFORE: " + direction);
+			//Debug.Log ("BEFORE: " + direction);
 			
 			direction += forwardDirection;
 			
 			//direction = Vector3.Normalize(direction);
-			Debug.Log ("AFTER: " + direction);
+			//Debug.Log ("AFTER: " + direction);
 			controller.SimpleMove (direction * playerSpeed);
 			
 			
