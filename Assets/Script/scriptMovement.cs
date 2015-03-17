@@ -87,6 +87,13 @@ public class scriptMovement : MonoBehaviour {
 		GameObject.Destroy(col.gameObject);
 		Debug.Log("working");
 		currNode++;
+
+		if (currNode == path.Length) {
+			isFrozen = true;
+			isGameOver = true;
+			canvas.gameObject.transform.Find("WinScreen").gameObject.SetActive (true);
+		}
+
 		forwardDirection = Vector3.Normalize (path[currNode].position - path[currNode-1].position);
 		Quaternion targetRotation = Quaternion.LookRotation (path[currNode].position - transform.position);
 		StartCoroutine(RotateTowards(targetRotation));
