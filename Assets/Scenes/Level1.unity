@@ -512,6 +512,34 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1553422377}
+    - target: {fileID: 487844, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: .00147130131
+      objectReference: {fileID: 0}
+    - target: {fileID: 487844, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .00837414525
+      objectReference: {fileID: 0}
+    - target: {fileID: 487844, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -.00197034515
+      objectReference: {fileID: 0}
+    - target: {fileID: 487844, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .999961913
+      objectReference: {fileID: 0}
+    - target: {fileID: 487844, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.00380992843
+      objectReference: {fileID: 0}
+    - target: {fileID: 487844, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .000226378441
+      objectReference: {fileID: 0}
+    - target: {fileID: 487844, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.00188255345
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
   m_IsPrefabParent: 0
@@ -778,7 +806,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b089f9175e1f040f2aa04d305ec87b7f, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b089f9175e1f040f2aa04d305ec87b7f, type: 3}
       propertyPath: m_LocalScale.x
@@ -912,7 +940,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472922, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11417762, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
       propertyPath: playerHolder
@@ -1573,7 +1601,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
