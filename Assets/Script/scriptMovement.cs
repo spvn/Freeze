@@ -45,7 +45,7 @@ public class scriptMovement : MonoBehaviour {
 		}
 
 		if (!isFrozen) {
-			mainCamera.GetComponent<BlurOptimized>().enabled = false;
+			mainCamera.GetComponent<ColorCorrectionCurves>().enabled = false;
 			float horizontal = Input.GetAxis ("Horizontal");
 			
 			direction = new Vector3 (horizontal, 0, 0);
@@ -75,7 +75,7 @@ public class scriptMovement : MonoBehaviour {
 		} 
 		
 		else {
-			mainCamera.GetComponent<BlurOptimized>().enabled = true;
+			mainCamera.GetComponent<ColorCorrectionCurves>().enabled = true;
 		}
 		
 		
