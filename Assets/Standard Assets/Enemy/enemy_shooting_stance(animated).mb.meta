@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 69a1e0cdb587c4e4cb43a44616a24153
+timeCreated: 1427767990
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: back
+    100002: Charactor_Done:Mesh
+    100004: crown
+    100006: enemy_grp
+    100008: //RootNode
+    100010: left
+    100012: left_ankle
+    100014: left_ball_feet
+    100016: left_chest
+    100018: left_elbow
+    100020: left_index_first
+    100022: left_index_second
+    100024: left_index_start
+    100026: left_index_tip
+    100028: left_knee
+    100030: left_mid_first
+    100032: left_mid_second
+    100034: left_mid_start
+    100036: left_mid_tip
+    100038: left_pink_last
+    100040: left_pink_second
+    100042: left_pink_start
+    100044: left_ring_first
+    100046: left_ring_second
+    100048: left_ring_start
+    100050: left_ring_tip
+    100052: left_shoulder
+    100054: left_thumb_mid
+    100056: left_thumb_start
+    100058: left_thumb_tip
+    100060: left_toe
+    100062: left_upper_leg
+    100064: left_wrist
+    100066: lower_back
+    100068: neck
+    100070: right_ankle1
+    100072: right_ball_feet1
+    100074: right_chest
+    100076: right_elbow
+    100078: right_index_first
+    100080: right_index_second
+    100082: right_index_start
+    100084: right_index_tip
+    100086: right_knee1
+    100088: right_mid_first
+    100090: right_mid_second
+    100092: right_mid_start
+    100094: right_mid_tip
+    100096: right_pink_last
+    100098: right_pink_second
+    100100: right_pink_start
+    100102: right_ring_first
+    100104: right_ring_second
+    100106: right_ring_start
+    100108: right_ring_tip
+    100110: right_shoulder
+    100112: right_thumb_mid
+    100114: right_thumb_start
+    100116: right_thumb_tip
+    100118: right_toe1
+    100120: right_upper_leg1
+    100122: right_wrist
+    100124: ring_pink_first
+    100126: ring_pink_first 1
+    100128: root_back
+    100130: upper_back
+    400000: back
+    400002: Charactor_Done:Mesh
+    400004: crown
+    400006: enemy_grp
+    400008: //RootNode
+    400010: left
+    400012: left_ankle
+    400014: left_ball_feet
+    400016: left_chest
+    400018: left_elbow
+    400020: left_index_first
+    400022: left_index_second
+    400024: left_index_start
+    400026: left_index_tip
+    400028: left_knee
+    400030: left_mid_first
+    400032: left_mid_second
+    400034: left_mid_start
+    400036: left_mid_tip
+    400038: left_pink_last
+    400040: left_pink_second
+    400042: left_pink_start
+    400044: left_ring_first
+    400046: left_ring_second
+    400048: left_ring_start
+    400050: left_ring_tip
+    400052: left_shoulder
+    400054: left_thumb_mid
+    400056: left_thumb_start
+    400058: left_thumb_tip
+    400060: left_toe
+    400062: left_upper_leg
+    400064: left_wrist
+    400066: lower_back
+    400068: neck
+    400070: right_ankle1
+    400072: right_ball_feet1
+    400074: right_chest
+    400076: right_elbow
+    400078: right_index_first
+    400080: right_index_second
+    400082: right_index_start
+    400084: right_index_tip
+    400086: right_knee1
+    400088: right_mid_first
+    400090: right_mid_second
+    400092: right_mid_start
+    400094: right_mid_tip
+    400096: right_pink_last
+    400098: right_pink_second
+    400100: right_pink_start
+    400102: right_ring_first
+    400104: right_ring_second
+    400106: right_ring_start
+    400108: right_ring_tip
+    400110: right_shoulder
+    400112: right_thumb_mid
+    400114: right_thumb_start
+    400116: right_thumb_tip
+    400118: right_toe1
+    400120: right_upper_leg1
+    400122: right_wrist
+    400124: ring_pink_first
+    400126: ring_pink_first 1
+    400128: root_back
+    400130: upper_back
+    4300000: Charactor_Done:Mesh
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Charactor_Done:Mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
