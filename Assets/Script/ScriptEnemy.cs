@@ -68,7 +68,7 @@ public class ScriptEnemy : MonoBehaviour {
 
 		GameObject bullet = (GameObject)Instantiate (bulletPrefab);
 
-		bullet.transform.localPosition = this.transform.localPosition + new Vector3(0,0.3f,0);
+		bullet.transform.position = this.transform.position + new Vector3(0,0.3f,0);
 
 		bulletTargetPoint = player.transform.position;
 		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);
