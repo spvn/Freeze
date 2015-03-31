@@ -17,6 +17,8 @@ ModelImporter:
     3300002: pPlane1
     4300000: pPlane1
     4300002: pCube1
+    6400000: pCube1
+    6400002: pPlane1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -39,7 +41,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -71,7 +73,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

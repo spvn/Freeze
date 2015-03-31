@@ -44,7 +44,7 @@ public class BulletScript : MonoBehaviour {
 
 	void checkHitPlayer()
 	{
-		if (Physics.Raycast (firstPoint, bulletDirection, out objHit, Mathf.Infinity, (1<<0)) && objHit.collider.gameObject.name == "Player") {
+		if (Physics.Raycast (firstPoint, bulletDirection, out objHit, Mathf.Infinity, (1<<9)) && objHit.collider.gameObject.name == "Player") {
 			bulletLine.SetColors (Color.red, Color.red);
 		} else {
 			bulletLine.SetColors(Color.green, Color.green);
