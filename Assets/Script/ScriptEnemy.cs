@@ -9,7 +9,8 @@ public class ScriptEnemy : MonoBehaviour {
 	public GameObject bulletPrefab;
 
 	float timer = 0.0f;
-	float intervalShootTime = 1.0f;
+	public float intervalShootTime = 1.0f;
+	public bool isHostile = true;
 	Quaternion initialAngle;
 
 	// Use this for initialization
@@ -19,14 +20,16 @@ public class ScriptEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isFacingPlayer() && !player.GetComponent<scriptMovement>().isFrozen && withinRotationRange()) {
-
-			transform.LookAt(player.transform);
-		
-			timer += Time.deltaTime;
-			if (timer > intervalShootTime) {
-				timer = 0.0f;
-				shootBullet ();
+		if (isHostile){
+			if (isFacingPlayer() && !player.GetComponent<scriptMovement>().isFrozen && withinRotationRange()) {
+	
+				transform.LookAt(player.transform);
+			
+				timer += Time.deltaTime;
+				if (timer > intervalShootTime) {
+					timer = 0.0f;
+					shootBullet ();
+				}
 			}
 		}
 	}
@@ -49,7 +52,7 @@ public class ScriptEnemy : MonoBehaviour {
 		Vector3 direction = playerPos - this.transform.position;
 	
 		//Debug.DrawRay (this.transform.position, direction);
-		if (!Physics.Raycast(this.transform.position, direction, distance, (1<<9))) {
+		if (!Physics.Raycast(this.transform.position, direction, distance, (1<<9 | 1 <<0))) {
 //			Debug.Log("Enemy is facing player");
 			return true;
 		}
