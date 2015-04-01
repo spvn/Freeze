@@ -23,7 +23,10 @@ public class BulletScript : MonoBehaviour {
 		bulletDirection = targetPoint - this.transform.position;
 		bulletDirection = transform.rotation * bulletDirection;
 		bulletDirection = Vector3.Normalize (bulletDirection);
-
+		
+		Quaternion bulletRotation = Quaternion.LookRotation(bulletDirection);
+		transform.rotation = bulletRotation;
+		
 		Vector3 lineFirstPoint = this.transform.position + (bulletDirection);
 		this.transform.localPosition = lineFirstPoint;
 		firstPoint = this.transform.localPosition;
