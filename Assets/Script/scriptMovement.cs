@@ -56,7 +56,7 @@ public class scriptMovement : MonoBehaviour {
 			
 			//direction = Vector3.Normalize(direction);
 			//Debug.Log ("AFTER: " + direction);
-			controller.SimpleMove (direction * playerSpeed);
+			controller.SimpleMove (Vector3.Normalize(direction) * playerSpeed);
 			
 			
 			RaycastHit hit;

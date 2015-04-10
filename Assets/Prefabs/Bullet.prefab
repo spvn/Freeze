@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf7d55f2c66046478f7079b7481bf95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 20
+  speed: 20
   playerMovement: {fileID: 0}
   bulletLine: {fileID: 12033470}
 --- !u!120 &12033470

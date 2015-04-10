@@ -4,7 +4,7 @@ using System.Collections;
 public class BulletScript : MonoBehaviour {
 	Vector3 targetPoint;
 	Vector3 firstPoint;
-	public float duration;
+	public float speed;
 	public scriptMovement playerMovement;
 	public LineRenderer bulletLine;
 
@@ -40,7 +40,7 @@ public class BulletScript : MonoBehaviour {
 
 		checkHitPlayer ();
 		if ( !playerMovement.isGameOver && bulletDirection != Vector3.zero && !playerMovement.isFrozen) {
-			this.transform.localPosition += bulletDirection * duration * Time.deltaTime;
+			this.transform.localPosition += bulletDirection * speed * Time.deltaTime;
 		}
 
 	}

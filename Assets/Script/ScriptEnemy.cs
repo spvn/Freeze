@@ -14,18 +14,20 @@ public class ScriptEnemy : MonoBehaviour {
 	Vector3 bulletOffset = new Vector3(0, 2.5f, 0);
 	Vector3 playerOffset = new Vector3(0, 0.3f, 0);
 	Vector3 randomOffset;
+	float playerSpeed;
 
 	bool isAiming = false;
 
 	// Use this for initialization
 	void Start () {
 		initialAngle = this.transform.localRotation;
+		playerSpeed = player.GetComponent<scriptMovement>().playerSpeed;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (isHostile){
-			Debug.Log(gameObject.name + " " + isFacingPlayer() + " " + player.GetComponent<scriptMovement>().isFrozen + withinRotationRange());
+			//Debug.Log(gameObject.name + " " + isFacingPlayer() + " " + player.GetComponent<scriptMovement>().isFrozen + withinRotationRange());
 			if (isFacingPlayer() && !player.GetComponent<scriptMovement>().isFrozen && withinRotationRange()) {
 				if(!isAiming)
 				{
@@ -46,7 +48,7 @@ public class ScriptEnemy : MonoBehaviour {
 	bool withinRotationRange()
 	{
 		float rotationAngle = Mathf.Abs ((this.transform.rotation.y) - initialAngle.y) * Mathf.Rad2Deg;
-		Debug.Log (this.transform.rotation.y * Mathf.Rad2Deg + " " + initialAngle.y * Mathf.Rad2Deg);
+		//Debug.Log (this.transform.rotation.y * Mathf.Rad2Deg + " " + initialAngle.y * Mathf.Rad2Deg);
 		if (rotationAngle <= 30.0f && rotationAngle >= 0.0f) {
 			return true;
 		}
@@ -82,8 +84,14 @@ public class ScriptEnemy : MonoBehaviour {
 		GameObject bullet = (GameObject)Instantiate (bulletPrefab);
 
 		bullet.transform.position = this.transform.position + bulletOffset;
-
-		bulletTargetPoint = player.transform.position + playerOffset;
+		
+		//Time of flight to reach player
+		float bulletTimeToCurrPos = (player.transform.position - transform.position).magnitude / bulletPrefab.GetComponent<BulletScript>().speed;
+		Debug.Log (bulletTimeToCurrPos);
+		
+		//playerOffset += player.transform.forward * playerSpeed;
+		bulletTargetPoint = player.transform.position + playerOffset + ((player.transform.forward * playerSpeed) * bulletTimeToCurrPos /2);
+		
 		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);
 		bullet.GetComponent<BulletScript> ().playerMovement = player.GetComponent<scriptMovement>();
 
