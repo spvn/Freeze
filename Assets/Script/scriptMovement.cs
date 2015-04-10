@@ -14,7 +14,8 @@ public class scriptMovement : MonoBehaviour {
 	private CharacterController controller;
 	private Vector3 direction;
 	private float playerWidth;
-
+	private Component[] imageEffects;
+	
 	public bool isFrozen;
 	public bool isGameOver = false;
 	public GameObject mainCamera;
@@ -45,7 +46,12 @@ public class scriptMovement : MonoBehaviour {
 		}
 
 		if (!isFrozen) {
-			mainCamera.GetComponent<ColorCorrectionCurves>().enabled = false;
+			imageEffects = mainCamera.GetComponentsInChildren<ColorCorrectionCurves>();
+			
+			foreach(ColorCorrectionCurves script in imageEffects) {
+				script.enabled = false;
+			}
+			
 			float horizontal = Input.GetAxis ("Horizontal");
 			
 			direction = new Vector3 (horizontal, 0, 0);
@@ -75,7 +81,11 @@ public class scriptMovement : MonoBehaviour {
 		} 
 		
 		else {
-			mainCamera.GetComponent<ColorCorrectionCurves>().enabled = true;
+			imageEffects = mainCamera.GetComponentsInChildren<ColorCorrectionCurves>();
+			
+			foreach(ColorCorrectionCurves script in imageEffects) {
+				script.enabled = true;
+			}
 		}
 		
 		
