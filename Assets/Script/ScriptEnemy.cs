@@ -19,6 +19,7 @@ public class ScriptEnemy : MonoBehaviour {
 	Vector3 rotationVector;
 	float playerSpeed;
 	GameObject muzzleFlash;
+	AudioSource shotSound;
 
 	bool isAiming = false;
 
@@ -27,6 +28,7 @@ public class ScriptEnemy : MonoBehaviour {
 		initialAngle = this.transform.localRotation;
 		playerSpeed = player.GetComponent<scriptMovement>().playerSpeed;
 		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;
+		shotSound = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -95,6 +97,7 @@ public class ScriptEnemy : MonoBehaviour {
 		bullet.transform.position = this.transform.position + bulletOffset;
 		//muzzleFlash.transform.position = bullet.transform.position;
 		muzzleFlash.GetComponent<ParticleSystem>().Play();
+		shotSound.Play();
 		
 		//Time of flight to reach player
 		float bulletTimeToCurrPos = (player.transform.position - transform.position).magnitude / bulletPrefab.GetComponent<BulletScript>().speed;
