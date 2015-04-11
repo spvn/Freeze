@@ -2409,10 +2409,10 @@ TextMesh:
   m_FontSize: 100
   m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: af0c49821bdd2d84484f1e8a0cb72ff9, type: 3}
+  m_Font: {fileID: 12800000, guid: 8122cf390dc91d44eb9a15726c3541d5, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4278255611
+    rgba: 4278190080
 --- !u!23 &1276439824
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2423,7 +2423,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: fb74802aaad1f114ebcc7838a5b91572, type: 2}
+  - {fileID: 2100000, guid: 8122cf390dc91d44eb9a15726c3541d5, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2496,7 +2496,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3efb2cbe68ab542589ae710c2a706d3d, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3efb2cbe68ab542589ae710c2a706d3d, type: 3}

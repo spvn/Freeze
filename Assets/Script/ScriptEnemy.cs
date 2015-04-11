@@ -48,7 +48,7 @@ public class ScriptEnemy : MonoBehaviour {
 				transform.LookAt(rotationVector);
 			
 				timer += Time.deltaTime;
-				if (timer > intervalShootTime) {
+				if (timer > Random.Range (intervalShootTime*0.7f, intervalShootTime* 1.4f) && !withinMeleeRange()) {
 					timer = 0.0f;
 					shootBullet ();
 				}
@@ -115,7 +115,8 @@ public class ScriptEnemy : MonoBehaviour {
 
 	void OnMouseDown(){
 		if (withinMeleeRange ()) {
-			Instantiate (deathEffect, transform.position - (transform.forward/2), deathEffect.transform.rotation);
+			Vector3 deathEffectPos = transform.position - (transform.forward/2) + new Vector3(0.0f,1.0f,0.0f);
+			Instantiate (deathEffect, deathEffectPos, deathEffect.transform.rotation);
 			Destroy (gameObject);
 		}
 
