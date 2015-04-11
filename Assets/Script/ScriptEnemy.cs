@@ -18,6 +18,7 @@ public class ScriptEnemy : MonoBehaviour {
 	Vector3 randomOffset;
 	Vector3 rotationVector;
 	float playerSpeed;
+	GameObject muzzleFlash;
 
 	bool isAiming = false;
 
@@ -25,6 +26,7 @@ public class ScriptEnemy : MonoBehaviour {
 	void Start () {
 		initialAngle = this.transform.localRotation;
 		playerSpeed = player.GetComponent<scriptMovement>().playerSpeed;
+		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;
 	}
 	
 	// Update is called once per frame
@@ -91,6 +93,8 @@ public class ScriptEnemy : MonoBehaviour {
 		GameObject bullet = (GameObject)Instantiate (bulletPrefab);
 
 		bullet.transform.position = this.transform.position + bulletOffset;
+		//muzzleFlash.transform.position = bullet.transform.position;
+		muzzleFlash.GetComponent<ParticleSystem>().Play();
 		
 		//Time of flight to reach player
 		float bulletTimeToCurrPos = (player.transform.position - transform.position).magnitude / bulletPrefab.GetComponent<BulletScript>().speed;
