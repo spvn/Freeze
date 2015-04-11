@@ -6,6 +6,7 @@ public class ScriptEnemy : MonoBehaviour {
 	bool shooting = false;
 	public GameObject bulletPrefab;
 	public Animator enemyAnimator;
+	public float inaccuracy = 0.2f;
 
 	float timer = 0.0f;
 	public float intervalShootTime;
@@ -28,6 +29,7 @@ public class ScriptEnemy : MonoBehaviour {
 	void Update () {
 		if (isHostile){
 			//Debug.Log(gameObject.name + " " + isFacingPlayer() + " " + player.GetComponent<scriptMovement>().isFrozen + withinRotationRange());
+			
 			if (isFacingPlayer() && !player.GetComponent<scriptMovement>().isFrozen && withinRotationRange()) {
 				if(!isAiming)
 				{
@@ -90,7 +92,8 @@ public class ScriptEnemy : MonoBehaviour {
 		Debug.Log (bulletTimeToCurrPos);
 		
 		//playerOffset += player.transform.forward * playerSpeed;
-		bulletTargetPoint = player.transform.position + playerOffset + ((player.transform.forward * playerSpeed) * bulletTimeToCurrPos /2);
+		randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracy/2 * -1, inaccuracy /2), Random.Range (inaccuracy*-1, inaccuracy));
+		bulletTargetPoint = player.transform.position + playerOffset + ((player.transform.forward * playerSpeed) * bulletTimeToCurrPos /2) + randomOffset;
 		
 		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);
 		bullet.GetComponent<BulletScript> ().playerMovement = player.GetComponent<scriptMovement>();
