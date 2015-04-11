@@ -56,43 +56,45 @@ public class scriptMovement : MonoBehaviour {
 		}
 
 		if (!isFrozen) {
+			Time.timeScale = 1.0f;
 			mainCamera.GetComponent<ColorCorrectionCurves>().enabled = false;
-			float horizontal = Input.GetAxis ("Horizontal");
 			
-			direction = new Vector3 (horizontal, 0, 0);
-			direction = transform.rotation * direction;
-			//Debug.Log ("BEFORE: " + direction);
-			
-			direction += forwardDirection;
-			
-			//direction = Vector3.Normalize(direction);
-			//Debug.Log ("AFTER: " + direction);
-			controller.SimpleMove (Vector3.Normalize(direction) * playerSpeed);
-			
-			
-			RaycastHit hit;
-			Ray checkCollisionRayLeft = new Ray (transform.position - new Vector3 (playerWidth / 2, 0, 0) + transform.forward*playerWidth, transform.forward);
-			Ray checkCollisionRayRight = new Ray (transform.position + new Vector3 (playerWidth / 2, 0, 0) + transform.forward*playerWidth, transform.forward);
-			Ray checkCollisionRayCenter = new Ray (transform.position + transform.forward*playerWidth , transform.forward);
-			
-			if (Physics.Raycast (checkCollisionRayLeft, out hit, collisionDist) 
-				|| Physics.Raycast (checkCollisionRayRight, out hit, collisionDist)
-				|| Physics.Raycast (checkCollisionRayCenter, out hit, collisionDist)) {
-				hasCollisionInFront = true;
-//				Debug.Log (hit.collider.gameObject.name);
-			} else {
-				hasCollisionInFront = false;
-			}
 		} 
 		
 		else {
+			Time.timeScale = 0.5f;
 			mainCamera.GetComponent<ColorCorrectionCurves>().enabled = true;
 		}
 		
+		float horizontal = Input.GetAxis ("Horizontal");
 		
+		direction = new Vector3 (horizontal, 0, 0);
+		direction = transform.rotation * direction;
+		//Debug.Log ("BEFORE: " + direction);
+		
+		direction += forwardDirection;
+		
+		//direction = Vector3.Normalize(direction);
+		//Debug.Log ("AFTER: " + direction);
+		controller.SimpleMove (Vector3.Normalize(direction) * playerSpeed);
+		
+		
+		RaycastHit hit;
+		Ray checkCollisionRayLeft = new Ray (transform.position - new Vector3 (playerWidth / 2, 0, 0) + transform.forward*playerWidth, transform.forward);
+		Ray checkCollisionRayRight = new Ray (transform.position + new Vector3 (playerWidth / 2, 0, 0) + transform.forward*playerWidth, transform.forward);
+		Ray checkCollisionRayCenter = new Ray (transform.position + transform.forward*playerWidth , transform.forward);
+		
+		if (Physics.Raycast (checkCollisionRayLeft, out hit, collisionDist) 
+		    || Physics.Raycast (checkCollisionRayRight, out hit, collisionDist)
+		    || Physics.Raycast (checkCollisionRayCenter, out hit, collisionDist)) {
+			hasCollisionInFront = true;
+			//				Debug.Log (hit.collider.gameObject.name);
+		} else {
+			hasCollisionInFront = false;
+		}
 		
 	}
-
+	
 	void OnTriggerEnter( Collider col )
 	{	
 		GameObject.Destroy(col.gameObject);
