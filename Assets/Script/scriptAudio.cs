@@ -23,11 +23,12 @@ public class scriptAudio : MonoBehaviour {
 	
 	public void playFreezeAudio() {
 		audio.PlayOneShot (freezeSounds[0]);
+		audio.pitch = 0.5f;
 	
 	}
 	
 	public void playUnfreezeAudio() {
 		audio.PlayOneShot (freezeSounds[1]);
-		
+		audio.pitch = 1.0f;
 	}
 }
