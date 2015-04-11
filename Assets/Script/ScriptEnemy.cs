@@ -7,12 +7,13 @@ public class ScriptEnemy : MonoBehaviour {
 	public GameObject bulletPrefab;
 	public Animator enemyAnimator;
 	public float inaccuracy = 0.2f;
+	public GameObject deathEffect;
 
 	float timer = 0.0f;
 	public float intervalShootTime;
 	public bool isHostile = true;
 	Quaternion initialAngle;
-	Vector3 bulletOffset = new Vector3(0, 2.5f, 0);
+	Vector3 bulletOffset = new Vector3(0, 1.5f, 0);
 	Vector3 playerOffset = new Vector3(0, 0.3f, 0);
 	Vector3 randomOffset;
 	float playerSpeed;
@@ -103,6 +104,7 @@ public class ScriptEnemy : MonoBehaviour {
 
 	void OnMouseDown(){
 		if (withinMeleeRange ()) {
+			Instantiate (deathEffect, transform.position - (transform.forward/2), deathEffect.transform.rotation);
 			Destroy (gameObject);
 		}
 
@@ -110,7 +112,7 @@ public class ScriptEnemy : MonoBehaviour {
 
 	bool withinMeleeRange()
 	{
-		if (Vector3.Distance (player.transform.position, this.transform.position) < 2.0f) {
+		if (Vector3.Distance (player.transform.position, this.transform.position) < 3.0f) {
 			return true;
 		}
 		return false;

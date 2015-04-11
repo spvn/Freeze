@@ -1009,7 +1009,7 @@ Transform:
   m_GameObject: {fileID: 166726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400136}
   - {fileID: 410528}
@@ -1244,7 +1244,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.9099998, y: 0, z: -.524999976}
+  m_LocalPosition: {x: 43.7400017, y: 0, z: 7.5999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 439796}
@@ -1544,6 +1544,8 @@ MonoBehaviour:
   player: {fileID: 0}
   bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
   enemyAnimator: {fileID: 9567750}
+  inaccuracy: .200000003
+  deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
   intervalShootTime: 2
   isHostile: 1
 --- !u!136 &13647524
@@ -1556,9 +1558,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .200000003
-  m_Height: 2.79999995
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1.5, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &13734220
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
