@@ -10,6 +10,7 @@ public class scriptMovement : MonoBehaviour {
 	public float rotateSpeed = 2.0f;
 	public Transform[] path;
 	public GameObject canvas;
+	public GameObject gameManager;
 	
 	private CharacterController controller;
 	private Vector3 direction;
@@ -40,6 +41,13 @@ public class scriptMovement : MonoBehaviour {
 			StartCoroutine(glitchEffect());			
 			
 			isFrozen = !isFrozen;
+			
+			if (isFrozen) {
+				gameManager.GetComponent<scriptAudio>().playFreezeAudio();
+			}
+			else {
+				gameManager.GetComponent<scriptAudio>().playUnfreezeAudio();
+			}
 
 			if(canvas.gameObject.transform.Find("StartingScreen").gameObject.activeSelf)
 			{
@@ -118,7 +126,7 @@ public class scriptMovement : MonoBehaviour {
 		mainCamera.GetComponent<NoiseAndScratches>().enabled = true;
 		
 		
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(0.5f);
 		
 		mainCamera.GetComponent<NoiseAndScratches>().enabled = false;
 		
