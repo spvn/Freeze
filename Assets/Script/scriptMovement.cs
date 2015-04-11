@@ -35,7 +35,10 @@ public class scriptMovement : MonoBehaviour {
 	void Update () {
 		
 		if (!isGameOver && Input.GetKeyDown (KeyCode.W)) {
-			Debug.Log("Pressed Freeze " + isFrozen );
+			//Debug.Log("Pressed Freeze " + isFrozen );
+
+			StartCoroutine(glitchEffect());			
+			
 			isFrozen = !isFrozen;
 
 			if(canvas.gameObject.transform.Find("StartingScreen").gameObject.activeSelf)
@@ -107,6 +110,17 @@ public class scriptMovement : MonoBehaviour {
 			transform.rotation = Quaternion.Slerp (transform.rotation, targetRotation, t/rotateSpeed);
 			yield return null;
 		}
+		
+	}
+	
+	IEnumerator glitchEffect() {
+		
+		mainCamera.GetComponent<NoiseAndScratches>().enabled = true;
+		
+		
+		yield return new WaitForSeconds(0.1f);
+		
+		mainCamera.GetComponent<NoiseAndScratches>().enabled = false;
 		
 	}
 
