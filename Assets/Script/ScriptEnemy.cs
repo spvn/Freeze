@@ -16,6 +16,7 @@ public class ScriptEnemy : MonoBehaviour {
 	Vector3 bulletOffset = new Vector3(0, 1.5f, 0);
 	Vector3 playerOffset = new Vector3(0, 0.3f, 0);
 	Vector3 randomOffset;
+	Vector3 rotationVector;
 	float playerSpeed;
 
 	bool isAiming = false;
@@ -37,7 +38,10 @@ public class ScriptEnemy : MonoBehaviour {
 					isAiming = true;
 					enemyAnimator.SetBool("Aim", true);
 				}
-				transform.LookAt(player.transform);
+				rotationVector = player.transform.position;
+				rotationVector.y = 0f;
+
+				transform.LookAt(rotationVector);
 			
 				timer += Time.deltaTime;
 				if (timer > intervalShootTime) {
