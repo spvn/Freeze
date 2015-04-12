@@ -2,16 +2,18 @@
 using System.Collections;
 
 public class BulletScript : MonoBehaviour {
-	Vector3 targetPoint;
-	Vector3 firstPoint;
+	private Vector3 targetPoint;
+	private Vector3 firstPoint;
+
 	public float speed;
 	public scriptMovement playerMovement;
-	GameManager gameManager;
+
+	private GameManager gameManager;
 	public LineRenderer bulletLine;
 
-	Vector3 bulletDirection = Vector3.zero;
-	float bulletLineLength;
-	RaycastHit objHit;
+	private Vector3 bulletDirection = Vector3.zero;
+	private float bulletLineLength;
+	private RaycastHit objHit;
 
 	// Use this for initialization
 	void Start () {

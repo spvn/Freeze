@@ -19,6 +19,7 @@ public class scriptMovement : MonoBehaviour {
 	public GameObject mainCamera;
 	private int currNode = 0;
 	private Vector3 forwardDirection;
+	private Animator playerAnimator;
 	
 	
 	// Use this for initialization
@@ -27,6 +28,7 @@ public class scriptMovement : MonoBehaviour {
 		playerWidth = GetComponent<MeshRenderer>().bounds.size.x;
 		forwardDirection = Vector3.Normalize (path[0].position - transform.position);
 		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		playerAnimator = this.transform.Find ("playerAnimator").GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -133,7 +135,7 @@ public class scriptMovement : MonoBehaviour {
 	void meleeAttack()
 	{
 		RaycastHit meleeHit;
-		Debug.DrawRay (transform.position, mainCamera.transform.forward);
+		playerAnimator.Play ("R punch");
 		if(Physics.Raycast(transform.position, mainCamera.transform.forward,  out meleeHit, 3.0f))
 		{
 			if(meleeHit.transform.gameObject.GetComponent<ScriptEnemy>() != null)

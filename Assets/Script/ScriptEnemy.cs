@@ -137,7 +137,6 @@ public class ScriptEnemy : MonoBehaviour {
 
 	public void Die()
 	{
-		Debug.Log ("DYING");
 		Vector3 deathEffectPos = transform.position - (transform.forward/2) + new Vector3(0.0f,1.0f,0.0f);
 		Instantiate (deathEffect, deathEffectPos, deathEffect.transform.rotation);
 		Destroy (gameObject);
