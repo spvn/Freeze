@@ -7,6 +7,7 @@ public class ScriptEnemy : MonoBehaviour {
 	public GameObject bulletPrefab;
 	public Animator enemyAnimator;
 	public float inaccuracy = 0.2f;
+	public float inaccuracyY = 0.5f; 
 	public GameObject deathEffect;
 
 	float timer = 0.0f;
@@ -41,6 +42,7 @@ public class ScriptEnemy : MonoBehaviour {
 				{
 					isAiming = true;
 					enemyAnimator.SetBool("Aim", true);
+					timer -= 1.0f;
 				}
 				rotationVector = player.transform.position;
 				rotationVector.y = 0f;
@@ -99,11 +101,11 @@ public class ScriptEnemy : MonoBehaviour {
 		shotSound.Play();
 		
 		//Time of flight to reach player
-		float bulletTimeToCurrPos = (player.transform.position - transform.position).magnitude / bulletPrefab.GetComponent<BulletScript>().speed;
+		float bulletTimeToCurrPos = (player.transform.position - transform.position).magnitude / bullet.GetComponent<BulletScript>().speed;
 		Debug.Log (bulletTimeToCurrPos);
 		
 		//playerOffset += player.transform.forward * playerSpeed;
-		randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracy/2 * -1, inaccuracy /2), Random.Range (inaccuracy*-1, inaccuracy));
+		randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracyY/2 * -1, 0f) + 0.5f, Random.Range (inaccuracy*-1, inaccuracy));
 		bulletTargetPoint = player.transform.position + playerOffset + ((player.transform.forward * playerSpeed) * bulletTimeToCurrPos /2) + randomOffset;
 		
 		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);
