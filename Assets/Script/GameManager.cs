@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
 	public bool isGameOver = false;
 	public GameObject canvas;
 
+	const int NUM_LEVELS = 1;
+
 
 	bool startedGame = false;
 
@@ -61,6 +63,15 @@ public class GameManager : MonoBehaviour {
 	{
 		Debug.Log ("Restarting");
 		Application.LoadLevel (Application.loadedLevel);
+	}
+
+	public void LoadNextLevel()
+	{
+		if (Application.loadedLevel < NUM_LEVELS) {
+			Application.LoadLevel (Application.loadedLevel + 1);
+		} else {
+			RestartLevel();
+		}
 	}
 
 }
