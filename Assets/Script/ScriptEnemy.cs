@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ScriptEnemy : MonoBehaviour {
 	public GameObject player;
+	GameManager gameManager;
 	bool shooting = false;
 	public GameObject bulletPrefab;
 	public Animator enemyAnimator;
@@ -26,6 +27,7 @@ public class ScriptEnemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
 		initialAngle = this.transform.localRotation;
 		playerSpeed = player.GetComponent<scriptMovement>().playerSpeed;
 		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;
@@ -37,7 +39,7 @@ public class ScriptEnemy : MonoBehaviour {
 		if (isHostile){
 			//Debug.Log(gameObject.name + " " + isFacingPlayer() + " " + player.GetComponent<scriptMovement>().isFrozen + withinRotationRange());
 			
-			if (isFacingPlayer() && !player.GetComponent<scriptMovement>().isFrozen && withinRotationRange()) {
+			if (isFacingPlayer() && !gameManager.isFrozen && withinRotationRange()) {
 				if(enemyAnimator.speed != 1)
 				{
 					enemyAnimator.speed = 1;
@@ -62,7 +64,7 @@ public class ScriptEnemy : MonoBehaviour {
 
 			}
 
-			if(player.GetComponent<scriptMovement>().isFrozen)
+			if(gameManager.isFrozen)
 			{
 				enemyAnimator.speed = 0;
 			}

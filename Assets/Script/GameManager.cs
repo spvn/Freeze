@@ -4,20 +4,26 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-	public GameObject timerGUIText;
+	GameObject timerGUIText;
 	public GameObject player;
+	public bool isFrozen;
+	public bool isGameOver = false;
+	public GameObject canvas;
+
 
 	bool startedGame = false;
 
 	float timeElapsed;
 	// Use this for initialization
 	void Start () {
+		isFrozen = true;
+		timerGUIText = canvas.transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (!startedGame && !player.GetComponent<scriptMovement>().isFrozen) {
+		if (!startedGame && !isFrozen) {
 			startedGame = true;
 		}
 
@@ -25,6 +31,36 @@ public class GameManager : MonoBehaviour {
 			timeElapsed += Time.deltaTime;
 			timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
 		}
+
+		if (!isGameOver && Input.GetKeyDown (KeyCode.W)) {
+			//Debug.Log("Pressed Freeze " + isFrozen );
+			
+			isFrozen = !isFrozen;
+			
+			if (isFrozen) {
+				this.GetComponent<scriptAudio>().playFreezeAudio();
+			}
+			else {
+				this.GetComponent<scriptAudio>().playUnfreezeAudio();
+			}
+			
+			if(canvas.gameObject.transform.Find("StartingScreen").gameObject.activeSelf)
+			{
+				canvas.gameObject.transform.Find("StartingScreen").gameObject.SetActive(false);
+			}
+		}
+	}
+
+	public void GameOver(){
+		canvas.gameObject.transform.Find("GameOverScreen").gameObject.SetActive (true);
+		isFrozen = true;
+		isGameOver = true;
 	}
 	
+	public void RestartLevel()
+	{
+		Debug.Log ("Restarting");
+		Application.LoadLevel (Application.loadedLevel);
+	}
+
 }

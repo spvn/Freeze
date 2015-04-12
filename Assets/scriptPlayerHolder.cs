@@ -23,7 +23,7 @@ public class scriptPlayerHolder : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Quaternion targetRotation;
-		if(!player.GetComponent<scriptMovement>().isFrozen){
+//		if(!player.GetComponent<scriptMovement>().isFrozen){
 			if (transform.position == pathNodes[currNode].position) {
 				currNode++;
 				targetRotation = Quaternion.LookRotation (pathNodes[currNode].position - player.transform.position);
@@ -38,7 +38,7 @@ public class scriptPlayerHolder : MonoBehaviour {
 			if (!player.GetComponent<scriptMovement>().hasCollisionInFront) {
 				transform.position = Vector3.MoveTowards (transform.position, pathNodes[currNode].position, moveSpeed * Time.deltaTime);
 			}
-		}
+//		}
 		
 		
 	}

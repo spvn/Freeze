@@ -6,6 +6,7 @@ public class BulletScript : MonoBehaviour {
 	Vector3 firstPoint;
 	public float speed;
 	public scriptMovement playerMovement;
+	GameManager gameManager;
 	public LineRenderer bulletLine;
 
 	Vector3 bulletDirection = Vector3.zero;
@@ -14,7 +15,7 @@ public class BulletScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
 	}
 
 	public void setBulletDirection(Vector3 targetVector)
@@ -39,7 +40,7 @@ public class BulletScript : MonoBehaviour {
 	void Update () {
 
 		checkHitPlayer ();
-		if ( !playerMovement.isGameOver && bulletDirection != Vector3.zero && !playerMovement.isFrozen) {
+		if ( !gameManager.isGameOver && bulletDirection != Vector3.zero && !gameManager.isFrozen) {
 			this.transform.localPosition += bulletDirection * speed * Time.deltaTime;
 		}
 
@@ -62,7 +63,7 @@ public class BulletScript : MonoBehaviour {
 		Destroy(gameObject);
 		if (col.gameObject.name == "Player") {
 			//Debug.Log("Bullet position: " + this.transform.localPosition +" hit player " + playerMovement.gameObject.transform.localPosition);
-			playerMovement.GameOver();
+			gameManager.GameOver();
 		}
 	}
 
