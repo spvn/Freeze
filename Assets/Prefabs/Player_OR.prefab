@@ -148,8 +148,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: .899999976, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 424818}
   - {fileID: 476528}
@@ -175,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116762}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 44.2999992, y: 1, z: 38.7999992}
+  m_LocalPosition: {x: 46.0952225, y: 1, z: 44.7454605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 404068}
@@ -324,24 +324,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 116762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b96a19de4248d849b3f948d8f5f685d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7aa56b6f920156740b32b1d101735bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 4
   hasCollisionInFront: 0
-  collisionDist: .100000001
+  collisionDist: .50999999
   rotateSpeed: 2
   path:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   canvas: {fileID: 0}
   gameManager: {fileID: 0}
-  isFrozen: 0
-  isGameOver: 0
   mainCamera: {fileID: 183444}
 --- !u!114 &11430832
 MonoBehaviour:

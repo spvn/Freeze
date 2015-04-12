@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
 
-public class scriptMovement : MonoBehaviour {
+public class scriptORMovement : MonoBehaviour {
 	
 	public float playerSpeed = 1.0f;
 	public bool hasCollisionInFront;
