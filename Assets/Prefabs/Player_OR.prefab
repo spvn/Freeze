@@ -46,6 +46,7 @@ GameObject:
   - 4: {fileID: 425328}
   - 20: {fileID: 2005526}
   - 114: {fileID: 11430832}
+  - 114: {fileID: 11487144}
   m_Layer: 9
   m_Name: RightEyeAnchor
   m_TagString: Untagged
@@ -79,6 +80,7 @@ GameObject:
   - 4: {fileID: 424818}
   - 20: {fileID: 2095568}
   - 114: {fileID: 11474454}
+  - 114: {fileID: 11458064}
   m_Layer: 9
   m_Name: LeftEyeAnchor
   m_TagString: Untagged
@@ -173,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116762}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 45.1096725, y: 1, z: 46.1985588}
+  m_LocalPosition: {x: 44.2999992, y: 1, z: 38.7999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 404068}
@@ -322,7 +324,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 116762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 461822a452feb9c48bf3416f02649fd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b96a19de4248d849b3f948d8f5f685d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
@@ -337,6 +339,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   canvas: {fileID: 0}
+  gameManager: {fileID: 0}
   isFrozen: 0
   isGameOver: 0
   mainCamera: {fileID: 183444}
@@ -469,6 +472,29 @@ MonoBehaviour:
     type: 3}
   colorCorrectionSelectiveShader: {fileID: 4800000, guid: e515e0f94cefc4c0db54b45cba621544,
     type: 3}
+--- !u!114 &11458064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175264}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88a26a276b4e47619ce2c5adad33fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monochrome: 1
+  grainIntensityMin: .800000012
+  grainIntensityMax: 1.5
+  grainSize: 5
+  scratchIntensityMin: 1
+  scratchIntensityMax: 2
+  scratchFPS: 10
+  scratchJitter: .100000001
+  grainTexture: {fileID: 2800000, guid: ffa9c02760c2b4e8eb9814ec06c4b05b, type: 3}
+  scratchTexture: {fileID: 2800000, guid: 6205c27cc031f4e66b8ea90d1bfaa158, type: 3}
+  shaderRGB: {fileID: 4800000, guid: 5d7f4c401ae8946bcb0d6ff68a9e7466, type: 3}
+  shaderYUV: {fileID: 4800000, guid: 0e447868506ba49f0a73235b8a8b647a, type: 3}
 --- !u!114 &11474454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -598,6 +624,29 @@ MonoBehaviour:
     type: 3}
   colorCorrectionSelectiveShader: {fileID: 4800000, guid: e515e0f94cefc4c0db54b45cba621544,
     type: 3}
+--- !u!114 &11487144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128042}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88a26a276b4e47619ce2c5adad33fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monochrome: 1
+  grainIntensityMin: .800000012
+  grainIntensityMax: 1.5
+  grainSize: 5
+  scratchIntensityMin: 1
+  scratchIntensityMax: 2
+  scratchFPS: 10
+  scratchJitter: .100000001
+  grainTexture: {fileID: 2800000, guid: ffa9c02760c2b4e8eb9814ec06c4b05b, type: 3}
+  scratchTexture: {fileID: 2800000, guid: 6205c27cc031f4e66b8ea90d1bfaa158, type: 3}
+  shaderRGB: {fileID: 4800000, guid: 5d7f4c401ae8946bcb0d6ff68a9e7466, type: 3}
+  shaderYUV: {fileID: 4800000, guid: 0e447868506ba49f0a73235b8a8b647a, type: 3}
 --- !u!114 &11487184
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
 
-public class scriptORMovement : MonoBehaviour {
+public class scriptMovement : MonoBehaviour {
 	
 	public float playerSpeed = 1.0f;
 	public bool hasCollisionInFront;
@@ -10,30 +10,27 @@ public class scriptORMovement : MonoBehaviour {
 	public float rotateSpeed = 2.0f;
 	public Transform[] path;
 	public GameObject canvas;
-	public GameObject gameManager;
+	public GameManager gameManager;
 	
 	private CharacterController controller;
 	private Vector3 direction;
 	private float playerWidth;
 
-	public bool isFrozen;
-	public bool isGameOver = false;
 	public GameObject mainCamera;
 	private int currNode = 0;
 	private Vector3 forwardDirection;
-	ColorCorrectionCurves[] cccObjects;
-	NoiseAndScratches[] nsObjects;
+	private ColorCorrectionCurves[] cccObjects;
+	private NoiseAndScratches[] nsObjects;
 	
 	
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();
 		playerWidth = GetComponent<MeshRenderer>().bounds.size.x;
-		isFrozen = true;
 		forwardDirection = Vector3.Normalize (path[0].position - transform.position);
+		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
 		cccObjects = mainCamera.GetComponentsInChildren<ColorCorrectionCurves>();
 		nsObjects = mainCamera.GetComponentsInChildren<NoiseAndScratches>();
-		Debug.Log ("TESTTESTTEST");
 	}
 	
 	// Update is called once per frame
@@ -42,36 +39,21 @@ public class scriptORMovement : MonoBehaviour {
 		{
 			meleeAttack();
 		}
-		
+	
 		if (Input.GetKeyDown (KeyCode.T))
 		{
 			Debug.Log (mainCamera.transform.GetChild(0).transform.position);
 			Debug.Log (mainCamera.transform.GetChild(0).transform.rotation);
 		}
-		if (!isGameOver && Input.GetKeyDown (KeyCode.W)) {
+		
+		if (!gameManager.isGameOver && Input.GetKeyDown (KeyCode.W)) {
 			//Debug.Log("Pressed Freeze " + isFrozen );
-
-			StartCoroutine(glitchEffect());			
 			
-			isFrozen = !isFrozen;
-			
-			if (isFrozen) {
-				gameManager.GetComponent<scriptAudio>().playFreezeAudio();
-			}
-			else {
-				gameManager.GetComponent<scriptAudio>().playUnfreezeAudio();
-			}
-
-			if(canvas.gameObject.transform.Find("StartingScreen").gameObject.activeSelf)
-			{
-				canvas.gameObject.transform.Find("StartingScreen").gameObject.SetActive(false);
-			}
+			StartCoroutine (glitchEffect ());
 		}
 
-		if (!isFrozen) {
+		if (!gameManager.isFrozen) {
 			//Time.timeScale = 1.0f; FOR SLOWMO PURPOSES.
-			
-			
 			
 			foreach (ColorCorrectionCurves obj in cccObjects) {
 				obj.enabled = false;
@@ -113,13 +95,13 @@ public class scriptORMovement : MonoBehaviour {
 		
 		else {
 			//Time.timeScale = 0.5f; FOR SLOWMO PURPOSES
-						
+			
 			foreach (ColorCorrectionCurves obj in cccObjects) {
 				obj.enabled = true;
 			}
 		}
 		
-		
+
 		
 	}
 	
@@ -130,8 +112,8 @@ public class scriptORMovement : MonoBehaviour {
 		currNode++;
 
 		if (currNode == path.Length) {
-			isFrozen = true;
-			isGameOver = true;
+			gameManager.isFrozen = true;
+			gameManager.isGameOver = true;
 			canvas.gameObject.transform.Find("WinScreen").gameObject.SetActive (true);
 		}
 
@@ -140,7 +122,22 @@ public class scriptORMovement : MonoBehaviour {
 		StartCoroutine(RotateTowards(targetRotation));
 		
 	}
-	
+
+	IEnumerator glitchEffect() {
+		
+		foreach (NoiseAndScratches obj in nsObjects) {
+			obj.enabled = true;
+		}
+		
+		
+		yield return new WaitForSeconds(0.5f);
+		
+		foreach (NoiseAndScratches obj in nsObjects) {
+			obj.enabled = false;
+		}
+		
+	}
+
 	IEnumerator RotateTowards(Quaternion targetRotation) {
 		
 		float t;
@@ -149,19 +146,6 @@ public class scriptORMovement : MonoBehaviour {
 			yield return null;
 		}
 		
-	}
-	
-	IEnumerator glitchEffect() {
-				
-		foreach (NoiseAndScratches obj in nsObjects) {
-			obj.enabled = true;
-		}
-		
-		yield return new WaitForSeconds(0.5f);
-		
-		foreach (NoiseAndScratches obj in nsObjects) {
-			obj.enabled = false;
-		}		
 	}
 
 	void meleeAttack()
@@ -177,16 +161,4 @@ public class scriptORMovement : MonoBehaviour {
 		}
 	}
 
-	public void GameOver(){
-		canvas.gameObject.transform.Find("GameOverScreen").gameObject.SetActive (true);
-		isFrozen = true;
-		isGameOver = true;
-	}
-
-	public void RestartLevel()
-	{
-		Debug.Log ("Restarting");
-		Application.LoadLevel (Application.loadedLevel);
-	}
-	
 }
