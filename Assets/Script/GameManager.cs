@@ -1,19 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
-	public bool isFrozen;
+
+	public GameObject timerGUIText;
+	public GameObject player;
+
+	float timeElapsed;
 	// Use this for initialization
 	void Start () {
-		isFrozen = true;
+		timerGUIText.GetComponent<Text> ().text = "0.00s";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.W)) {
-			isFrozen = !isFrozen;
+		if (!player.GetComponent<scriptMovement> ().isFrozen) {
+			timeElapsed += Time.deltaTime;
+			timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
 		}
-	
 	}
 	
 }

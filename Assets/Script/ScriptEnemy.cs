@@ -38,6 +38,11 @@ public class ScriptEnemy : MonoBehaviour {
 			//Debug.Log(gameObject.name + " " + isFacingPlayer() + " " + player.GetComponent<scriptMovement>().isFrozen + withinRotationRange());
 			
 			if (isFacingPlayer() && !player.GetComponent<scriptMovement>().isFrozen && withinRotationRange()) {
+				if(enemyAnimator.speed != 1)
+				{
+					enemyAnimator.speed = 1;
+				}
+
 				if(!isAiming)
 				{
 					isAiming = true;
@@ -54,6 +59,12 @@ public class ScriptEnemy : MonoBehaviour {
 					timer = 0.0f;
 					shootBullet ();
 				}
+
+			}
+
+			if(player.GetComponent<scriptMovement>().isFrozen)
+			{
+				enemyAnimator.speed = 0;
 			}
 		}
 	}
