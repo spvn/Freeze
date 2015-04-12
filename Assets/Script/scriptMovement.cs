@@ -29,7 +29,6 @@ public class scriptMovement : MonoBehaviour {
 		playerWidth = GetComponent<MeshRenderer>().bounds.size.x;
 		isFrozen = true;
 		forwardDirection = Vector3.Normalize (path[0].position - transform.position);
-		Debug.Log ("forward: " + forwardDirection);
 	}
 	
 	// Update is called once per frame
@@ -70,17 +69,20 @@ public class scriptMovement : MonoBehaviour {
 			direction = transform.rotation * direction;
 			//Debug.Log ("BEFORE: " + direction);
 			
-			direction += forwardDirection;
+			if (!hasCollisionInFront)
+				
+				direction += forwardDirection;
 			
 			//direction = Vector3.Normalize(direction);
 			//Debug.Log ("AFTER: " + direction);
-			controller.SimpleMove (Vector3.Normalize(direction) * playerSpeed);
+			
+			controller.SimpleMove (direction * playerSpeed);
 			
 			
 			RaycastHit hit;
-			Ray checkCollisionRayLeft = new Ray (transform.position - new Vector3 (playerWidth / 2, 0, 0) + transform.forward*playerWidth, transform.forward);
-			Ray checkCollisionRayRight = new Ray (transform.position + new Vector3 (playerWidth / 2, 0, 0) + transform.forward*playerWidth, transform.forward);
-			Ray checkCollisionRayCenter = new Ray (transform.position + transform.forward*playerWidth , transform.forward);
+			Ray checkCollisionRayLeft = new Ray (transform.position + (-transform.right * (playerWidth / 2)) + transform.forward*playerWidth/2, transform.forward);
+			Ray checkCollisionRayRight = new Ray (transform.position + (transform.right * (playerWidth / 2)) + transform.forward*playerWidth/2, transform.forward);
+			Ray checkCollisionRayCenter = new Ray (transform.position + transform.forward*playerWidth/2 , transform.forward);
 			
 			if (Physics.Raycast (checkCollisionRayLeft, out hit, collisionDist) 
 			    || Physics.Raycast (checkCollisionRayRight, out hit, collisionDist)
