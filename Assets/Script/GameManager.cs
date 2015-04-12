@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
 	public GameObject timerGUIText;
 	public GameObject player;
 
+	bool startedGame = false;
+
 	float timeElapsed;
 	// Use this for initialization
 	void Start () {
@@ -15,7 +17,11 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!player.GetComponent<scriptMovement> ().isFrozen) {
+		if (!startedGame && !player.GetComponent<scriptMovement>().isFrozen) {
+			startedGame = true;
+		}
+
+		if (startedGame) {
 			timeElapsed += Time.deltaTime;
 			timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
 		}
