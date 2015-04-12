@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 34a61b766abe04a66bde1cae96119150
-timeCreated: 1428652032
+timeCreated: 1428823559
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -136,6 +136,21 @@ ModelImporter:
     4300024: pasted__pasted__pSphere1
     4300026: pasted__pasted__pSphere1
     4300028: pasted__pasted__pSphere1
+    6400000: pasted__pasted__pasted__pSphere1
+    6400002: pasted__pasted__pasted__pSphere1 1
+    6400004: pasted__pasted__pasted__pSphere1 2
+    6400006: pasted__pasted__pSphere1
+    6400008: pasted__pasted__pSphere1 1
+    6400010: pasted__pasted__pSphere1 2
+    6400012: pasted__pasted__pSphere1 3
+    6400014: pasted__pasted__pSphere1 4
+    6400016: pasted__pasted__pSphere1 5
+    6400018: pasted__pasted__pSphere1 6
+    6400020: pasted__pasted__pSphere1 7
+    6400022: pasted__pSphere1
+    6400024: pasted__pSphere1 1
+    6400026: pPlane1
+    6400028: pSphere1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -158,7 +173,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
