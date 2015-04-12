@@ -84,10 +84,11 @@ public class scriptMovement : MonoBehaviour {
 			Ray checkCollisionRayRight = new Ray (transform.position + (transform.right * (playerWidth / 2)) + transform.forward*playerWidth/2, transform.forward);
 			Ray checkCollisionRayCenter = new Ray (transform.position + transform.forward*playerWidth/2 , transform.forward);
 			
-			if (Physics.Raycast (checkCollisionRayLeft, out hit, collisionDist) 
-			    || Physics.Raycast (checkCollisionRayRight, out hit, collisionDist)
-			    || Physics.Raycast (checkCollisionRayCenter, out hit, collisionDist)) {
-				hasCollisionInFront = true;
+			if (Physics.Raycast (checkCollisionRayLeft, collisionDist, (1<<0)) 
+			    || Physics.Raycast (checkCollisionRayRight, collisionDist, (1<<0))
+			    || Physics.Raycast (checkCollisionRayCenter, collisionDist, (1<<0))) {
+			    
+					hasCollisionInFront = true;
 				//				Debug.Log (hit.collider.gameObject.name);
 			} else {
 				hasCollisionInFront = false;
