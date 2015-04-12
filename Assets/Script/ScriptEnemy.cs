@@ -73,7 +73,6 @@ public class ScriptEnemy : MonoBehaviour {
 		float distance = Vector3.Distance (this.transform.position, playerPos) - 1;
 		Vector3 direction = playerPos - (this.transform.position + bulletOffset);
 	
-		Debug.DrawRay (this.transform.position + bulletOffset, direction);
 		if (!Physics.Raycast(this.transform.position + bulletOffset, direction, distance, (1<<9 | 1 <<0))) {
 //			Debug.Log("Enemy is facing player");
 			return true;
@@ -113,15 +112,6 @@ public class ScriptEnemy : MonoBehaviour {
 		shooting = false;
 	}
 
-	void OnMouseDown(){
-		if (withinMeleeRange ()) {
-			Vector3 deathEffectPos = transform.position - (transform.forward/2) + new Vector3(0.0f,1.0f,0.0f);
-			Instantiate (deathEffect, deathEffectPos, deathEffect.transform.rotation);
-			Destroy (gameObject);
-		}
-
-	}
-
 	bool withinMeleeRange()
 	{
 		if (Vector3.Distance (player.transform.position, this.transform.position) < 3.0f) {
@@ -130,8 +120,12 @@ public class ScriptEnemy : MonoBehaviour {
 		return false;
 	}
 
-	IEnumerator Fall()
+	public void Die()
 	{
-		yield return null;
+		Debug.Log ("DYING");
+		Vector3 deathEffectPos = transform.position - (transform.forward/2) + new Vector3(0.0f,1.0f,0.0f);
+		Instantiate (deathEffect, deathEffectPos, deathEffect.transform.rotation);
+		Destroy (gameObject);
 	}
+
 }

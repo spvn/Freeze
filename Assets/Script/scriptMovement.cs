@@ -34,7 +34,10 @@ public class scriptMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if( Input.GetMouseButtonDown(0))
+		{
+			meleeAttack();
+		}
 		if (!isGameOver && Input.GetKeyDown (KeyCode.W)) {
 			//Debug.Log("Pressed Freeze " + isFrozen );
 
@@ -132,6 +135,19 @@ public class scriptMovement : MonoBehaviour {
 		
 		mainCamera.GetComponent<NoiseAndScratches>().enabled = false;
 		
+	}
+
+	void meleeAttack()
+	{
+		RaycastHit meleeHit;
+		Debug.DrawRay (transform.position, mainCamera.transform.forward);
+		if(Physics.Raycast(transform.position, mainCamera.transform.forward,  out meleeHit, 3.0f))
+		{
+			if(meleeHit.transform.gameObject.GetComponent<ScriptEnemy>() != null)
+			{
+				meleeHit.transform.gameObject.GetComponent<ScriptEnemy>().Die();
+			}
+		}
 	}
 
 	public void GameOver(){
