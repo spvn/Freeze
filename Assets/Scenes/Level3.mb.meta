@@ -49,6 +49,7 @@ ModelImporter:
     100082: pPlane1
     100084: pSphere1
     100086: back1
+    100088: pPlane2
     400000: group
     400002: group1
     400004: group10
@@ -93,6 +94,7 @@ ModelImporter:
     400082: pPlane1
     400084: pSphere1
     400086: back1
+    400088: pPlane2
     2300000: pasted__pasted__pasted__pSphere1
     2300002: pasted__pasted__pasted__pSphere1 1
     2300004: pasted__pasted__pasted__pSphere1 2
@@ -108,6 +110,7 @@ ModelImporter:
     2300024: pasted__pSphere1 1
     2300026: pPlane1
     2300028: pSphere1
+    2300030: pPlane2
     3300000: pasted__pasted__pasted__pSphere1
     3300002: pasted__pasted__pasted__pSphere1 1
     3300004: pasted__pasted__pasted__pSphere1 2
@@ -123,6 +126,7 @@ ModelImporter:
     3300024: pasted__pSphere1 1
     3300026: pPlane1
     3300028: pSphere1
+    3300030: pPlane2
     4300000: pPlane1
     4300002: pSphere1
     4300004: pasted__pSphere1
@@ -138,6 +142,7 @@ ModelImporter:
     4300024: pasted__pasted__pSphere1
     4300026: pasted__pasted__pSphere1
     4300028: pasted__pasted__pSphere1
+    4300030: pPlane2
     6400000: pasted__pasted__pasted__pSphere1
     6400002: pasted__pasted__pasted__pSphere1 1
     6400004: pasted__pasted__pasted__pSphere1 2
@@ -153,6 +158,7 @@ ModelImporter:
     6400024: pasted__pSphere1 1
     6400026: pPlane1
     6400028: pSphere1
+    6400030: pPlane2
     9500000: //RootNode
   materials:
     importMaterials: 1
