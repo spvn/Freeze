@@ -53,7 +53,7 @@ public class script2ORMovement : MonoBehaviour {
 		
 		currFramePos = transform.GetChild(1).transform.localPosition;
 		
-		if( Input.GetMouseButtonDown(0))
+		if( Input.GetKeyDown(KeyCode.K))
 		{
 			meleeAttack();
 		}
@@ -64,7 +64,7 @@ public class script2ORMovement : MonoBehaviour {
 			//Debug.Log (mainCamera.transform.GetChild(1).transform.rotation);
 		}
 		
-		if (!gameManager.isGameOver && Input.GetKeyDown (KeyCode.W)) {
+		if (!gameManager.isGameOver && Input.GetKeyDown (KeyCode.J)) {
 			//Debug.Log("Pressed Freeze " + isFrozen );
 			
 			StartCoroutine (glitchEffect ());

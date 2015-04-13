@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 
 	float timeElapsed;
 	// Use this for initialization
-	void Start () {
+	void Start () {	
 		isFrozen = true;
 		timerGUIText = canvas.transform.Find ("Panel").transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
 			timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
 		}
 
-		if (!isGameOver && Input.GetKeyDown (KeyCode.W)) {
+		if (!isGameOver && Input.GetKeyDown (KeyCode.J)) {
 			//Debug.Log("Pressed Freeze " + isFrozen );
 			
 			isFrozen = !isFrozen;
@@ -51,6 +51,15 @@ public class GameManager : MonoBehaviour {
 				canvas.gameObject.transform.Find("StartingScreen").gameObject.SetActive(false);
 			}
 		}
+
+		if (canvas.gameObject.transform.Find ("GameOverScreen").gameObject.activeSelf && Input.GetKeyDown (KeyCode.Space)) {
+			RestartLevel();
+		}
+
+		if (canvas.gameObject.transform.Find ("WinScreen").gameObject.activeSelf && Input.GetKeyDown (KeyCode.Space)) {
+			LoadNextLevel();
+		}
+
 	}
 
 	public void GameOver(){

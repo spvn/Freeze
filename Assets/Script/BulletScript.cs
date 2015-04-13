@@ -6,7 +6,6 @@ public class BulletScript : MonoBehaviour {
 	private Vector3 firstPoint;
 
 	public float speed;
-	public scriptMovement playerMovement;
 
 	private GameManager gameManager;
 	public LineRenderer bulletLine;

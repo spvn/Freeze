@@ -938,6 +938,18 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 354429414}
     m_Modifications:
+    - target: {fileID: 11480850, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: delegates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459816, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: delegates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494224, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: delegates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 22486112, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1096,7 +1108,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22431506, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 167144, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
       propertyPath: m_IsActive
@@ -1194,7 +1206,44 @@ Prefab:
       propertyPath: m_FontData.m_FontSize
       value: 25
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11403954, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: m_Text
+      value: Press space to next level
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470526, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493684, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: m_Text
+      value: 'J TO START/FREEZE
+
+        A / D TO STRAFE'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413078, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: m_Text
+      value: Press space to start over
+      objectReference: {fileID: 0}
+    - target: {fileID: 22403912, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421514, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 992371f9ccc5a834eb89a9e5ec1e603f, type: 2}
+    - target: {fileID: 11413078, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 992371f9ccc5a834eb89a9e5ec1e603f, type: 2}
+    - target: {fileID: 11486402, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11480850, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+    - {fileID: 11459816, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
+    - {fileID: 11494224, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bb3e8a88f418f0846b1615e0ebb7eb2d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &443152536

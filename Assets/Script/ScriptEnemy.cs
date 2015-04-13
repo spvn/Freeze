@@ -124,7 +124,6 @@ public class ScriptEnemy : MonoBehaviour {
 		bulletTargetPoint = player.transform.position + playerOffset + ((player.transform.forward * playerSpeed) * bulletTimeToCurrPos /2) + randomOffset;
 		
 		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);
-		bullet.GetComponent<BulletScript> ().playerMovement = player.GetComponent<scriptMovement>();
 
 		shooting = false;
 	}
