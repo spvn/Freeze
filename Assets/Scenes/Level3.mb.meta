@@ -48,6 +48,7 @@ ModelImporter:
     100080: pasted__pSphere1 1
     100082: pPlane1
     100084: pSphere1
+    100086: back1
     400000: group
     400002: group1
     400004: group10
@@ -91,6 +92,7 @@ ModelImporter:
     400080: pasted__pSphere1 1
     400082: pPlane1
     400084: pSphere1
+    400086: back1
     2300000: pasted__pasted__pasted__pSphere1
     2300002: pasted__pasted__pasted__pSphere1 1
     2300004: pasted__pasted__pasted__pSphere1 2
