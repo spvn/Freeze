@@ -75,11 +75,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 489722}
   - 33: {fileID: 3389722}
-  - 135: {fileID: 13589722}
   - 23: {fileID: 2389722}
   - 114: {fileID: 11414570}
   - 54: {fileID: 5449672}
   - 122: {fileID: 12223434}
+  - 136: {fileID: 13676012}
   m_Layer: 8
   m_Name: Bullet
   m_TagString: Untagged
@@ -144,7 +144,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.2999992, y: .0799999982, z: 4.59000015}
+  m_LocalPosition: {x: 43.8201103, y: .075000003, z: 2.83604741}
   m_LocalScale: {x: .150000006, y: .150000006, z: .150000006}
   m_Children:
   - {fileID: 424010}
@@ -273,7 +273,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  playerMovement: {fileID: 0}
   bulletLine: {fileID: 12033470}
 --- !u!120 &12033470
 LineRenderer:
@@ -335,8 +334,8 @@ Halo:
     serializedVersion: 2
     rgba: 4278255615
   m_Size: .0700000003
---- !u!135 &13589722
-SphereCollider:
+--- !u!136 &13676012
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -344,9 +343,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .0500000007
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: .289999992
+  m_Height: 3
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -.100000001}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

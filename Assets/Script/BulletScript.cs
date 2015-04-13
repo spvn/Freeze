@@ -57,20 +57,20 @@ public class BulletScript : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter( Collision col )
-	{	
-		Debug.Log ("Collided bullet " + col.gameObject.name + " at " + this.transform.localPosition.ToString());
-
-		Destroy(gameObject);
-		if (col.gameObject.layer == 9) {
-			//Debug.Log("Bullet position: " + this.transform.localPosition +" hit player " + playerMovement.gameObject.transform.localPosition);
-			gameManager.GameOver();
-		}
-	}
+//	void OnCollisionEnter( Collision col )
+//	{	
+//		Destroy(gameObject);
+//		if (col.gameObject.layer == 9) {
+//			Debug.Log ("Collided bullet " + col.gameObject.name + " at " + this.transform.localPosition.ToString());
+//			//Debug.Log("Bullet position: " + this.transform.localPosition +" hit player " + playerMovement.gameObject.transform.localPosition);
+//			gameManager.GameOver();
+//		}
+//	}
 
 	void OnTriggerEnter( Collider other )
 	{
 		if (other.gameObject.layer == 9) {
+			Debug.Log ("Collided bullet " + other.gameObject.name + " at " + this.transform.localPosition.ToString());
 			gameManager.GameOver();
 		}
 		Destroy (gameObject);
