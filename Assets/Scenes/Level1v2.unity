@@ -975,6 +975,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11414832, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: path.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 466342, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 44.5900002
@@ -2250,7 +2254,7 @@ Transform:
   m_LocalScale: {x: .400000006, y: .400000006, z: .400000006}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1001 &1123152958
 Prefab:
   m_ObjectHideFlags: 0
