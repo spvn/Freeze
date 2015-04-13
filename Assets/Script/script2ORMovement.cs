@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
 
-public class scriptORMovement : MonoBehaviour {
+public class script2ORMovement : MonoBehaviour {
 	
 	public float playerSpeed = 1.0f;
 	public bool hasCollisionInFront;
@@ -16,34 +16,27 @@ public class scriptORMovement : MonoBehaviour {
 	private Vector3 direction;
 	private float playerWidth;
 
-	public GameObject mainCamera;
 	private int currNode = 0;
 	private Vector3 forwardDirection;
 	private ColorCorrectionCurves[] cccObjects;
 	private NoiseAndScratches[] nsObjects;
 	private Vector3 lastFramePos;
 	private Vector3 currFramePos;
-	private Vector3 leftEyePos;
-	private Vector3 rightEyePos;
 	Vector3 oculusMovement;
 	
 	
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();
-		playerWidth = GetComponent<MeshRenderer>().bounds.size.x;
+		if (controller)
+		Debug.Log (controller.gameObject.name);
+		playerWidth = controller.radius * 2;
 		forwardDirection = Vector3.Normalize (path[0].position - transform.position);
 		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
-		cccObjects = mainCamera.GetComponentsInChildren<ColorCorrectionCurves>();
-		nsObjects = mainCamera.GetComponentsInChildren<NoiseAndScratches>();
+		cccObjects = GetComponentsInChildren<ColorCorrectionCurves>();
+		nsObjects = GetComponentsInChildren<NoiseAndScratches>();
 		
-		
-		//leftEyePos = OVRManager.display.GetEyePose(OVREye.Left).position;
-		//rightEyePos = OVRManager.display.GetEyePose(OVREye.Right).position;
-		//lastFramePos = (leftEyePos + rightEyePos)/2;
-		
-		//lastFramePos = OVRManager.display.GetHeadPose().position;
-		lastFramePos = mainCamera.transform.GetChild(1).transform.localPosition;
+		lastFramePos = transform.GetChild(1).transform.localPosition;
 		
 		
 	}
@@ -51,16 +44,13 @@ public class scriptORMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+		
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			OVRManager.display.RecenterPose();
 		}
 		
-		//currFramePos = OVRManager.display.GetHeadPose().position;
-		currFramePos = mainCamera.transform.GetChild(1).transform.localPosition;
 		
-		//leftEyePos = OVRManager.display.GetEyePose(OVREye.Left).position;
-		//rightEyePos = OVRManager.display.GetEyePose(OVREye.Right).position;
-		//currFramePos = (leftEyePos + rightEyePos)/2;
+		currFramePos = transform.GetChild(1).transform.localPosition;
 		
 		if( Input.GetMouseButtonDown(0))
 		{
@@ -69,7 +59,7 @@ public class scriptORMovement : MonoBehaviour {
 	
 		if (Input.GetKeyDown (KeyCode.T))
 		{
-			Debug.Log (mainCamera.transform.GetChild(1).transform.position);
+			Debug.Log (transform.GetChild(1).transform.localPosition);
 			//Debug.Log (mainCamera.transform.GetChild(1).transform.rotation);
 		}
 		
@@ -100,7 +90,8 @@ public class scriptORMovement : MonoBehaviour {
 			//Debug.Log ("AFTER: " + direction);
 			oculusMovement = lastFramePos - currFramePos;
 			
-			controller.SimpleMove ((direction * playerSpeed) + (oculusMovement / Time.deltaTime));
+			controller.SimpleMove ((direction * playerSpeed));
+			//Debug.Log ((direction * playerSpeed));
 			
 			
 			RaycastHit hit;
@@ -125,7 +116,7 @@ public class scriptORMovement : MonoBehaviour {
 			//Time.timeScale = 0.5f; FOR SLOWMO PURPOSES
 			oculusMovement = lastFramePos - currFramePos;
 			
-			controller.SimpleMove (oculusMovement / Time.deltaTime);
+			
 			
 			foreach (ColorCorrectionCurves obj in cccObjects) {
 				obj.enabled = true;
@@ -138,19 +129,21 @@ public class scriptORMovement : MonoBehaviour {
 	
 	void OnTriggerEnter( Collider col )
 	{	
-		GameObject.Destroy(col.gameObject);
-		Debug.Log("working");
-		currNode++;
-
-		if (currNode == path.Length) {
-			gameManager.isFrozen = true;
-			gameManager.isGameOver = true;
-			canvas.gameObject.transform.Find("WinScreen").gameObject.SetActive (true);
+		if (col.gameObject.layer == 10) {
+			GameObject.Destroy(col.gameObject);
+			Debug.Log("working");
+			currNode++;
+	
+			if (currNode == path.Length) {
+				gameManager.isFrozen = true;
+				gameManager.isGameOver = true;
+				canvas.gameObject.transform.Find("WinScreen").gameObject.SetActive (true);
+			}
+	
+			forwardDirection = Vector3.Normalize (path[currNode].position - path[currNode-1].position);
+			Quaternion targetRotation = Quaternion.LookRotation (path[currNode].position - transform.position);
+			StartCoroutine(RotateTowards(targetRotation));
 		}
-
-		forwardDirection = Vector3.Normalize (path[currNode].position - path[currNode-1].position);
-		Quaternion targetRotation = Quaternion.LookRotation (path[currNode].position - transform.position);
-		StartCoroutine(RotateTowards(targetRotation));
 		
 	}
 
@@ -182,8 +175,8 @@ public class scriptORMovement : MonoBehaviour {
 	void meleeAttack()
 	{
 		RaycastHit meleeHit;
-		Debug.DrawRay (transform.position, mainCamera.transform.forward);
-		if(Physics.Raycast(transform.position, mainCamera.transform.forward,  out meleeHit, 3.0f))
+		Debug.DrawRay (transform.position, transform.forward);
+		if(Physics.Raycast(transform.position, transform.forward,  out meleeHit, 3.0f))
 		{
 			if(meleeHit.transform.gameObject.GetComponent<ScriptEnemy>() != null)
 			{

@@ -16,7 +16,7 @@ public class ScriptEnemy : MonoBehaviour {
 	public bool isHostile = true;
 	Quaternion initialAngle;
 	Vector3 bulletOffset = new Vector3(0, 1.5f, 0);
-	Vector3 playerOffset = new Vector3(0, 0.3f, 0);
+	Vector3 playerOffset = new Vector3(0, 0.0f, 0);
 	Vector3 randomOffset;
 	Vector3 rotationVector;
 	float playerSpeed;
@@ -29,7 +29,7 @@ public class ScriptEnemy : MonoBehaviour {
 	void Start () {
 		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
 		initialAngle = this.transform.localRotation;
-		playerSpeed = player.GetComponent<scriptMovement>().playerSpeed;
+		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
 		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;
 		shotSound = GetComponent<AudioSource>();
 	}
@@ -118,7 +118,9 @@ public class ScriptEnemy : MonoBehaviour {
 		Debug.Log (bulletTimeToCurrPos);
 		
 		//playerOffset += player.transform.forward * playerSpeed;
-		randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracyY/2 * -1, 0f) + 0.5f, Random.Range (inaccuracy*-1, inaccuracy));
+		//randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracyY/2 * -1, 0f) + 0.5f, Random.Range (inaccuracy*-1, inaccuracy));
+		randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracyY * -1, 0f), Random.Range (inaccuracy*-1, inaccuracy));
+		
 		bulletTargetPoint = player.transform.position + playerOffset + ((player.transform.forward * playerSpeed) * bulletTimeToCurrPos /2) + randomOffset;
 		
 		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isFrozen = true;
-		timerGUIText = canvas.transform.Find ("TimerText").gameObject;
+		timerGUIText = canvas.transform.Find ("Panel").transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
 	}
 	
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
 			startedGame = true;
 		}
 
-		if (startedGame) {
+		if (startedGame && !isGameOver) {
 			timeElapsed += Time.deltaTime;
 			timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
 		}

@@ -50,7 +50,7 @@ public class BulletScript : MonoBehaviour {
 
 	void checkHitPlayer()
 	{
-		if (Physics.Raycast (firstPoint, bulletDirection, out objHit, Mathf.Infinity, (1<<9)) && objHit.collider.gameObject.name == "Player") {
+		if (Physics.Raycast (firstPoint, bulletDirection, out objHit, Mathf.Infinity, (1<<9))) {
 			bulletLine.SetColors (Color.red, Color.red);
 		} else {
 			bulletLine.SetColors(Color.green, Color.green);
@@ -63,7 +63,7 @@ public class BulletScript : MonoBehaviour {
 		Debug.Log ("Collided bullet " + col.gameObject.name + " at " + this.transform.localPosition.ToString());
 
 		Destroy(gameObject);
-		if (col.gameObject.name == "Player") {
+		if (col.gameObject.layer == 9) {
 			//Debug.Log("Bullet position: " + this.transform.localPosition +" hit player " + playerMovement.gameObject.transform.localPosition);
 			gameManager.GameOver();
 		}
@@ -71,6 +71,9 @@ public class BulletScript : MonoBehaviour {
 
 	void OnTriggerEnter( Collider other )
 	{
+		if (other.gameObject.layer == 9) {
+			gameManager.GameOver();
+		}
 		Destroy (gameObject);
 	}
 }
