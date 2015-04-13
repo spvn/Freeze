@@ -5,6 +5,7 @@ using UnityStandardAssets.ImageEffects;
 public class script2ORMovement : MonoBehaviour {
 	
 	public float playerSpeed = 1.0f;
+	public float lateralSpeed = 3.0f;
 	public bool hasCollisionInFront;
 	public float collisionDist = 0.51f;
 	public float rotateSpeed = 2.0f;
@@ -13,7 +14,7 @@ public class script2ORMovement : MonoBehaviour {
 	public GameManager gameManager;
 	
 	private CharacterController controller;
-	private Vector3 direction;
+	private Vector3 sideDirection;
 	private float playerWidth;
 
 	private int currNode = 0;
@@ -78,19 +79,22 @@ public class script2ORMovement : MonoBehaviour {
 			
 			float horizontal = Input.GetAxis ("Horizontal");
 			
-			direction = new Vector3 (horizontal, 0, 0);
-			direction = transform.rotation * direction;
+			sideDirection = new Vector3 (horizontal, 0, 0);
+			sideDirection = transform.rotation * sideDirection;
 			//Debug.Log ("BEFORE: " + direction);
 			
-			if (!hasCollisionInFront)
+			if (!hasCollisionInFront) {
+				controller.SimpleMove ((forwardDirection * playerSpeed) + (sideDirection * lateralSpeed));
 				
-				direction += forwardDirection;
+			}
+			else {
+				controller.SimpleMove ((sideDirection * lateralSpeed));
+			}
 			
 			//direction = Vector3.Normalize(direction);
 			//Debug.Log ("AFTER: " + direction);
-			oculusMovement = lastFramePos - currFramePos;
+			//oculusMovement = lastFramePos - currFramePos;
 			
-			controller.SimpleMove ((direction * playerSpeed));
 			//Debug.Log ((direction * playerSpeed));
 			
 			
