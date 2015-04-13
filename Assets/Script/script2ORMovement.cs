@@ -24,7 +24,7 @@ public class script2ORMovement : MonoBehaviour {
 	private Vector3 lastFramePos;
 	private Vector3 currFramePos;
 	Vector3 oculusMovement;
-	private Animator playerAnimator;
+	//private Animator playerAnimator;
 	
 	
 	// Use this for initialization
@@ -37,7 +37,7 @@ public class script2ORMovement : MonoBehaviour {
 		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
 		cccObjects = GetComponentsInChildren<ColorCorrectionCurves>();
 		nsObjects = GetComponentsInChildren<NoiseAndScratches>();
-		playerAnimator = this.transform.Find ("playerAnimator").GetComponent<Animator> ();
+		//playerAnimator = this.transform.Find ("playerAnimator").GetComponent<Animator> ();
 		
 		lastFramePos = transform.GetChild(1).transform.localPosition;
 		
@@ -181,7 +181,7 @@ public class script2ORMovement : MonoBehaviour {
 	void meleeAttack()
 	{
 		RaycastHit meleeHit;
-		playerAnimator.Play ("R punch");
+		//playerAnimator.Play ("R punch");
 		if(Physics.Raycast(transform.position, transform.forward,  out meleeHit, 3.0f))
 		{
 			if(meleeHit.transform.gameObject.GetComponent<ScriptEnemy>() != null)
