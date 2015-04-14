@@ -1926,6 +1926,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 33
+--- !u!1 &989499549
+GameObject:
+  m_PrefabParentObject: {fileID: 165934, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+  m_PrefabInternal: {fileID: 545698936}
+--- !u!114 &989499554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989499549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf96de38efe38a24fabc43ef797e9968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oculusEnabled: 1
+  oculusCameraBinded: 1
+  openWindowOnEnable: 1
+  disableCameraOnCloseWindow: 1
+  overwriteViewportRect: 1
+  oculusRenderEventID: 1
+  oculusCameraViewportHeight: .550000012
+  issuePluginEventEnabled: 1
+  renderEventIDEnabled: 1
+  renderEventID: 1411031728
+  targetCamera: {fileID: 0}
+  targetTexture: {fileID: 0}
+  _inspectorAdvanced: 0
 --- !u!4 &993744661
 Transform:
   m_PrefabParentObject: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
@@ -2255,6 +2283,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!1 &1118544417
+GameObject:
+  m_PrefabParentObject: {fileID: 139670, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+  m_PrefabInternal: {fileID: 545698936}
+--- !u!114 &1118544422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118544417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf96de38efe38a24fabc43ef797e9968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oculusEnabled: 1
+  oculusCameraBinded: 1
+  openWindowOnEnable: 1
+  disableCameraOnCloseWindow: 1
+  overwriteViewportRect: 1
+  oculusRenderEventID: 1
+  oculusCameraViewportHeight: .550000012
+  issuePluginEventEnabled: 1
+  renderEventIDEnabled: 1
+  renderEventID: 1411031728
+  targetCamera: {fileID: 0}
+  targetTexture: {fileID: 0}
+  _inspectorAdvanced: 0
 --- !u!1001 &1123152958
 Prefab:
   m_ObjectHideFlags: 0
