@@ -5,7 +5,6 @@ using System.Collections;
 public class Highscore : MonoBehaviour {
 	
 	public static Text displayHighscore;
-	public GameManager gm;
 	// Use this for initialization
 	void Start () {
 		displayHighscore = GetComponent <Text> ();
@@ -13,15 +12,17 @@ public class Highscore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (ScoreManager.score > ScoreManager.highscore) {
+			displayHighscore.text = "New High Score: " + ScoreManager.score;
+		}
 		if (ScoreManager.score < ScoreManager.highscore) {
 			displayHighscore.text = "High Score to Beat: " + ScoreManager.highscore;
 		}
-		if (ScoreManager.score > ScoreManager.highscore) {
-			displayHighscore.text = "New High Score: " + ScoreManager.score;
-			displayHighscore.color = Color.yellow;
-			displayHighscore.color = Color.red;
-		}
+	}
+
+	public static void forceHighScoreDisplay () {
+		displayHighscore.text = "New High Score: " + ScoreManager.score;
+
 	}
 
 }

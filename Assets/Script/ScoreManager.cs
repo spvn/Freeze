@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
    	public static Text currentScore;
 
     void Start ()
-    {
+    {	
 		currentScore = GetComponent <Text> ();
         score = 0;
     }
