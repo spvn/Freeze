@@ -7,16 +7,19 @@ public class BulletScript : MonoBehaviour {
 
 	public float speed;
 
+	public GameObject player;
 	private GameManager gameManager;
 	public LineRenderer bulletLine;
 
 	private Vector3 bulletDirection = Vector3.zero;
 	private float bulletLineLength;
 	private RaycastHit objHit;
+	private Vector3 previousPlayerPos;
 
 	// Use this for initialization
 	void Start () {
 		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		player = GameObject.Find("OVRCameraRig").transform.gameObject;
 	}
 
 	public void setBulletDirection(Vector3 targetVector)
@@ -41,6 +44,7 @@ public class BulletScript : MonoBehaviour {
 	void Update () {
 
 		checkHitPlayer ();
+		checkNearMisses ();
 		if ( !gameManager.isGameOver && bulletDirection != Vector3.zero && !gameManager.isFrozen) {
 			this.transform.localPosition += bulletDirection * speed * Time.deltaTime;
 		}
@@ -57,6 +61,16 @@ public class BulletScript : MonoBehaviour {
 	
 	}
 
+	void checkNearMisses () {
+		Vector3 currentPlayerPos = player.transform.position;
+		float distOfBulletAndPlayer = Vector3.Distance (currentPlayerPos, transform.position);
+		if (currentPlayerPos != previousPlayerPos && distOfBulletAndPlayer < 3.0) {
+			ScoreManager.score += 10;
+			previousPlayerPos = currentPlayerPos;
+		}
+
+	}
+
 //	void OnCollisionEnter( Collision col )
 //	{	
 //		Destroy(gameObject);
@@ -70,8 +84,11 @@ public class BulletScript : MonoBehaviour {
 	void OnTriggerEnter( Collider other )
 	{
 		if (other.gameObject.layer == 9) {
-			Debug.Log ("Collided bullet " + other.gameObject.name + " at " + this.transform.localPosition.ToString());
-			gameManager.GameOver();
+			Debug.Log ("Collided bullet " + other.gameObject.name + " at " + this.transform.localPosition.ToString ());
+			gameManager.GameOver ();
+		} else {
+			// Bullet misses the player
+			ScoreManager.score += 1;
 		}
 		Destroy (gameObject);
 	}
