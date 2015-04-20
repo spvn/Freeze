@@ -5,8 +5,8 @@ using System.Collections;
 public class ScoreManager : MonoBehaviour
 {
     public static int score;
-
-    Text currentScore;
+	public static int highscore = 0;
+   	public static Text currentScore;
 
     void Start ()
     {
@@ -14,10 +14,14 @@ public class ScoreManager : MonoBehaviour
         score = 0;
     }
 
-
     void Update ()
     {
         currentScore.text = "Score: " + score;
     }
-	
+
+	public static void updateHighscore () {
+		if (score > highscore) {
+			highscore = score;
+		}
+	}
 }

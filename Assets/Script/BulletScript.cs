@@ -64,7 +64,7 @@ public class BulletScript : MonoBehaviour {
 	void checkNearMisses () {
 		Vector3 currentPlayerPos = player.transform.position;
 		float distOfBulletAndPlayer = Vector3.Distance (currentPlayerPos, transform.position);
-		if (currentPlayerPos != previousPlayerPos && distOfBulletAndPlayer < 3.0) {
+		if (currentPlayerPos != previousPlayerPos && distOfBulletAndPlayer < 0.75) {
 			ScoreManager.score += 10;
 			previousPlayerPos = currentPlayerPos;
 		}

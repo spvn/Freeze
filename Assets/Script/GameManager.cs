@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	public bool isFrozen;
 	public bool isGameOver = false;
 	public GameObject canvas;
+	public Highscore hs;
 
 	const int NUM_LEVELS = 1;
 
@@ -63,6 +64,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void GameOver(){
+		ScoreManager.updateHighscore ();
 		canvas.gameObject.transform.Find("GameOverScreen").gameObject.SetActive (true);
 		isFrozen = true;
 		isGameOver = true;
