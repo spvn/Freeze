@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
 			timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
 		}
 
-		if (!isGameOver && Input.GetKeyDown (KeyCode.J)) {
+		if (!isGameOver && (Input.GetKeyDown (KeyCode.J) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
 			//Debug.Log("Pressed Freeze " + isFrozen );
 			
 			isFrozen = !isFrozen;
@@ -53,11 +53,11 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 
-		if (canvas.gameObject.transform.Find ("GameOverScreen").gameObject.activeSelf && Input.GetKeyDown (KeyCode.Space)) {
+		if (canvas.gameObject.transform.Find ("GameOverScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
 			RestartLevel();
 		}
 
-		if (canvas.gameObject.transform.Find ("WinScreen").gameObject.activeSelf && Input.GetKeyDown (KeyCode.Space)) {
+		if (canvas.gameObject.transform.Find ("WinScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
 			LoadNextLevel();
 		}
 

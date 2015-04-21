@@ -115,7 +115,6 @@ public class ScriptEnemy : MonoBehaviour {
 		
 		//Time of flight to reach player
 		float bulletTimeToCurrPos = (player.transform.position - transform.position).magnitude / bullet.GetComponent<BulletScript>().speed;
-		Debug.Log (bulletTimeToCurrPos);
 		
 		//playerOffset += player.transform.forward * playerSpeed;
 		//randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracyY/2 * -1, 0f) + 0.5f, Random.Range (inaccuracy*-1, inaccuracy));

@@ -30,8 +30,6 @@ public class script2ORMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();
-		if (controller)
-		Debug.Log (controller.gameObject.name);
 		playerWidth = controller.radius * 2;
 		forwardDirection = Vector3.Normalize (path[0].position - transform.position);
 		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
@@ -48,25 +46,19 @@ public class script2ORMovement : MonoBehaviour {
 	void Update () {
 		
 		
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
 			OVRManager.display.RecenterPose();
 		}
 		
 		
 		currFramePos = transform.GetChild(1).transform.localPosition;
 		
-		if( Input.GetKeyDown(KeyCode.K))
+		if( Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown (KeyCode.JoystickButton1))
 		{
 			meleeAttack();
 		}
-	
-		if (Input.GetKeyDown (KeyCode.T))
-		{
-			Debug.Log (transform.GetChild(1).transform.localPosition);
-			//Debug.Log (mainCamera.transform.GetChild(1).transform.rotation);
-		}
 		
-		if (!gameManager.isGameOver && Input.GetKeyDown (KeyCode.J)) {
+		if (!gameManager.isGameOver && (Input.GetKeyDown (KeyCode.J) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
 			//Debug.Log("Pressed Freeze " + isFrozen );
 			
 			StartCoroutine (glitchEffect ());
