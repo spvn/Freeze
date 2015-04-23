@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletScript : MonoBehaviour {
+public class scriptBullet : MonoBehaviour {
 	private Vector3 targetPoint;
 	private Vector3 firstPoint;
 

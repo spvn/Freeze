@@ -114,7 +114,7 @@ public class ScriptEnemy : MonoBehaviour {
 		shotSound.Play();
 		
 		//Time of flight to reach player
-		float bulletTimeToCurrPos = (player.transform.position - transform.position).magnitude / bullet.GetComponent<BulletScript>().speed;
+		float bulletTimeToCurrPos = (player.transform.position - transform.position).magnitude / bullet.GetComponent<scriptBullet>().speed;
 		
 		//playerOffset += player.transform.forward * playerSpeed;
 		//randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracyY/2 * -1, 0f) + 0.5f, Random.Range (inaccuracy*-1, inaccuracy));
@@ -122,7 +122,7 @@ public class ScriptEnemy : MonoBehaviour {
 		
 		bulletTargetPoint = player.transform.position + playerOffset + ((player.transform.forward * playerSpeed) * bulletTimeToCurrPos /2) + randomOffset;
 		
-		bullet.GetComponent<BulletScript> ().setBulletDirection (bulletTargetPoint);
+		bullet.GetComponent<scriptBullet> ().setBulletDirection (bulletTargetPoint);
 
 		shooting = false;
 	}

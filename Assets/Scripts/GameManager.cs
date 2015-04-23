@@ -66,7 +66,6 @@ public class GameManager : MonoBehaviour {
 
 	public void GameOver(){
 		ScoreManager.updateHighscore ();
-		Highscore.forceHighScoreDisplay ();
 		canvas.gameObject.transform.Find("GameOverScreen").gameObject.SetActive (true);
 		timeElapsed = 0.0f;
 		isFrozen = true;
