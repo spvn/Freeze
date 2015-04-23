@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
 	bool startedGame = false;
 
 	public static float timeElapsed;
+
 	// Use this for initialization
 	void Start () {	
 		isFrozen = true;
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour {
 		ScoreManager.updateHighscore ();
 		Highscore.forceHighScoreDisplay ();
 		canvas.gameObject.transform.Find("GameOverScreen").gameObject.SetActive (true);
+		timeElapsed = 0.0f;
 		isFrozen = true;
 		isGameOver = true;
 	}
