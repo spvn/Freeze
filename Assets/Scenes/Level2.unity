@@ -334,34 +334,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43874447067ee924ca5602ef017aee5a, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &464754386
-GameObject:
-  m_PrefabParentObject: {fileID: 139670, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-  m_PrefabInternal: {fileID: 1270225662}
---- !u!114 &464754391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 464754386}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96de38efe38a24fabc43ef797e9968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oculusEnabled: 1
-  oculusCameraBinded: 1
-  openWindowOnEnable: 1
-  disableCameraOnCloseWindow: 1
-  overwriteViewportRect: 1
-  oculusRenderEventID: 1
-  oculusCameraViewportHeight: .550000012
-  issuePluginEventEnabled: 1
-  renderEventIDEnabled: 1
-  renderEventID: 1411031728
-  targetCamera: {fileID: 0}
-  targetTexture: {fileID: 0}
-  _inspectorAdvanced: 0
 --- !u!1001 &469435105
 Prefab:
   m_ObjectHideFlags: 0
@@ -1037,7 +1009,20 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1945645845}
-    m_RemovedComponents: []
+    - target: {fileID: 11461642, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111060, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 101176, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400386, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1271781306
