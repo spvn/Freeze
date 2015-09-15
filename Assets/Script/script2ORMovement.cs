@@ -5,7 +5,7 @@ using UnityStandardAssets.ImageEffects;
 public class script2ORMovement : MonoBehaviour {
 	
 	public float playerSpeed = 1.0f;
-	public float lateralSpeed = 3.0f;
+	public float lateralSpeed = 5.0f;
 	public bool hasCollisionInFront;
 	public float collisionDist = 0.51f;
 	public float rotateSpeed = 2.0f;
@@ -24,11 +24,13 @@ public class script2ORMovement : MonoBehaviour {
 	private Vector3 lastFramePos;
 	private Vector3 currFramePos;
 	Vector3 oculusMovement;
-	//private Animator playerAnimator;
-	
-	
-	// Use this for initialization
-	void Start () {
+    //private Animator playerAnimator;
+
+    // For testing of jump
+    public float jumpSpeed = 3.0f;
+
+    // Use this for initialization
+    void Start () {
 		controller = GetComponent<CharacterController>();
 		playerWidth = controller.radius * 2;
 		forwardDirection = Vector3.Normalize (path[0].position - transform.position);
@@ -45,16 +47,25 @@ public class script2ORMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		
 		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
-			OVRManager.display.RecenterPose();
+			OVRManager.display.RecenterPose();  
 		}
-		
-		
+
+        // Jump
+        if(controller.isGrounded)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftAlt))
+            {
+                transform.Translate(Vector3.up * jumpSpeed * Time.deltaTime, Space.World);
+            }
+        }
+        
+
+        // Get position of player's hit area
 		currFramePos = transform.GetChild(1).transform.localPosition;
 		
-		if( Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown (KeyCode.JoystickButton1))
-		{
+
+		if( Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown (KeyCode.JoystickButton1)) {
 			meleeAttack();
 		}
 		
@@ -84,14 +95,13 @@ public class script2ORMovement : MonoBehaviour {
 			else {
 				controller.SimpleMove ((sideDirection * lateralSpeed));
 			}
-			
-			//direction = Vector3.Normalize(direction);
-			//Debug.Log ("AFTER: " + direction);
-			//oculusMovement = lastFramePos - currFramePos;
-			
-			//Debug.Log ((direction * playerSpeed));
-			
-			
+
+            //direction = Vector3.Normalize(direction);
+            //Debug.Log ("AFTER: " + direction);
+            //oculusMovement = lastFramePos - currFramePos;
+
+            //Debug.Log ((direction * playerSpeed));
+
 			RaycastHit hit;
 			Ray checkCollisionRayLeft = new Ray (transform.position + (-transform.right * (playerWidth / 2)) + transform.forward*playerWidth/2, transform.forward);
 			Ray checkCollisionRayRight = new Ray (transform.position + (transform.right * (playerWidth / 2)) + transform.forward*playerWidth/2, transform.forward);
@@ -100,10 +110,9 @@ public class script2ORMovement : MonoBehaviour {
 			if (Physics.Raycast (checkCollisionRayLeft, collisionDist, (1<<0)) 
 			    || Physics.Raycast (checkCollisionRayRight, collisionDist, (1<<0))
 			    || Physics.Raycast (checkCollisionRayCenter, collisionDist, (1<<0))) {
-			    
-					hasCollisionInFront = true;
-				//				Debug.Log (hit.collider.gameObject.name);
-			} else {
+				hasCollisionInFront = true;
+                //				Debug.Log (hit.collider.gameObject.name);
+            } else {
 				hasCollisionInFront = false;
 			}
 			
