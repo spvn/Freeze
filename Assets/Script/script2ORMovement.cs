@@ -27,7 +27,10 @@ public class script2ORMovement : MonoBehaviour {
     //private Animator playerAnimator;
 
     // For testing of jump
-    public float jumpSpeed = 3.0f;
+    public float jumpSpeed = 10.0f;
+    public float gravity = 9.81f;
+    private float verticalVelocity = 0f;
+    private Vector3 moveDirection;
 
     // Use this for initialization
     void Start () {
@@ -43,23 +46,31 @@ public class script2ORMovement : MonoBehaviour {
 		
 		
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
-		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
-			OVRManager.display.RecenterPose();  
-		}
 
         // Jump
-        if(controller.isGrounded)
+        if (controller.isGrounded)
         {
+            verticalVelocity = -1;
             if (Input.GetKeyDown(KeyCode.LeftAlt))
             {
-                transform.Translate(Vector3.up * jumpSpeed * Time.deltaTime, Space.World);
+                verticalVelocity = jumpSpeed;
+                //transform.Translate(Vector3.up * jumpSpeed * 0.5f * Time.smoothDeltaTime); // This one will teleport to highest point then drop down
             }
         }
-        
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection *= playerSpeed;
+        // if player jumps
+        verticalVelocity -= gravity * Time.deltaTime; // vertical speeds decrease over time due to gravity
+        moveDirection.y = verticalVelocity;
+        controller.Move(moveDirection * Time.deltaTime);
+
+        if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
+			OVRManager.display.RecenterPose();  
+		} 
 
         // Get position of player's hit area
 		currFramePos = transform.GetChild(1).transform.localPosition;
