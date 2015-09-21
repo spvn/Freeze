@@ -51,21 +51,18 @@ public class script2ORMovement : MonoBehaviour {
 	void Update () {
 
         // Jump
-        if (controller.isGrounded)
+        if (controller.isGrounded && !gameManager.isGameOver)
         {
-            verticalVelocity = -1;
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection *= playerSpeed;
             if (Input.GetKeyDown(KeyCode.LeftAlt))
             {
-                verticalVelocity = jumpSpeed;
-                //transform.Translate(Vector3.up * jumpSpeed * 0.5f * Time.smoothDeltaTime); // This one will teleport to highest point then drop down
+                moveDirection.y = jumpSpeed;
             }
         }
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        moveDirection = transform.TransformDirection(moveDirection);
-        moveDirection *= playerSpeed;
         // if player jumps
-        verticalVelocity -= gravity * Time.deltaTime; // vertical speeds decrease over time due to gravity
-        moveDirection.y = verticalVelocity;
+        moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
 
         if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
