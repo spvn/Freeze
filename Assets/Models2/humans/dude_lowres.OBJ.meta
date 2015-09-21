@@ -1,45 +1,42 @@
 fileFormatVersion: 2
-guid: 005107a1b64395c4e8593e4ea7baeb12
-timeCreated: 1441372043
+guid: 776e80d8e27885d42b04d99cce436e90
+timeCreated: 1442813046
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: pCube1
-    100002: pCube2
-    100004: pCube3
-    100006: pCylinder1
-    100008: pCylinder2
-    100010: //RootNode
-    400000: pCube1
-    400002: pCube2
-    400004: pCube3
-    400006: pCylinder1
-    400008: pCylinder2
-    400010: //RootNode
-    2300000: pCube1
-    2300002: pCube2
-    2300004: pCube3
-    2300006: pCylinder1
-    2300008: pCylinder2
-    3300000: pCube1
-    3300002: pCube2
-    3300004: pCube3
-    3300006: pCylinder1
-    3300008: pCylinder2
-    4300000: pCube1
-    4300002: pCylinder1
-    4300004: pCube2
-    4300006: pCylinder2
-    4300008: pCube3
-    6400000: pCube1
-    6400002: pCube2
-    6400004: pCube3
-    6400006: pCylinder1
-    6400008: pCylinder2
-    7400000: Take 001
-    9500000: //RootNode
-    11100000: //RootNode
+    100000: //RootNode
+    100002: Group1
+    100004: Group2
+    100006: Group3
+    100008: Group4
+    100010: Group5
+    100012: Group7
+    400000: //RootNode
+    400002: Group1
+    400004: Group2
+    400006: Group3
+    400008: Group4
+    400010: Group5
+    400012: Group7
+    2300000: Group1
+    2300002: Group2
+    2300004: Group3
+    2300006: Group4
+    2300008: Group5
+    2300010: Group7
+    3300000: Group1
+    3300002: Group2
+    3300004: Group3
+    3300006: Group4
+    3300008: Group5
+    3300010: Group7
+    4300000: Group1
+    4300002: Group2
+    4300004: Group3
+    4300006: Group4
+    4300008: Group5
+    4300010: Group7
   materials:
     importMaterials: 1
     materialName: 0
@@ -97,7 +94,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
