@@ -123,8 +123,6 @@ public class script2ORMovement : MonoBehaviour {
             } else {
 				hasCollisionInFront = false;
 			}
-			
-			
 		} 
 		
 		else {
