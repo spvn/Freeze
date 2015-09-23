@@ -39,7 +39,7 @@ public class DoorControl : MonoBehaviour {
 			}
 
 			if (transform.localEulerAngles.y > angleOpened) { 
-				Debug.Log (transform.localEulerAngles.y);
+				//Debug.Log (transform.localEulerAngles.y);
 				transform.RotateAround (transform.position, Vector3.up, -1 * openingSpeed * Time.deltaTime);
 			} else {
 				doorIsOpened = true;
