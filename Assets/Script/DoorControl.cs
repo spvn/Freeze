@@ -15,7 +15,7 @@ public class DoorControl : MonoBehaviour {
 
 	void Start () {
 		doorIsOpened = false;
-		triggerDoorOpen = false;
+		triggerDoorOpen = true;
 		angleClosed = transform.localEulerAngles.y;
 	}
 
@@ -39,6 +39,7 @@ public class DoorControl : MonoBehaviour {
 			}
 
 			if (transform.localEulerAngles.y > angleOpened) { 
+				Debug.Log (transform.localEulerAngles.y);
 				transform.RotateAround (transform.position, Vector3.up, -1 * openingSpeed * Time.deltaTime);
 			} else {
 				doorIsOpened = true;

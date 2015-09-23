@@ -444,6 +444,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 137322, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400386, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
@@ -549,7 +553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477650, guid: 94628c1620dc8b746ba10d9db09c2e22, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -66.3000031
+      value: -55.8199997
       objectReference: {fileID: 0}
     - target: {fileID: 477650, guid: 94628c1620dc8b746ba10d9db09c2e22, type: 2}
       propertyPath: m_LocalPosition.y
@@ -557,7 +561,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477650, guid: 94628c1620dc8b746ba10d9db09c2e22, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 6
+      value: -10.54
       objectReference: {fileID: 0}
     - target: {fileID: 477650, guid: 94628c1620dc8b746ba10d9db09c2e22, type: 2}
       propertyPath: m_LocalRotation.x
@@ -597,7 +601,7 @@ Prefab:
       objectReference: {fileID: 146832, guid: 283c31c58e616114786b4719cea7f018, type: 2}
     - target: {fileID: 116762, guid: 94628c1620dc8b746ba10d9db09c2e22, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94628c1620dc8b746ba10d9db09c2e22, type: 2}
@@ -692,8 +696,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6213e9707b9270b41b27170ae702964a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angleOpened: 0
-  openingSpeed: 0
+  angleOpened: 270
+  openingSpeed: 10
   rotateClockwiseToOpen: 0
   triggerDoorOpen: 1
 --- !u!23 &1716363588

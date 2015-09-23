@@ -16,8 +16,8 @@ public class scriptAudio : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (audio.isPlaying == false) {
-			audio.clip = bgm;
-			audio.Play ();
+			//audio.clip = bgm;
+			//audio.Play ();
 		}
 	}
 	
