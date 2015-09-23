@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
 
+//TODO: movement based on events
+
 public class script2ORMovement : MonoBehaviour {
 	
 	public float playerSpeed = 1.0f;
@@ -43,8 +45,6 @@ public class script2ORMovement : MonoBehaviour {
 		//playerAnimator = this.transform.Find ("playerAnimator").GetComponent<Animator> ();
 		
 		lastFramePos = transform.GetChild(1).transform.localPosition;
-		
-		
 	}
 
 	// Update is called once per frame
@@ -99,8 +99,7 @@ public class script2ORMovement : MonoBehaviour {
 			if (!hasCollisionInFront) {
 				controller.SimpleMove ((forwardDirection * playerSpeed) + (sideDirection * lateralSpeed));
 				
-			}
-			else {
+			}else {
 				controller.SimpleMove ((sideDirection * lateralSpeed));
 			}
 
@@ -128,22 +127,19 @@ public class script2ORMovement : MonoBehaviour {
 		else {
 			//Time.timeScale = 0.5f; FOR SLOWMO PURPOSES
 			oculusMovement = lastFramePos - currFramePos;
-			
-			
-			
+
 			foreach (ColorCorrectionCurves obj in cccObjects) {
 				obj.enabled = true;
 			}
 		}
-		
-
 		lastFramePos = currFramePos;
 	}
 	
 	void OnTriggerEnter( Collider col )
 	{	
 		if (col.gameObject.layer == 10) {
-			GameObject.Destroy(col.gameObject);
+			col.gameObject.SetActive(false);
+			//GameObject.Destroy(col.gameObject);
 			Debug.Log("working");
 			currNode++;
 	
@@ -156,8 +152,7 @@ public class script2ORMovement : MonoBehaviour {
 			forwardDirection = Vector3.Normalize (path[currNode].position - path[currNode-1].position);
 			Quaternion targetRotation = Quaternion.LookRotation (path[currNode].position - transform.position);
 			StartCoroutine(RotateTowards(targetRotation));
-		}
-		
+		}	
 	}
 
 	IEnumerator glitchEffect() {
@@ -198,4 +193,8 @@ public class script2ORMovement : MonoBehaviour {
 		}
 	}
 
+	public int getCurrentState()
+	{
+		return currNode;
+	}
 }

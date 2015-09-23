@@ -13,8 +13,7 @@ public class GameManager : MonoBehaviour {
 
 	const int NUM_LEVELS = 1;
 
-
-	bool startedGame = false;
+	public bool startedGame = false;
 
 	public static float timeElapsed;
 
