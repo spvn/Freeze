@@ -18,6 +18,12 @@ ModelImporter:
     100020: Group46811
     100022: Group54681
     100024: Group56811
+    100026: subtool1
+    100028: subtool1_MeshPart0
+    100030: subtool1_MeshPart1
+    100032: subtool1_MeshPart2
+    100034: subtool1_MeshPart3
+    100036: subtool1_MeshPart4
     400000: //RootNode
     400002: Group18402
     400004: Group28406
@@ -31,6 +37,12 @@ ModelImporter:
     400020: Group46811
     400022: Group54681
     400024: Group56811
+    400026: subtool1
+    400028: subtool1_MeshPart0
+    400030: subtool1_MeshPart1
+    400032: subtool1_MeshPart2
+    400034: subtool1_MeshPart3
+    400036: subtool1_MeshPart4
     2300000: Group18402
     2300002: Group28406
     2300004: Group36104
@@ -42,6 +54,11 @@ ModelImporter:
     2300016: Group46811
     2300018: Group54681
     2300020: Group56811
+    2300022: subtool1_MeshPart0
+    2300024: subtool1_MeshPart1
+    2300026: subtool1_MeshPart2
+    2300028: subtool1_MeshPart3
+    2300030: subtool1_MeshPart4
     3300000: Group18402
     3300002: Group28406
     3300004: Group36104
@@ -53,6 +70,11 @@ ModelImporter:
     3300016: Group46811
     3300018: Group54681
     3300020: Group56811
+    3300022: subtool1_MeshPart0
+    3300024: subtool1_MeshPart1
+    3300026: subtool1_MeshPart2
+    3300028: subtool1_MeshPart3
+    3300030: subtool1_MeshPart4
     4300000: Group18402
     4300002: Group28406
     4300004: Group36104
@@ -64,6 +86,11 @@ ModelImporter:
     4300016: Group46811
     4300018: Group54681
     4300020: Group56811
+    4300022: subtool1_MeshPart0
+    4300024: subtool1_MeshPart1
+    4300026: subtool1_MeshPart2
+    4300028: subtool1_MeshPart3
+    4300030: subtool1_MeshPart4
   materials:
     importMaterials: 1
     materialName: 0
@@ -120,8 +147,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
