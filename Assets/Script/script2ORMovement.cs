@@ -6,7 +6,7 @@ using UnityStandardAssets.ImageEffects;
 
 public class script2ORMovement : MonoBehaviour {
 	
-	public float playerSpeed = 1.0f;
+	public float playerSpeed = 0.0f;
 	public float lateralSpeed = 5.0f;
 	public bool hasCollisionInFront;
 	public float collisionDist = 0.51f;
@@ -134,9 +134,10 @@ public class script2ORMovement : MonoBehaviour {
 		}
 		lastFramePos = currFramePos;
 	}
-	
+
 	void OnTriggerEnter( Collider col )
 	{	
+		Debug.Log ("collided");
 		if (col.gameObject.layer == 10) {
 			col.gameObject.SetActive(false);
 			//GameObject.Destroy(col.gameObject);
