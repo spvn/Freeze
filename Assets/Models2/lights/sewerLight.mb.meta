@@ -1,61 +1,15 @@
 fileFormatVersion: 2
-guid: 47efc0972382f604c9ea7afa78809015
-timeCreated: 1443446433
+guid: dd2d9b214f05364459e973104180d252
+timeCreated: 1443502795
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
-    100002: group
-    100004: group1
-    100006: group2
-    100008: pasted__group
-    100010: pasted__group1
-    100012: pasted__pasted__group
-    100014: pasted__pasted__pasted__pCube1
-    100016: pasted__pasted__pCube1
-    100018: pasted__pCube1
-    100020: pCube1
-    100022: pCube2
-    100024: pPlane1
-    100026: polySurface1
-    100028: transform1
     400000: //RootNode
-    400002: group
-    400004: group1
-    400006: group2
-    400008: pasted__group
-    400010: pasted__group1
-    400012: pasted__pasted__group
-    400014: pasted__pasted__pasted__pCube1
-    400016: pasted__pasted__pCube1
-    400018: pasted__pCube1
-    400020: pCube1
-    400022: pCube2
-    400024: pPlane1
-    400026: polySurface1
-    400028: transform1
-    2300000: pasted__pasted__pasted__pCube1
-    2300002: pasted__pasted__pCube1
-    2300004: pasted__pCube1
-    2300006: pCube1
-    2300008: pCube2
-    2300010: pPlane1
-    2300012: polySurface1
-    3300000: pasted__pasted__pasted__pCube1
-    3300002: pasted__pasted__pCube1
-    3300004: pasted__pCube1
-    3300006: pCube1
-    3300008: pCube2
-    3300010: pPlane1
-    3300012: polySurface1
-    4300000: pPlane1
-    4300002: pCube1
-    4300004: pasted__pCube1
-    4300006: pasted__pasted__pCube1
-    4300008: pasted__pasted__pasted__pCube1
-    4300010: pCube2
-    4300012: polySurface1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCube1
     9500000: //RootNode
   materials:
     importMaterials: 1
