@@ -45,10 +45,10 @@ public class ScriptTurret : MonoBehaviour {
 			//Debug.Log(gameObject.name + " " + isFacingPlayer() + " " + player.GetComponent<scriptMovement>().isFrozen + withinRotationRange());
 			
 			if (isFacingPlayer() && !gameManager.isFrozen && withinRotationRange()) {
-				if(!isAiming){
+				/*if(!isAiming){
 					isAiming = true;
 					timer -= 1.0f;
-				}
+				}*/
 				rotationVector = player.transform.position;
 				rotationVector.y = 0f;
 
@@ -87,7 +87,7 @@ public class ScriptTurret : MonoBehaviour {
 		Vector3 direction = playerPos - (turretHead.transform.position);
 	
 		if (!Physics.Raycast(turretHead.transform.position, direction, distance, (1<<9 | 1 <<0))) {
-//			Debug.Log("Enemy is facing player");
+			Debug.Log("Enemy is facing player");
 			return true;
 		}
 
@@ -101,6 +101,7 @@ public class ScriptTurret : MonoBehaviour {
 			return;
 		}
 
+		Debug.Log("Shooting");
 		shooting = true;
 		if (!turretAnimation.isPlaying) {
 			turretAnimation.Play ();

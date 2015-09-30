@@ -114,7 +114,7 @@ GameObject:
   - 4: {fileID: 411952}
   - 65: {fileID: 6542356}
   - 114: {fileID: 11455018}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: HoveringTurretTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.5400009, y: -8.89999962, z: 36.5}
+  m_LocalPosition: {x: 53.5400009, y: -8.89999962, z: 46.8499985}
   m_LocalScale: {x: .564480364, y: .339276195, z: .0824734345}
   m_Children:
   - {fileID: 490670}
@@ -282,7 +282,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.8999996, y: -44.5600014, z: 17}
+  m_LocalPosition: {x: -46.0999985, y: -54.2999992, z: -266}
   m_LocalScale: {x: .294420391, y: .294420391, z: .294420391}
   m_Children:
   - {fileID: 442682}
@@ -535,8 +535,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 65.4538498, y: -84.5776367, z: -49.3349457}
-  m_Center: {x: -32.2269173, y: -42.7888184, z: -25.1674767}
+  m_Size: {x: 65.4538574, y: -79.9199982, z: -15.4936771}
+  m_Center: {x: -32.2269135, y: -40.4599838, z: -42.088089}
 --- !u!82 &8284800
 AudioSource:
   m_ObjectHideFlags: 1
@@ -652,8 +652,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoveringTurret: {fileID: 131872}
-  direction: 0
-  speed: 100
+  direction: 2
+  speed: 40
+  distance: 50
 --- !u!136 &13659994
 CapsuleCollider:
   m_ObjectHideFlags: 1
