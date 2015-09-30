@@ -137,7 +137,6 @@ public class script2ORMovement : MonoBehaviour {
 
 	void OnTriggerEnter( Collider col )
 	{	
-		Debug.Log ("collided");
 		if (col.gameObject.layer == 10) {
 			col.gameObject.SetActive(false);
 			//GameObject.Destroy(col.gameObject);
