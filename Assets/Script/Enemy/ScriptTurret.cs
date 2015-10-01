@@ -6,7 +6,7 @@ public class ScriptTurret : MonoBehaviour {
 	GameManager gameManager;
 	bool shooting = false;
 	public GameObject bulletPrefab;
-	public Animation turretAnimation;
+	public Animation shootingAnimation;
 	public float inaccuracy = 0.2f;
 	public float inaccuracyY = 0.5f; 
 	public GameObject deathEffect;
@@ -45,10 +45,6 @@ public class ScriptTurret : MonoBehaviour {
 			//Debug.Log(gameObject.name + " " + isFacingPlayer() + " " + player.GetComponent<scriptMovement>().isFrozen + withinRotationRange());
 			
 			if (isFacingPlayer() && !gameManager.isFrozen && withinRotationRange()) {
-				/*if(!isAiming){
-					isAiming = true;
-					timer -= 1.0f;
-				}*/
 				rotationVector = player.transform.position;
 				rotationVector.y = 0f;
 
@@ -59,11 +55,9 @@ public class ScriptTurret : MonoBehaviour {
 					timer = 0.0f;
 					shootBullet();
 				}
-
 			}
-
 			if(gameManager.isFrozen){
-				turretAnimation.Stop();
+				shootingAnimation.Stop();
 			}
 		}
 	}
@@ -103,8 +97,8 @@ public class ScriptTurret : MonoBehaviour {
 
 		Debug.Log("Shooting");
 		shooting = true;
-		if (!turretAnimation.isPlaying) {
-			turretAnimation.Play ();
+		if (!shootingAnimation.isPlaying) {
+			shootingAnimation.Play ();
 		}
 		
 		GameObject bullet = (GameObject)Instantiate (bulletPrefab);

@@ -29,9 +29,9 @@ public class TurretTrigger : MonoBehaviour {
 		if (direction == AppearingDirection.FROM_ABOVE) {
 			directionVector = Vector3.down;
 		} else if (direction == AppearingDirection.FROM_LEFT) {
-			directionVector = Vector3.right;
-		} else {
 			directionVector = Vector3.left;
+		} else {
+			directionVector = Vector3.right;
 		}
 	}
 	
@@ -63,7 +63,7 @@ public class TurretTrigger : MonoBehaviour {
 	void moveTurret(){
 		distanceTravelled += (directionVector * speed * Time.deltaTime).magnitude;
 		hoveringTurret.transform.Translate(directionVector * speed * Time.deltaTime, Space.World);
-		//Debug.Log ("Distance travelled: " + distanceTravelled);
+		Debug.Log ("Distance travelled: " + distanceTravelled);
 	}
 
 }
