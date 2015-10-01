@@ -17,11 +17,14 @@ public class TurretTrigger : MonoBehaviour {
 	public float distance;
 	private bool startMoving;
 
+	private GameManager gameManager;
 	private float distanceTravelled;
 	private Vector3 directionVector;
 
 	// Use this for initialization
 	void Start () {
+		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+
 		hoveringTurret.SetActive (false);
 		startMoving = false;
 		distanceTravelled = 0;
@@ -37,12 +40,14 @@ public class TurretTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (startMoving && distanceTravelled <= distance) {
-			moveTurret ();
-		}
-
-		if (distanceTravelled >= distance) {
-			hoveringTurret.GetComponent<ScriptTurret> ().isHostile = true;
+		if (!gameManager.isFrozen) {
+			if (startMoving && distanceTravelled <= distance) {
+				moveTurret ();
+			}
+			
+			if (distanceTravelled >= distance) {
+				hoveringTurret.GetComponent<ScriptTurret> ().isHostile = true;
+			}
 		}
 	}
 
@@ -63,7 +68,7 @@ public class TurretTrigger : MonoBehaviour {
 	void moveTurret(){
 		distanceTravelled += (directionVector * speed * Time.deltaTime).magnitude;
 		hoveringTurret.transform.Translate(directionVector * speed * Time.deltaTime, Space.World);
-		Debug.Log ("Distance travelled: " + distanceTravelled);
+		//Debug.Log ("Distance travelled: " + distanceTravelled);
 	}
 
 }
