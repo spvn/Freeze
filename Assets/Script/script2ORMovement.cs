@@ -66,7 +66,6 @@ public class script2ORMovement : MonoBehaviour {
         }
         // Gravity
         moveDirection.y -= gravity * Time.deltaTime;
-        print(moveDirection.y);
         controller.Move(moveDirection * Time.deltaTime);
 
         // Forward and lateral movement
