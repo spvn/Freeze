@@ -35,11 +35,6 @@ public class GameManager : MonoBehaviour {
 			timeElapsed += Time.deltaTime;
 			timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
 		}
-        
-        if (isChoosingPath)
-        {
-            return;
-        }
 
 		if (!isGameOver && (Input.GetKeyDown (KeyCode.J) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
 			//Debug.Log("Pressed Freeze " + isFrozen );

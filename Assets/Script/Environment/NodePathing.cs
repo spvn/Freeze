@@ -51,16 +51,6 @@ public class NodePathing : MonoBehaviour {
     void OnTriggerEnter ()
     {
         playerInRange = true;
-        if (hasMultiplePath)
-        {
-            gameManager.isFrozen = true;
-            // TODO: Player UI displays options
-            // UI.displayPathChoice(hasLeft, hasMid, hasRight);
-        }
-        else
-        {
-            sendNodeToPlayer(MiddleDestinationNode);
-        }
     }
     
     void OnTriggerExit ()
@@ -78,9 +68,9 @@ public class NodePathing : MonoBehaviour {
 
     private void sendNodeToPlayer(Transform destinationNode)
     {
+        print("Sending node to player");
         GameObject.Find("OVRCameraRig").GetComponent<script2ORMovement>().destinationNode = destinationNode;
-        gameManager.isFrozen = false;
-        playerInRange = false;
+        gameObject.SetActive(false);
     }
 
     public Transform getNextDestinationSinglePath()

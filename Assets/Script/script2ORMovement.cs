@@ -58,12 +58,18 @@ public class script2ORMovement : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        if (destinationNode != null)
+        {
+            moveToNextNode();
+        }
+        /*
         if (gameManager.isChoosingPath)
         {
+            print("Player Script: Is choosing path");
             if (destinationNode = null)
             {
                 // Active script running in NodePathing.cs while player is choosing path
-                return;
+                //return;
             }
             else
             {
@@ -72,7 +78,7 @@ public class script2ORMovement : MonoBehaviour {
                 gameManager.isChoosingPath = false;
                 moveToNextNode(destinationNode);
             }
-        }
+        }*/
 
         // Jump
         if (controller.isGrounded && !gameManager.isFrozen)
@@ -99,6 +105,7 @@ public class script2ORMovement : MonoBehaviour {
             float horizontal = Input.GetAxis("Horizontal");
             sideDirection = new Vector3(horizontal, 0, 0);
             sideDirection = transform.rotation * sideDirection;
+            print("Forward: " + forwardDirection);
             controller.SimpleMove((forwardDirection * playerSpeed) + (sideDirection * lateralSpeed));
         }
 
@@ -187,14 +194,16 @@ public class script2ORMovement : MonoBehaviour {
             }
             else if(node.hasMultiplePath)
             {
+                print("Player Script: Node has multiple paths");
                 gameManager.isFrozen = true;
                 gameManager.isChoosingPath = true;
             }
             // single path: get next node and continue travelling
             else
             {
-                Transform destinationNode = node.getNextDestinationSinglePath();
-                moveToNextNode(destinationNode);
+                print("Player Script: Getting next single path node");
+                destinationNode = node.getNextDestinationSinglePath();
+                moveToNextNode();
             }
 
             /*
@@ -216,13 +225,15 @@ public class script2ORMovement : MonoBehaviour {
 		}	
 	}
 
-    public void moveToNextNode(Transform destinationNode)
+    public void moveToNextNode()
     {
-        forwardDirection = Vector3.Normalize(destinationNode.position - currentNode.position);
+        forwardDirection = Vector3.Normalize(destinationNode.position - transform.position);
         Quaternion targetRotation = Quaternion.LookRotation(destinationNode.position - transform.position);
         StartCoroutine(RotateTowards(targetRotation));
         currentNode = destinationNode;
         destinationNode = null;
+        gameManager.isFrozen = false;
+        gameManager.isChoosingPath = false;
     }
 
 	IEnumerator glitchEffect()
