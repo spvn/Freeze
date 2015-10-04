@@ -160,11 +160,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LeftDestinationNode: {fileID: 0}
-  MiddleDestinationNode: {fileID: 0}
+  MiddleDestinationNode: {fileID: 1157355165}
   RightDestinationNode: {fileID: 0}
   numRoutes: 0
   hasMultiplePath: 0
   isEndNode: 0
+  playerInRange: 0
 --- !u!1 &481060672
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +290,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1e267ad97e8b478ea0d230f0dfc496f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &830882825 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192476, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+  m_PrefabInternal: {fileID: 288321334}
+--- !u!114 &830882826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830882825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad7d1e972454294182a8b816633b05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftDestinationNode: {fileID: 0}
+  MiddleDestinationNode: {fileID: 0}
+  RightDestinationNode: {fileID: 0}
+  numRoutes: 0
+  hasMultiplePath: 0
+  isEndNode: 0
+  playerInRange: 0
+--- !u!1 &990693078 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192476, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+  m_PrefabInternal: {fileID: 1157355164}
+--- !u!114 &990693079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990693078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad7d1e972454294182a8b816633b05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftDestinationNode: {fileID: 0}
+  MiddleDestinationNode: {fileID: 288321335}
+  RightDestinationNode: {fileID: 1649444412}
+  numRoutes: 0
+  hasMultiplePath: 0
+  isEndNode: 0
+  playerInRange: 0
 --- !u!1001 &1157355164
 Prefab:
   m_ObjectHideFlags: 0
@@ -634,6 +679,10 @@ Prefab:
       propertyPath: lateralSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414832, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: destinationNode
+      value: 
+      objectReference: {fileID: 1681131418}
     m_RemovedComponents:
     - {fileID: 11400386, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
@@ -724,6 +773,28 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
   m_PrefabInternal: {fileID: 1345707668}
+--- !u!1 &1592210731 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192476, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+  m_PrefabInternal: {fileID: 1649444411}
+--- !u!114 &1592210732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592210731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad7d1e972454294182a8b816633b05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftDestinationNode: {fileID: 0}
+  MiddleDestinationNode: {fileID: 0}
+  RightDestinationNode: {fileID: 0}
+  numRoutes: 0
+  hasMultiplePath: 0
+  isEndNode: 0
+  playerInRange: 0
 --- !u!1001 &1649444411
 Prefab:
   m_ObjectHideFlags: 0
