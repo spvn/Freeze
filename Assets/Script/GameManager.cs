@@ -86,4 +86,8 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+    public void FreezeGame()
+    {
+        isFrozen = !isFrozen;
+    }
 }
