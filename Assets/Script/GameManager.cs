@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject player;
 	public bool isFrozen;
 	public bool isGameOver = false;
+    public bool isChoosingPath = false;
 	public GameObject canvas;
 	public Highscore hs;
 
@@ -34,6 +35,11 @@ public class GameManager : MonoBehaviour {
 			timeElapsed += Time.deltaTime;
 			timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
 		}
+        
+        if (isChoosingPath)
+        {
+            return;
+        }
 
 		if (!isGameOver && (Input.GetKeyDown (KeyCode.J) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
 			//Debug.Log("Pressed Freeze " + isFrozen );
@@ -85,9 +91,4 @@ public class GameManager : MonoBehaviour {
 			RestartLevel();
 		}
 	}
-
-    public void FreezeGame()
-    {
-        isFrozen = !isFrozen;
-    }
 }

@@ -29,7 +29,9 @@ public class script2ORMovement : MonoBehaviour {
 
     public Transform[] path;
 	public GameObject canvas;
-    private int currNode = 0;  
+    private int currNode = 0;
+    public Transform currentNode;
+    public Transform destinationNode;
 
     //private float playerWidth;
 	//private Vector3 lastFramePos;
@@ -43,15 +45,34 @@ public class script2ORMovement : MonoBehaviour {
         cccObjects = GetComponentsInChildren<ColorCorrectionCurves>();
         nsObjects = GetComponentsInChildren<NoiseAndScratches>();
 
-        forwardDirection = Vector3.Normalize (path[0].position - transform.position);
-        
+        forwardDirection = Vector3.Normalize(destinationNode.position - transform.position);
+        currentNode = transform;
+        destinationNode = null;
+        //forwardDirection = Vector3.Normalize (path[0].position - transform.position);
+
         //lastFramePos = transform.GetChild(1).transform.localPosition;
         //playerAnimator = this.transform.Find ("playerAnimator").GetComponent<Animator> ();
         //playerWidth = controller.radius * 2;
     }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update() {
+
+        if (gameManager.isChoosingPath)
+        {
+            if (destinationNode = null)
+            {
+                // Active script running in NodePathing.cs while player is choosing path
+                return;
+            }
+            else
+            {
+                // Player has chosen path and node script has supplied destination node
+                gameManager.isFrozen = false;
+                gameManager.isChoosingPath = false;
+                moveToNextNode(destinationNode);
+            }
+        }
 
         // Jump
         if (controller.isGrounded && !gameManager.isFrozen)
@@ -65,8 +86,11 @@ public class script2ORMovement : MonoBehaviour {
             }
         }
         // Gravity
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
+        if (!gameManager.isGameOver)
+        {
+            moveDirection.y -= gravity * Time.deltaTime;
+            controller.Move(moveDirection * Time.deltaTime);
+        }
 
         // Forward and lateral movement
         if (!gameManager.isFrozen)
@@ -153,6 +177,27 @@ public class script2ORMovement : MonoBehaviour {
 	{	
         // if player collides with a node
 		if (col.gameObject.layer == 10) {
+            // access node script
+            NodePathing node = col.GetComponent<NodePathing>();
+            if(node.isEndNode)
+            {
+                gameManager.isFrozen = true;
+                gameManager.isGameOver = true;
+                canvas.gameObject.transform.Find("WinScreen").gameObject.SetActive(true);
+            }
+            else if(node.hasMultiplePath)
+            {
+                gameManager.isFrozen = true;
+                gameManager.isChoosingPath = true;
+            }
+            // single path: get next node and continue travelling
+            else
+            {
+                Transform destinationNode = node.getNextDestinationSinglePath();
+                moveToNextNode(destinationNode);
+            }
+
+            /*
 			col.gameObject.SetActive(false);
 			//GameObject.Destroy(col.gameObject);
 			//Debug.Log("working");
@@ -167,8 +212,18 @@ public class script2ORMovement : MonoBehaviour {
 			forwardDirection = Vector3.Normalize (path[currNode].position - path[currNode-1].position);
 			Quaternion targetRotation = Quaternion.LookRotation (path[currNode].position - transform.position);
 			StartCoroutine(RotateTowards(targetRotation));
+            */
 		}	
 	}
+
+    public void moveToNextNode(Transform destinationNode)
+    {
+        forwardDirection = Vector3.Normalize(destinationNode.position - currentNode.position);
+        Quaternion targetRotation = Quaternion.LookRotation(destinationNode.position - transform.position);
+        StartCoroutine(RotateTowards(targetRotation));
+        currentNode = destinationNode;
+        destinationNode = null;
+    }
 
 	IEnumerator glitchEffect()
     {
