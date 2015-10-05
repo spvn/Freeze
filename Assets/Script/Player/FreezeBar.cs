@@ -9,13 +9,13 @@ public class FreezeBar : MonoBehaviour {
 	public RectTransform freezeBarUI;
 	public RectTransform coolDownBarUI;
 
-	public static bool isFrozen;
-
 	private float currFreezeAmt;
 	private float freezeBarUIMinX;
 	private float freezeBarUIWidth;
+	private GameManager gameManager;
 
 	void Start () {
+		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
 		currFreezeAmt = maxFreezeStock;
 		freezeBarUIWidth = freezeBarUI.rect.size.x;
 		freezeBarUIMinX = freezeBarUI.localPosition.x - freezeBarUIWidth;
@@ -24,7 +24,7 @@ public class FreezeBar : MonoBehaviour {
 	void Update () {
 		//print (currFreezeAmt);
 
-		if (isFrozen) {
+		if (gameManager.getFreezeBarStatus()) {
 			Debug.Log ("isFrozen in Freeze bar");
 			DepleteFreezeStock();
 		}
@@ -37,6 +37,7 @@ public class FreezeBar : MonoBehaviour {
 		currFreezeAmt -= freezeDepletionRate;
 
 		if (currFreezeAmt < 0) {
+			gameManager.invertFreezeStatus();
 			currFreezeAmt = 0;
 		}
 
