@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class FreezeBar : MonoBehaviour {
@@ -6,8 +7,9 @@ public class FreezeBar : MonoBehaviour {
 	public float freezeDepletionRate;
 	public float freezeReplenishRate;
 	public RectTransform freezeBarUI;
+	public RectTransform coolDownBarUI;
 
-	private bool isFrozen;
+	public static bool isFrozen;
 
 	private float currFreezeAmt;
 	private float freezeBarUIMinX;
@@ -15,14 +17,15 @@ public class FreezeBar : MonoBehaviour {
 
 	void Start () {
 		currFreezeAmt = maxFreezeStock;
-
 		freezeBarUIWidth = freezeBarUI.rect.size.x;
 		freezeBarUIMinX = freezeBarUI.localPosition.x - freezeBarUIWidth;
 	}
 	
 	void Update () {
 		//print (currFreezeAmt);
+
 		if (isFrozen) {
+			Debug.Log ("isFrozen in Freeze bar");
 			DepleteFreezeStock();
 		}
 		else {

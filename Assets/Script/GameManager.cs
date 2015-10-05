@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour {
 			//Debug.Log("Pressed Freeze " + isFrozen );
 			
 			isFrozen = !isFrozen;
+			FreezeBar.isFrozen = isFrozen;
 			
 			if (isFrozen) {
 				this.GetComponent<scriptAudio>().playFreezeAudio();
