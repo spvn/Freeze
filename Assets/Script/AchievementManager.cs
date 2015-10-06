@@ -41,12 +41,25 @@ public class Achievement {
 	}
 }
 
+[System.Serializable]
 public class AchievementManager : MonoBehaviour {
+	private	static AchievementManager _instance;
 	public Achievement[] achievements;
-	
-	// Use this for initialization
-	void Start () {
-	
+
+	void Awake () {
+		if (_instance == null) {
+			_instance = this;
+			DontDestroyOnLoad (this);
+		} else {
+			if (this != _instance) {
+				Destroy(this.gameObject);
+			}
+		}
+	}
+
+	public static AchievementManager getManager()
+	{
+		return _instance;
 	}
 
 	public Achievement getAchievementByName(string achievementName)

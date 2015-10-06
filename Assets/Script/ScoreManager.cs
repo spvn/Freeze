@@ -17,6 +17,9 @@ public class ScoreManager : MonoBehaviour
     void Update ()
     {
         currentScore.text = "Score: " + score;
+		AchievementManager am = AchievementManager.getManager ();
+		Debug.Log (am);
+		am.setProgressByAchievementName ("Score", score);
     }
 
 	public static void updateHighscore () {
