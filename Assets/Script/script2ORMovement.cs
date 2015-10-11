@@ -12,6 +12,7 @@ public class script2ORMovement : MonoBehaviour {
     public float rotateSpeed = 2.0f;
     private Vector3 sideDirection;
     private Vector3 forwardDirection;
+    public bool canStrafe = true;
     // For testing of jump
     public float jumpSpeed = 10.0f;
     public float gravity = 9.81f;
@@ -99,7 +100,7 @@ public class script2ORMovement : MonoBehaviour {
         // Jump
         if (controller.isGrounded && !gameManager.isFrozen)
         {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDirection = new Vector3(/*Input.GetAxis("Horizontal")*/0, 0, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= playerSpeed;
             if (Input.GetKeyDown(KeyCode.LeftAlt))
@@ -119,9 +120,12 @@ public class script2ORMovement : MonoBehaviour {
         {
             //Time.timeScale = 1.0f; FOR SLOWMO PURPOSES.
             float horizontal = Input.GetAxis("Horizontal");
+            if (canStrafe == false)
+            {
+                horizontal = 0; // strafe disabled
+            }
             sideDirection = new Vector3(horizontal, 0, 0);
             sideDirection = transform.rotation * sideDirection;
-            print("Forward: " + forwardDirection);
             controller.SimpleMove((forwardDirection * playerSpeed) + (sideDirection * lateralSpeed));
         }
 
@@ -197,13 +201,20 @@ public class script2ORMovement : MonoBehaviour {
 		if (col.gameObject.layer == 10) {
             // access node script
             NodePathing node = col.GetComponent<NodePathing>();
-            if(node.isEndNode)
+
+            // this node will disable strafing until it reaches a point where it is unable to go backwards through strafing
+            if (node.disableStrafe == true)
+            {
+                canStrafe = false;
+            }
+
+            if (node.isEndNode)
             {
                 gameManager.isFrozen = true;
                 gameManager.isGameOver = true;
                 canvas.gameObject.transform.Find("WinScreen").gameObject.SetActive(true);
             }
-            else if(node.hasMultiplePath)
+            else if (node.hasMultiplePath)
             {
                 print("Player Script: Node has multiple paths");
                 gameManager.isFrozen = true;
