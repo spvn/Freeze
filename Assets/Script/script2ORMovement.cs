@@ -58,9 +58,25 @@ public class script2ORMovement : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        if (!gameManager.isGameOver && (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.JoystickButton0)))
+        {
+            //Debug.Log("Pressed Freeze " + isFrozen );
+            StartCoroutine(glitchEffect());
+        }
+
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton5)))
+        {
+            OVRManager.display.RecenterPose();
+        }
+
         if (destinationNode != null)
         {
             moveToNextNode();
+        }
+
+        if (gameManager.isGameOver || gameManager.isFrozen)
+        {
+            return;
         }
         /*
         if (gameManager.isChoosingPath)
@@ -92,7 +108,7 @@ public class script2ORMovement : MonoBehaviour {
             }
         }
         // Gravity
-        if (!gameManager.isGameOver)
+        if (!gameManager.isGameOver || !gameManager.isFrozen)
         {
             moveDirection.y -= gravity * Time.deltaTime;
             controller.Move(moveDirection * Time.deltaTime);
@@ -109,9 +125,7 @@ public class script2ORMovement : MonoBehaviour {
             controller.SimpleMove((forwardDirection * playerSpeed) + (sideDirection * lateralSpeed));
         }
 
-        if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
-			OVRManager.display.RecenterPose();  
-		} 
+        
 
         // Get position of player's hit area
 		//currFramePos = transform.GetChild(1).transform.localPosition;
@@ -120,10 +134,7 @@ public class script2ORMovement : MonoBehaviour {
 			meleeAttack();
 		}
 		
-		if (!gameManager.isGameOver && (Input.GetKeyDown (KeyCode.J) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
-			//Debug.Log("Pressed Freeze " + isFrozen );
-			StartCoroutine (glitchEffect ());
-		}
+		
         
         /*
 		if (!gameManager.isFrozen) {
