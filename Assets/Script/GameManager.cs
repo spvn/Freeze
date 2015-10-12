@@ -39,7 +39,10 @@ public class GameManager : MonoBehaviour {
 
 		if (!isGameOver && (Input.GetKeyDown (KeyCode.J) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
 			//Debug.Log("Pressed Freeze " + isFrozen );
-			
+			if(isChoosingPath)
+            {
+                return; // player cannot un-freeze when choosing a path to go
+            }
 			invertFreezeStatus ();
 			
 			if (isFrozen) {

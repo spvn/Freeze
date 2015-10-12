@@ -14,6 +14,7 @@ public class NodePathing : MonoBehaviour {
     public bool hasMultiplePath = false;   // default node has 1 destination node
     public bool isEndNode = false;         // default node is not an end node
     public bool playerInRange = false;
+    public bool disableStrafe = false;
     private GameManager gameManager;
 
     // Use this for initialization
