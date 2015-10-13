@@ -170,11 +170,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 480054}
   - 111: {fileID: 11139868}
-  - 135: {fileID: 13562600}
   - 82: {fileID: 8253206}
   - 114: {fileID: 11464732}
   - 195: {fileID: 19589644}
   - 114: {fileID: 11444062}
+  - 135: {fileID: 13577066}
   m_Layer: 0
   m_Name: MovingTurret
   m_TagString: Untagged
@@ -289,7 +289,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.53711557, y: 3.4000001, z: -8.4668951}
+  m_LocalPosition: {x: -8.82999992, y: 3.94000006, z: -8.4668951}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 441104}
@@ -569,7 +569,7 @@ MonoBehaviour:
   deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
   intervalShootTime: 1
   isHostile: 1
---- !u!135 &13562600
+--- !u!135 &13577066
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -579,8 +579,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 2
+  m_Center: {x: 0, y: 3.5, z: 0}
 --- !u!195 &19589644
 NavMeshAgent:
   m_ObjectHideFlags: 1
