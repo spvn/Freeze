@@ -26,7 +26,9 @@ public class TurretMoving : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!gameManager.isFrozen) {
-			ChasePlayer();
+			ChasePlayer ();
+		} else {
+			StopChase();
 		}
 	}
 
@@ -41,5 +43,10 @@ public class TurretMoving : MonoBehaviour {
 			                      + 3*player.transform.forward + 5*player.transform.right);
 			Debug.Log ("Chasing right");
 		}
+	}
+
+	void StopChase(){
+		enemy.Stop ();
+		Debug.Log ("Enemy stopped chasing.");
 	}
 }

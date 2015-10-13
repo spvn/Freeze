@@ -121,6 +121,13 @@ public class ScriptTurret : MonoBehaviour {
 
 		shooting = false;
 	}
+	/*
+	void OnTriggerEnter(Collider other){
+		if (other.gameObject.name == "OVRCameraRig") {
+			Debug.Log ("Player in shooting field.");
+
+		}
+	}*/
 
 	bool withinMeleeRange()
 	{
