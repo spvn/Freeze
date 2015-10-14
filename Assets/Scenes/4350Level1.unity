@@ -1391,54 +1391,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1698343461}
-    - target: {fileID: 410252, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_LocalScale.x
-      value: .586143732
-      objectReference: {fileID: 0}
-    - target: {fileID: 410252, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .586143672
-      objectReference: {fileID: 0}
-    - target: {fileID: 410252, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .586143672
-      objectReference: {fileID: 0}
-    - target: {fileID: 148048, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 159848, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 192670, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 147800, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 178402, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 183722, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 149444, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 106988, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 113604, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
   m_IsPrefabParent: 0
