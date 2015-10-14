@@ -46,7 +46,7 @@ public class ScriptTurret : MonoBehaviour {
 			
 			if (isFacingPlayer() && !gameManager.isFrozen && withinRotationRange()) {
 				rotationVector = player.transform.position;
-				rotationVector.y = 0f;
+				//rotationVector.y = 0f;
 
 				turretHead.transform.LookAt(rotationVector);
 
