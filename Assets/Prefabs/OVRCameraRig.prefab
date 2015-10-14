@@ -742,6 +742,7 @@ GameObject:
   - 114: {fileID: 11413106}
   - 114: {fileID: 11414832}
   - 143: {fileID: 14334584}
+  - 114: {fileID: 11479800}
   m_Layer: 0
   m_Name: OVRCameraRig
   m_TagString: Untagged
@@ -2340,7 +2341,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137322}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -64.8000031, y: 1, z: 50.1800003}
+  m_LocalPosition: {x: -64.8000031, y: 1.79999995, z: 50.1800003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 488240}
@@ -3930,6 +3931,24 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Score: 0'
+--- !u!114 &11479800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 0
+  sensitivityX: 15
+  sensitivityY: 15
+  minimumX: -360
+  maximumX: 360
+  minimumY: -60
+  maximumY: 60
 --- !u!114 &11480778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4088,7 +4107,7 @@ CapsuleCollider:
   m_Radius: .100000001
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -.800000012, z: 0}
 --- !u!137 &13716404
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -4237,7 +4256,7 @@ CharacterController:
   m_StepOffset: .300000012
   m_SkinWidth: .00999999978
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -.800000012, z: 0}
 --- !u!222 &22201852
 CanvasRenderer:
   m_ObjectHideFlags: 1
