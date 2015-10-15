@@ -117,6 +117,28 @@ ModelImporter:
     4300038: pCube23
     4300040: pCube24
     4300042: pCube25
+    6400000: pCube1
+    6400002: pCube10
+    6400004: pCube13
+    6400006: pCube14
+    6400008: pCube15
+    6400010: pCube16
+    6400012: pCube17
+    6400014: pCube19
+    6400016: pCube2
+    6400018: pCube20
+    6400020: pCube21
+    6400022: pCube22
+    6400024: pCube23
+    6400026: pCube24
+    6400028: pCube25
+    6400030: pCube3
+    6400032: pCube4
+    6400034: pCube5
+    6400036: pCube6
+    6400038: pCube7
+    6400040: pCube8
+    6400042: pCube9
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -127,6 +149,10 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -139,7 +165,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -170,8 +196,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
