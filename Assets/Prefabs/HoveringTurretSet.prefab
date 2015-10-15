@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3395656}
   - 23: {fileID: 2349746}
   - 64: {fileID: 6449130}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pCylinder3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 33: {fileID: 3361550}
   - 23: {fileID: 2364768}
   - 64: {fileID: 6498622}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,10 +44,25 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 440866}
-  - 65: {fileID: 6559752}
-  - 114: {fileID: 11404730}
   m_Layer: 11
-  m_Name: HoveringTurret
+  m_Name: HoveringTurretSet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &106392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405962}
+  - 65: {fileID: 6575800}
+  - 114: {fileID: 11493306}
+  m_Layer: 11
+  m_Name: HoveringTurretTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +76,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 442690}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BulletShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +94,7 @@ GameObject:
   - 33: {fileID: 3306954}
   - 23: {fileID: 2349092}
   - 64: {fileID: 6419726}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pPipe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +109,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 411246}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TurretHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +126,7 @@ GameObject:
   - 4: {fileID: 412120}
   - 198: {fileID: 19811390}
   - 199: {fileID: 19908040}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: muzzleFlashParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +144,7 @@ GameObject:
   - 33: {fileID: 3382286}
   - 23: {fileID: 2396804}
   - 64: {fileID: 6449954}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pPipe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +159,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427634}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: group4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +178,7 @@ GameObject:
   - 114: {fileID: 11444570}
   - 82: {fileID: 8272166}
   - 136: {fileID: 13613178}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HoveringTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +196,7 @@ GameObject:
   - 33: {fileID: 3386682}
   - 23: {fileID: 2342704}
   - 64: {fileID: 6424096}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +214,7 @@ GameObject:
   - 33: {fileID: 3396698}
   - 23: {fileID: 2346186}
   - 64: {fileID: 6483758}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +232,7 @@ GameObject:
   - 33: {fileID: 3322312}
   - 23: {fileID: 2380940}
   - 64: {fileID: 6447808}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,13 +250,25 @@ GameObject:
   - 33: {fileID: 3396874}
   - 23: {fileID: 2396640}
   - 64: {fileID: 6407192}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &405962
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.70000005, y: 0, z: -76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 440866}
+  m_RootOrder: 1
 --- !u!4 &411246
 Transform:
   m_ObjectHideFlags: 1
@@ -348,11 +375,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104542}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.8999996, y: 19, z: -8.69999981}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: 33.0885506, y: -3.35999966, z: 33.2863503}
   m_LocalScale: {x: .564480364, y: .339276195, z: .0824734345}
   m_Children:
   - {fileID: 462374}
+  - {fileID: 405962}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &442690
@@ -386,7 +414,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.5, y: -29.7000008, z: 206}
+  m_LocalPosition: {x: 19.8999996, y: -7.30000019, z: -401}
   m_LocalScale: {x: .824629009, y: 1.37199974, z: 5.64408207}
   m_Children:
   - {fileID: 427634}
@@ -767,18 +795,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300008, guid: 2f86bc750a37bcf428f32197d63094d3, type: 3}
---- !u!65 &6559752
+--- !u!65 &6575800
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104542}
+  m_GameObject: {fileID: 106392}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.29633808, y: -56.0814667, z: 407.496826}
-  m_Center: {x: -16.9708767, y: -28.5407162, z: 169.407166}
+  m_Size: {x: 57.0252113, y: -93.310173, z: 27.2775192}
+  m_Center: {x: 9.39357758, y: -47.1550751, z: 1.17359161}
 --- !u!82 &8272166
 AudioSource:
   m_ObjectHideFlags: 1
@@ -863,21 +891,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11404730
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c21890ddf2d6614caab3e3795070a7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoveringTurret: {fileID: 162710}
-  direction: 2
-  speed: 15
-  distance: 10
 --- !u!114 &11444570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -892,11 +905,27 @@ MonoBehaviour:
   player: {fileID: 0}
   bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
   shootingAnimation: {fileID: 0}
+  angleOfShooting: 90
   inaccuracy: .200000003
   inaccuracyY: .5
   deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
-  intervalShootTime: 1
   isHostile: 1
+  intervalShootTime: 1
+--- !u!114 &11493306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c21890ddf2d6614caab3e3795070a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringTurret: {fileID: 162710}
+  direction: 0
+  speed: 15
+  distance: 20
 --- !u!136 &13613178
 CapsuleCollider:
   m_ObjectHideFlags: 1

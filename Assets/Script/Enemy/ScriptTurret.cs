@@ -41,6 +41,7 @@ public class ScriptTurret : MonoBehaviour {
 		shotSound = GetComponent<AudioSource>();
 
 		turretFront = transform.forward;
+		turretFront.y = 0;
 	}
 	
 	// Update is called once per frame
@@ -50,22 +51,23 @@ public class ScriptTurret : MonoBehaviour {
 				lookAtPlayer ();
 
 				timer += Time.deltaTime;
-				if (timer > Random.Range (intervalShootTime * 0.7f, intervalShootTime * 1.4f) && !withinMeleeRange ()) {
+				if (timer > Random.Range (intervalShootTime * 0.7f, intervalShootTime * 1.4f) && !withinMeleeRange()) {
 					timer = 0.0f;
 					shootBullet ();
 				}
 			}
 		} else {
-			shootingAnimation.Stop ();
+		//	shootingAnimation.Stop ();
 		}
 	}
 
 	bool withinRotationRange()
 	{
 		Vector3 playerDirection = player.transform.position - transform.position;
+		playerDirection.y = 0;
 
 		float angle = Vector3.Angle (turretFront, playerDirection);
-		//Debug.Log (angle);
+		Debug.Log (angle);
 
 		if (angle <= angleOfShooting / 2.0) {
 			return true;
@@ -80,7 +82,8 @@ public class ScriptTurret : MonoBehaviour {
 		float distance = Vector3.Distance (turretHead.transform.position, playerPos) - 1;
 		Vector3 direction = playerPos - (turretHead.transform.position);
 	
-		if (!Physics.Raycast(turretHead.transform.position, direction, distance, (1<<9 | 1 <<0))) {
+		// Raycast on layer 0 default and layer 9 player
+		if (!Physics.Raycast(turretHead.transform.position, direction, distance, (1<<9 | 1<<0))) {
 			//Debug.Log("Player visible to enemy");
 			return true;
 		}
@@ -97,9 +100,9 @@ public class ScriptTurret : MonoBehaviour {
 
 		//Debug.Log("Shooting");
 		shooting = true;
-		if (!shootingAnimation.isPlaying) {
+		/*if (!shootingAnimation.isPlaying) {
 			shootingAnimation.Play ();
-		}
+		}*/
 		
 		GameObject bullet = (GameObject)Instantiate (bulletPrefab);
 
