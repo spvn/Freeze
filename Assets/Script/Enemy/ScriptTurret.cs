@@ -7,24 +7,26 @@ public class ScriptTurret : MonoBehaviour {
 	bool shooting = false;
 	public GameObject bulletPrefab;
 	public Animation shootingAnimation;
+	public float angleOfShooting = 90f;
 	public float inaccuracy = 0.2f;
 	public float inaccuracyY = 0.5f; 
 	public GameObject deathEffect;
 
+	public bool isHostile = true;
+
+	// Shooting variables
 	private Transform turretHead;
 	private Transform bulletShootingPt;
 	float timer = 0.0f;
 	public float intervalShootTime;
-	public bool isHostile = true;
 	Quaternion initialAngle;
-	Vector3 bulletOffset = new Vector3(0, 0, 0);
 	Vector3 playerOffset = new Vector3(0, 0.0f, 0);
 	Vector3 randomOffset;
-	Vector3 rotationVector;
+	AudioSource shotSound;
 	float playerSpeed;
 	GameObject muzzleFlash;
-	AudioSource shotSound;
 
+	private Vector3 turretFront;
 	bool isAiming = false;
 
 	// Use this for initialization
@@ -37,51 +39,49 @@ public class ScriptTurret : MonoBehaviour {
 		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
 		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;
 		shotSound = GetComponent<AudioSource>();
+
+		turretFront = transform.forward;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (isHostile){
-			//Debug.Log(gameObject.name + " " + isFacingPlayer() + " " + player.GetComponent<scriptMovement>().isFrozen + withinRotationRange());
-			
-			if (isFacingPlayer() && !gameManager.isFrozen && withinRotationRange()) {
-				rotationVector = player.transform.position;
-				//rotationVector.y = 0f;
-
-				turretHead.transform.LookAt(rotationVector);
+		if (!gameManager.isFrozen) {
+			if (isHostile && playerIsVisibleToEnemey () && withinRotationRange ()) {				
+				lookAtPlayer ();
 
 				timer += Time.deltaTime;
-				if (timer > Random.Range (intervalShootTime*0.7f, intervalShootTime* 1.4f) && !withinMeleeRange()) {
+				if (timer > Random.Range (intervalShootTime * 0.7f, intervalShootTime * 1.4f) && !withinMeleeRange ()) {
 					timer = 0.0f;
-					shootBullet();
+					shootBullet ();
 				}
 			}
-			if(gameManager.isFrozen){
-				shootingAnimation.Stop();
-			}
+		} else {
+			shootingAnimation.Stop ();
 		}
 	}
 
 	bool withinRotationRange()
 	{
-		float rotationAngle = Mathf.Abs ((turretHead.transform.rotation.y) - initialAngle.y) * Mathf.Rad2Deg;
-		//Debug.Log (this.transform.rotation.y * Mathf.Rad2Deg + " " + initialAngle.y * Mathf.Rad2Deg);
-	
-		if (rotationAngle <= 90.0f && rotationAngle >= 0.0f) {
+		Vector3 playerDirection = player.transform.position - transform.position;
+
+		float angle = Vector3.Angle (turretFront, playerDirection);
+		//Debug.Log (angle);
+
+		if (angle <= angleOfShooting / 2.0) {
 			return true;
-		}
-		Debug.Log ("Not turning " + rotationAngle);
+		} 
+
 		return false;
 	}
 
-	bool isFacingPlayer()
+	bool playerIsVisibleToEnemey()
 	{
 		Vector3 playerPos = player.transform.position;
 		float distance = Vector3.Distance (turretHead.transform.position, playerPos) - 1;
 		Vector3 direction = playerPos - (turretHead.transform.position);
 	
 		if (!Physics.Raycast(turretHead.transform.position, direction, distance, (1<<9 | 1 <<0))) {
-			Debug.Log("Enemy is facing player");
+			//Debug.Log("Player visible to enemy");
 			return true;
 		}
 
@@ -95,7 +95,7 @@ public class ScriptTurret : MonoBehaviour {
 			return;
 		}
 
-		Debug.Log("Shooting");
+		//Debug.Log("Shooting");
 		shooting = true;
 		if (!shootingAnimation.isPlaying) {
 			shootingAnimation.Play ();
@@ -121,13 +121,11 @@ public class ScriptTurret : MonoBehaviour {
 
 		shooting = false;
 	}
-	/*
-	void OnTriggerEnter(Collider other){
-		if (other.gameObject.name == "OVRCameraRig") {
-			Debug.Log ("Player in shooting field.");
 
-		}
-	}*/
+	void lookAtPlayer()
+	{
+		turretHead.transform.LookAt(player.transform.position);
+	}
 
 	bool withinMeleeRange()
 	{
