@@ -45,7 +45,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 440866}
   m_Layer: 11
-<<<<<<< HEAD:Assets/Prefabs/HoveringTurretSet.prefab
   m_Name: HoveringTurretSet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,8 +62,6 @@ GameObject:
   - 65: {fileID: 6575800}
   - 114: {fileID: 11493306}
   m_Layer: 11
-=======
->>>>>>> origin/master:Assets/Prefabs/HoveringTurretTrigger.prefab
   m_Name: HoveringTurretTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +822,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1.87
   MinDistance: 1
@@ -915,7 +911,6 @@ MonoBehaviour:
   deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
   isHostile: 1
   intervalShootTime: 1
-<<<<<<< HEAD:Assets/Prefabs/HoveringTurretSet.prefab
 --- !u!114 &11493306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -931,8 +926,6 @@ MonoBehaviour:
   direction: 0
   speed: 15
   distance: 20
-=======
->>>>>>> origin/master:Assets/Prefabs/HoveringTurretTrigger.prefab
 --- !u!136 &13613178
 CapsuleCollider:
   m_ObjectHideFlags: 1
