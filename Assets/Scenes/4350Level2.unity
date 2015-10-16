@@ -448,11 +448,12 @@ MonoBehaviour:
   player: {fileID: 1037163281}
   bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
   shootingAnimation: {fileID: 1203994218}
+  angleOfShooting: 90
   inaccuracy: .200000003
   inaccuracyY: .5
   deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
-  intervalShootTime: 1
   isHostile: 1
+  intervalShootTime: 1
 --- !u!33 &219224334
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -738,6 +739,48 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400012, guid: e636fa8f980ae684bae742dd791f47bd, type: 3}
   m_PrefabInternal: {fileID: 232489610}
+--- !u!1001 &266462277
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 431886, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 39.7999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 431886, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 431886, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 52.2999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 431886, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431886, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431886, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431886, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 431886, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &291726862
 Prefab:
   m_ObjectHideFlags: 0
@@ -2497,51 +2540,6 @@ MonoBehaviour:
   isEndNode: 0
   playerInRange: 0
   disableStrafe: 0
---- !u!1 &901116800
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 901116802}
-  - 114: {fileID: 901116801}
-  m_Layer: 0
-  m_Name: AchievementManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &901116801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 901116800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47e468f7dada9a6448f5ec2fb363f653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  achievements:
-  - name: Score
-    description: 
-    progress: 0
-    target: 5
-    unlocked: 0
---- !u!4 &901116802
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 901116800}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.7999992, y: -19, z: 52.2999992}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
 --- !u!1001 &943898834
 Prefab:
   m_ObjectHideFlags: 0

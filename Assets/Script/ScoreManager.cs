@@ -5,7 +5,7 @@ using System.Collections;
 public class ScoreManager : MonoBehaviour
 {
     public static int score;
-	public static int highscore = 2204;
+	public static int highscore = 0;
    	public static Text currentScore;
 
     void Start ()
@@ -17,9 +17,10 @@ public class ScoreManager : MonoBehaviour
     void Update ()
     {
         currentScore.text = "Score: " + score;
-		AchievementManager am = AchievementManager.getManager ();
-		Debug.Log (am);
-		am.setProgressByAchievementName ("Score", score);
+		StatisticManager sm = StatisticManager.getManager ();
+		if (sm.getProgressByStatisticName("High Score") < score) {
+			sm.setProgressByStatisticName("High Score", score);
+		}
     }
 
 	public static void updateHighscore () {

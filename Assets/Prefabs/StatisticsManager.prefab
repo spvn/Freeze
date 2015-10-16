@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &167226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 431886}
+  - 114: {fileID: 11463142}
+  - 114: {fileID: 11442026}
+  m_Layer: 0
+  m_Name: StatisticsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &431886
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.7999992, y: -19, z: 52.2999992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11442026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b06a32746b15047b4e2d067a0b2d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+  - name: Bullets Dodged
+    progress: 0
+    achievements:
+    - name: Dodged 50 bullets
+      description: 
+      progress: 0
+      target: 50
+      unlocked: 0
+    - name: Dodged 100 bullets
+      description: 
+      progress: 0
+      target: 100
+      unlocked: 0
+    - name: Dodged 150 bullets
+      description: 
+      progress: 0
+      target: 150
+      unlocked: 0
+  - name: High Score
+    progress: 0
+    achievements:
+    - name: Get score of 200
+      description: 
+      progress: 0
+      target: 200
+      unlocked: 0
+    - name: Get score of 400
+      description: 
+      progress: 0
+      target: 400
+      unlocked: 0
+    - name: Get score of 600
+      description: 
+      progress: 0
+      target: 600
+      unlocked: 0
+  - name: Furthest Level
+    progress: 0
+    achievements:
+    - name: Completed Level 1
+      description: 
+      progress: 0
+      target: 1
+      unlocked: 0
+    - name: Completed Level 2
+      description: 
+      progress: 0
+      target: 2
+      unlocked: 0
+    - name: Completed Level 3
+      description: 
+      progress: 0
+      target: 3
+      unlocked: 0
+  - name: Time Spent Playing
+    progress: 0
+    achievements:
+    - name: Played for 1 minute
+      description: 
+      progress: 0
+      target: 60
+      unlocked: 0
+    - name: Played for 5 minutes
+      description: 
+      progress: 0
+      target: 300
+      unlocked: 0
+    - name: Played for 10 minutes
+      description: 
+      progress: 0
+      target: 600
+      unlocked: 0
+  - name: Deaths
+    progress: 0
+    achievements:
+    - name: Died Once
+      description: 
+      progress: 0
+      target: 1
+      unlocked: 0
+    - name: Died 5 Times
+      description: 
+      progress: 0
+      target: 5
+      unlocked: 0
+    - name: Died 10 Times
+      description: 
+      progress: 0
+      target: 10
+      unlocked: 0
+--- !u!114 &11463142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e468f7dada9a6448f5ec2fb363f653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievements: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 167226}
+  m_IsPrefabParent: 1
