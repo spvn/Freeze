@@ -201,77 +201,21 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1037163281}
-    - target: {fileID: 8253206, guid: a1831d2d146218141837704fbee69fc4, type: 2}
+    - target: {fileID: 13577066, guid: a1831d2d146218141837704fbee69fc4, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13577066, guid: a1831d2d146218141837704fbee69fc4, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13577066, guid: a1831d2d146218141837704fbee69fc4, type: 2}
+      propertyPath: m_Radius
+      value: 1.79999995
       objectReference: {fileID: 0}
     - target: {fileID: 11444062, guid: a1831d2d146218141837704fbee69fc4, type: 2}
       propertyPath: speed
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 19589644, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Height
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 19589644, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_BaseOffset
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 13577066, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19589644, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_StoppingDistance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 183360, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 151322, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 166358, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 149626, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 106424, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 138180, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 186902, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 127172, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 101836, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 145086, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 190056, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 11464732, guid: a1831d2d146218141837704fbee69fc4, type: 2}
-      propertyPath: angleOfShooting
-      value: 360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1831d2d146218141837704fbee69fc4, type: 2}

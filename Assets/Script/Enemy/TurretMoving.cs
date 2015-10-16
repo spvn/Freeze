@@ -16,38 +16,76 @@ public class TurretMoving : MonoBehaviour {
 	private Vector3 rightSide;
 	private Vector3 leftSide;
 
+	private Vector3 chasePosition;
+	private float playerSpeed;
+
 	// Use this for initialization
 	void Start () {
 		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
 		player = GameObject.Find ("OVRCameraRig");
 		enemy = GetComponent<NavMeshAgent> ();
+
 		enemy.speed = speed;
+		playerSpeed = player.GetComponent<script2ORMovement> ().playerSpeed;
+
+		ChasePlayer ();
+		StopChase ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (!gameManager.isFrozen) {
-			ChasePlayer ();
+			if (isLockedOnPlayer()){
+				LagChasePlayer();
+			} else {
+				ChasePlayer ();
+			}
 		} else {
 			StopChase();
 		}
 	}
 
+	void LagChasePlayer(){
+		if (chasePosition == null) {
+			return;
+		}
+
+		Debug.Log ("Lag chasing");
+		enemy.Resume ();
+		// TODO: check what if chasing while player rotating
+		enemy.SetDestination (chasePosition + player.transform.forward*playerSpeed);
+	}
+
 	void ChasePlayer(){
 		enemy.Resume ();
 		if (chaseSide == AppearSide.APPEAR_LEFT) {
-			enemy.SetDestination (player.transform.position 
-			                      + 3*player.transform.forward - 5*player.transform.right);
-			Debug.Log ("Chasing on player's left");
+			chasePosition = player.transform.position 
+				+ 3*player.transform.forward - 5*player.transform.right;
+			enemy.SetDestination (chasePosition);
+			//Debug.Log ("Chasing on player's left");
 		} else {
-			enemy.SetDestination (player.transform.position 
-			                      + 3*player.transform.forward + 5*player.transform.right);
-			Debug.Log ("Chasing on player's right");
+			chasePosition = player.transform.position 
+				+ 3*player.transform.forward + 5*player.transform.right;
+			enemy.SetDestination (chasePosition);
+			//Debug.Log ("Chasing on player's right");
 		}
+	}
+
+	bool isLockedOnPlayer(){
+		if (enemy.remainingDistance <= 1) {
+			return true;
+		}
+		return false;
 	}
 
 	void StopChase(){
 		enemy.Stop ();
-		Debug.Log ("Enemy stopped chasing.");
+		//Debug.Log ("Enemy stopped chasing.");
+	}
+
+	// TODO: Need dumber AI to trigger this
+	void OnTriggerEnter(Collider other){
+		Debug.Log ("Moving turret got hit by something.");
+		GetComponent<ScriptTurret> ().Die();
 	}
 }
