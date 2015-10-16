@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 // TODO: collider check when moving left/right
@@ -17,13 +17,13 @@ public class TurretTrigger : MonoBehaviour {
 	public float distance;
 	private bool startMoving;
 
-	private GameManager gameManager;
+	private LevelManager levelManager;
 	private float distanceTravelled;
 	private Vector3 directionVector;
 
 	// Use this for initialization
 	void Start () {
-		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 
 		hoveringTurret.SetActive (false);
 		startMoving = false;
@@ -40,7 +40,7 @@ public class TurretTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!gameManager.isFrozen) {
+		if (!levelManager.isFrozen) {
 			if (startMoving && distanceTravelled <= distance) {
 				moveTurret ();
 			}

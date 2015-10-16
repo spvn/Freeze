@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class TurretMovingAI : MonoBehaviour {
@@ -14,7 +14,7 @@ public class TurretMovingAI : MonoBehaviour {
 	public float intervalShootTime;
 	public bool isHostile = true;
 
-	private GameManager gameManager;
+	private LevelManager levelManager;
 	GameObject muzzleFlash;
 	AudioSource shotSound;
 	private bool withinRange;
@@ -34,7 +34,7 @@ public class TurretMovingAI : MonoBehaviour {
 		turretHead = transform.Find ("TurretHead");
 		bulletShootingPt = turretHead.Find ("BulletShootingPoint");
 		
-		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		initialAngle = this.transform.localRotation;
 		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
 		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;
@@ -47,7 +47,7 @@ public class TurretMovingAI : MonoBehaviour {
 	void Update () {
 		if (isHostile){
 			//Debug.Log(gameObject.name + " " + isFacingPlayer() + " " + player.GetComponent<scriptMovement>().isFrozen + withinRotationRange());
-			if (!gameManager.isFrozen){
+			if (!levelManager.isFrozen){
 				facePlayer();
 
 				if (withinRange){

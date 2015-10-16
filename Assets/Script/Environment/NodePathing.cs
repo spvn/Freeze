@@ -1,4 +1,4 @@
-﻿/* 
+/* 
  *  Attach script to pathing nodes. 
  */
 
@@ -15,7 +15,7 @@ public class NodePathing : MonoBehaviour {
     public bool isEndNode = false;         // default node is not an end node
     public bool playerInRange = false;
     public bool disableStrafe = false;
-    private GameManager gameManager;
+    private LevelManager levelManager;
 
     // Use this for initialization
     void Start () {
@@ -24,7 +24,7 @@ public class NodePathing : MonoBehaviour {
         if (numRoutes > 1 && numRoutes != 0) hasMultiplePath = true;
         if (numRoutes == 0) isEndNode = true;
 
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
     }
 	
 	// Update is called once per frame

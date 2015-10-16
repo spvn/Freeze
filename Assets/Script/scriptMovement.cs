@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
 
@@ -10,7 +10,7 @@ public class scriptMovement : MonoBehaviour {
 	public float rotateSpeed = 2.0f;
 	public Transform[] path;
 	public GameObject canvas;
-	public GameManager gameManager;
+	public LevelManager levelManager;
 	
 	private CharacterController controller;
 	private Vector3 direction;
@@ -27,7 +27,7 @@ public class scriptMovement : MonoBehaviour {
 		controller = GetComponent<CharacterController>();
 		playerWidth = GetComponent<MeshRenderer>().bounds.size.x;
 		forwardDirection = Vector3.Normalize (path[0].position - transform.position);
-		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		playerAnimator = this.transform.Find ("playerAnimator").GetComponent<Animator> ();
 	}
 	
@@ -38,13 +38,13 @@ public class scriptMovement : MonoBehaviour {
 			meleeAttack();
 		}
 
-		if (!gameManager.isGameOver && Input.GetKeyDown (KeyCode.W)) {
+		if (!levelManager.isGameOver && Input.GetKeyDown (KeyCode.W)) {
 			//Debug.Log("Pressed Freeze " + isFrozen );
 			
 			StartCoroutine (glitchEffect ());
 		}
 
-		if (!gameManager.isFrozen) {
+		if (!levelManager.isFrozen) {
 			//Time.timeScale = 1.0f; FOR SLOWMO PURPOSES.
 			
 			mainCamera.GetComponent<ColorCorrectionCurves>().enabled = false;
@@ -100,8 +100,8 @@ public class scriptMovement : MonoBehaviour {
 		currNode++;
 
 		if (currNode == path.Length) {
-			gameManager.isFrozen = true;
-			gameManager.isGameOver = true;
+			levelManager.isFrozen = true;
+			levelManager.isGameOver = true;
 			canvas.gameObject.transform.Find("WinScreen").gameObject.SetActive (true);
 		}
 

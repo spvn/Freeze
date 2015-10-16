@@ -601,19 +601,12 @@ MonoBehaviour:
   playerSpeed: 4
   lateralSpeed: 2
   rotateSpeed: 2
-  canStrafe: 1
   jumpSpeed: 10
   gravity: 9.81000042
-  path:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  canvas: {fileID: 1913993198}
+  canStrafe: 1
   currentNode: {fileID: 0}
   destinationNode: {fileID: 0}
+  canvas: {fileID: 1913993198}
 --- !u!114 &396176565
 MonoBehaviour:
   m_ObjectHideFlags: 0

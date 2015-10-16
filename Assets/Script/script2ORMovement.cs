@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
 
@@ -22,7 +22,7 @@ public class script2ORMovement : MonoBehaviour {
     private Vector3 downDirection;
 
     // Essential GameObjects 
-    private GameManager gameManager;
+    private LevelManager levelManager;
     private CharacterController controller;
     //private ColorCorrectionCurves[] cccObjects;
     private NoiseAndScratches[] nsObjects;
@@ -30,7 +30,7 @@ public class script2ORMovement : MonoBehaviour {
 
     void Start () {
 		controller = GetComponent<CharacterController>();
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
         //cccObjects = GetComponentsInChildren<ColorCorrectionCurves>();
         nsObjects = GetComponentsInChildren<NoiseAndScratches>();
 
@@ -47,12 +47,12 @@ public class script2ORMovement : MonoBehaviour {
             moveToNextNode();
         }
 
-        if (gameManager.isChoosingPath)
+        if (levelManager.isChoosingPath)
         {
             return;
         }
 
-        if (!gameManager.isGameOver && (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.JoystickButton0)))
+        if (!levelManager.isGameOver && (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.JoystickButton0)))
         {
             StartCoroutine(glitchEffect());
         }
@@ -62,7 +62,7 @@ public class script2ORMovement : MonoBehaviour {
             OVRManager.display.RecenterPose();
         }   
 
-        if (gameManager.isGameOver || gameManager.isFrozen)
+        if (levelManager.isGameOver || levelManager.isFrozen)
         {
             return;
         }
@@ -96,15 +96,15 @@ public class script2ORMovement : MonoBehaviour {
 
             if (node.isEndNode)
             {
-                gameManager.isFrozen = true;
-                gameManager.isGameOver = true;
+                levelManager.isFrozen = true;
+                levelManager.isGameOver = true;
                 canvas.gameObject.transform.Find("WinScreen").gameObject.SetActive(true);
             }
             else if (node.hasMultiplePath)
             {
                 print("Player Script: Node has multiple paths");
-                gameManager.isFrozen = true;
-                gameManager.isChoosingPath = true;
+                levelManager.isFrozen = true;
+                levelManager.isChoosingPath = true;
             }
             // single path: get next node and continue travelling
             else
@@ -122,8 +122,8 @@ public class script2ORMovement : MonoBehaviour {
         StartCoroutine(RotateTowards(targetRotation));
         currentNode = destinationNode;
         destinationNode = null;
-        gameManager.isFrozen = false;
-        gameManager.isChoosingPath = false;
+        levelManager.isFrozen = false;
+        levelManager.isChoosingPath = false;
     }
 
 	IEnumerator glitchEffect()
