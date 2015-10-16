@@ -39,7 +39,7 @@ public class Statistic {
 
 [System.Serializable]
 public class StatisticManager : MonoBehaviour {
-	private	static StatisticManager _instance;
+	private static StatisticManager _instance;
 	public Statistic[] stats;
 	
 	void Awake () {
@@ -56,7 +56,12 @@ public class StatisticManager : MonoBehaviour {
 	
 	public static StatisticManager getManager()
 	{
-		return _instance;
+		if (_instance == null) {
+			Debug.LogError("Statistic Manager not instantiated yet");
+			return null;
+		} else {
+			return _instance;
+		}
 	}
 	
 	public Statistic getStatisticByName(string statisticName)
