@@ -21,6 +21,7 @@ public class TurretMoving : MonoBehaviour {
 		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
 		player = GameObject.Find ("OVRCameraRig");
 		enemy = GetComponent<NavMeshAgent> ();
+		enemy.speed = speed;
 	}
 	
 	// Update is called once per frame
@@ -33,15 +34,15 @@ public class TurretMoving : MonoBehaviour {
 	}
 
 	void ChasePlayer(){
-		enemy.speed = speed;
+		enemy.Resume ();
 		if (chaseSide == AppearSide.APPEAR_LEFT) {
 			enemy.SetDestination (player.transform.position 
 			                      + 3*player.transform.forward - 5*player.transform.right);
-			Debug.Log ("Chasing left");
+			Debug.Log ("Chasing on player's left");
 		} else {
 			enemy.SetDestination (player.transform.position 
 			                      + 3*player.transform.forward + 5*player.transform.right);
-			Debug.Log ("Chasing right");
+			Debug.Log ("Chasing on player's right");
 		}
 	}
 

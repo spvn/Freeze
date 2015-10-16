@@ -67,7 +67,7 @@ public class ScriptTurret : MonoBehaviour {
 		playerDirection.y = 0;
 
 		float angle = Vector3.Angle (turretFront, playerDirection);
-		Debug.Log (angle);
+		//Debug.Log (angle);
 
 		if (angle <= angleOfShooting / 2.0) {
 			return true;
