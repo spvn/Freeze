@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class scriptBullet : MonoBehaviour {
@@ -8,7 +8,7 @@ public class scriptBullet : MonoBehaviour {
 	public float speed;
 
 	public GameObject player;
-	private GameManager gameManager;
+	private LevelManager levelManager;
 	public LineRenderer bulletLine;
 
 	private Vector3 bulletDirection = Vector3.zero;
@@ -18,7 +18,7 @@ public class scriptBullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		player = GameObject.Find("OVRCameraRig").transform.gameObject;
 	}
 
@@ -45,7 +45,7 @@ public class scriptBullet : MonoBehaviour {
 
 		checkHitPlayer ();
 		checkNearMisses ();
-		if ( !gameManager.isGameOver && bulletDirection != Vector3.zero && !gameManager.isFrozen) {
+		if ( !levelManager.isGameOver && bulletDirection != Vector3.zero && !levelManager.isFrozen) {
 			this.transform.localPosition += bulletDirection * speed * Time.deltaTime;
 		}
 
@@ -85,7 +85,7 @@ public class scriptBullet : MonoBehaviour {
 	{
 		if (other.gameObject.layer == 9) {
 			Debug.Log ("Collided bullet " + other.gameObject.name + " at " + this.transform.localPosition.ToString ());
-			gameManager.GameOver ();
+			levelManager.GameOver ();
 		} else {
 			// Bullet misses the player
 			ScoreManager.score += 1;

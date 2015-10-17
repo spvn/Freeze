@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour {
 
 	GameObject timerGUIText;
 	public GameObject player;

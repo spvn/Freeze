@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ScriptTurret : MonoBehaviour {
 	public GameObject player;
-	GameManager gameManager;
+	LevelManager levelManager;
 	bool shooting = false;
 	public GameObject bulletPrefab;
 	public Animation shootingAnimation;
@@ -34,7 +34,7 @@ public class ScriptTurret : MonoBehaviour {
 		turretHead = transform.Find ("TurretHead");
 		bulletShootingPt = turretHead.Find ("BulletShootingPoint");
 
-		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		initialAngle = this.transform.localRotation;
 		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
 		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;
@@ -46,7 +46,7 @@ public class ScriptTurret : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!gameManager.isFrozen) {
+		if (!levelManager.isFrozen) {
 			if (isHostile && playerIsVisibleToEnemey () && withinRotationRange ()) {				
 				lookAtPlayer ();
 

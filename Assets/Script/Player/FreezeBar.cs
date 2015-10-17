@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -12,10 +12,10 @@ public class FreezeBar : MonoBehaviour {
 	private float currFreezeAmt;
 	private float freezeBarUIMinX;
 	private float freezeBarUIWidth;
-	private GameManager gameManager;
+	private LevelManager levelManager;
 
 	void Start () {
-		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		currFreezeAmt = maxFreezeStock;
 		freezeBarUIWidth = freezeBarUI.rect.size.x;
 		freezeBarUIMinX = freezeBarUI.localPosition.x - freezeBarUIWidth;
@@ -24,7 +24,7 @@ public class FreezeBar : MonoBehaviour {
 	void Update () {
 		//print (currFreezeAmt);
 
-		if (gameManager.getFreezeBarStatus()) {
+		if (levelManager.getFreezeBarStatus()) {
 			Debug.Log ("isFrozen in Freeze bar");
 			DepleteFreezeStock();
 		}
@@ -37,7 +37,7 @@ public class FreezeBar : MonoBehaviour {
 		currFreezeAmt -= freezeDepletionRate;
 
 		if (currFreezeAmt < 0) {
-			gameManager.invertFreezeStatus();
+			levelManager.invertFreezeStatus();
 			currFreezeAmt = 0;
 		}
 

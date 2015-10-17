@@ -41,6 +41,7 @@ public class Achievement {
 	}
 }
 
+// Achievement Manager no longer in use
 [System.Serializable]
 public class AchievementManager : MonoBehaviour {
 	private	static AchievementManager _instance;
@@ -79,3 +80,4 @@ public class AchievementManager : MonoBehaviour {
 		achievement.addProgress (progressAmount);
 	}
 }
+

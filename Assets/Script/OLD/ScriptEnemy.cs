@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ScriptEnemy : MonoBehaviour {
 	public GameObject player;
-	GameManager gameManager;
+	LevelManager gameManager;
 	bool shooting = false;
 	public GameObject bulletPrefab;
 	public Animator enemyAnimator;
@@ -27,7 +27,7 @@ public class ScriptEnemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		gameManager = GameObject.Find ("Game Manager").GetComponent<LevelManager>();
 		initialAngle = this.transform.localRotation;
 		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
 		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;

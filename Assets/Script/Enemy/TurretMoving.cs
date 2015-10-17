@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public enum AppearSide{
@@ -10,7 +10,7 @@ public class TurretMoving : MonoBehaviour {
 	public float speed;
 	public AppearSide chaseSide;
 
-	private GameManager gameManager;
+	private LevelManager levelManager;
 	private GameObject player;
 	private NavMeshAgent enemy;
 	private Vector3 rightSide;
@@ -21,7 +21,7 @@ public class TurretMoving : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gameManager = GameObject.Find ("Game Manager").GetComponent<GameManager>();
+		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		player = GameObject.Find ("OVRCameraRig");
 		enemy = GetComponent<NavMeshAgent> ();
 
@@ -34,7 +34,7 @@ public class TurretMoving : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!gameManager.isFrozen) {
+		if (!levelManager.isFrozen) {
 			if (isLockedOnPlayer()){
 				LagChasePlayer();
 			} else {
