@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3394244}
   - 23: {fileID: 2386186}
   - 64: {fileID: 6450096}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 136: {fileID: 13639106}
   - 82: {fileID: 8227828}
   - 114: {fileID: 11476844}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: GroundTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - 33: {fileID: 3330352}
   - 23: {fileID: 2380802}
   - 64: {fileID: 6437500}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   - 4: {fileID: 474502}
   - 198: {fileID: 19859782}
   - 199: {fileID: 19966892}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: muzzleFlashParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - 33: {fileID: 3307470}
   - 23: {fileID: 2310528}
   - 64: {fileID: 6460078}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 414668}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: BulletShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - 33: {fileID: 3370976}
   - 23: {fileID: 2376424}
   - 64: {fileID: 6404736}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - 33: {fileID: 3322946}
   - 23: {fileID: 2322214}
   - 64: {fileID: 6444654}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 476496}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: TurretHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,6 +502,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1.87
   MinDistance: 1
@@ -1699,7 +1700,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 113604}
