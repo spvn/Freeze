@@ -3168,14 +3168,12 @@ MonoBehaviour:
   playerSpeed: 4
   lateralSpeed: 3
   rotateSpeed: 2
-  canStrafe: 1
   jumpSpeed: 10
   gravity: 9.81000042
-  path:
-  - {fileID: 0}
-  canvas: {fileID: 157982}
+  canStrafe: 1
   currentNode: {fileID: 466342}
   destinationNode: {fileID: 0}
+  canvas: {fileID: 157982}
 --- !u!114 &11415004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4635,7 +4633,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135278}
   m_LocalRotation: {x: 0, y: 3.2584137e-07, z: 0, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: -88.0999985}
+  m_LocalPosition: {x: 0, y: 0, z: -66.1999969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22487582}
@@ -4757,7 +4755,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176968}
   m_LocalRotation: {x: 0, y: 3.2584137e-07, z: 0, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: -88.0999985}
+  m_LocalPosition: {x: 0, y: 0, z: -66.1999969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22467418}

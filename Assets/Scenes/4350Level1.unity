@@ -4305,14 +4305,6 @@ Prefab:
       propertyPath: destinationNode
       value: 
       objectReference: {fileID: 34765641}
-    - target: {fileID: 22461580, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -66.1999969
-      objectReference: {fileID: 0}
-    - target: {fileID: 22419688, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -66.1999969
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_IsPrefabParent: 0
