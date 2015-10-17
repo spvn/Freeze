@@ -1,38 +1,25 @@
 fileFormatVersion: 2
-guid: 625340f6a83589e45b7b76d68fef6a88
-timeCreated: 1445065380
+guid: 8f411b17dc8ff224c9d8f26b84c3f652
+timeCreated: 1445049914
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: pCube1
-    100002: pCube2
-    100004: pCube3
-    100006: pCylinder1
-    100008: pCylinder2
-    100010: //RootNode
-    400000: pCube1
-    400002: pCube2
-    400004: pCube3
-    400006: pCylinder1
-    400008: pCylinder2
-    400010: //RootNode
-    2300000: pCube1
-    2300002: pCube2
-    2300004: pCube3
-    2300006: pCylinder1
-    2300008: pCylinder2
-    3300000: pCube1
-    3300002: pCube2
-    3300004: pCube3
-    3300006: pCylinder1
-    3300008: pCylinder2
-    4300000: pCube1
-    4300002: pCylinder1
-    4300004: pCube2
-    4300006: pCylinder2
-    4300008: pCube3
-    7400000: Take 001
+    100000: //RootNode
+    100002: pSphere1
+    100004: pTorus3
+    100006: pTorus4
+    100008: transform1
+    100010: transform2
+    400000: //RootNode
+    400002: pSphere1
+    400004: pTorus3
+    400006: pTorus4
+    400008: transform1
+    400010: transform2
+    2300000: pTorus4
+    3300000: pTorus4
+    4300000: pTorus4
     9500000: //RootNode
   materials:
     importMaterials: 1

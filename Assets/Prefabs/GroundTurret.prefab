@@ -502,7 +502,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1.87
   MinDistance: 1
@@ -586,11 +585,12 @@ MonoBehaviour:
   player: {fileID: 0}
   bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
   shootingAnimation: {fileID: 11118724}
+  angleOfShooting: 90
   inaccuracy: .200000003
   inaccuracyY: .5
   deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
-  intervalShootTime: 1
   isHostile: 1
+  intervalShootTime: 1
 --- !u!136 &13639106
 CapsuleCollider:
   m_ObjectHideFlags: 1
