@@ -8,6 +8,7 @@ public class MainMenuButton : MonoBehaviour {
 	public Button achievementButt;
 	public Button exitGameButt;
 
+    private GameManager gm;
 	private int currSelectionIndex = 0;
 
 	// Use this for initialization
@@ -15,6 +16,7 @@ public class MainMenuButton : MonoBehaviour {
 		startGameButt = startGameButt.GetComponent<Button> ();
 		achievementButt = achievementButt.GetComponent<Button> ();
 		exitGameButt = exitGameButt.GetComponent<Button> ();
+        gm = GameManager.getManager();
 	}
 	
 	// Update is called once per frame
@@ -68,15 +70,13 @@ public class MainMenuButton : MonoBehaviour {
 
 		switch (index) {
 		case 1:
-			Debug.Log ("trying to load level 1");
-			Application.LoadLevel(1);
+            gm.loadLevelSelector();
 			break;
 		case 2:
-		//	for achievement scene
+            gm.showAchievements();
 			break;
 		case 3:
-			Debug.Log ("quiting...");
-			Application.Quit();
+            gm.quitGame();
 			break;
 		}
 	}
