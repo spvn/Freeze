@@ -8,16 +8,22 @@ ModelImporter:
     100000: //RootNode
     100002: group
     100004: pPlane2
+    100006: Level1_modified:pPlane1
     400000: //RootNode
     400002: group
     400004: pPlane2
+    400006: Level1_modified:pPlane1
     2300000: //RootNode
     2300002: pPlane2
+    2300004: Level1_modified:pPlane1
     3300000: //RootNode
     3300002: pPlane2
+    3300004: Level1_modified:pPlane1
     4300000: pPlane1
     4300002: pPlane2
+    4300004: Level1_modified:pPlane1
     6400000: pPlane2
+    6400002: Level1_modified:pPlane1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -28,10 +34,6 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: 
-    animationImportWarnings: 
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -75,10 +77,8 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
-    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
-  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
