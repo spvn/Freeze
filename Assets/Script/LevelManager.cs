@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour {
 	public bool isGameOver = false;
     public bool isChoosingPath = false;
 	public bool isFreezeBarActivated = false;
+	public bool isAttacking = false;
 	public GameObject canvas;
 	public Highscore hs;
 
@@ -66,6 +67,11 @@ public class LevelManager : MonoBehaviour {
 			LoadNextLevel();
 		}
 
+		//Testing attacking bar here
+		if (!isGameOver && Input.GetKeyDown (KeyCode.K)) {
+			isAttacking = true;
+		}
+
 	}
 
 	public void GameOver(){
@@ -102,5 +108,14 @@ public class LevelManager : MonoBehaviour {
 
 	public bool getFreezeBarStatus () {
 		return isFreezeBarActivated;
+	}
+
+	public bool getIsAttackingStatus () {
+		return isAttacking;
+	}
+
+	public void setActionBar () {
+		Debug.Log ("Setting Action Bar");
+		isAttacking = !isAttacking;
 	}
 }
