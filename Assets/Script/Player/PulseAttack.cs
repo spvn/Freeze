@@ -34,7 +34,6 @@ public class PulseAttack : MonoBehaviour {
         // Depleting action bar stock
         if ( actionBar.canDeplete(energyCost) )
         {
-            print("Pulsing.. Depleteing stock");
             Instantiate(pulseEffect, transform.position - new Vector3(0,transform.position.y,0), transform.rotation);
             actionBar.DepleteActionStock(energyCost);
 
