@@ -14,15 +14,15 @@ public class LevelManager : MonoBehaviour {
 	public GameObject canvas;
 	public Highscore hs;
 
-	const int NUM_LEVELS = 1;
+	const int NUM_LEVELS = 2;
 
 	public bool startedGame = false;
 
 	public static float timeElapsed;
 
 	// Use this for initialization
-	void Start () {	
-		isFrozen = true;
+	void Start () {
+        isFrozen = true;
 		timerGUIText = canvas.transform.Find ("Panel").transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
 	}
