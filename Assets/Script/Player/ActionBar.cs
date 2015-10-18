@@ -27,13 +27,13 @@ public class ActionBar: MonoBehaviour {
 		
 		if (levelManager.getIsAttackingStatus()) {
 			// Check if player is attacking. If no, countdown 2 secs before replenishing action bar.
-			Debug.Log ("In Action bar");
+			//Debug.Log ("In Action bar");
 			DepleteActionStock(300);
 			levelManager.setActionBar();
 		}
 		else {
 		//	countdownTime -= Time.deltaTime;
-			Debug.Log ("In Action bar - replenishing");
+			//Debug.Log ("In Action bar - replenishing");
 	//		if (countdownTime <= 0.0) {
 				ReplenishActionStock();
 	//		}
@@ -70,4 +70,16 @@ public class ActionBar: MonoBehaviour {
 		position.x = actionBarUIMinX + actionStockPercentage * actionBarUIWidth;
 		actionBarUI.localPosition = position;
 	}
+
+    public bool canDeplete(int actionPoint)
+    {
+        if (currActionAmt >= actionPoint)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

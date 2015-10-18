@@ -25,7 +25,7 @@ public class FreezeBar : MonoBehaviour {
 		//print (currFreezeAmt);
 
 		if (levelManager.getFreezeBarStatus()) {
-			Debug.Log ("isFrozen in Freeze bar");
+			//Debug.Log ("isFrozen in Freeze bar");
 			DepleteFreezeStock();
 		}
 		else {

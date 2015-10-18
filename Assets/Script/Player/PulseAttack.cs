@@ -29,17 +29,21 @@ public class PulseAttack : MonoBehaviour {
 
     public void destroyEnemies ()
     {
+
         // Depleting action bar stock
-        actionBar.DepleteActionStock(energyCost);
-
-        Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, pulseRadius);
-
-        for (int i = 0; i < hitColliders.Length; i++)
+        if ( actionBar.canDeplete(energyCost) )
         {
-            if (hitColliders[i].gameObject.layer == 12 &&
-                    hitColliders[i].gameObject.tag == "Destroyable")
+            print("Pulsing.. Depleteing stock");
+            actionBar.DepleteActionStock(energyCost);
+
+            Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, pulseRadius);
+            for (int i = 0; i < hitColliders.Length; i++)
             {
-                hitColliders[i].gameObject.SetActive(false);
+                if (hitColliders[i].gameObject.layer == 12 &&
+                        hitColliders[i].gameObject.tag == "Destroyable")
+                {
+                    hitColliders[i].gameObject.SetActive(false);
+                }
             }
         }
     }
