@@ -7,6 +7,7 @@ public class PulseAttack : MonoBehaviour {
     public int energyCost = 60;
     public GameObject actionBarObject;
     private ActionBar actionBar;
+    public GameObject pulseEffect;
 
     // Use this for initialization
     void Start ()
@@ -34,6 +35,7 @@ public class PulseAttack : MonoBehaviour {
         if ( actionBar.canDeplete(energyCost) )
         {
             print("Pulsing.. Depleteing stock");
+            Instantiate(pulseEffect, transform.position - new Vector3(0,transform.position.y,0), transform.rotation);
             actionBar.DepleteActionStock(energyCost);
 
             Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, pulseRadius);

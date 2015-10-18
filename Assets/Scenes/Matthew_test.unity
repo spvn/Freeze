@@ -141,6 +141,10 @@ Prefab:
       propertyPath: m_TagString
       value: Destroyable
       objectReference: {fileID: 0}
+    - target: {fileID: 8259230, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11118724, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
     - {fileID: 8227828, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
@@ -264,6 +268,10 @@ Prefab:
       propertyPath: m_TagString
       value: Destroyable
       objectReference: {fileID: 0}
+    - target: {fileID: 8259230, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11118724, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
     - {fileID: 8227828, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
@@ -293,127 +301,6 @@ MonoBehaviour:
   isEndNode: 0
   playerInRange: 0
   disableStrafe: 0
---- !u!1 &400189843
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400189847}
-  - 15: {fileID: 400189846}
-  - 26: {fileID: 400189845}
-  - 12: {fileID: 400189844}
-  m_Layer: 0
-  m_Name: Fire Pulse (Particle System)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!12 &400189844
-ParticleAnimator:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 400189843}
-  Does Animate Color?: 1
-  colorAnimation[0]:
-    serializedVersion: 2
-    rgba: 184549375
-  colorAnimation[1]:
-    serializedVersion: 2
-    rgba: 3036676095
-  colorAnimation[2]:
-    serializedVersion: 2
-    rgba: 4294967295
-  colorAnimation[3]:
-    serializedVersion: 2
-    rgba: 3036676095
-  colorAnimation[4]:
-    serializedVersion: 2
-    rgba: 184549375
-  worldRotationAxis: {x: 0, y: 0, z: 0}
-  localRotationAxis: {x: 0, y: 0, z: 0}
-  sizeGrow: 0
-  rndForce: {x: 0, y: 0, z: 0}
-  force: {x: 0, y: 0, z: 0}
-  damping: 1
-  stopSimulation: 0
-  autodestruct: 0
---- !u!26 &400189845
-ParticleRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 400189843}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 3bfa2f095c911d649bf4cb92a55ac974, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_CameraVelocityScale: 0
-  m_StretchParticles: 0
-  m_LengthScale: 2
-  m_VelocityScale: 0
-  m_MaxParticleSize: 1
-  UV Animation:
-    x Tile: 8
-    y Tile: 4
-    cycles: 1
---- !u!15 &400189846
-EllipsoidParticleEmitter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 400189843}
-  serializedVersion: 2
-  m_Enabled: 1
-  m_Emit: 1
-  minSize: 3
-  maxSize: 3
-  minEnergy: .400000006
-  maxEnergy: .400000006
-  minEmission: 80
-  maxEmission: 80
-  worldVelocity: {x: 0, y: 0, z: 0}
-  localVelocity: {x: 0, y: 0, z: 0}
-  rndVelocity: {x: 0, y: 0, z: 0}
-  emitterVelocityScale: .0500000007
-  tangentVelocity: {x: 10, y: 0, z: 10}
-  angularVelocity: 0
-  rndAngularVelocity: 0
-  rndRotation: 0
-  Simulate in Worldspace?: 1
-  m_OneShot: 1
-  m_Ellipsoid: {x: 1, y: .00100000005, z: 1}
-  m_MinEmitterRange: 0
---- !u!4 &400189847
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 400189843}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.7800007, y: .800000012, z: -11.2542896}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
 --- !u!1 &481060672
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +391,10 @@ Prefab:
     - target: {fileID: 113604, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: m_TagString
       value: Destroyable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8259230, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11118724, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
@@ -657,6 +548,10 @@ Prefab:
     - target: {fileID: 113604, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: m_TagString
       value: Destroyable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8259230, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11118724, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
@@ -1167,6 +1062,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412308, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407854, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: pulseEffect
+      value: 
+      objectReference: {fileID: 133296, guid: 950ebfb99e972c34480a655f1017132b, type: 2}
+    - target: {fileID: 8266066, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266066, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
