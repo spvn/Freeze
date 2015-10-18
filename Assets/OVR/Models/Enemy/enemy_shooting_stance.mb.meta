@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8ff2d4ff474b9bb4689e516c8a984386
+guid: 2d17d9b150aa0d8449812b6e6c857630
 timeCreated: 1427535210
 licenseType: Free
 ModelImporter:
@@ -81,6 +81,10 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
@@ -452,8 +456,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: root_back
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
