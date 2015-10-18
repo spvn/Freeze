@@ -4913,7 +4913,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412308, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11491768, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: destinationNode
