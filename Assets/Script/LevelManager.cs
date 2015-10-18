@@ -18,10 +18,14 @@ public class LevelManager : MonoBehaviour {
 
 	public bool startedGame = false;
 
-	public static float timeElapsed;
+	public float timeElapsed;
+
+    private GameManager gm;
 
 	// Use this for initialization
 	void Start () {
+        gm = GameManager.getManager();
+        gm.updateCurrentLevel();
         isFrozen = true;
 		timerGUIText = canvas.transform.Find ("Panel").transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
@@ -76,26 +80,21 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	public void GameOver(){
+        gm.playerGameOver();
 		ScoreManager.updateHighscore ();
-		canvas.gameObject.transform.Find("GameOverScreen").gameObject.SetActive (true);
-		timeElapsed = 0.0f;
 		isFrozen = true;
 		isGameOver = true;
 	}
 	
 	public void RestartLevel()
 	{
-		Debug.Log ("Restarting");
-		Application.LoadLevel (Application.loadedLevel);
+        gm.restartCurrentLevel();
 	}
 
 	public void LoadNextLevel()
 	{
-		if (Application.loadedLevel < NUM_LEVELS) {
-			Application.LoadLevel (Application.loadedLevel + 1);
-		} else {
-			RestartLevel();
-		}
+        gm.currentLevelCleared();
+        gm.loadNextLevel();
 	}
 
 	public void invertFreezeStatus () {

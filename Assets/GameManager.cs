@@ -5,9 +5,12 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
     private static GameManager _instance;
 
+    public int[] nextLevel;
+
     private GameObject canvas;
     private StatisticManager sm;
     private int currentLevel;
+
     private GameObject mmScreen;
     private GameObject lsScreen;
     private GameObject achieveScreen;
@@ -16,7 +19,10 @@ public class GameManager : MonoBehaviour {
     private GameObject winScreen;
     private GameObject timePanel;
     private GameObject scorePanel;
-        
+    private GameObject freezeBar;
+    private GameObject actionBar;
+    private GameObject eventScreen;
+
 
     void Awake()
     {
@@ -76,25 +82,38 @@ public class GameManager : MonoBehaviour {
         Application.Quit();
     }
 
-    private void checkUIsLoaded()
+    private void attachRequiredUI()
     {
-        if (currentLevel != Application.loadedLevel)
+        switch (Application.loadedLevel)
         {
-            switch (Application.loadedLevel)
-            {
-                case 0:
-                    Debug.Log("Checking screens for MainMenu");
-                    mmScreen = assignUI("MainMenuScreen");
-                    lsScreen = assignUI("LevelSelectorScreen");
-                    achieveScreen = assignUI("AchievementScreen");
-                    break;
-            }
-            currentLevel = Application.loadedLevel;
+            case 0:
+                Debug.Log("Attaching screens for MainMenu");
+                mmScreen = assignUI("MainMenuScreen");
+                lsScreen = assignUI("LevelSelectorScreen");
+                achieveScreen = assignUI("AchievementScreen");
+                break;
+            case 1:
+            case 2:
+                Debug.Log("Attaching screens for Level 1");
+                startScreen = assignUI("StartingScreen");
+                timePanel = assignUI("Panel");
+                scorePanel = assignUI("Score Panel");
+                goScreen = assignUI("GameOverScreen");
+                winScreen = assignUI("WinScreen");
+                freezeBar = assignUI("Freeze bar");
+                actionBar = assignUI("Action Bar");
+                eventScreen = assignUI("EventScreen");
+                break;
         }
     }
 
     private GameObject assignUI(string screenName)
     {
+        if (canvas == null)
+        {
+            canvas = GameObject.Find("ORCanvas");
+        }
+
         GameObject screenOb = canvas.transform.FindChild(screenName).gameObject;
         if (screenOb == null)
         {
@@ -102,7 +121,36 @@ public class GameManager : MonoBehaviour {
             return null;
         } else {
             return screenOb;
-        }
-        
+        }        
+    }
+
+    public void updateCurrentLevel()
+    {
+        currentLevel = Application.loadedLevel;
+        attachRequiredUI();
+    }
+
+    public void playerGameOver()
+    {
+        Debug.Log("Player died on level: " + currentLevel);
+        goScreen.SetActive(true);
+    }
+
+    public void restartCurrentLevel()
+    {
+        Debug.Log("Player restarting current level: " + currentLevel);
+        Application.LoadLevel(currentLevel);
+        attachRequiredUI();
+    }
+
+    public void currentLevelCleared()
+    {
+        Debug.Log("Player cleared current level: " + currentLevel);
+    }
+
+    public void loadNextLevel()
+    {
+        Debug.Log("Game attempting to load next level after " +  currentLevel +" : " + nextLevel[currentLevel]);
+        Application.LoadLevel(nextLevel[currentLevel]);
     }
 }
