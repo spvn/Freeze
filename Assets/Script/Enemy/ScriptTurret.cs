@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class ScriptTurret : MonoBehaviour {
-	public GameObject player;
+	private GameObject player;
 	LevelManager levelManager;
 	bool shooting = false;
 	public GameObject bulletPrefab;
@@ -14,6 +14,11 @@ public class ScriptTurret : MonoBehaviour {
 
 	public bool isHostile = true;
 
+	// Sounds
+	private AudioSource[] turretAudio;
+	private int SHOOTING_SOUND = 0;
+	private int DYING_SOUND = 1;
+
 	// Shooting variables
 	private Transform turretHead;
 	private Transform bulletShootingPt;
@@ -22,7 +27,6 @@ public class ScriptTurret : MonoBehaviour {
 	Quaternion initialAngle;
 	Vector3 playerOffset = new Vector3(0, 0.0f, 0);
 	Vector3 randomOffset;
-	AudioSource shotSound;
 	float playerSpeed;
 	GameObject muzzleFlash;
 
@@ -34,12 +38,13 @@ public class ScriptTurret : MonoBehaviour {
 		turretHead = transform.Find ("TurretHead");
 		bulletShootingPt = turretHead.Find ("BulletShootingPoint");
 
+		player = GameObject.Find ("OVRCameraRig");
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		initialAngle = this.transform.localRotation;
 		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
 		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;
-		shotSound = GetComponent<AudioSource>();
-
+		turretAudio = GetComponents<AudioSource>();
+		
 		turretFront = transform.forward;
 		turretFront.y = 0;
 	}
@@ -109,7 +114,7 @@ public class ScriptTurret : MonoBehaviour {
 		bullet.transform.position = bulletShootingPt.transform.position;
 		muzzleFlash.transform.position = bulletShootingPt.transform.position;
 		muzzleFlash.GetComponent<ParticleSystem>().Play();
-		shotSound.Play();
+		turretAudio[SHOOTING_SOUND].Play();
 		
 		//Time of flight to reach player
 		float bulletTimeToCurrPos = (player.transform.position - bulletShootingPt.transform.position).magnitude / bullet.GetComponent<scriptBullet>().speed;
@@ -143,6 +148,7 @@ public class ScriptTurret : MonoBehaviour {
 		Vector3 deathEffectPos = transform.position - (transform.forward/2) + new Vector3(0.0f,1.0f,0.0f);
 		Instantiate (deathEffect, deathEffectPos, deathEffect.transform.rotation);
 		ScoreManager.score += 50;
+	//	turretAudio[DYING_SOUND].Play();
 		Destroy (gameObject);
 	}
 
