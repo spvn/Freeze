@@ -9,21 +9,39 @@ ModelImporter:
     100002: group
     100004: pPlane2
     100006: Level1_modified:pPlane1
+    100008: pCube1
+    100010: pCube2
+    100012: pPlane3
+    100014: transform1
+    100016: transform2
     400000: //RootNode
     400002: group
     400004: pPlane2
     400006: Level1_modified:pPlane1
+    400008: pCube1
+    400010: pCube2
+    400012: pPlane3
+    400014: transform1
+    400016: transform2
     2300000: //RootNode
     2300002: pPlane2
     2300004: Level1_modified:pPlane1
+    2300006: pCube2
+    2300008: pPlane3
     3300000: //RootNode
     3300002: pPlane2
     3300004: Level1_modified:pPlane1
+    3300006: pCube2
+    3300008: pPlane3
     4300000: pPlane1
     4300002: pPlane2
     4300004: Level1_modified:pPlane1
+    4300006: pCube2
+    4300008: pPlane3
     6400000: pPlane2
     6400002: Level1_modified:pPlane1
+    6400004: pCube2
+    6400006: pPlane3
     9500000: //RootNode
   materials:
     importMaterials: 1
