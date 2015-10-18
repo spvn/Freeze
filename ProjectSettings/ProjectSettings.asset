@@ -249,6 +249,10 @@ PlayerSettings:
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
   ps4attribShareSupport: 0
+<<<<<<< HEAD
+=======
+  ps4IncludedModules: []
+>>>>>>> origin/master
   monoEnv: 
   psp2Splashimage: {fileID: 0}
   psp2NPTrophyPackPath: 
