@@ -42,7 +42,9 @@ public class PulseAttack : MonoBehaviour {
                 if (hitColliders[i].gameObject.layer == 12 &&
                         hitColliders[i].gameObject.tag == "Destroyable")
                 {
-                    hitColliders[i].gameObject.SetActive(false);
+                    ScriptTurret turret = hitColliders[i].gameObject.GetComponent<ScriptTurret>();
+                    turret.Die();
+                    //hitColliders[i].gameObject.SetActive(false);
                 }
             }
         }
