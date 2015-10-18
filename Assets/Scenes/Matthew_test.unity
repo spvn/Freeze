@@ -543,6 +543,10 @@ Prefab:
     - {fileID: 11476844, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1081038979 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 191228, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+  m_PrefabInternal: {fileID: 1961805317}
 --- !u!1001 &1157355164
 Prefab:
   m_ObjectHideFlags: 0
@@ -659,6 +663,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
   m_PrefabInternal: {fileID: 1345707668}
+--- !u!1 &1589667264 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125082, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+  m_PrefabInternal: {fileID: 1961805317}
 --- !u!1 &1592210731 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 192476, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
@@ -828,13 +836,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093da01cd52a75549ae83c407be8d53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1081038979}
   isFrozen: 0
   isGameOver: 0
   isChoosingPath: 0
   isFreezeBarActivated: 0
   isAttacking: 0
-  canvas: {fileID: 0}
+  canvas: {fileID: 1589667264}
   hs: {fileID: 0}
   startedGame: 0
 --- !u!114 &1759487873
