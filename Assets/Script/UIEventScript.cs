@@ -29,6 +29,12 @@ public class UIEventScript : MonoBehaviour {
 				Debug.Log("Moved");
 				canvasEventText.GetComponent<Text>().text = "MOVE YOUR HEAD";
 				break;
+			case "pulse":
+				canvasEventText.GetComponent<Text>().text = "PULSE: K";
+				break;
+			case "strafe":
+				canvasEventText.GetComponent<Text>().text = "STRAFE: A/D";
+				break;
 			default:
 				break;
 			}
