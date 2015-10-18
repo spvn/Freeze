@@ -4,11 +4,13 @@ using System.Collections;
 public class PulseAttack : MonoBehaviour {
 
     public float pulseRadius = 0f;
+    public GameObject actionBarObject;
+    private ActionBar actionBar;
 
     // Use this for initialization
     void Start ()
     {
-
+        actionBar = actionBarObject.GetComponent<ActionBar>();
     }
 	
 	// Update is called once per frame
@@ -26,6 +28,8 @@ public class PulseAttack : MonoBehaviour {
 
     public void destroyEnemies ()
     {
+        // Depleting action bar stock
+        actionBar.DepleteActionStock(20);
         Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, pulseRadius);
 
         for (int i = 0; i < hitColliders.Length; i++)

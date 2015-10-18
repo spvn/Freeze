@@ -66,11 +66,12 @@ public class LevelManager : MonoBehaviour {
 		if (canvas.gameObject.transform.Find ("WinScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
 			LoadNextLevel();
 		}
-
+        /*
 		//Testing attacking bar here
 		if (!isGameOver && Input.GetKeyDown (KeyCode.K)) {
 			isAttacking = true;
-		}
+		}*/
+        
 
 	}
 
