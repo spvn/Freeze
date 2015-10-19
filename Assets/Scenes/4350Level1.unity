@@ -5547,6 +5547,7 @@ MonoBehaviour:
   isFreezeBarActivated: 0
   isAttacking: 0
   canvas: {fileID: 1945645845}
+  cameraOVR: {fileID: 1698343461}
   hs: {fileID: 0}
   startedGame: 0
   timeElapsed: 0

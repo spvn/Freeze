@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour {
                 scorePanel = assignUI("Score Panel");
                 goScreen = assignUI("GameOverScreen");
                 winScreen = assignUI("WinScreen");
-                freezeBar = assignUI("Freeze bar");
+                freezeBar = assignUI("Freeze Bar");
                 actionBar = assignUI("Action Bar");
                 eventScreen = assignUI("EventScreen");
                 break;

@@ -4,6 +4,9 @@ using System.Collections;
 public class FadingScript : MonoBehaviour {
 	
 	public float countdownTime = 10.0f;
+	public GameObject cameraOVR;
+
+	private bool hasFadedIn = false;
 	Color fadeEffect;
 
 	void Start() {
@@ -15,13 +18,23 @@ public class FadingScript : MonoBehaviour {
 	void Update () {
 		if (countdownTime >= 0.0){
 			countdownTime -= Time.deltaTime;
-			fadeEffect.a  -=  0.3f * Time.deltaTime;
+			fadeEffect.a  -=  0.4f * Time.deltaTime;
 			GetComponent<Renderer>().material.color = fadeEffect;
-		} else {
-			fadeEffect.a  = 0.0f;	
-			GetComponent<Renderer>().material.color = fadeEffect;
+		} else if (!hasFadedIn) {
+			hasFadedIn = true;
+			cameraOVR.gameObject.transform.Find("Fade Box").gameObject.SetActive(false);
+			setFadeBoxOpaque ();
 			countdownTime = -1.0f;
 		}
+	}
 
+	public void setFadeBoxOpaque () {
+		fadeEffect.a = 1.0f;
+		GetComponent<Renderer>().material.color = fadeEffect;
+	}
+
+	public void setFadeBoxTransparent () {
+		fadeEffect.a = 0.0f;
+		GetComponent<Renderer>().material.color = fadeEffect;
 	}
 }

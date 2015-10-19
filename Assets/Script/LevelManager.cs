@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -12,7 +12,9 @@ public class LevelManager : MonoBehaviour {
 	public bool isFreezeBarActivated = false;
 	public bool isAttacking = false;
 	public GameObject canvas;
+	public GameObject cameraOVR;
 	public Highscore hs;
+	private bool isPause = false;
 
 	const int NUM_LEVELS = 2;
 
@@ -38,28 +40,61 @@ public class LevelManager : MonoBehaviour {
 		}
 
 		if (startedGame && !isGameOver) {
-			timeElapsed += Time.deltaTime;
-			timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
+			if (!isPause) {
+				timeElapsed += Time.deltaTime;
+				timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
+			}
 		}
 
 		if (!isGameOver && (Input.GetKeyDown (KeyCode.J) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
-			//Debug.Log("Pressed Freeze " + isFrozen );
-			if(isChoosingPath)
-            {
-                return; // player cannot un-freeze when choosing a path to go
-            }
-			invertFreezeStatus ();
-			
-			if (isFrozen) {
-				this.GetComponent<scriptAudio>().playFreezeAudio();
+
+			if (!isPause) {
+				//Debug.Log("Pressed Freeze " + isFrozen );
+				if(isChoosingPath)
+				{
+					return; // player cannot un-freeze when choosing a path to go
+				}
+				invertFreezeStatus ();
+				setFreezeBar ();
+				
+				if (isFrozen) {
+					this.GetComponent<scriptAudio>().playFreezeAudio();
+				}
+				else {
+					this.GetComponent<scriptAudio>().playUnfreezeAudio();
+				}
 			}
-			else {
-				this.GetComponent<scriptAudio>().playUnfreezeAudio();
-			}
-			
+
 			if(canvas.gameObject.transform.Find("StartingScreen").gameObject.activeSelf)
 			{
 				canvas.gameObject.transform.Find("StartingScreen").gameObject.SetActive(false);
+			}
+
+		}
+
+		//Pause State
+		if (!isGameOver && (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown (KeyCode.JoystickButton7)/*start button on Xbox Controller*/)) {
+
+			invertPauseStatus ();
+
+			if (isPause) {
+				isFrozen = true;
+				canvas.transform.Find ("Panel").gameObject.SetActive(false);
+				canvas.transform.Find ("Score Panel").gameObject.SetActive(false);
+				canvas.transform.Find ("Freeze Bar").gameObject.SetActive(false);
+				canvas.transform.Find ("Action Bar").gameObject.SetActive(false);
+				canvas.transform.Find ("EventScreen").gameObject.SetActive(false);
+				canvas.transform.Find ("PauseScreen").gameObject.SetActive(true);
+				cameraOVR.transform.Find("Fade Box").gameObject.SetActive(true);
+			} else {
+				isFrozen = false;
+				canvas.transform.Find ("Panel").gameObject.SetActive(true);
+				canvas.transform.Find ("Score Panel").gameObject.SetActive(true);
+				canvas.transform.Find ("Freeze Bar").gameObject.SetActive(true);
+				canvas.transform.Find ("Action Bar").gameObject.SetActive(true);
+				canvas.transform.Find ("EventScreen").gameObject.SetActive(true);
+				canvas.transform.Find ("PauseScreen").gameObject.SetActive(false);
+				cameraOVR.transform.Find("Fade Box").gameObject.SetActive(false);
 			}
 		}
 
@@ -70,12 +105,8 @@ public class LevelManager : MonoBehaviour {
 		if (canvas.gameObject.transform.Find ("WinScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
 			LoadNextLevel();
 		}
-        /*
-		//Testing attacking bar here
-		if (!isGameOver && Input.GetKeyDown (KeyCode.K)) {
-			isAttacking = true;
-		}*/
         
+
 
 	}
 
@@ -99,7 +130,10 @@ public class LevelManager : MonoBehaviour {
 
 	public void invertFreezeStatus () {
 		isFrozen = !isFrozen;
-		setFreezeBar ();
+	}
+
+	public void invertPauseStatus () {
+		isPause = !isPause;
 	}
 
 	public void setFreezeBar () {

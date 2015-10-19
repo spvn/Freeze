@@ -38,6 +38,7 @@ public class FreezeBar : MonoBehaviour {
 
 		if (currFreezeAmt < 0) {
 			levelManager.invertFreezeStatus();
+			levelManager.setFreezeBar();
 			currFreezeAmt = 0;
 		}
 
