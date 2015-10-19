@@ -49,9 +49,12 @@ public class NodePathing : MonoBehaviour {
         }
 	}
 
-    void OnTriggerEnter ()
+    void OnTriggerEnter (Collider col)
     {
-        playerInRange = true;
+        if (col.gameObject.name == "OVRCameraRig")
+        {
+            playerInRange = true;
+        }
     }
     
     void OnTriggerExit ()

@@ -67,6 +67,7 @@ public class script2ORMovement : MonoBehaviour {
             return;
         }
 
+
         // Player can do these actions if game is not paused
         if (controller.isGrounded && Input.GetKeyDown(KeyCode.LeftAlt))
         {
@@ -165,9 +166,9 @@ public class script2ORMovement : MonoBehaviour {
 
     void jump()
     {
-        downDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
-        downDirection = transform.TransformDirection(downDirection);
-        downDirection *= playerSpeed;
+        downDirection = new Vector3(0, 0, /*Input.GetAxis("Vertical")*/0);
+        //downDirection = transform.TransformDirection(downDirection);
+        //downDirection *= playerSpeed;
         downDirection.y = jumpSpeed;
     }
 
