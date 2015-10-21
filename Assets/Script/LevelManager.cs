@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour {
 	public Highscore hs;
 	private bool isPause = false;
 
-	const int NUM_LEVELS = 2;
+	const int NUM_LEVELS = 4;
 
 	public bool startedGame = false;
 
