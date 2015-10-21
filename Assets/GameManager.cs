@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour {
                 break;
             case 1:
             case 2:
+            case 3:
                 Debug.Log("Attaching screens for Level 1");
                 startScreen = assignUI("StartingScreen");
                 timePanel = assignUI("Panel");
