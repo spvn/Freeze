@@ -86,10 +86,33 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &233884196 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192476, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+  m_PrefabInternal: {fileID: 444001872}
 --- !u!4 &233884197 stripped
 Transform:
   m_PrefabParentObject: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
   m_PrefabInternal: {fileID: 444001872}
+--- !u!114 &233884198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 233884196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad7d1e972454294182a8b816633b05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftDestinationNode: {fileID: 0}
+  MiddleDestinationNode: {fileID: 0}
+  RightDestinationNode: {fileID: 0}
+  numRoutes: 0
+  hasMultiplePath: 0
+  isEndNode: 0
+  playerInRange: 0
+  disableStrafe: 0
 --- !u!1001 &392267442
 Prefab:
   m_ObjectHideFlags: 0
@@ -140,10 +163,33 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &393455731 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192476, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+  m_PrefabInternal: {fileID: 2053377642}
 --- !u!4 &393455732 stripped
 Transform:
   m_PrefabParentObject: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
   m_PrefabInternal: {fileID: 2053377642}
+--- !u!114 &393455733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393455731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad7d1e972454294182a8b816633b05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftDestinationNode: {fileID: 0}
+  MiddleDestinationNode: {fileID: 233884197}
+  RightDestinationNode: {fileID: 0}
+  numRoutes: 0
+  hasMultiplePath: 0
+  isEndNode: 0
+  playerInRange: 0
+  disableStrafe: 0
 --- !u!1 &422821759 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100090, guid: 2e6136c8e4b63ed4e96774e3b988e040, type: 3}
