@@ -30,7 +30,6 @@ public class PulseAttack : MonoBehaviour {
 
     public void destroyEnemies ()
     {
-
         // Depleting action bar stock
         if ( actionBar.canDeplete(energyCost) )
         {
@@ -51,4 +50,8 @@ public class PulseAttack : MonoBehaviour {
         }
     }
 
+    public void deflectBossProjectile ()
+    {
+
+    }
 }

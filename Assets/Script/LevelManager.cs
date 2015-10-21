@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour {
 	public GameObject canvas;
 	public GameObject cameraOVR;
 	public Highscore hs;
-	private bool isPause = false;
+	public bool isPause = false;
 
 	const int NUM_LEVELS = 4;
 
