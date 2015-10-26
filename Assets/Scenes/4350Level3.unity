@@ -2016,7 +2016,7 @@ Prefab:
       objectReference: {fileID: 393455732}
     - target: {fileID: 191228, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
@@ -2101,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1455132004
 AudioListener:
   m_ObjectHideFlags: 0
