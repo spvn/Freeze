@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour {
 		if (startedGame && !isGameOver) {
 			if (!isPause) {
 				timeElapsed += Time.deltaTime;
-				timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
+				//timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
 			}
 		}
 
