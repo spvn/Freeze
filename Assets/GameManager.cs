@@ -17,11 +17,9 @@ public class GameManager : MonoBehaviour {
     private GameObject goScreen;
     private GameObject startScreen;
     private GameObject winScreen;
-    private GameObject timePanel;
-    private GameObject scorePanel;
-    private GameObject freezeBar;
-    private GameObject actionBar;
-    private GameObject eventScreen;
+    private GameObject HUD;
+    private GameObject pauseScreen;
+    private GameObject exitScreen;
 
 
     void Awake()
@@ -95,15 +93,14 @@ public class GameManager : MonoBehaviour {
             case 1:
             case 2:
             case 3:
-                Debug.Log("Attaching screens for Level 1");
+            case 4:
+                Debug.Log("Attaching screens for playable level");
                 startScreen = assignUI("StartingScreen");
-                timePanel = assignUI("Panel");
-                scorePanel = assignUI("Score Panel");
+                HUD = assignUI("HUD");
                 goScreen = assignUI("GameOverScreen");
                 winScreen = assignUI("WinScreen");
-                freezeBar = assignUI("Freeze Bar");
-                actionBar = assignUI("Action Bar");
-                eventScreen = assignUI("EventScreen");
+                pauseScreen = assignUI("PauseScreen");
+                exitScreen = assignUI("ExitScreen");
                 break;
         }
     }
@@ -141,7 +138,7 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("Player restarting current level: " + currentLevel);
         Application.LoadLevel(currentLevel);
-        attachRequiredUI();
+      //  attachRequiredUI();
     }
 
     public void currentLevelCleared()
@@ -153,5 +150,25 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("Game attempting to load next level after " +  currentLevel +" : " + nextLevel[currentLevel]);
         Application.LoadLevel(nextLevel[currentLevel]);
+    }
+
+    public void pauseGame()
+    {
+        HUD.SetActive(false);
+        pauseScreen.SetActive(true);
+        exitScreen.SetActive(false);
+    }
+
+    public void unpauseGame()
+    {
+        HUD.SetActive(true);
+        pauseScreen.SetActive(false);
+        exitScreen.SetActive(false);
+    }
+
+    public void exitToMainMenu()
+    {
+        Debug.Log("Player exit to main menu");
+        Application.LoadLevel(0);
     }
 }

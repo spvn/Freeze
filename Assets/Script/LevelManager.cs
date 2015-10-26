@@ -44,7 +44,7 @@ public class LevelManager : MonoBehaviour {
         gm = GameManager.getManager();
         gm.updateCurrentLevel();
         isFrozen = true;
-		timerGUIText = canvas.transform.Find ("Panel").transform.Find ("TimerText").gameObject;
+		timerGUIText = canvas.transform.Find("HUD").Find ("Panel").transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
 	}
 	
@@ -113,26 +113,14 @@ public class LevelManager : MonoBehaviour {
         if (isPause)
         {
             isFrozen = true;
-            canvas.transform.Find("Panel").gameObject.SetActive(false);
-            canvas.transform.Find("Score Panel").gameObject.SetActive(false);
-            canvas.transform.Find("Freeze Bar").gameObject.SetActive(false);
-            canvas.transform.Find("Action Bar").gameObject.SetActive(false);
-            canvas.transform.Find("EventScreen").gameObject.SetActive(false);
-			canvas.transform.Find("ExitScreen").gameObject.SetActive(false);
-            canvas.transform.Find("PauseScreen").gameObject.SetActive(true);
             cameraOVR.transform.Find("Fade Box").gameObject.SetActive(true);
+            gm.pauseGame();
         }
         else
         {
 			isFrozen = isFrozenWhenPaused;
-			canvas.transform.Find("Panel").gameObject.SetActive(true);
-            canvas.transform.Find("Score Panel").gameObject.SetActive(true);
-            canvas.transform.Find("Freeze Bar").gameObject.SetActive(true);
-            canvas.transform.Find("Action Bar").gameObject.SetActive(true);
-            canvas.transform.Find("EventScreen").gameObject.SetActive(true);
-			canvas.transform.Find("ExitScreen").gameObject.SetActive(false);
-            canvas.transform.Find("PauseScreen").gameObject.SetActive(false);
             cameraOVR.transform.Find("Fade Box").gameObject.SetActive(false);
+            gm.unpauseGame();
         }
     }
 
