@@ -2249,8 +2249,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191228}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -67.3000031, y: 1.79999995, z: 46.5900002}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -165.25, y: 270.200012, z: 4.46000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 468792}
@@ -3540,7 +3540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf9d2deb2672674893e612b259b4211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 4
+  countdownTime: 3
   cameraOVR: {fileID: 191228}
 --- !u!114 &11402160
 MonoBehaviour:

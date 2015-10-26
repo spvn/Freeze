@@ -89,7 +89,9 @@ public class LevelManager : MonoBehaviour {
 
 		//Pause State
 		if (!isGameOver && (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown (KeyCode.JoystickButton7)/*start button on Xbox Controller*/)) {
-			isFrozenWhenPaused = isFrozen;
+
+            if (!isPause)
+               isFrozenWhenPaused = isFrozen;
 			PauseGame();
         }
 
