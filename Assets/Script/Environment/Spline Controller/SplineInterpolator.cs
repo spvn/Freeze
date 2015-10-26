@@ -135,7 +135,13 @@ public class SplineInterpolator : MonoBehaviour
 
 	void Update()
 	{
-		if (mState == "Reset" || mState == "Stopped" || mNodes.Count < 4)
+        LevelManager levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
+        if (levelManager.isFrozen || levelManager.isPause || levelManager.isGameOver)
+        {
+            return;
+        }
+
+        if (mState == "Reset" || mState == "Stopped" || mNodes.Count < 4)
 			return;
 
 		mCurrentTime += Time.deltaTime;
@@ -244,5 +250,6 @@ public class SplineInterpolator : MonoBehaviour
 		param = MathUtils.Ease(param, mNodes[idx].EaseIO.x, mNodes[idx].EaseIO.y);
 
 		return GetHermiteInternal(idx, param);
-	}
+    }
+       
 }
