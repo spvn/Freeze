@@ -261,6 +261,14 @@ Prefab:
       propertyPath: cameraOVR
       value: 
       objectReference: {fileID: 1698343461}
+    - target: {fileID: 8234326, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1ba4f627a220642a51c613534d4bee, type: 3}
+    - target: {fileID: 8234326, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
   m_IsPrefabParent: 0

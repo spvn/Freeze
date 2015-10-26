@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
+	private static LevelManager _instance;
 
 	GameObject timerGUIText;
 	public GameObject player;
@@ -15,14 +16,28 @@ public class LevelManager : MonoBehaviour {
 	public GameObject cameraOVR;
 	public Highscore hs;
 	public bool isPause = false;
-
 	const int NUM_LEVELS = 4;
-
 	public bool startedGame = false;
-
 	public float timeElapsed;
 
     private GameManager gm;
+	private bool isFrozenWhenPaused = false;
+
+	void Awake()
+	{
+		if (_instance == null)
+		{
+			_instance = this;
+	//		DontDestroyOnLoad(this);
+		}
+		else
+		{
+			if (this != _instance)
+			{
+				Destroy(this.gameObject);
+			}
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -74,29 +89,9 @@ public class LevelManager : MonoBehaviour {
 
 		//Pause State
 		if (!isGameOver && (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown (KeyCode.JoystickButton7)/*start button on Xbox Controller*/)) {
-
-			invertPauseStatus ();
-
-			if (isPause) {
-				isFrozen = true;
-				canvas.transform.Find ("Panel").gameObject.SetActive(false);
-				canvas.transform.Find ("Score Panel").gameObject.SetActive(false);
-				canvas.transform.Find ("Freeze Bar").gameObject.SetActive(false);
-				canvas.transform.Find ("Action Bar").gameObject.SetActive(false);
-				canvas.transform.Find ("EventScreen").gameObject.SetActive(false);
-				canvas.transform.Find ("PauseScreen").gameObject.SetActive(true);
-				cameraOVR.transform.Find("Fade Box").gameObject.SetActive(true);
-			} else {
-				isFrozen = false;
-				canvas.transform.Find ("Panel").gameObject.SetActive(true);
-				canvas.transform.Find ("Score Panel").gameObject.SetActive(true);
-				canvas.transform.Find ("Freeze Bar").gameObject.SetActive(true);
-				canvas.transform.Find ("Action Bar").gameObject.SetActive(true);
-				canvas.transform.Find ("EventScreen").gameObject.SetActive(true);
-				canvas.transform.Find ("PauseScreen").gameObject.SetActive(false);
-				cameraOVR.transform.Find("Fade Box").gameObject.SetActive(false);
-			}
-		}
+			isFrozenWhenPaused = isFrozen;
+			PauseGame();
+        }
 
 		if (canvas.gameObject.transform.Find ("GameOverScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
 			RestartLevel();
@@ -109,6 +104,35 @@ public class LevelManager : MonoBehaviour {
 
 
 	}
+
+    public void PauseGame() {
+        invertPauseStatus();
+
+        if (isPause)
+        {
+            isFrozen = true;
+            canvas.transform.Find("Panel").gameObject.SetActive(false);
+            canvas.transform.Find("Score Panel").gameObject.SetActive(false);
+            canvas.transform.Find("Freeze Bar").gameObject.SetActive(false);
+            canvas.transform.Find("Action Bar").gameObject.SetActive(false);
+            canvas.transform.Find("EventScreen").gameObject.SetActive(false);
+			canvas.transform.Find("ExitScreen").gameObject.SetActive(false);
+            canvas.transform.Find("PauseScreen").gameObject.SetActive(true);
+            cameraOVR.transform.Find("Fade Box").gameObject.SetActive(true);
+        }
+        else
+        {
+			isFrozen = isFrozenWhenPaused;
+			canvas.transform.Find("Panel").gameObject.SetActive(true);
+            canvas.transform.Find("Score Panel").gameObject.SetActive(true);
+            canvas.transform.Find("Freeze Bar").gameObject.SetActive(true);
+            canvas.transform.Find("Action Bar").gameObject.SetActive(true);
+            canvas.transform.Find("EventScreen").gameObject.SetActive(true);
+			canvas.transform.Find("ExitScreen").gameObject.SetActive(false);
+            canvas.transform.Find("PauseScreen").gameObject.SetActive(false);
+            cameraOVR.transform.Find("Fade Box").gameObject.SetActive(false);
+        }
+    }
 
 	public void GameOver(){
         gm.playerGameOver();
@@ -151,5 +175,18 @@ public class LevelManager : MonoBehaviour {
 	public void setActionBar () {
 		Debug.Log ("Setting Action Bar");
 		isAttacking = !isAttacking;
+	}
+
+	public static LevelManager getLevelManager()
+	{
+		if (_instance == null)
+		{
+			Debug.LogError("Level Manager not instantiated yet");
+			return null;
+		}
+		else
+		{
+			return _instance;
+		}
 	}
 }

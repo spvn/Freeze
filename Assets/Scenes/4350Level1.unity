@@ -5410,6 +5410,7 @@ MonoBehaviour:
   canvas: {fileID: 1945645845}
   cameraOVR: {fileID: 1698343461}
   hs: {fileID: 0}
+  isPause: 0
   startedGame: 0
   timeElapsed: 0
 --- !u!114 &2126755699
