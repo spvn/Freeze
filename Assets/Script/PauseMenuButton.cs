@@ -104,8 +104,7 @@ public class PauseMenuButton : MonoBehaviour
 				currSelectionIndex = 6;
 				break;
 			case 7: //Exit to main menu
-				Debug.Log ("Yes Button");
-				Application.LoadLevel (0);
+                gm.exitToMainMenu();
 				break;
 			case 8: //resume game
 				Debug.Log ("Yes Button");

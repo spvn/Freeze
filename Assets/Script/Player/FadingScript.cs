@@ -22,7 +22,7 @@ public class FadingScript : MonoBehaviour {
 			GetComponent<Renderer>().material.color = fadeEffect;
 		} else if (!hasFadedIn) {
 			hasFadedIn = true;
-			cameraOVR.gameObject.transform.Find("Fade Box").gameObject.SetActive(false);
+			this.gameObject.SetActive(false);
 			setFadeBoxOpaque ();
 			countdownTime = -1.0f;
 		}
