@@ -5,6 +5,7 @@ public class BossAI : MonoBehaviour {
 
 	private GameObject player;
 	private LevelManager levelManager;
+	private BossHealth bossHealth;
 
 	private bool bossActivated;
 
@@ -12,6 +13,7 @@ public class BossAI : MonoBehaviour {
 	void Start () {
 		player = GameObject.Find ("OVRCameraRig");
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
+		bossHealth = GetComponent<BossHealth> ();
 
 		bossActivated = false;
 	}
@@ -19,8 +21,13 @@ public class BossAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!levelManager.isFrozen && !levelManager.isPause) {
-			if (bossActivated){
+			if (bossHealth.getCurrentHealth() > 0){
 				LookAtPlayer();
+				if (bossActivated){
+
+				}
+			} else {
+				Die ();
 			}
 		}
 	}
@@ -32,4 +39,9 @@ public class BossAI : MonoBehaviour {
 	public void ActivateBoss(){
 		bossActivated = true;
 	}
+
+	private void Die(){
+
+	}
+
 }
