@@ -29,7 +29,12 @@ public class BlastBullet : MonoBehaviour {
 		}
 	}
 
+	void OnCollisionEnter(Collision col){
+		Debug.Log ("collided");
+	}
+
 	void OnTriggerEnter(Collider other){
+		Debug.Log ("triggered");
 		hasHitSomething = true;
 		ActivateBlast ();
 		Destroy (gameObject);
