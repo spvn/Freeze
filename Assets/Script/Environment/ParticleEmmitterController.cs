@@ -1,0 +1,30 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class ParticleEmmitterController : MonoBehaviour {
+
+    public GameObject[] gameObjects;
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        LevelManager levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
+        if (levelManager.isFrozen || levelManager.isPause || levelManager.isGameOver)
+        {
+            for (int i = 0; i < gameObjects.Length; i++)
+            {
+                gameObjects[i].SetActive(false);
+            }
+        } else
+        {
+            for (int i = 0; i < gameObjects.Length; i++)
+            {
+                gameObjects[i].SetActive(true);
+            }
+        }
+    }
+}

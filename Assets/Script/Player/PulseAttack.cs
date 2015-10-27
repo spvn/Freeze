@@ -52,6 +52,6 @@ public class PulseAttack : MonoBehaviour {
 
     public void deflectBossProjectile ()
     {
-
+        Instantiate(pulseEffect, transform.position - new Vector3(0, 1.5f, 0), transform.rotation);
     }
 }
