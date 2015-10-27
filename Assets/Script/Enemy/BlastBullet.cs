@@ -7,23 +7,34 @@ public class BlastBullet : MonoBehaviour {
 	public GameObject rocket;
 
 	private LevelManager levelManager;
+	private GameObject player;
+	//private GameObject boss;
 	private GameObject explosionEffect;
-	
+
+	private bool isDeflected;
 	private bool hasHitSomething;
 
 	// Use this for initialization
 	void Start () {
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
+		player = GameObject.Find ("OVRCameraRig");
+		//boss = GameObject.Find ("Boss");
 		explosionEffect = transform.Find ("BlastEffect").gameObject;
 
 		hasHitSomething = false;
+		isDeflected = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (levelManager.startedGame && !levelManager.isFrozen) {
 			if (!hasHitSomething) {
-				Move();
+				if (isDeflected){
+					MoveToPlayer();
+					//MoveToBoss();
+				} else {
+					MoveToPlayer();
+				}
 			} else {
 				if (explosionEffect.GetComponent<ParticleSystem>().IsAlive()){
 					gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -39,7 +50,6 @@ public class BlastBullet : MonoBehaviour {
 		hasHitSomething = true;
 
 		ActivateBlast ();
-		//Destroy (gameObject);
 	}
 
 	private void ActivateBlast(){
@@ -48,7 +58,11 @@ public class BlastBullet : MonoBehaviour {
 		explosionEffect.GetComponent<ParticleSystem>().Play();
 	}
 
-	private void Move(){
+	private void MoveToPlayer(){
 		rocket.transform.Translate(Vector3.down * Time.deltaTime * 0.1f, Space.World);
+	}
+
+	private void MoveToBoss(){
+
 	}
 }
