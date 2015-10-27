@@ -36,6 +36,6 @@ public class BossHealth : MonoBehaviour {
 	}
 
 	public float getCurrentHealthPercentage(){
-		return currentHealth/maxHealth*100.0;
+		return currentHealth/maxHealth*100;
 	}
 }

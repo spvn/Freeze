@@ -3,24 +3,24 @@ using System.Collections;
 
 public class BlastBullet : MonoBehaviour {
 
-	private LevelManager levelManager;
+	public GameObject blastRadius;
+	public GameObject rocket;
 
-	private GameObject blastRadius;
+	private LevelManager levelManager;
+	
 	private bool hasHitSomething;
 
 	// Use this for initialization
 	void Start () {
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 
-		blastRadius = GameObject.Find ("BlastRadius");
-		blastRadius.SetActive (false);
 
 		hasHitSomething = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (levelManager.startedGame) {
+		if (levelManager.startedGame && !levelManager.isFrozen) {
 			if (!hasHitSomething) {
 				Move();
 			} else {
@@ -32,6 +32,7 @@ public class BlastBullet : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		hasHitSomething = true;
 		ActivateBlast ();
+		Destroy (gameObject);
 	}
 
 	private void ActivateBlast(){
@@ -39,6 +40,6 @@ public class BlastBullet : MonoBehaviour {
 	}
 
 	private void Move(){
-		transform.Translate(Vector3.down * Time.deltaTime, Space.World);
+		rocket.transform.Translate(Vector3.down * Time.deltaTime * 0.1f, Space.World);
 	}
 }
