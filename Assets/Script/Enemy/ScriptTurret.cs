@@ -24,7 +24,6 @@ public class ScriptTurret : MonoBehaviour {
 	private Transform bulletShootingPt;
 	float timer = 0.0f;
 	public float intervalShootTime;
-	Quaternion initialAngle;
 	Vector3 playerOffset = new Vector3(0, 0.0f, 0);
 	Vector3 randomOffset;
 	float playerSpeed;
@@ -40,7 +39,6 @@ public class ScriptTurret : MonoBehaviour {
 
 		player = GameObject.Find ("OVRCameraRig");
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
-		initialAngle = this.transform.localRotation;
 		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
 		muzzleFlash = transform.Find ("muzzleFlashParticle").gameObject;
 		turretAudio = GetComponents<AudioSource>();
