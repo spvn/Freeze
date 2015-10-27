@@ -4,11 +4,15 @@ using System.Collections;
 public class RocketLauncher : MonoBehaviour {
 
 	public GameObject rocketPrefab;
+	public float shootCooldown = 2f;
 
 	private GameObject player;
 	private LevelManager levelManager;
+
+	// Shooting
 	private Transform rocketShootingPt;
 	private bool isShooting;
+	private float shootingTimer;
 
 	// Use this for initialization
 	void Start () {
@@ -17,12 +21,15 @@ public class RocketLauncher : MonoBehaviour {
 		rocketShootingPt = transform.Find ("RocketShootingPoint");
 
 		isShooting = false;
+		shootingTimer = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (!levelManager.isFrozen) {
-			LookAtPlayer();
+			if (canShoot()){
+				ShootRocket();
+			}
 		}
 	}
 
@@ -37,9 +44,13 @@ public class RocketLauncher : MonoBehaviour {
 		rocket.transform.position = rocketShootingPt.transform.position;
 	}
 
-	private void LookAtPlayer()
-	{
-		transform.rotation = Quaternion.Slerp(transform.rotation, 
-		                                      Quaternion.LookRotation(player.transform.position - transform.position), Time.deltaTime);
+	private bool canShoot(){
+		shootingTimer += Time.deltaTime;
+
+		if (shootingTimer >= shootCooldown) {
+			shootingTimer = 0;
+			return true;
+		} 
+		return false;
 	}
 }
