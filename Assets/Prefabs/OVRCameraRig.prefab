@@ -3733,7 +3733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e171aa502ca50d43a2db5c06f1baf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pulseRadius: 5
+  pulseRadius: 8
   energyCost: 60
   actionBarObject: {fileID: 127128}
   pulseEffect: {fileID: 133296, guid: 950ebfb99e972c34480a655f1017132b, type: 2}
@@ -6780,6 +6780,14 @@ Prefab:
       propertyPath: pulseEffect
       value: 
       objectReference: {fileID: 133296, guid: 950ebfb99e972c34480a655f1017132b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: pulseRadius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: staticPlayerBody
+      value: 
+      objectReference: {fileID: 150034}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 191228}

@@ -33,7 +33,7 @@ public class PulseAttack : MonoBehaviour {
         // Depleting action bar stock
         if ( actionBar.canDeplete(energyCost) )
         {
-            Instantiate(pulseEffect, transform.position - new Vector3(0,1.5f,0), transform.rotation);
+            Instantiate(pulseEffect, transform.position - new Vector3(0,1.5f,0), Quaternion.identity);
             actionBar.DepleteActionStock(energyCost);
 
             Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, pulseRadius);
