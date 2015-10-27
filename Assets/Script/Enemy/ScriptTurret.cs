@@ -2,9 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 public class ScriptTurret : MonoBehaviour {
+
 	private GameObject player;
-	LevelManager levelManager;
-	bool shooting = false;
+	private LevelManager levelManager;
 	public GameObject bulletPrefab;
 	public Animation shootingAnimation;
 	public float angleOfShooting = 90f;
@@ -20,6 +20,7 @@ public class ScriptTurret : MonoBehaviour {
 	private int DYING_SOUND = 1;
 
 	// Shooting variables
+	bool shooting = false;
 	private Transform turretHead;
 	private Transform bulletShootingPt;
 	float timer = 0.0f;
