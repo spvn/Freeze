@@ -7,13 +7,14 @@ public class BlastBullet : MonoBehaviour {
 	public GameObject rocket;
 
 	private LevelManager levelManager;
+	private GameObject explosionEffect;
 	
 	private bool hasHitSomething;
 
 	// Use this for initialization
 	void Start () {
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
-
+		explosionEffect = transform.Find ("BlastEffect").gameObject;
 
 		hasHitSomething = false;
 	}
@@ -24,24 +25,27 @@ public class BlastBullet : MonoBehaviour {
 			if (!hasHitSomething) {
 				Move();
 			} else {
-				
+				if (explosionEffect.GetComponent<ParticleSystem>().IsAlive()){
+					gameObject.GetComponent<MeshRenderer>().enabled = false;
+				} else {
+					Destroy(gameObject);
+				}
 			}
 		}
-	}
-
-	void OnCollisionEnter(Collision col){
-		Debug.Log ("collided");
 	}
 
 	void OnTriggerEnter(Collider other){
 		Debug.Log ("triggered");
 		hasHitSomething = true;
+
 		ActivateBlast ();
-		Destroy (gameObject);
+		//Destroy (gameObject);
 	}
 
 	private void ActivateBlast(){
 		blastRadius.SetActive (true);
+		explosionEffect.transform.position = transform.position;
+		explosionEffect.GetComponent<ParticleSystem>().Play();
 	}
 
 	private void Move(){

@@ -4,12 +4,10 @@ using System.Collections;
 public class BlastRadius : MonoBehaviour {
 
 	public float damage;
-	public float explosionTime = 1f;
+	public GameObject explosionEffect;
 
 	private LevelManager levelManager;
 	private BossHealth bossHealth;
-
-	private float explosionTimer;
 
 	// Use this for initialization
 	void Start () {
@@ -17,14 +15,11 @@ public class BlastRadius : MonoBehaviour {
 		//bossHealth = GameObject.Find ("Boss").GetComponent<BossHealth>();
 
 		gameObject.SetActive (false);
-
-		explosionTimer = 0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		explosionTimer += Time.deltaTime;
-		if (explosionTimer >= explosionTime) {
+		if (!explosionEffect.GetComponent<ParticleSystem>().IsAlive()) {
 			Destroy (gameObject);
 		} 
 	}
