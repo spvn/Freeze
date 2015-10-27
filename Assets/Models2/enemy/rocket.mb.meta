@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 309424e4d1e6c3e49892ea89aa2b8594
 timeCreated: 1445940163
+=======
+guid: 4b10311aa707b264aaa6c7ee9bb24628
+timeCreated: 1445942625
+>>>>>>> 29362cf8de9e94b00c7a3cc270b961d707c2e403
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -11,7 +16,10 @@ ModelImporter:
     3300000: //RootNode
     4300000: pCylinder1
     9500000: //RootNode
+<<<<<<< HEAD
     11100000: //RootNode
+=======
+>>>>>>> 29362cf8de9e94b00c7a3cc270b961d707c2e403
   materials:
     importMaterials: 1
     materialName: 0
@@ -68,8 +76,15 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+<<<<<<< HEAD
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1
+=======
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+>>>>>>> 29362cf8de9e94b00c7a3cc270b961d707c2e403
   additionalBone: 0
   userData: 
   assetBundleName: 
