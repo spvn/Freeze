@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BossHealth : MonoBehaviour {
 
-	public float maxHealth;
+	public float maxHealth = 100f;
 
 	private GameObject player;
 	private LevelManager levelManager;
