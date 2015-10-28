@@ -81,8 +81,8 @@ public class BlastBullet : MonoBehaviour {
 	}
 
 	private void MoveToBoss(){
-		Vector3 moveDirection = bossPosition - rocket.transform.position;
-		//rocket.transform.Translate(Vector3.down * Time.deltaTime * 0.1f, Space.World);
+		//Vector3 moveDirection = bossPosition - rocket.transform.position;
+		rocket.transform.Translate(Vector3.up * Time.deltaTime * 0.1f, Space.World);
 	}
 
 	private void FlipBullet(){
@@ -93,5 +93,10 @@ public class BlastBullet : MonoBehaviour {
 		playerTargetDirection = target - transform.position;
 		//playerTargetDirection = transform.rotation * playerTargetDirection;
 		playerTargetDirection = Vector3.Normalize (playerTargetDirection);
+	}
+
+	public void DeflectBullet(){
+		Debug.Log ("Rocket deflected");
+		isDeflected = true;
 	}
 }

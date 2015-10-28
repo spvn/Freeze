@@ -53,5 +53,16 @@ public class PulseAttack : MonoBehaviour {
     public void deflectBossProjectile ()
     {
         Instantiate(pulseEffect, transform.position - new Vector3(0, 1.5f, 0), transform.rotation);
+
+		Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, pulseRadius);
+		for (int i = 0; i < hitColliders.Length; i++)
+		{
+			if (hitColliders[i].gameObject.layer == 14 &&
+			    hitColliders[i].gameObject.tag == "Deflectable")
+			{
+				BlastBullet rocket = hitColliders[i].gameObject.GetComponentInChildren<BlastBullet>();
+				rocket.DeflectBullet();
+			}
+		}
     }
 }
