@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 441630}
   - 135: {fileID: 13518500}
   - 114: {fileID: 11487182}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: BlastRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,6 +25,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450632}
+<<<<<<< HEAD
   - 114: {fileID: 11436660}
   m_Layer: 14
   m_Name: Rocket
@@ -47,9 +48,9 @@ GameObject:
   - 136: {fileID: 13650576}
   - 114: {fileID: 11490334}
   - 54: {fileID: 5437914}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: rocket 1
-  m_TagString: Deflectable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +65,7 @@ GameObject:
   - 4: {fileID: 422138}
   - 198: {fileID: 19814604}
   - 199: {fileID: 19980848}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: BlastEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1309,15 +1310,7 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132928}
