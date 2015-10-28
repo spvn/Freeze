@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour {
     {
         sm = StatisticManager.getManager();
         canvas = GameObject.Find("ORCanvas");
+        attachRequiredUI();
     }
 
     public static GameManager getManager()
@@ -60,7 +61,10 @@ public class GameManager : MonoBehaviour {
 
     void Update()
     {
-
+        if (canvas == null)
+        {
+            attachRequiredUI();
+        }
     }
 
     public void loadLevelSelector()
@@ -70,7 +74,9 @@ public class GameManager : MonoBehaviour {
 
     public void showAchievements()
     {
-
+        mmScreen.SetActive(false);
+        achieveScreen.SetActive(true);
+        achieveScreen.GetComponent<AchievementDisplay>().loadFirstPage();
     }
 
     public void quitGame()
@@ -132,6 +138,7 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("Player died on level: " + currentLevel);
         goScreen.SetActive(true);
+        sm.addProgressByStatisticName("Deaths", 1);
     }
 
     public void restartCurrentLevel()
@@ -144,6 +151,7 @@ public class GameManager : MonoBehaviour {
     public void currentLevelCleared()
     {
         Debug.Log("Player cleared current level: " + currentLevel);
+        sm.setProgressIfHigher("Furthest Level", currentLevel);
     }
 
     public void loadNextLevel()
@@ -165,10 +173,16 @@ public class GameManager : MonoBehaviour {
         pauseScreen.SetActive(false);
         exitScreen.SetActive(false);
     }
-
+    
     public void exitToMainMenu()
     {
         Debug.Log("Player exit to main menu");
         Application.LoadLevel(0);
+    }
+
+    public void backToMainMenu()
+    {
+        achieveScreen.SetActive(false);
+        mmScreen.SetActive(true);
     }
 }
