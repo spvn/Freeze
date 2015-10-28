@@ -11,6 +11,7 @@ public class BlastBullet : MonoBehaviour {
 	private GameObject player;
 	private GameObject boss;
 	private GameObject explosionEffect;
+	private AudioSource blastSound;
 
 	private bool isDeflected;
 	private bool bulletIsFlipped;
@@ -25,6 +26,7 @@ public class BlastBullet : MonoBehaviour {
 		player = GameObject.Find ("OVRCameraRig");
 		boss = GameObject.Find ("Boss");
 		explosionEffect = transform.Find ("BlastEffect").gameObject;
+		blastSound = GetComponent<AudioSource> ();
 
 		hasHitSomething = false;
 		isDeflected = false;
@@ -64,18 +66,23 @@ public class BlastBullet : MonoBehaviour {
 
 	private void ActivateBlast(){
 		blastRadius.SetActive (true);
+
 		explosionEffect.transform.position = transform.position;
 		explosionEffect.GetComponent<ParticleSystem>().Play();
+
+		if (!blastSound.isPlaying) {
+			blastSound.Play ();
+		}
 	}
 
 	private void MoveToPlayer(){
-		//rocket.transform.Translate(Vector3.down * Time.deltaTime * 0.1f, Space.World);
+		rocket.transform.LookAt (player.transform.position);
 		rocket.transform.localPosition += playerTargetDirection * speed * Time.deltaTime;
 	}
 
 	private void MoveToBoss(){
 		Vector3 moveDirection = bossPosition - rocket.transform.position;
-
+		//rocket.transform.Translate(Vector3.down * Time.deltaTime * 0.1f, Space.World);
 	}
 
 	private void FlipBullet(){

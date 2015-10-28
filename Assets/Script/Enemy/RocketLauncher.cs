@@ -17,6 +17,7 @@ public class RocketLauncher : MonoBehaviour {
 
 	private GameObject player;
 	private LevelManager levelManager;
+	private AudioSource shootingSound;
 
 	// Shooting
 	private Transform rocketShootingPt;
@@ -29,6 +30,7 @@ public class RocketLauncher : MonoBehaviour {
 		player = GameObject.Find ("OVRCameraRig");
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		rocketShootingPt = transform.Find ("RocketShootingPoint");
+		shootingSound = GetComponent<AudioSource> ();
 
 		isShooting = false;
 		shootingTimer = 0;
@@ -56,6 +58,10 @@ public class RocketLauncher : MonoBehaviour {
 			return;
 		} else {
 			isShooting = true;
+		}
+
+		if (!shootingSound.isPlaying) {
+			shootingSound.Play();
 		}
 
 		GameObject rocket = (GameObject)Instantiate (rocketPrefab);
