@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class Statistic {
@@ -38,77 +39,110 @@ public class Statistic {
 }
 
 [System.Serializable]
-public class StatisticManager : MonoBehaviour {
-	private static StatisticManager _instance;
-	public Statistic[] stats;
-	
-	void Awake () {
-		if (_instance == null) {
-			_instance = this;
-			DontDestroyOnLoad (this);
-			this.loadStatistics();
-		} else {
-			if (this != _instance) {
-				Destroy(this.gameObject);
-			}
-		}
-	}
-	
-	public static StatisticManager getManager()
-	{
-		if (_instance == null) {
-			Debug.LogError("Statistic Manager not instantiated yet");
-			return null;
-		} else {
-			return _instance;
-		}
-	}
-	
-	public Statistic getStatisticByName(string statisticName)
-	{
-		return stats.FirstOrDefault(statistic => statistic.name == statisticName);
-	}
-	
-	public void addProgressByStatisticName(string statisticName, float progressAmount)
-	{
-		Statistic stat = this.getStatisticByName (statisticName);
-		stat.addProgress (progressAmount);
-		this.saveStatistics ();
-	}
-	
-	public void setProgressByStatisticName(string statisticName, float progressAmount)
-	{
-		Statistic stat = this.getStatisticByName (statisticName);
-		stat.setProgress (progressAmount);
-		this.saveStatistics ();
-	}
+public class StatisticManager : MonoBehaviour
+{
+    private static StatisticManager _instance;
+    public Statistic[] stats;
 
-	public float getProgressByStatisticName(string statisticName)
-	{
-		Statistic stat = this.getStatisticByName (statisticName);
-		return stat.getProgress ();
-	}
+    void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(this);
+            this.loadStatistics();
+        }
+        else
+        {
+            if (this != _instance)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
 
-	public void saveStatistics ()
-	{
-		BinaryFormatter bf = new BinaryFormatter();
-		FileStream file = File.Create (Application.persistentDataPath + "/savefile.gd");
-		bf.Serialize(file, stats);
-		file.Close ();
-		Debug.Log("Saved stats to: " + Application.persistentDataPath + "/savefile.gd");
-	}
+    public static StatisticManager getManager()
+    {
+        if (_instance == null)
+        {
+            Debug.LogError("Statistic Manager not instantiated yet");
+            return null;
+        }
+        else
+        {
+            return _instance;
+        }
+    }
 
-	public void loadStatistics()
-	{
-		if (File.Exists (Application.persistentDataPath + "/savefile.gd")) {
-			BinaryFormatter bf = new BinaryFormatter ();
-			FileStream file = File.Open (Application.persistentDataPath + "/savefile.gd", FileMode.Open);
-			stats = (Statistic[])bf.Deserialize (file);
-			file.Close ();
-			Debug.Log ("Loaded stats from: " + Application.persistentDataPath + "/savefile.gd");
-		} else {
-			Debug.Log ("Old stats not found. Creating new file.");
-			this.saveStatistics();
-		}
-	}
+    public Statistic getStatisticByName(string statisticName)
+    {
+        return stats.FirstOrDefault(statistic => statistic.name == statisticName);
+    }
+
+    public void addProgressByStatisticName(string statisticName, float progressAmount)
+    {
+        Statistic stat = this.getStatisticByName(statisticName);
+        stat.addProgress(progressAmount);
+        this.saveStatistics();
+    }
+
+    public void setProgressByStatisticName(string statisticName, float progressAmount)
+    {
+        Statistic stat = this.getStatisticByName(statisticName);
+        stat.setProgress(progressAmount);
+        this.saveStatistics();
+    }
+
+    public float getProgressByStatisticName(string statisticName)
+    {
+        Statistic stat = this.getStatisticByName(statisticName);
+        return stat.getProgress();
+    }
+
+    public void saveStatistics()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/savefile.gd");
+        bf.Serialize(file, stats);
+        file.Close();
+        Debug.Log("Saved stats to: " + Application.persistentDataPath + "/savefile.gd");
+    }
+
+    public void loadStatistics()
+    {
+        if (File.Exists(Application.persistentDataPath + "/savefile.gd"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/savefile.gd", FileMode.Open);
+            stats = (Statistic[])bf.Deserialize(file);
+            file.Close();
+            Debug.Log("Loaded stats from: " + Application.persistentDataPath + "/savefile.gd");
+        }
+        else
+        {
+            Debug.Log("Old stats not found. Creating new file.");
+            this.saveStatistics();
+        }
+    }
+
+    public void setProgressIfHigher(string statisticName, float progressAmount)
+    {
+        if (this.getProgressByStatisticName(statisticName) < progressAmount)
+        {
+            this.setProgressByStatisticName(statisticName, progressAmount);
+        }
+    }
+
+    public List<Achievement> getAllAchievements()
+    {
+        List<Achievement> achievementList = new List<Achievement>();
+        foreach (Statistic stat in stats)
+        {
+            foreach (Achievement ach in stat.achievements)
+            {
+                achievementList.Add(ach);
+            }
+        }
+        return achievementList;
+    }
 }
