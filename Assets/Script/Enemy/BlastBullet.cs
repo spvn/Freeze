@@ -30,8 +30,7 @@ public class BlastBullet : MonoBehaviour {
 		if (levelManager.startedGame && !levelManager.isFrozen) {
 			if (!hasHitSomething) {
 				if (isDeflected){
-					MoveToPlayer();
-					//MoveToBoss();
+					MoveToBoss();
 				} else {
 					MoveToPlayer();
 				}
@@ -59,10 +58,16 @@ public class BlastBullet : MonoBehaviour {
 	}
 
 	private void MoveToPlayer(){
+		//Stub
 		rocket.transform.Translate(Vector3.down * Time.deltaTime * 0.1f, Space.World);
 	}
 
 	private void MoveToBoss(){
+		// Stub
+		rocket.transform.Translate(Vector3.up * Time.deltaTime * 0.1f, Space.World);
+	}
 
+	public void DeflectRocket(){
+		isDeflected = true;
 	}
 }
