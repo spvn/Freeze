@@ -43,5 +43,4 @@ public class BossAI : MonoBehaviour {
 	private void Die(){
 
 	}
-
 }

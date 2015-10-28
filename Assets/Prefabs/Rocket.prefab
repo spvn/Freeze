@@ -25,6 +25,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450632}
+  - 114: {fileID: 11436660}
   m_Layer: 14
   m_Name: Rocket
   m_TagString: Untagged
@@ -114,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.4899979, y: 4.26999998, z: 41.4099998}
+  m_LocalPosition: {x: -67.4899979, y: 4.26999998, z: 41.3800011}
   m_LocalScale: {x: .312422097, y: .312422097, z: .312422097}
   m_Children:
   - {fileID: 420854}
@@ -181,6 +182,17 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11436660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c5a85ffdba91a4aa6203c033ffd140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11487182
 MonoBehaviour:
   m_ObjectHideFlags: 1
