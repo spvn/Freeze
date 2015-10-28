@@ -2,14 +2,31 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &122186
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 468492}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: RocketShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &135494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 418060}
+  - 111: {fileID: 11140036}
+  - 114: {fileID: 11463346}
+  m_Layer: 14
+  m_Name: bossRocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17,7 +34,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &166740
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -25,7 +42,7 @@ GameObject:
   - 4: {fileID: 426936}
   - 33: {fileID: 3334232}
   - 23: {fileID: 2305194}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pPipe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +51,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &184150
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -42,7 +59,7 @@ GameObject:
   - 4: {fileID: 427578}
   - 33: {fileID: 3341442}
   - 23: {fileID: 2330434}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pPipe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +68,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &195258
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -59,7 +76,7 @@ GameObject:
   - 4: {fileID: 483926}
   - 33: {fileID: 3333734}
   - 23: {fileID: 2384880}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pPipe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,15 +91,30 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 439558}
-  - 111: {fileID: 11198714}
-  - 114: {fileID: 11464556}
-  m_Layer: 0
+  - 114: {fileID: 11468534}
+  m_Layer: 14
   m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &418060
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135494}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 483926}
+  - {fileID: 426936}
+  - {fileID: 427578}
+  - {fileID: 468492}
+  m_Father: {fileID: 439558}
+  m_RootOrder: 0
 --- !u!4 &426936
 Transform:
   m_ObjectHideFlags: 1
@@ -93,7 +125,7 @@ Transform:
   m_LocalPosition: {x: 3.05300808, y: .0543689542, z: -.0115287267}
   m_LocalScale: {x: 1, y: 1, z: .99999994}
   m_Children: []
-  m_Father: {fileID: 439558}
+  m_Father: {fileID: 418060}
   m_RootOrder: 1
 --- !u!4 &427578
 Transform:
@@ -105,7 +137,7 @@ Transform:
   m_LocalPosition: {x: .443117648, y: .0543689542, z: -.0115287267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 439558}
+  m_Father: {fileID: 418060}
   m_RootOrder: 2
 --- !u!4 &439558
 Transform:
@@ -113,14 +145,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199834}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.6560287, y: 12.4399996, z: 9.40993118}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -68.2900009, y: 3.06999993, z: 41.9799995}
+  m_LocalScale: {x: .354813308, y: .354813308, z: .354813218}
   m_Children:
-  - {fileID: 483926}
-  - {fileID: 426936}
-  - {fileID: 427578}
-  - {fileID: 468492}
+  - {fileID: 418060}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &468492
@@ -133,7 +162,7 @@ Transform:
   m_LocalPosition: {x: -3.6500001, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 439558}
+  m_Father: {fileID: 418060}
   m_RootOrder: 3
 --- !u!4 &483926
 Transform:
@@ -145,7 +174,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 439558}
+  m_Father: {fileID: 418060}
   m_RootOrder: 0
 --- !u!23 &2305194
 MeshRenderer:
@@ -240,12 +269,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184150}
   m_Mesh: {fileID: 4300004, guid: 5dd324be9a8f8ff499e0cec46bf05c13, type: 3}
---- !u!111 &11198714
+--- !u!111 &11140036
 Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199834}
+  m_GameObject: {fileID: 135494}
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 5dd324be9a8f8ff499e0cec46bf05c13, type: 3}
@@ -255,7 +284,20 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11464556
+--- !u!114 &11463346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c56c65665034149a9f0c943023a37f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketPrefab: {fileID: 132928, guid: 7e5beddbfd2dc0c4bb435ea63324b984, type: 2}
+  shootCooldown: 2
+--- !u!114 &11468534
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -263,17 +305,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 199834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69c56c65665034149a9f0c943023a37f, type: 3}
+  m_Script: {fileID: 11500000, guid: 477b336cdb0b59a4dbd85f1536464193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocketPrefab: {fileID: 132928, guid: 7e5beddbfd2dc0c4bb435ea63324b984, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 199834}
