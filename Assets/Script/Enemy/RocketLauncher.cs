@@ -41,8 +41,10 @@ public class RocketLauncher : MonoBehaviour {
 		if (shootTarget == ShootTarget.AT_PLAYER) {
 			playerOffset = Vector3.zero;
 		} else if (shootTarget == ShootTarget.LEFT_OF_PLAYER) {
+			// Stub. TODO: Follow position of player's circular path.
 			playerOffset = Vector3.left * 5;
 		} else {
+			// Stub. TODO: Follow position of player's circular path.
 			playerOffset = Vector3.right * 5;
 		}
 	}
@@ -83,7 +85,7 @@ public class RocketLauncher : MonoBehaviour {
 	private bool canShoot(){
 		shootingTimer += Time.deltaTime;
 
-		if (shootingTimer >= shootCooldown) {
+		if (shootingTimer >= Random.Range (shootCooldown*0.7f, shootCooldown*1.4f)) {
 			shootingTimer = 0;
 			return true;
 		} 

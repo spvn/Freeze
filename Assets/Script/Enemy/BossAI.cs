@@ -5,6 +5,8 @@ public class BossAI : MonoBehaviour {
 
 	public bool bossActivated;
 
+	public GameObject[] bossAttackGameObjects;
+
 	private GameObject player;
 	private LevelManager levelManager;
 	private BossHealth bossHealth;
@@ -72,7 +74,13 @@ public class BossAI : MonoBehaviour {
 	}
 
 	private void ActivateAllAttacks(){
-
+		for (int i = 0; i < bossAttackGameObjects.Length; i++) {
+			if (bossAttackGameObjects[i].tag == "RocketLauncher"){
+				bossAttackGameObjects[i].GetComponentInChildren<RocketLauncher>().MakeHostile();
+			} else if (bossAttackGameObjects[i].tag == "BossTurret"){
+				bossAttackGameObjects[i].GetComponent<ScriptTurret>().isHostile = true;
+			}
+		}
 	}
 
 	public void ActivateBoss(){

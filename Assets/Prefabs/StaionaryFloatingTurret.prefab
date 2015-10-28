@@ -81,7 +81,7 @@ GameObject:
   - 82: {fileID: 8248234}
   m_Layer: 12
   m_Name: StaionaryFloatingTurret
-  m_TagString: Destroyable
+  m_TagString: BossTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
   inaccuracy: .200000003
   inaccuracyY: .5
   deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
-  isHostile: 1
+  isHostile: 0
   intervalShootTime: 1
 --- !u!135 &13563402
 SphereCollider:
@@ -1731,7 +1731,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: BossTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: isHostile
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 129856}

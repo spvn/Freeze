@@ -95,7 +95,7 @@ GameObject:
   - 114: {fileID: 11468534}
   m_Layer: 14
   m_Name: RocketLauncher
-  m_TagString: Untagged
+  m_TagString: RocketLauncher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -403,6 +403,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Volume
       value: .437000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: RocketLauncher
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
