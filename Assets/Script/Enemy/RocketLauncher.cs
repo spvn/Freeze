@@ -19,6 +19,8 @@ public class RocketLauncher : MonoBehaviour {
 	private LevelManager levelManager;
 	private AudioSource shootingSound;
 
+	private bool isHostile;
+
 	// Shooting
 	private Transform rocketShootingPt;
 	private Vector3 playerOffset;
@@ -32,6 +34,7 @@ public class RocketLauncher : MonoBehaviour {
 		rocketShootingPt = transform.Find ("RocketShootingPoint");
 		shootingSound = GetComponent<AudioSource> ();
 
+		isHostile = true;
 		isShooting = false;
 		shootingTimer = 0;
 
@@ -47,7 +50,7 @@ public class RocketLauncher : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!levelManager.isFrozen) {
-			if (canShoot()){
+			if (isHostile && canShoot()){
 				ShootRocket();
 			}
 		}
@@ -85,5 +88,9 @@ public class RocketLauncher : MonoBehaviour {
 			return true;
 		} 
 		return false;
+	}
+
+	public void MakeHostile(){
+		isHostile = true;
 	}
 }
