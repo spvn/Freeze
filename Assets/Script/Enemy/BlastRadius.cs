@@ -27,7 +27,7 @@ public class BlastRadius : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.name == "OVRCameraRig") {
 			Debug.Log ("Player within Blast Bullet radius.");
-			levelManager.GameOver ();
+			//levelManager.GameOver ();
 		} 
 		if (other.gameObject.name == "Boss") {
 			Debug.Log ("Boss within Blast Bullet radius.");
