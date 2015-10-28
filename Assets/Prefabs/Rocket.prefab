@@ -27,11 +27,11 @@ GameObject:
   - 4: {fileID: 420854}
   - 33: {fileID: 3309702}
   - 23: {fileID: 2354004}
-  - 111: {fileID: 11181094}
   - 136: {fileID: 13650576}
   - 114: {fileID: 11490334}
   - 54: {fileID: 5437914}
   - 82: {fileID: 8244898}
+  - 120: {fileID: 12041670}
   m_Layer: 14
   m_Name: rocket 1
   m_TagString: Deflectable
@@ -239,20 +239,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!111 &11181094
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144536}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &11409464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,6 +288,44 @@ MonoBehaviour:
   blastRadius: {fileID: 177108}
   rocket: {fileID: 132928}
   speed: 15
+  bulletLine: {fileID: 12041670}
+--- !u!120 &12041670
+LineRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144536}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 655641e6eaac1474588b2fb217e7fbd9, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    startWidth: .0399999991
+    endWidth: .0399999991
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4281138944
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4278386432
+  m_UseWorldSpace: 1
 --- !u!135 &13590660
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -312,7 +336,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13650576
 CapsuleCollider:
@@ -1412,6 +1436,34 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bulletLine
+      value: 
+      objectReference: {fileID: 12041670}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.m_StartColor.rgba
+      value: 4281138944
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.m_EndColor.rgba
+      value: 4278386432
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.startWidth
+      value: .0399999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.endWidth
+      value: .0399999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 655641e6eaac1474588b2fb217e7fbd9, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -5,7 +5,7 @@ public class BlastBullet : MonoBehaviour {
 
 	public GameObject blastRadius;
 	public GameObject rocket;
-	public float speed = 15f;
+	public float speed = 5f;
 
 	private LevelManager levelManager;
 	private GameObject player;
@@ -14,11 +14,16 @@ public class BlastBullet : MonoBehaviour {
 	private AudioSource blastSound;
 
 	private bool isDeflected;
-	private bool bulletIsFlipped;
 	private bool hasHitSomething;
 
 	private Vector3 bossPosition;
+	private Vector3 deflectedPosition;
 	private Vector3 playerTargetDirection;
+	private Vector3 bossTargetDirection;
+
+	public LineRenderer bulletLine;
+	private Vector3 firstAppearancePosition;
+	private Vector3 bulletLineEndVertex;
 
 	// Use this for initialization
 	void Start () {
@@ -27,12 +32,13 @@ public class BlastBullet : MonoBehaviour {
 		boss = GameObject.Find ("Boss");
 		explosionEffect = transform.Find ("BlastEffect").gameObject;
 		blastSound = GetComponent<AudioSource> ();
+		bulletLine = GetComponent<LineRenderer> ();
 
 		hasHitSomething = false;
 		isDeflected = false;
-		bulletIsFlipped = false;
 
 		bossPosition = boss.transform.position;
+		firstAppearancePosition = rocket.transform.position;
 	}
 	
 	// Update is called once per frame
@@ -40,11 +46,10 @@ public class BlastBullet : MonoBehaviour {
 		if (levelManager.startedGame && !levelManager.isFrozen) {
 			if (!hasHitSomething) {
 				if (isDeflected){
-					if (!bulletIsFlipped){
-						FlipBullet();
-					}
 					MoveToBoss();
 				} else {
+					DrawBulletLine ();
+					CheckHitPlayer();
 					MoveToPlayer();
 				}
 			} else {
@@ -81,22 +86,50 @@ public class BlastBullet : MonoBehaviour {
 	}
 
 	private void MoveToBoss(){
-		//Vector3 moveDirection = bossPosition - rocket.transform.position;
-		rocket.transform.Translate(Vector3.up * Time.deltaTime * 0.1f, Space.World);
+		rocket.transform.LookAt (boss.transform.position);
+		rocket.transform.localPosition += bossTargetDirection * speed * Time.deltaTime;
+		//rocket.transform.Translate(Vector3.up * Time.deltaTime * 0.1f, Space.World);
 	}
 
-	private void FlipBullet(){
-		bulletIsFlipped = true;
+	private void DrawBulletLine(){
+		bulletLine.SetWidth (0.5f, 0.5f);
+		bulletLine.SetPosition (0, firstAppearancePosition);
+		bulletLine.SetPosition(1, bulletLineEndVertex);
+	}
+
+	private void CheckHitPlayer(){
+		RaycastHit objHit;
+		// Check if aiming directly at player
+		if (Physics.Raycast (firstAppearancePosition, bulletLineEndVertex-firstAppearancePosition, 
+		                     out objHit, Mathf.Infinity, (1<<9))) {
+			bulletLine.SetColors (Color.red, Color.red);
+		} else {
+			// Check if player is wihtin blast radius
+			Collider[] hitColliders = Physics.OverlapSphere(bulletLineEndVertex, 
+			                                                blastRadius.GetComponent<SphereCollider>().radius);
+			for (int i = 0; i < hitColliders.Length; i++){
+				if (hitColliders[i].gameObject.name == "OVRCameraRig"){
+					bulletLine.SetColors (Color.red, Color.red);
+					return;
+				}
+			}
+
+			bulletLine.SetColors(Color.green, Color.green);
+		}
 	}
 
 	public void setBulletDirection(Vector3 target){
+		bulletLineEndVertex = target;
+
 		playerTargetDirection = target - transform.position;
-		//playerTargetDirection = transform.rotation * playerTargetDirection;
 		playerTargetDirection = Vector3.Normalize (playerTargetDirection);
 	}
 
 	public void DeflectBullet(){
 		Debug.Log ("Rocket deflected");
 		isDeflected = true;
+
+		deflectedPosition = rocket.transform.position;
+		bossTargetDirection = bossPosition - deflectedPosition;
 	}
 }
