@@ -37,7 +37,7 @@ public class BlastBullet : MonoBehaviour {
 		hasHitSomething = false;
 		isDeflected = false;
 
-		bossPosition = boss.transform.position;
+		bossPosition = boss.transform.Find("BossCenter").transform.position;
 		firstAppearancePosition = rocket.transform.position;
 	}
 	
@@ -86,13 +86,14 @@ public class BlastBullet : MonoBehaviour {
 	}
 
 	private void MoveToBoss(){
-		rocket.transform.LookAt (boss.transform.position);
+		rocket.transform.LookAt (bossPosition);
 		rocket.transform.localPosition += bossTargetDirection * speed * Time.deltaTime;
 		//rocket.transform.Translate(Vector3.up * Time.deltaTime * 0.1f, Space.World);
 	}
 
 	private void DrawBulletLine(){
-		bulletLine.SetWidth (0.5f, 0.5f);
+		bulletLine.enabled = true;
+		bulletLine.SetWidth (0.04f, 0.04f);
 		bulletLine.SetPosition (0, firstAppearancePosition);
 		bulletLine.SetPosition(1, bulletLineEndVertex);
 	}
@@ -131,5 +132,8 @@ public class BlastBullet : MonoBehaviour {
 
 		deflectedPosition = rocket.transform.position;
 		bossTargetDirection = bossPosition - deflectedPosition;
+		bossTargetDirection = Vector3.Normalize (bossTargetDirection);
+
+		bulletLine.enabled = false;
 	}
 }

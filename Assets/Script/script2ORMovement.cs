@@ -194,7 +194,6 @@ public class script2ORMovement : MonoBehaviour {
     void pulseAttack()
     {
         PulseAttack attack = gameObject.GetComponent<PulseAttack>();
-        attack.destroyEnemies();
-		attack.deflectBossProjectile ();
+		attack.Pulse ();
     }
 }

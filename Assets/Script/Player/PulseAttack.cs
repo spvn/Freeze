@@ -28,41 +28,29 @@ public class PulseAttack : MonoBehaviour {
         //Gizmos.DrawSphere(transform.position, pulseRadius);
     }
 
-    public void destroyEnemies ()
-    {
-        // Depleting action bar stock
-        if ( actionBar.canDeplete(energyCost) )
-        {
-            Instantiate(pulseEffect, transform.position - new Vector3(0,1.5f,0), Quaternion.identity);
-            actionBar.DepleteActionStock(energyCost);
+	public void Pulse(){
+		// Depleting action bar stock
+		if (actionBar.canDeplete (energyCost)) {
+			Instantiate(pulseEffect, transform.position - new Vector3(0, 1.5f, 0), transform.rotation);
+			actionBar.DepleteActionStock(energyCost);
 
-            Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, pulseRadius);
-            for (int i = 0; i < hitColliders.Length; i++)
-            {
-                if (hitColliders[i].gameObject.layer == 12 &&
-                        hitColliders[i].gameObject.tag == "Destroyable")
-                {
-                    ScriptTurret turret = hitColliders[i].gameObject.GetComponent<ScriptTurret>();
-                    turret.Die();
-                    //hitColliders[i].gameObject.SetActive(false);
-                }
-            }
-        }
-    }
-
-    public void deflectBossProjectile ()
-    {
-        Instantiate(pulseEffect, transform.position - new Vector3(0, 1.5f, 0), transform.rotation);
-
-		Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, pulseRadius);
-		for (int i = 0; i < hitColliders.Length; i++)
-		{
-			if (hitColliders[i].gameObject.layer == 14 &&
-			    hitColliders[i].gameObject.tag == "Deflectable")
+			Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, pulseRadius);
+			for (int i = 0; i < hitColliders.Length; i++)
 			{
-				BlastBullet rocket = hitColliders[i].gameObject.GetComponentInChildren<BlastBullet>();
-				rocket.DeflectBullet();
+				// Destroy enemies
+				if (hitColliders[i].gameObject.layer == 12 &&
+				    hitColliders[i].gameObject.tag == "Destroyable"){
+					ScriptTurret turret = hitColliders[i].gameObject.GetComponent<ScriptTurret>();
+					turret.Die();
+					//hitColliders[i].gameObject.SetActive(false);
+				} 
+				// Deflect bullets
+				else if (hitColliders[i].gameObject.layer == 14 &&
+				           hitColliders[i].gameObject.tag == "Deflectable"){
+					BlastBullet rocket = hitColliders[i].gameObject.GetComponentInChildren<BlastBullet>();
+					rocket.DeflectBullet();
+				}
 			}
 		}
-    }
+	}
 }

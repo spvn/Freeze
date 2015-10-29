@@ -12,7 +12,7 @@ public class BlastRadius : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
-		//bossHealth = GameObject.Find ("Boss").GetComponent<BossHealth>();
+		bossHealth = GameObject.Find ("Boss").GetComponent<BossHealth>();
 
 		gameObject.SetActive (false);
 	}
@@ -31,7 +31,7 @@ public class BlastRadius : MonoBehaviour {
 		} 
 		if (other.gameObject.name == "Boss") {
 			Debug.Log ("Boss within Blast Bullet radius.");
-			//bossHealth.TakeDamage(damage);
+			bossHealth.TakeDamage(damage);
 		}
 	}
 

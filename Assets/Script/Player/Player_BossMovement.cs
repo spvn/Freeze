@@ -36,7 +36,7 @@ public class Player_BossMovement : MonoBehaviour {
         if ( Input.GetKeyDown(KeyCode.K) )
         {
             PulseAttack attack = gameObject.GetComponent<PulseAttack>();
-            attack.deflectBossProjectile();
+            attack.Pulse();
         }
 
 	    if ( Input.GetKey(KeyCode.A) && controller.isGrounded )
