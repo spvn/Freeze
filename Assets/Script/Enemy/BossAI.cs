@@ -37,7 +37,6 @@ public class BossAI : MonoBehaviour {
 
 				if (bossHealth.getCurrentHealth() > 0){
 					LookAtPlayer();
-						
 				} else {
 					Die ();
 				}
@@ -55,8 +54,8 @@ public class BossAI : MonoBehaviour {
 		} else {
 			if (!bossAnimations.IsPlaying ("Opening")){
 				PlayIdleAnimation();
+				ActivateAllAttacks();
 			}
-			ActivateAllAttacks();
 		}
 	}
 

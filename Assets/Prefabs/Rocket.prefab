@@ -317,8 +317,8 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
-    startWidth: .0399999991
-    endWidth: .0399999991
+    startWidth: .0299999993
+    endWidth: .0299999993
     m_StartColor:
       serializedVersion: 2
       rgba: 4281138944
@@ -1451,11 +1451,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Parameters.startWidth
-      value: .0399999991
+      value: .0299999993
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Parameters.endWidth
-      value: .0399999991
+      value: .0299999993
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Materials.Array.data[0]

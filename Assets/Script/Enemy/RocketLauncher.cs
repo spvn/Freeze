@@ -34,7 +34,7 @@ public class RocketLauncher : MonoBehaviour {
 		rocketShootingPt = transform.Find ("RocketShootingPoint");
 		shootingSound = GetComponent<AudioSource> ();
 
-		isHostile = true;
+		isHostile = false;
 		isShooting = false;
 		shootingTimer = 0;
 
