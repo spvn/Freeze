@@ -64,7 +64,7 @@ public class BlastBullet : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (!isDeflected && other.gameObject.name == "Boss") {
-			// Ignore the boss collision box when it is first fired
+			// Ignore the boss collision box when it is first fired from boss
 		} else {
 			//Debug.Log ("Rocket triggered.");
 			hasHitSomething = true;
@@ -123,10 +123,10 @@ public class BlastBullet : MonoBehaviour {
 	}
 
 	public void setBulletDirection(Vector3 target){
-		bulletLineEndVertex = target;
-
 		playerTargetDirection = target - transform.position;
 		playerTargetDirection = Vector3.Normalize (playerTargetDirection);
+
+		bulletLineEndVertex = target + playerTargetDirection*50;
 	}
 
 	public void DeflectBullet(){

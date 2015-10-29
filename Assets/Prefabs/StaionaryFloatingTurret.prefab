@@ -620,7 +620,7 @@ MonoBehaviour:
   shootingAnimation: {fileID: 0}
   angleOfShooting: 360
   inaccuracy: .200000003
-  inaccuracyY: .5
+  inaccuracyY: .100000001
   deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
   isHostile: 0
   intervalShootTime: 1
@@ -1739,6 +1739,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: isHostile
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: inaccuracyY
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
