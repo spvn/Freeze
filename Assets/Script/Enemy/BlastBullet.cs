@@ -63,10 +63,13 @@ public class BlastBullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		Debug.Log ("triggered");
-		hasHitSomething = true;
-
-		ActivateBlast ();
+		if (!isDeflected && other.gameObject.name == "Boss") {
+			// Ignore the boss collision box when it is first fired
+		} else {
+			//Debug.Log ("Rocket triggered.");
+			hasHitSomething = true;
+			ActivateBlast ();
+		}
 	}
 
 	private void ActivateBlast(){

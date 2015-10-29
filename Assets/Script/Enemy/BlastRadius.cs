@@ -30,8 +30,8 @@ public class BlastRadius : MonoBehaviour {
 			//levelManager.GameOver ();
 		} 
 		if (other.gameObject.name == "Boss") {
-			Debug.Log ("Boss within Blast Bullet radius.");
 			bossHealth.TakeDamage(damage);
+			Debug.Log ("Boss took damage. Current health: " + bossHealth.getCurrentHealth());
 		}
 	}
 
