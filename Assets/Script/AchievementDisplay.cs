@@ -69,8 +69,7 @@ public class AchievementDisplay : MonoBehaviour {
 
     private void createAchievementPages()
     {
-        Debug.Log(achievements.Count);
-        for (int i = 0; i < achievements.Count/5; i++)
+        for (int i = 0; i < Mathf.Ceil(achievements.Count / 5.0f); i++)
         {
             achievementPages.Add(createPage());
         }
@@ -78,8 +77,8 @@ public class AchievementDisplay : MonoBehaviour {
 
     private void populateAchievementPages()
     {
-        for (int i = 0; i < achievements.Count/5; i++)
-        {
+        for (int i = 0; i < Mathf.Ceil(achievements.Count/5.0f); i++)
+        { 
             Transform currentPage = achievementPages[i];
             for (int j = 0; j < achievements.Count - i*5 && j < 5; j++)
             {
@@ -92,12 +91,17 @@ public class AchievementDisplay : MonoBehaviour {
                 {
                     currentPanel.GetComponent<Image>().color = new Color(0, 1, 0, 1);
                     currentPanel.GetChild(1).GetComponent<Text>().text = currentAchievement.target + "/" + currentAchievement.target;
-                } else
-                {
+                } else {
                     currentPanel.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
                     currentPanel.GetChild(1).GetComponent<Text>().text = currentAchievement.progress + "/" + currentAchievement.target;
                 }
                 currentPanel.GetChild(0).GetComponent<Text>().text = currentAchievement.name;
+            }
+
+            for (int j = 0; j < (i+1)*5 - achievements.Count; j++)
+            {
+                Transform currentPanel = currentPage.GetChild(5-j);
+                currentPanel.gameObject.SetActive(false);
             }
 
             // Setting page buttons
@@ -106,7 +110,7 @@ public class AchievementDisplay : MonoBehaviour {
                 currentPage.GetChild(7).gameObject.SetActive(false);
             }
 
-            if (i == (achievements.Count/5) - 1)
+            if (i == (Mathf.Ceil(achievements.Count/5.0f)) - 1)
             {
                 currentPage.GetChild(6).gameObject.SetActive(false);
             }
