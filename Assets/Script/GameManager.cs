@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour {
     private GameObject pauseScreen;
     private GameObject exitScreen;
 
-
     void Awake()
     {
         if (_instance == null)
@@ -69,7 +68,8 @@ public class GameManager : MonoBehaviour {
 
     public void loadLevelSelector()
     {
-        Application.LoadLevel(1);
+        mmScreen.SetActive(false);
+        lsScreen.transform.GetComponent<LevelSelectorDisplay>().loadLevelSelector();
     }
 
     public void showAchievements()
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour {
 
     public void quitGame()
     {
-        Debug.Log("quiting...");
+        Debug.Log("Player selected to quit game");
         sm.saveStatistics();
         Application.Quit();
     }
@@ -182,6 +182,7 @@ public class GameManager : MonoBehaviour {
 
     public void backToMainMenu()
     {
+        lsScreen.SetActive(false);
         achieveScreen.SetActive(false);
         mmScreen.SetActive(true);
     }
