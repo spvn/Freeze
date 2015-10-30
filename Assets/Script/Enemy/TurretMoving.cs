@@ -50,7 +50,7 @@ public class TurretMoving : MonoBehaviour {
 			return;
 		}
 
-		Debug.Log ("Lag chasing");
+//		Debug.Log ("Lag chasing");
 		enemy.Resume ();
 		// TODO: check what if chasing while player rotating
 		enemy.SetDestination (chasePosition + player.transform.forward*playerSpeed);
