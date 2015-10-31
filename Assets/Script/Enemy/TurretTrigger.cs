@@ -40,6 +40,10 @@ public class TurretTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(hoveringTurret == null)
+		{
+			Destroy(this.transform.parent.gameObject);
+		}
 		if (!levelManager.isFrozen) {
 			if (startMoving && distanceTravelled <= distance) {
 				moveTurret ();
