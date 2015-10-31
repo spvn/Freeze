@@ -3,14 +3,15 @@ using System.Collections;
 
 public class ScriptTurret : MonoBehaviour {
 
-	private GameObject player;
-	private LevelManager levelManager;
+	public bool dontUsePlayerVisibleFunction;
 	public GameObject bulletPrefab;
 	public Animation shootingAnimation;
 	public float angleOfShooting = 90f;
 	public float inaccuracy = 0.2f;
 	public float inaccuracyY = 0.5f; 
 	public GameObject deathEffect;
+	private GameObject player;
+	private LevelManager levelManager;
 
 	public bool isHostile = true;
 
@@ -82,6 +83,10 @@ public class ScriptTurret : MonoBehaviour {
 
 	bool playerIsVisibleToEnemey()
 	{
+		if (dontUsePlayerVisibleFunction) {
+			return true;
+		}
+
 		Vector3 playerPos = player.transform.position;
 		float distance = Vector3.Distance (turretHead.transform.position, playerPos) - 1;
 		Vector3 direction = playerPos - (turretHead.transform.position);
