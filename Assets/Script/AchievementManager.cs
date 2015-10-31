@@ -36,9 +36,9 @@ public class Achievement {
 	
 	private void notifyAchievementUnlocked ()
 	{
-		Debug.Log ("Achievement \"" + this.name + "\" has been unlocked!");
-		// Not implemented yet
-	}
+        StatisticManager sm = StatisticManager.getManager();
+        sm.newAchievementUnlocked(this.name);
+    }
 }
 
 // Achievement Manager no longer in use

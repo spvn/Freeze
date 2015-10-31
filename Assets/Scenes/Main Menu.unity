@@ -532,7 +532,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431886, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
       propertyPath: stats.Array.data[5].name
@@ -2214,6 +2214,11 @@ Prefab:
       propertyPath: stats.Array.data[64].achievements.Array.data[2].target
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: achievementNotif
+      value: 
+      objectReference: {fileID: 22492432, guid: 8bacd24cc4bce7b4190c6014a293ea84,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
   m_IsPrefabParent: 0

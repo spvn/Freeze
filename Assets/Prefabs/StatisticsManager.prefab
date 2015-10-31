@@ -40,6 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b06a32746b15047b4e2d067a0b2d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementNotif: {fileID: 22492432, guid: 8bacd24cc4bce7b4190c6014a293ea84, type: 2}
   stats:
   - name: Bullets Dodged
     progress: 0
@@ -127,6 +128,24 @@ MonoBehaviour:
       target: 5
       unlocked: 0
     - name: Died 10 Times
+      description: 
+      progress: 0
+      target: 10
+      unlocked: 0
+  - name: Enemies Killed
+    progress: 0
+    achievements:
+    - name: Killed 1 Enemy
+      description: 
+      progress: 0
+      target: 1
+      unlocked: 0
+    - name: Killed 5 Enemies
+      description: 
+      progress: 0
+      target: 5
+      unlocked: 0
+    - name: Killed 10 Enemies
       description: 
       progress: 0
       target: 10

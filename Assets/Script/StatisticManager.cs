@@ -42,8 +42,9 @@ public class Statistic {
 public class StatisticManager : MonoBehaviour
 {
     private static StatisticManager _instance;
+    public Transform achievementNotif;
     public Statistic[] stats;
-
+    
     void Awake()
     {
         if (_instance == null)
@@ -144,5 +145,18 @@ public class StatisticManager : MonoBehaviour
             }
         }
         return achievementList;
+    }
+
+    public void newAchievementUnlocked(string achievementName)
+    {
+        Debug.Log("Achievement \"" + achievementName + "\" has been unlocked!");
+        Transform canvas = GameObject.Find("ORCanvas").transform;
+        Transform notif = (Transform) Instantiate(achievementNotif , canvas.position, canvas.rotation);
+        notif.SetParent(canvas);
+        notif.localScale = new Vector3(1, 1, 1);
+        RectTransform notifRect = (RectTransform)notif;
+        notifRect.offsetMax = new Vector2(0, 0);
+        notifRect.offsetMin = new Vector2(0, 0);
+        notif.GetComponent<AchievementNotification>().setAchievementText(achievementName);
     }
 }
