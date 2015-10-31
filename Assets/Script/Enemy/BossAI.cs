@@ -2,16 +2,18 @@
 using System.Collections;
 
 public class BossAI : MonoBehaviour {
-
-	public bool bossActivated;
-
+	
 	public GameObject[] bossAttackGameObjects;
+	// 0: opening, 1: movement, 2,3: idle
+	public AudioClip[]	bossAudio;
 
 	private GameObject player;
 	private LevelManager levelManager;
 	private BossHealth bossHealth;
 	private Animation bossAnimations;
+	private AudioSource bossAudioPlayer;
 
+	private bool bossActivated;
 	private bool openingAnimationPlayed;
 
 	// Use this for initialization
@@ -20,6 +22,7 @@ public class BossAI : MonoBehaviour {
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		bossHealth = GetComponent<BossHealth> ();
 		bossAnimations = GetComponent<Animation> ();
+		bossAudioPlayer = GetComponent<AudioSource> ();
 
 		bossActivated = false;
 		openingAnimationPlayed = false;
@@ -63,12 +66,21 @@ public class BossAI : MonoBehaviour {
 		bossAnimations ["Opening"].speed = 0.5f;
 		bossAnimations.Play ("Opening", PlayMode.StopAll);
 		openingAnimationPlayed = true;
+
+		bossAudioPlayer.clip = bossAudio [0];
+		bossAudioPlayer.PlayDelayed(0.1f);
 	}
 
 	private void PlayIdleAnimation(){
 		if (!bossAnimations.IsPlaying ("Idle")) {
 			bossAnimations ["Idle"].speed = 0.5f;
 			bossAnimations.Play ("Idle", PlayMode.StopAll);
+		}
+
+		bossAudioPlayer.clip = bossAudio [1];
+		if (!bossAudioPlayer.isPlaying) {
+			bossAudioPlayer.PlayDelayed(0f);
+			bossAudioPlayer.loop = true;
 		}
 	}
 
