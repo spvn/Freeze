@@ -6,6 +6,7 @@ public class scriptBullet : MonoBehaviour {
 	private Vector3 firstPoint;
 
 	public float speed;
+    public float secondsToDestroyAfterMissing = 0.5f;
 
 	public GameObject player;
 	private LevelManager levelManager;
@@ -15,6 +16,7 @@ public class scriptBullet : MonoBehaviour {
 	private float bulletLineLength;
 	private RaycastHit objHit;
 	private Vector3 previousPlayerPos;
+    private float distanceFromPlayer = 9999999999999;
 
 	// Use this for initialization
 	void Start () {
@@ -48,7 +50,13 @@ public class scriptBullet : MonoBehaviour {
 		if ( !levelManager.isGameOver && bulletDirection != Vector3.zero && !levelManager.isFrozen) {
 			this.transform.localPosition += bulletDirection * speed * Time.deltaTime;
 		}
-
+        if (checkPlayerDistance() < this.distanceFromPlayer)
+        {
+            this.distanceFromPlayer = checkPlayerDistance();
+        } else
+        {
+            StartCoroutine(destroyBullet());
+        }
 	}
 
 	void checkHitPlayer()
@@ -92,4 +100,16 @@ public class scriptBullet : MonoBehaviour {
 		}
 		Destroy (gameObject);
 	}
+
+    private float checkPlayerDistance()
+    {
+        return Vector3.Distance(transform.position, player.transform.position);
+    }
+
+    private IEnumerator destroyBullet()
+    {
+        yield return new WaitForSeconds(timeToDestroyAfterMissing);
+        Debug.Log("Destorying a bulelt that missed");
+        Destroy(this.gameObject);
+    }
 }
