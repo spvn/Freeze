@@ -49,7 +49,7 @@ public class scriptBullet : MonoBehaviour {
 		if ( !levelManager.isGameOver && bulletDirection != Vector3.zero && !levelManager.isFrozen) {
 			this.transform.localPosition += bulletDirection * speed * Time.deltaTime;
 		}
-        if (checkPlayerDistance() <= this.distanceFromPlayer)
+        if (checkPlayerDistance() < this.distanceFromPlayer)
         {
             this.distanceFromPlayer = checkPlayerDistance();
         } else
