@@ -1428,6 +1428,18 @@ Prefab:
       propertyPath: m_Name
       value: HoveringTurretSet (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 405962, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 405962, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 405962, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .800000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
   m_IsPrefabParent: 0
@@ -2089,6 +2101,14 @@ Prefab:
     - target: {fileID: 162710, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_TagString
       value: Destroyable
+      objectReference: {fileID: 0}
+    - target: {fileID: 405962, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 405962, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.6999998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
