@@ -2995,15 +2995,15 @@ Prefab:
       objectReference: {fileID: 393455732}
     - target: {fileID: 191228, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11491768, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: playerSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 161808, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
@@ -3315,7 +3315,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480054, guid: a1831d2d146218141837704fbee69fc4, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.96999979
+      value: 14.1499996
       objectReference: {fileID: 0}
     - target: {fileID: 480054, guid: a1831d2d146218141837704fbee69fc4, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4063,7 +4063,7 @@ Transform:
   - {fileID: 1090097794}
   - {fileID: 73032741}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1001 &2031192545
 Prefab:
   m_ObjectHideFlags: 0
