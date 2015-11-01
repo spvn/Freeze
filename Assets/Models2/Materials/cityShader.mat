@@ -101,7 +101,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .349999994
+        second: .25
       data:
         first:
           name: _BumpScale
@@ -109,7 +109,7 @@ Material:
       data:
         first:
           name: _OcclusionStrength
-        second: .5
+        second: 0
       data:
         first:
           name: _DetailNormalMapScale
@@ -125,7 +125,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .50999999
+        second: 1
       data:
         first:
           name: _EmissionScaleUI
@@ -138,7 +138,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .17463237, g: .454472721, b: .625, a: 1}
+        second: {r: 0, g: .36093694, b: .580882311, a: 1}
       data:
         first:
           name: _EmissionColorUI

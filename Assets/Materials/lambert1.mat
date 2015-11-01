@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11,7 +11,6 @@ Material:
   m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
-  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -158,14 +157,6 @@ Material:
     m_Floats:
       data:
         first:
-          name: _SrcBlend
-        second: 1
-      data:
-        first:
-          name: _DstBlend
-        second: 0
-      data:
-        first:
           name: _Cutoff
         second: .5
       data:
@@ -176,6 +167,14 @@ Material:
         first:
           name: _Exposure
         second: 1
+      data:
+        first:
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
       data:
         first:
           name: _Parallax
@@ -191,7 +190,7 @@ Material:
       data:
         first:
           name: _BumpScale
-        second: .200000003
+        second: .800000012
       data:
         first:
           name: _OcclusionStrength
@@ -203,10 +202,6 @@ Material:
       data:
         first:
           name: _UVSec
-        second: 0
-      data:
-        first:
-          name: _EmissionScaleUI
         second: 0
       data:
         first:
@@ -242,6 +237,10 @@ Material:
         second: 15
       data:
         first:
+          name: _EmissionScaleUI
+        second: 0
+      data:
+        first:
           name: _SquashAmount
         second: 1
       data:
@@ -260,7 +259,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .332828701, g: .372700155, b: .41911763, a: 1}
+        second: {r: .367647052, g: .486562014, b: .625, a: 1}
       data:
         first:
           name: _SpecColor
