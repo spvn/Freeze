@@ -44,7 +44,6 @@ public class scriptBullet : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-
 		checkHitPlayer ();
 		checkNearMisses ();
 		if ( !levelManager.isGameOver && bulletDirection != Vector3.zero && !levelManager.isFrozen) {
@@ -108,7 +107,7 @@ public class scriptBullet : MonoBehaviour {
 
     private IEnumerator destroyBullet()
     {
-        yield return new WaitForSeconds(timeToDestroyAfterMissing);
+        yield return new WaitForSeconds(secondsToDestroyAfterMissing);
         Debug.Log("Destorying a bulelt that missed");
         Destroy(this.gameObject);
     }
