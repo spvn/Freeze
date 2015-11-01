@@ -9,6 +9,7 @@ public enum AppearSide{
 public class TurretMoving : MonoBehaviour {
 	public float speed;
 	public AppearSide chaseSide;
+	public float selfDestruct;
 
 	private LevelManager levelManager;
 	private GameObject player;
@@ -18,6 +19,7 @@ public class TurretMoving : MonoBehaviour {
 
 	private Vector3 chasePosition;
 	private float playerSpeed;
+	private float aliveTime;
 
 	// Use this for initialization
 	void Start () {
@@ -27,13 +29,17 @@ public class TurretMoving : MonoBehaviour {
 
 		enemy.speed = speed;
 		playerSpeed = player.GetComponent<script2ORMovement> ().playerSpeed;
-
+		aliveTime = 0;
 		ChasePlayer ();
 		StopChase ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		aliveTime += Time.deltaTime;
+		if (aliveTime > selfDestruct) {
+			this.gameObject.transform.GetComponent<ScriptTurret>().Die();
+		}
 		if (!levelManager.isFrozen) {
 			if (isLockedOnPlayer()){
 				LagChasePlayer();

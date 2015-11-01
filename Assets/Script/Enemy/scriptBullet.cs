@@ -15,6 +15,7 @@ public class scriptBullet : MonoBehaviour {
 	private float bulletLineLength;
 	private RaycastHit objHit;
 	private Vector3 previousPlayerPos;
+	private float bulletDistanceTravelled;
 
 	// Use this for initialization
 	void Start () {
@@ -42,13 +43,15 @@ public class scriptBullet : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-
 		checkHitPlayer ();
 		checkNearMisses ();
 		if ( !levelManager.isGameOver && bulletDirection != Vector3.zero && !levelManager.isFrozen) {
 			this.transform.localPosition += bulletDirection * speed * Time.deltaTime;
 		}
-
+		bulletDistanceTravelled = Vector3.Distance (firstPoint, this.transform.localPosition);
+		if (bulletDistanceTravelled > bulletLineLength) {
+			Destroy (gameObject);
+		}
 	}
 
 	void checkHitPlayer()

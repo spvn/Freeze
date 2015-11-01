@@ -44,6 +44,7 @@ public class TurretTrigger : MonoBehaviour {
 		{
 			Destroy(this.transform.parent.gameObject);
 			Destroy(this.gameObject);
+			return;
 		}
 		if (!levelManager.isFrozen) {
 			if (startMoving && distanceTravelled <= distance) {

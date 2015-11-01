@@ -92,7 +92,7 @@ public class ScriptTurret : MonoBehaviour {
 		Vector3 direction = playerPos - (turretHead.transform.position);
 	
 		// Raycast on layer 0 default and layer 9 player
-		if (!Physics.Raycast(turretHead.transform.position, direction, distance, (1<<9 | 1<<0))) {
+		if (!Physics.Raycast(turretHead.transform.position, direction, distance, (1<<9 | 1<<0)) && distance < 40) {
 			//Debug.Log("Player visible to enemy");
 			return true;
 		}
