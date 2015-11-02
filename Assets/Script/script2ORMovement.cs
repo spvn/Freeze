@@ -95,6 +95,12 @@ public class script2ORMovement : MonoBehaviour {
                 canStrafe = false;
             }
 
+            if (node.isCheckpoint == true)
+            {
+                levelManager.playerCheckpoint = col.gameObject;
+            }
+
+
             if (node.isEndNode)
             {
                 levelManager.isFrozen = true;

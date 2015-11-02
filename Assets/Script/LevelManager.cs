@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour {
 
     private GameManager gm;
 	private bool isFrozenWhenPaused = false;
+    public GameObject playerCheckpoint;
 
 	void Awake()
 	{
@@ -47,6 +48,30 @@ public class LevelManager : MonoBehaviour {
 		timerGUIText = canvas.transform.Find("HUD").Find ("Panel").transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
 	}
+
+    public void restartFromCheckpoint ()
+    {
+        if (playerCheckpoint != null)
+        {    
+            isFrozen = true;
+            startedGame = false;
+            isGameOver = false;
+
+            //canvas.gameObject.transform.Find("StartingScreen").gameObject.SetActive(true);
+            canvas.gameObject.transform.Find("GameOverScreen").gameObject.SetActive(false);
+            // set player position
+            GameObject OVRCameraRig = GameObject.Find("OVRCameraRig");
+            OVRCameraRig.transform.position = playerCheckpoint.transform.position;
+            // set player direction
+            script2ORMovement player = OVRCameraRig.GetComponent<script2ORMovement>();
+            NodePathing node = playerCheckpoint.GetComponent<NodePathing>();
+            player.destinationNode = node.MiddleDestinationNode;
+        }
+        else
+        {
+            gm.restartCurrentLevel();
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -96,8 +121,9 @@ public class LevelManager : MonoBehaviour {
         }
 
 		if (canvas.gameObject.transform.Find ("GameOverScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
-			RestartLevel();
-		}
+            restartFromCheckpoint();
+            //RestartLevel();
+        }
 
 		if (canvas.gameObject.transform.Find ("WinScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
 			LoadNextLevel();

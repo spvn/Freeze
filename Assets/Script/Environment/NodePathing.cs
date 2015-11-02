@@ -15,6 +15,7 @@ public class NodePathing : MonoBehaviour {
     public bool isEndNode = false;         // default node is not an end node
     public bool playerInRange = false;
     public bool disableStrafe = false;
+    public bool isCheckpoint = false;
     private LevelManager levelManager;
 
     // Use this for initialization
@@ -60,7 +61,7 @@ public class NodePathing : MonoBehaviour {
     void OnTriggerExit ()
     {
         playerInRange = false;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     private void countRoutes()
