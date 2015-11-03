@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ScriptTurret : MonoBehaviour {
 
-	public float maxPlayerTurretDistance = 40f;
+	public float maxShootingDistance = 40f;
 	public GameObject bulletPrefab;
 	public Animation shootingAnimation;
 	public float angleOfShooting = 90f;
@@ -87,7 +87,8 @@ public class ScriptTurret : MonoBehaviour {
 		Vector3 direction = playerPos - (turretHead.transform.position);
 	
 		// Raycast on layer 0 default and layer 9 player
-		if (!Physics.Raycast(turretHead.transform.position, direction, distance, (1<<9 | 1<<0)) && distance < maxPlayerTurretDistance) {
+		if (!Physics.Raycast(turretHead.transform.position, direction, distance, 
+		                     (1<<9 | 1<<0)) && distance < maxShootingDistance) {
 			//Debug.Log("Player visible to enemy");
 			return true;
 		}

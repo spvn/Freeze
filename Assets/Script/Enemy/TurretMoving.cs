@@ -19,6 +19,7 @@ public class TurretMoving : MonoBehaviour {
 
 	private Vector3 chasePosition;
 	private float playerSpeed;
+	private bool enemyStopped;
 	private float aliveTime;
 
 	// Use this for initialization
@@ -27,6 +28,7 @@ public class TurretMoving : MonoBehaviour {
 		player = GameObject.Find ("OVRCameraRig");
 		enemy = GetComponent<NavMeshAgent> ();
 
+		enemyStopped = false;
 		enemy.speed = speed;
 		playerSpeed = player.GetComponent<script2ORMovement> ().playerSpeed;
 		aliveTime = 0;
@@ -42,11 +44,11 @@ public class TurretMoving : MonoBehaviour {
 		}
 		if (!levelManager.isFrozen) {
 			ResumeChase();
-			if (isLockedOnPlayer()){
-				LagChasePlayer();
-			} else {
+			//if (isLockedOnPlayer()){
+			//	LagChasePlayer();
+			//} else {
 				ChasePlayer ();
-			}
+			//}
 		} else {
 			StopChase();
 		}
@@ -84,13 +86,21 @@ public class TurretMoving : MonoBehaviour {
 	}
 
 	void StopChase(){
-		enemy.Stop ();
-		enemy.SetDestination (transform.position);
+		//enemy.Stop ();
+		//enemy.SetDestination (transform.position);
+		enemy.enabled = false;
+		enemyStopped = true;
 		//Debug.Log ("Enemy stopped chasing.");
 	}
 
 	void ResumeChase(){
-		enemy.Resume ();
+		if (enemyStopped) {
+
+			enemy.enabled = true;
+			enemy.Resume ();
+
+			enemyStopped = false;
+		}
 	}
 
 	// TODO: Need dumber AI to trigger this

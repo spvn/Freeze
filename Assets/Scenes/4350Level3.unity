@@ -954,7 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f30db4429f2bc34ebabd2fa6241c034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDestroyer: {fileID: 0}
+  bulletDestroyer: {fileID: 1345316555}
 --- !u!54 &632871547
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2638,6 +2638,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
   m_PrefabInternal: {fileID: 1864731357}
+--- !u!1 &1345316555 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 195306, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+  m_PrefabInternal: {fileID: 1437789648}
 --- !u!1001 &1351271426
 Prefab:
   m_ObjectHideFlags: 0
