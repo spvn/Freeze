@@ -139,7 +139,7 @@ public class script2ORMovement : MonoBehaviour {
 				slopeStatus = 1;	// going up slope
 			}
 		}
-		Debug.Log("slope status: " + slopeStatus + " Slope Angle: " + slopeAngle);
+		//Debug.Log("slope status: " + slopeStatus + " Slope Angle: " + slopeAngle);
 	}
 
     public void moveToNextNode()

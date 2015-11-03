@@ -128,7 +128,7 @@ public class ScriptTurret : MonoBehaviour {
 			                            Random.Range (inaccuracyY * -1, 0f), Random.Range (inaccuracy * -1, inaccuracy));
 			bulletTargetPoint = player.transform.position + randomOffset 
 				+ distFromPlayerToShoot*player.transform.forward;
-			} else {
+		} else {
 			randomOffset = new Vector3 (Random.Range (inaccuracy * -1, inaccuracy), 
 			                            Random.Range (inaccuracyY * -1, 0f), Random.Range (inaccuracy * -1, inaccuracy));
 			bulletTargetPoint = player.transform.position + randomOffset;
