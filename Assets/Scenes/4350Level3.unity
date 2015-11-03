@@ -3366,6 +3366,14 @@ Prefab:
       propertyPath: m_AutoBraking
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 190056, guid: a1831d2d146218141837704fbee69fc4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444062, guid: a1831d2d146218141837704fbee69fc4, type: 2}
+      propertyPath: selfDestruct
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1831d2d146218141837704fbee69fc4, type: 2}
   m_IsPrefabParent: 0
