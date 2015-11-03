@@ -36,7 +36,7 @@ public class scriptBullet : MonoBehaviour {
 		
 		Vector3 lineFirstPoint = this.transform.position + (bulletDirection);
 		this.transform.localPosition = lineFirstPoint;
-		firstPoint = this.transform.localPosition;
+		firstPoint = this.transform.position;
 		bulletLine.SetPosition (0, lineFirstPoint);
 		bulletLine.SetPosition (1, targetPoint + (bulletDirection * 10));
 		bulletLineLength = Vector3.Distance (lineFirstPoint, (targetPoint + (bulletDirection * 100))); 

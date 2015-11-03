@@ -28,6 +28,10 @@ public class script2ORMovement : MonoBehaviour {
     private NoiseAndScratches[] nsObjects;
     public GameObject canvas;
 
+	// Feedback to enemies
+	public float slopeAngle;
+	public int slopeStatus;	// -1: down slope, 0: flat, 1: up slope
+
     void Start () {
 		controller = GetComponent<CharacterController>();
         levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
@@ -122,6 +126,22 @@ public class script2ORMovement : MonoBehaviour {
 		}	
 	}
 
+	void OnControllerColliderHit(ControllerColliderHit hit) {
+		slopeAngle = Vector3.Angle(Vector3.up, hit.normal);
+
+		if (slopeAngle <= 1) {
+			slopeStatus = 0;	// flat
+		} else {
+			float genAngle = Vector3.Angle(forwardDirection, hit.normal);
+			if (genAngle < 90){
+				slopeStatus = -1;	// going down slope
+			} else {
+				slopeStatus = 1;	// going up slope
+			}
+		}
+		Debug.Log("slope status: " + slopeStatus + " Slope Angle: " + slopeAngle);
+	}
+
     public void moveToNextNode()
     {
         forwardDirection = Vector3.Normalize(destinationNode.position - transform.position);
@@ -202,4 +222,8 @@ public class script2ORMovement : MonoBehaviour {
         PulseAttack attack = gameObject.GetComponent<PulseAttack>();
 		attack.Pulse ();
     }
+
+	public Vector3 getForwardDirection(){
+		return forwardDirection;
+	}
 }

@@ -26,7 +26,6 @@ public class ScriptTurret : MonoBehaviour {
 	private Transform bulletShootingPt;
 	float timer = 0.0f;
 	public float intervalShootTime;
-	Vector3 playerOffset = new Vector3(0, 0.0f, 0);
 	Vector3 randomOffset;
 	float playerSpeed;
 	GameObject muzzleFlash;
@@ -108,23 +107,32 @@ public class ScriptTurret : MonoBehaviour {
 		/*if (!shootingAnimation.isPlaying) {
 			shootingAnimation.Play ();
 		}*/
-		
-		GameObject bullet = (GameObject)Instantiate (bulletPrefab);
 
+		GameObject bullet = (GameObject)Instantiate (bulletPrefab);
 		bullet.transform.position = bulletShootingPt.transform.position;
 		muzzleFlash.transform.position = bulletShootingPt.transform.position;
 		muzzleFlash.GetComponent<ParticleSystem>().Play();
 		turretAudio[SHOOTING_SOUND].Play();
+
+
+
+		int playerSlopeStatus = player.GetComponent<script2ORMovement> ().slopeStatus;
+		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
+		if (playerSlopeStatus != 0) {
+			float slopeAngle = player.GetComponent<script2ORMovement> ().slopeAngle;
+			playerSpeed = playerSpeed / Mathf.Cos (slopeAngle * 3.142f / 180f);
 		
-		//Time of flight to reach player
-		float bulletTimeToCurrPos = (player.transform.position - bulletShootingPt.transform.position).magnitude / bullet.GetComponent<scriptBullet>().speed;
-		
-		//playerOffset += player.transform.forward * playerSpeed;
-		//randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracyY/2 * -1, 0f) + 0.5f, Random.Range (inaccuracy*-1, inaccuracy));
-		randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracyY * -1, 0f), Random.Range (inaccuracy*-1, inaccuracy));
-		
-		bulletTargetPoint = player.transform.position + playerOffset + ((player.transform.forward * playerSpeed) * bulletTimeToCurrPos /2) + randomOffset;
-		
+			float distPlayerTurret = (player.transform.position - bulletShootingPt.transform.position).magnitude;
+			float distFromPlayerToShoot = (distPlayerTurret * playerSpeed) / (playerSpeed + bullet.GetComponent<scriptBullet> ().speed);
+			randomOffset = new Vector3 (Random.Range (inaccuracy * -1, inaccuracy), 
+			                            Random.Range (inaccuracyY * -1, 0f), Random.Range (inaccuracy * -1, inaccuracy));
+			bulletTargetPoint = player.transform.position + randomOffset 
+				+ distFromPlayerToShoot*player.transform.forward;
+			} else {
+			randomOffset = new Vector3 (Random.Range (inaccuracy * -1, inaccuracy), 
+			                            Random.Range (inaccuracyY * -1, 0f), Random.Range (inaccuracy * -1, inaccuracy));
+			bulletTargetPoint = player.transform.position + randomOffset;
+		}
 		bullet.GetComponent<scriptBullet> ().setBulletDirection (bulletTargetPoint);
 
 		shooting = false;
