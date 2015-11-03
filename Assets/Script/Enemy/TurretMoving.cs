@@ -9,7 +9,7 @@ public enum AppearSide{
 public class TurretMoving : MonoBehaviour {
 	public float speed;
 	public AppearSide chaseSide;
-	public float selfDestruct;
+	//public float selfDestruct;
 
 	private LevelManager levelManager;
 	private GameObject player;
@@ -37,9 +37,9 @@ public class TurretMoving : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		aliveTime += Time.deltaTime;
-		if (aliveTime > selfDestruct) {
-			this.gameObject.transform.GetComponent<ScriptTurret>().Die();
-		}
+	//	if (aliveTime > selfDestruct) {
+	//		this.gameObject.transform.GetComponent<ScriptTurret>().Die();
+	//	}
 		if (!levelManager.isFrozen) {
 			if (isLockedOnPlayer()){
 				LagChasePlayer();

@@ -4,7 +4,6 @@ using System.Collections;
 public class ScriptTurret : MonoBehaviour {
 
 	public float maxPlayerTurretDistance = 40f;
-	public bool dontUsePlayerVisibleFunction;
 	public GameObject bulletPrefab;
 	public Animation shootingAnimation;
 	public float angleOfShooting = 90f;
@@ -84,10 +83,6 @@ public class ScriptTurret : MonoBehaviour {
 
 	bool playerIsVisibleToEnemey()
 	{
-		if (dontUsePlayerVisibleFunction) {
-			return true;
-		}
-
 		Vector3 playerPos = player.transform.position;
 		float distance = Vector3.Distance (turretHead.transform.position, playerPos) - 1;
 		Vector3 direction = playerPos - (turretHead.transform.position);
