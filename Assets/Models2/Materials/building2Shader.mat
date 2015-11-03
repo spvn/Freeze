@@ -120,16 +120,16 @@ Material:
         second: 0
       data:
         first:
+          name: _EmissionScaleUI
+        second: 0
+      data:
+        first:
           name: _Mode
         second: 0
       data:
         first:
           name: _Metallic
-        second: .430000007
-      data:
-        first:
-          name: _EmissionScaleUI
-        second: 0
+        second: .579999983
     m_Colors:
       data:
         first:
@@ -138,7 +138,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .151215166, g: .0311418679, b: .176470593, a: 1}
+        second: {r: .30504787, g: .0423875377, b: .360294104, a: 1}
       data:
         first:
           name: _EmissionColorUI
