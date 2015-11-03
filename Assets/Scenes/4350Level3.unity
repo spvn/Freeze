@@ -3362,6 +3362,10 @@ Prefab:
       propertyPath: speed
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 19589644, guid: a1831d2d146218141837704fbee69fc4, type: 2}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1831d2d146218141837704fbee69fc4, type: 2}
   m_IsPrefabParent: 0

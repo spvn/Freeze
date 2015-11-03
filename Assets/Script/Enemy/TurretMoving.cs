@@ -36,11 +36,12 @@ public class TurretMoving : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		aliveTime += Time.deltaTime;
-	//	if (aliveTime > selfDestruct) {
-	//		this.gameObject.transform.GetComponent<ScriptTurret>().Die();
-	//	}
+		//aliveTime += Time.deltaTime;
+		//if (aliveTime > selfDestruct) {
+		//	this.gameObject.transform.GetComponent<ScriptTurret>().Die();
+		//}
 		if (!levelManager.isFrozen) {
+			ResumeChase();
 			if (isLockedOnPlayer()){
 				LagChasePlayer();
 			} else {
@@ -57,13 +58,11 @@ public class TurretMoving : MonoBehaviour {
 		}
 
 //		Debug.Log ("Lag chasing");
-		enemy.Resume ();
 		// TODO: check what if chasing while player rotating
 		enemy.SetDestination (chasePosition + player.transform.forward*playerSpeed);
 	}
 
 	void ChasePlayer(){
-		enemy.Resume ();
 		if (chaseSide == AppearSide.APPEAR_LEFT) {
 			chasePosition = player.transform.position 
 				+ 3*player.transform.forward - 5*player.transform.right;
@@ -86,7 +85,12 @@ public class TurretMoving : MonoBehaviour {
 
 	void StopChase(){
 		enemy.Stop ();
+		enemy.SetDestination (transform.position);
 		//Debug.Log ("Enemy stopped chasing.");
+	}
+
+	void ResumeChase(){
+		enemy.Resume ();
 	}
 
 	// TODO: Need dumber AI to trigger this
