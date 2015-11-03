@@ -127,11 +127,12 @@ public class ScriptTurret : MonoBehaviour {
 			randomOffset = new Vector3 (Random.Range (inaccuracy * -1, inaccuracy), 
 			                            Random.Range (inaccuracyY * -1, 0f), Random.Range (inaccuracy * -1, inaccuracy));
 			bulletTargetPoint = player.transform.position + randomOffset 
-				+ distFromPlayerToShoot*player.transform.forward;
+				+ distFromPlayerToShoot*player.GetComponent<script2ORMovement>().getForwardDirection().normalized;
 		} else {
-			randomOffset = new Vector3 (Random.Range (inaccuracy * -1, inaccuracy), 
-			                            Random.Range (inaccuracyY * -1, 0f), Random.Range (inaccuracy * -1, inaccuracy));
-			bulletTargetPoint = player.transform.position + randomOffset;
+			//Time of flight to reach player
+			float bulletTimeToCurrPos = (player.transform.position - bulletShootingPt.transform.position).magnitude / bullet.GetComponent<scriptBullet>().speed;
+			randomOffset = new Vector3(Random.Range (inaccuracy*-1, inaccuracy), Random.Range(inaccuracyY * -1, 0f), Random.Range (inaccuracy*-1, inaccuracy));	
+			bulletTargetPoint = player.transform.position + ((player.transform.forward * playerSpeed) * bulletTimeToCurrPos /2) + randomOffset;
 		}
 		bullet.GetComponent<scriptBullet> ().setBulletDirection (bulletTargetPoint);
 

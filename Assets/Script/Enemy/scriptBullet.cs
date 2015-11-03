@@ -6,14 +6,13 @@ public class scriptBullet : MonoBehaviour {
 	private Vector3 firstPoint;
 
 	public float speed;
-    public float secondsToDestroyAfterMissing = 0.5f;
+    public float secondsToDestroyAfterMissing = 1f;
 
 	public GameObject player;
 	private LevelManager levelManager;
 	public LineRenderer bulletLine;
 
 	private Vector3 bulletDirection = Vector3.zero;
-	private float bulletLineLength;
 	private RaycastHit objHit;
 	private Vector3 previousPlayerPos;
     private float distanceFromPlayer = 9999999999999;
@@ -36,10 +35,9 @@ public class scriptBullet : MonoBehaviour {
 		
 		Vector3 lineFirstPoint = this.transform.position + (bulletDirection);
 		this.transform.localPosition = lineFirstPoint;
-		firstPoint = this.transform.position;
+		firstPoint = this.transform.localPosition;
 		bulletLine.SetPosition (0, lineFirstPoint);
-		bulletLine.SetPosition (1, targetPoint + (bulletDirection * 10));
-		bulletLineLength = Vector3.Distance (lineFirstPoint, (targetPoint + (bulletDirection * 100))); 
+		bulletLine.SetPosition (1, targetPoint + (bulletDirection * 100));
 	}
 	// Update is called once per frame
 	void Update () {

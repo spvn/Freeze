@@ -13,14 +13,14 @@ public class ButtonAudio : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		audio = GetComponent<AudioSource>();
+//		audio = GetComponent<AudioSource>();
 	}
 
 	public void playButtonHighlightAudio() {
-		audio.PlayOneShot (buttonSounds[0]);audio.pitch = 1.0f;
+//		audio.PlayOneShot (buttonSounds[0]);audio.pitch = 1.0f;
 	}
 	
 	public void playButtonSelectedAudio() {
-		audio.PlayOneShot (buttonSounds[1]);audio.pitch = 1.0f;
+//		audio.PlayOneShot (buttonSounds[1]);audio.pitch = 1.0f;
 	}
 }
