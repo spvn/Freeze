@@ -94,7 +94,15 @@ public class scriptBullet : MonoBehaviour {
 			// Bullet misses the player
 			ScoreManager.score += 1;
 		}
-		Destroy (gameObject);
+
+        if (other.gameObject.layer == 13)
+        {
+            Debug.Log("Bullet collided into UI element");
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 	}
 
     private float checkPlayerDistance()
