@@ -10,6 +10,7 @@ public class MainMenuButton : MonoBehaviour {
 
     private GameManager gm;
 	private int currSelectionIndex = 0;
+	private ButtonAudio ba;
 
 	// Use this for initialization
 	void Start () {
@@ -17,22 +18,25 @@ public class MainMenuButton : MonoBehaviour {
 		achievementButt = achievementButt.GetComponent<Button> ();
 		exitGameButt = exitGameButt.GetComponent<Button> ();
         gm = GameManager.getManager();
+		ba = GameObject.Find("OVRCameraRig").GetComponent<ButtonAudio> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.DownArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/){
 			incrementCurrSelectionIndex ();
+			ba.playButtonHighlightAudio();
 			highlightButton(currSelectionIndex);
 		} 
 
 		if (Input.GetKeyDown(KeyCode.UpArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/){
 			decrementCurrSelectionIndex ();
+			ba.playButtonHighlightAudio();
 			highlightButton(currSelectionIndex);
 		}
 
 		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown (KeyCode.KeypadEnter) || Input.GetKeyDown (KeyCode.JoystickButton0)) {
-			Debug.Log ("selected ENTER");
+			ba.playButtonSelectedAudio();
 			selectButton (currSelectionIndex);
 		}
 	}
