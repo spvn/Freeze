@@ -36,7 +36,7 @@ public class LevelSelectorDisplay : MonoBehaviour {
 
     public void levelButtonPressed(int levelSelected)
     {
-        Application.LoadLevel(levelSelected);
+		Application.LoadLevel(levelSelected);
     }
 
     public void mainMenuButtonPressed()
