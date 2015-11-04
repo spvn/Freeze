@@ -13,6 +13,7 @@ public class PauseMenuButton : MonoBehaviour
 	private LevelManager lm;
 	private GameManager gm;
     private int currSelectionIndex = 0;
+	private ButtonAudio ba;
 
 	// Use this for initialization
     void Start()
@@ -23,6 +24,7 @@ public class PauseMenuButton : MonoBehaviour
         noExitButt = exitGameButt.GetComponent<Button>();
         lm = LevelManager.getLevelManager();
 		gm = GameManager.getManager ();
+		ba = GameObject.Find("ORCanvas").GetComponent<ButtonAudio> ();
     }
 
     // Update is called once per frame
@@ -31,18 +33,21 @@ public class PauseMenuButton : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
         {
             incrementCurrSelectionIndex();
+			ba.playButtonHighlightAudio();
             highlightButton(currSelectionIndex);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
         {
             decrementCurrSelectionIndex();
+			ba.playButtonHighlightAudio();
             highlightButton(currSelectionIndex);
         }
 
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             Debug.Log("selected ENTER");
+			ba.playButtonSelectedAudio();
             selectButton(currSelectionIndex);
         }
 
@@ -107,7 +112,6 @@ public class PauseMenuButton : MonoBehaviour
                 gm.exitToMainMenu();
 				break;
 			case 8: //resume game
-				Debug.Log ("Yes Button");
 				currSelectionIndex = 0;
 				lm.PauseGame();
 				break;
