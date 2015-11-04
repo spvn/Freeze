@@ -30,27 +30,28 @@ public class PauseMenuButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
-        {
-            incrementCurrSelectionIndex();
-			ba.playButtonHighlightAudio();
-            highlightButton(currSelectionIndex);
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
-        {
-            decrementCurrSelectionIndex();
-			ba.playButtonHighlightAudio();
-            highlightButton(currSelectionIndex);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton0))
-        {
-            Debug.Log("selected ENTER");
-			ba.playButtonSelectedAudio();
-            selectButton(currSelectionIndex);
-        }
-
+		if (lm.isPause) {
+			if (Input.GetKeyDown(KeyCode.DownArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
+			{
+				incrementCurrSelectionIndex();
+				ba.playButtonHighlightAudio();
+				highlightButton(currSelectionIndex);
+			}
+			
+			if (Input.GetKeyDown(KeyCode.UpArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
+			{
+				decrementCurrSelectionIndex();
+				ba.playButtonHighlightAudio();
+				highlightButton(currSelectionIndex);
+			}
+			
+			if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton0))
+			{
+				Debug.Log("selected ENTER");
+				ba.playButtonSelectedAudio();
+				selectButton(currSelectionIndex);
+			}
+		}
     }
 
     private void incrementCurrSelectionIndex()
