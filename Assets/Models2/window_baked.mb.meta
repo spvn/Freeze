@@ -160,7 +160,91 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 1
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: gravityField1
+        weight: 1
+      - path: radialField1
+        weight: 1
+      - path: solidShatter1
+        weight: 1
+      - path: solidShatter1/shard1
+        weight: 1
+      - path: solidShatter1/shard2
+        weight: 1
+      - path: solidShatter1/shard3
+        weight: 1
+      - path: solidShatter1/shard4
+        weight: 1
+      - path: solidShatter1/shard5
+        weight: 1
+      - path: solidShatter1/shard6
+        weight: 1
+      - path: solidShatter1/shard7
+        weight: 1
+      - path: solidShatter1/shard8
+        weight: 1
+      - path: solidShatter1/shard9
+        weight: 1
+      - path: solidShatter1/shard10
+        weight: 1
+      - path: solidShatter1/shard11
+        weight: 1
+      - path: solidShatter1/shard12
+        weight: 1
+      - path: solidShatter1/shard13
+        weight: 1
+      - path: solidShatter1/shard14
+        weight: 1
+      - path: solidShatter1/shard15
+        weight: 1
+      - path: solidShatter1/shard16
+        weight: 1
+      - path: solidShatter1/shard17
+        weight: 1
+      - path: solidShatter1/shard18
+        weight: 1
+      - path: solidShatter1/shard19
+        weight: 1
+      - path: solidShatter1/shard20
+        weight: 1
+      - path: solidShatter1/shard21
+        weight: 1
+      - path: solidShatter1/shard22
+        weight: 1
+      - path: solidShatter1/shard23
+        weight: 1
+      - path: solidShatter1/shard24
+        weight: 1
+      - path: solidShatter1/shard25
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
