@@ -45,108 +45,108 @@ MonoBehaviour:
   - name: Bullets Dodged
     progress: 0
     achievements:
-    - name: Dodged 50 bullets
-      description: 
+    - name: Fast Moves
+      description: Dodged 1 bullet
       progress: 0
-      target: 50
+      target: 1
       unlocked: 0
-    - name: Dodged 100 bullets
-      description: 
+    - name: Dodgy
+      description: Dodged 50 bullets
       progress: 0
-      target: 100
+      target: 15
       unlocked: 0
-    - name: Dodged 150 bullets
-      description: 
+    - name: Matrixmaster
+      description: Dodged 150 bullets
       progress: 0
       target: 150
       unlocked: 0
   - name: High Score
     progress: 0
     achievements:
-    - name: Get score of 200
-      description: 
+    - name: 200
+      description: Get score of 200
       progress: 0
       target: 200
       unlocked: 0
-    - name: Get score of 400
-      description: 
+    - name: 400
+      description: Get score of 400
       progress: 0
       target: 400
       unlocked: 0
-    - name: Get score of 600
-      description: 
+    - name: 666
+      description: Get score of 666
       progress: 0
-      target: 600
+      target: 666
       unlocked: 0
   - name: Furthest Level
     progress: 0
     achievements:
-    - name: Completed Level 1
-      description: 
+    - name: Escapist
+      description: Completed Level 1
       progress: 0
       target: 1
       unlocked: 0
-    - name: Completed Level 2
-      description: 
+    - name: Sewers
+      description: Completed Level 2
       progress: 0
       target: 2
       unlocked: 0
-    - name: Completed Level 3
-      description: 
+    - name: Metropolitan
+      description: Completed Level 3
       progress: 0
       target: 3
       unlocked: 0
   - name: Time Spent Playing
     progress: 0
     achievements:
-    - name: Played for 1 minute
-      description: 
+    - name: Beginner
+      description: Played for 1 minute
       progress: 0
       target: 60
       unlocked: 0
-    - name: Played for 5 minutes
-      description: 
-      progress: 0
-      target: 300
-      unlocked: 0
-    - name: Played for 10 minutes
-      description: 
+    - name: Intermediate
+      description: Played for 10 minutes
       progress: 0
       target: 600
+      unlocked: 0
+    - name: Expert
+      description: Played for 30 minutes
+      progress: 0
+      target: 1800
       unlocked: 0
   - name: Deaths
     progress: 0
     achievements:
-    - name: Died Once
-      description: 
+    - name: Careless
+      description: Died Once
       progress: 0
       target: 1
       unlocked: 0
-    - name: Died 5 Times
-      description: 
+    - name: Noob
+      description: Died 5 Times
       progress: 0
       target: 5
       unlocked: 0
-    - name: Died 10 Times
-      description: 
+    - name: Uninstall
+      description: Died 15 times
       progress: 0
-      target: 10
+      target: 15
       unlocked: 0
   - name: Enemies Killed
     progress: 0
     achievements:
-    - name: Killed 1 Enemy
-      description: 
+    - name: Pulse
+      description: Killed 1 Enemy
       progress: 0
       target: 1
       unlocked: 0
-    - name: Killed 5 Enemies
-      description: 
+    - name: Slayer
+      description: Killed 5 Enemies
       progress: 0
       target: 5
       unlocked: 0
-    - name: Killed 10 Enemies
-      description: 
+    - name: The Force
+      description: Killed 10 Enemies
       progress: 0
       target: 10
       unlocked: 0

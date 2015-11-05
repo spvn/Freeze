@@ -96,6 +96,7 @@ public class AchievementDisplay : MonoBehaviour {
                     currentPanel.GetChild(1).GetComponent<Text>().text = currentAchievement.progress + "/" + currentAchievement.target;
                 }
                 currentPanel.GetChild(0).GetComponent<Text>().text = currentAchievement.name;
+				currentPanel.GetChild(2).GetComponent<Text>().text = currentAchievement.description;
             }
 
             for (int j = 0; j < (i+1)*5 - achievements.Count; j++)

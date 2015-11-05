@@ -540,7 +540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
       propertyPath: stats.Array.data[5].achievements.Array.data[0].name
-      value: Killed 1 Enemy
+      value: Pulse
       objectReference: {fileID: 0}
     - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
       propertyPath: stats.Array.data[5].achievements.Array.data[0].target
@@ -548,7 +548,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
       propertyPath: stats.Array.data[5].achievements.Array.data[1].name
-      value: Killed 5 Enemies
+      value: Slayer
       objectReference: {fileID: 0}
     - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
       propertyPath: stats.Array.data[5].achievements.Array.data[1].target
@@ -556,7 +556,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
       propertyPath: stats.Array.data[5].achievements.Array.data[2].name
-      value: Killed 10 Enemies
+      value: The Force
       objectReference: {fileID: 0}
     - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
       propertyPath: stats.Array.data[5].achievements.Array.data[2].target
@@ -2219,6 +2219,166 @@ Prefab:
       value: 
       objectReference: {fileID: 22492432, guid: 8bacd24cc4bce7b4190c6014a293ea84,
         type: 2}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[0].achievements.Array.data[0].description
+      value: Dodged 1 bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[0].achievements.Array.data[0].name
+      value: Fast Moves
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[0].achievements.Array.data[0].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[0].achievements.Array.data[1].name
+      value: Dodgy
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[0].achievements.Array.data[1].target
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[0].achievements.Array.data[1].description
+      value: Dodged 50 bullets
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[0].achievements.Array.data[2].name
+      value: Matrixmaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[0].achievements.Array.data[2].description
+      value: Dodged 150 bullets
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[2].achievements.Array.data[0].description
+      value: Completed Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[2].achievements.Array.data[0].name
+      value: Escapist
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[5].achievements.Array.data[0].description
+      value: Killed 1 Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[2].achievements.Array.data[1].description
+      value: Completed Level 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[2].achievements.Array.data[1].name
+      value: Sewers
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[2].achievements.Array.data[2].name
+      value: Metropolitan
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[2].achievements.Array.data[2].description
+      value: Completed Level 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[1].achievements.Array.data[0].description
+      value: Get score of 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[1].achievements.Array.data[0].name
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[1].achievements.Array.data[1].description
+      value: Get score of 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[1].achievements.Array.data[1].name
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[1].achievements.Array.data[2].description
+      value: Get score of 666
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[1].achievements.Array.data[2].name
+      value: 666
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[1].achievements.Array.data[2].target
+      value: 666
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[3].achievements.Array.data[0].description
+      value: Played for 1 minute
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[3].achievements.Array.data[0].name
+      value: Beginner
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[3].achievements.Array.data[1].name
+      value: Intermediate
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[3].achievements.Array.data[1].description
+      value: Played for 10 minutes
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[3].achievements.Array.data[1].target
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[3].achievements.Array.data[2].target
+      value: 1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[3].achievements.Array.data[2].description
+      value: Played for 30 minutes
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[3].achievements.Array.data[2].unlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[3].achievements.Array.data[2].name
+      value: Expert
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[4].achievements.Array.data[0].description
+      value: Died Once
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[4].achievements.Array.data[0].name
+      value: Careless
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[4].achievements.Array.data[1].description
+      value: Died 5 Times
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[4].achievements.Array.data[1].name
+      value: Noob
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[4].achievements.Array.data[2].name
+      value: Uninstall
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[4].achievements.Array.data[2].description
+      value: Died 15 times
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[4].achievements.Array.data[2].target
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[5].achievements.Array.data[1].description
+      value: Killed 5 Enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442026, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
+      propertyPath: stats.Array.data[5].achievements.Array.data[2].description
+      value: Killed 10 Enemies
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f5003174faf8849888f7d1673142b8, type: 2}
   m_IsPrefabParent: 0
