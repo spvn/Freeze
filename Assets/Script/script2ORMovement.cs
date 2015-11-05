@@ -13,13 +13,15 @@ public class script2ORMovement : MonoBehaviour {
     public float jumpSpeed = 10.0f;
     public float gravity = 9.81f;
     public bool canStrafe = true;
+	public bool isFreefall = false;
 
     public Transform currentNode;
     public Transform destinationNode;
 
     private Vector3 sideDirection;
     private Vector3 forwardDirection;
-    private Vector3 downDirection;
+	private Vector3 downDirection = new Vector3(0, 0, 0);
+	private float tempPlayerSpeed;
 
     // Essential GameObjects 
     private LevelManager levelManager;
@@ -41,6 +43,7 @@ public class script2ORMovement : MonoBehaviour {
         forwardDirection = Vector3.Normalize(destinationNode.position - transform.position);
         currentNode = transform;
         destinationNode = null;
+		tempPlayerSpeed = playerSpeed;
     }
 
     // Update is called once per frame
@@ -90,6 +93,7 @@ public class script2ORMovement : MonoBehaviour {
 	{	
         // if player collides with a node
 		if (col.gameObject.layer == 10) {
+			Debug.Log (col.name);
             // access node script
             NodePathing node = col.GetComponent<NodePathing>();
 
@@ -103,6 +107,18 @@ public class script2ORMovement : MonoBehaviour {
             {
                 levelManager.playerCheckpoint = col.gameObject;
             }
+
+			if (node.isFreefall == true)
+			{
+				isFreefall = true;
+				playerSpeed = 0;
+			}
+
+			else
+			{
+				isFreefall = false;
+				playerSpeed = tempPlayerSpeed;
+			}
 
 
             if (node.isEndNode)
@@ -145,8 +161,12 @@ public class script2ORMovement : MonoBehaviour {
     public void moveToNextNode()
     {
         forwardDirection = Vector3.Normalize(destinationNode.position - transform.position);
-        Quaternion targetRotation = Quaternion.LookRotation(destinationNode.position - transform.position);
-        StartCoroutine(RotateTowards(targetRotation));
+
+		//if is freefall node, dont need to rotate
+		if (!isFreefall) {
+			Quaternion targetRotation = Quaternion.LookRotation (destinationNode.position - transform.position);
+			StartCoroutine (RotateTowards (targetRotation));
+		}
         currentNode = destinationNode;
         destinationNode = null;
         levelManager.isFrozen = false;
@@ -201,8 +221,10 @@ public class script2ORMovement : MonoBehaviour {
     void updateFrameMovement()
     {
         // Gravity for downward movement
-        downDirection.y -= gravity * Time.deltaTime;
+		if (!controller.isGrounded)
+			downDirection.y -= gravity * Time.deltaTime;
 
+		Debug.Log (downDirection.y);
         // Forward and lateral movement
         //Time.timeScale = 1.0f; FOR SLOWMO PURPOSES.
         float horizontal = Input.GetAxis("Horizontal");
@@ -213,8 +235,8 @@ public class script2ORMovement : MonoBehaviour {
         sideDirection = new Vector3(horizontal, 0, 0);
         sideDirection = transform.rotation * sideDirection;
 
-        controller.Move(downDirection * Time.deltaTime);
-        controller.SimpleMove((forwardDirection * playerSpeed) + (sideDirection * lateralSpeed));
+        //controller.Move(downDirection * Time.deltaTime);
+		controller.Move ((forwardDirection * playerSpeed * Time.deltaTime) + (sideDirection * lateralSpeed * Time.deltaTime) + (downDirection * Time.deltaTime));
     }
 
     void pulseAttack()

@@ -16,6 +16,7 @@ public class NodePathing : MonoBehaviour {
     public bool playerInRange = false;
     public bool disableStrafe = false;
     public bool isCheckpoint = false;
+	public bool isFreefall = false;
     private LevelManager levelManager;
 
     // Use this for initialization
