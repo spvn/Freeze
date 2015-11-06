@@ -124,8 +124,9 @@ public class LevelManager : MonoBehaviour {
             restartFromCheckpoint();
             //RestartLevel();
         }
-
+	
 		if (canvas.gameObject.transform.Find ("WinScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
+			gm.currentLevelCleared();
 			LoadNextLevel();
 		}
         
@@ -162,9 +163,12 @@ public class LevelManager : MonoBehaviour {
         gm.restartCurrentLevel();
 	}
 
+	public void LevelCleared(){
+		gm.currentLevelCleared ();
+	}
+
 	public void LoadNextLevel()
 	{
-        gm.currentLevelCleared();
         gm.loadNextLevel();
 	}
 

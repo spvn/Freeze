@@ -125,7 +125,9 @@ public class script2ORMovement : MonoBehaviour {
             {
                 levelManager.isFrozen = true;
                 levelManager.isGameOver = true;
+				levelManager.LevelCleared();
                 canvas.gameObject.transform.Find("WinScreen").gameObject.SetActive(true);
+
             }
             else if (node.hasMultiplePath)
             {
