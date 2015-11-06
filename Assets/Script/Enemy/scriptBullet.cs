@@ -17,10 +17,14 @@ public class scriptBullet : MonoBehaviour {
 	private Vector3 previousPlayerPos;
     private float distanceFromPlayer = 9999999999999;
 
+    private bool playerHitBulletWhileFrozen;
+
 	// Use this for initialization
 	void Start () {
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		player = GameObject.Find("OVRCameraRig").transform.gameObject;
+
+		playerHitBulletWhileFrozen = false;
 	}
 
 	public void setBulletDirection(Vector3 targetVector)
@@ -41,6 +45,10 @@ public class scriptBullet : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+		if (playerHitBulletWhileFrozen){
+			levelManager.GameOver ();
+		}
+
 		checkHitPlayer ();
 		checkNearMisses ();
 		if ( !levelManager.isGameOver && bulletDirection != Vector3.zero && !levelManager.isFrozen) {
@@ -89,7 +97,12 @@ public class scriptBullet : MonoBehaviour {
 	{
 		if (other.gameObject.layer == 9) {
 			Debug.Log ("Collided bullet " + other.gameObject.name + " at " + this.transform.localPosition.ToString ());
-			levelManager.GameOver ();
+			if (!levelManager.isFrozen){
+				levelManager.GameOver ();
+			} else{
+				playerHitBulletWhileFrozen = true;
+			}
+			
 		} else {
 			// Bullet misses the player
 			ScoreManager.score += 1;
@@ -103,6 +116,13 @@ public class scriptBullet : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+	}
+
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.layer == 9 && playerHitBulletWhileFrozen){
+			playerHitBulletWhileFrozen = false;
+		}
 	}
 
     private float checkPlayerDistance()
