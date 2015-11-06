@@ -288,6 +288,9 @@ MonoBehaviour:
   blastRadius: {fileID: 177108}
   rocket: {fileID: 132928}
   speed: 15
+  audio:
+  - {fileID: 8300000, guid: 5ee25ae820ca5fa45bbc56d58617cd63, type: 3}
+  - {fileID: 8300000, guid: a8d9ee60495f3274e93b86522553e97e, type: 3}
   bulletLine: {fileID: 12041670}
 --- !u!120 &12041670
 LineRenderer:
@@ -1418,6 +1421,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: audio.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
@@ -1469,6 +1476,14 @@ Prefab:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: audio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ee25ae820ca5fa45bbc56d58617cd63, type: 3}
+    - target: {fileID: 0}
+      propertyPath: audio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: a8d9ee60495f3274e93b86522553e97e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132928}

@@ -115,8 +115,6 @@ public class ScriptTurret : MonoBehaviour {
 		muzzleFlash.GetComponent<ParticleSystem>().Play();
 		turretAudio[SHOOTING_SOUND].Play();
 
-
-
 		int playerSlopeStatus = player.GetComponent<script2ORMovement> ().slopeStatus;
 		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
 		if (playerSlopeStatus != 0) {

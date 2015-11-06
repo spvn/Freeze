@@ -6,12 +6,14 @@ public class BlastBullet : MonoBehaviour {
 	public GameObject blastRadius;
 	public GameObject rocket;
 	public float speed = 5f;
+	// 0: blast, 1: reflect
+	public AudioClip[] audio;
 
 	private LevelManager levelManager;
 	private GameObject player;
 	private GameObject boss;
 	private GameObject explosionEffect;
-	private AudioSource blastSound;
+	private AudioSource audioPlayer;
 
 	private bool isDeflected;
 	private bool hasHitSomething;
@@ -31,7 +33,7 @@ public class BlastBullet : MonoBehaviour {
 		player = GameObject.Find ("OVRCameraRig");
 		boss = GameObject.Find ("Boss");
 		explosionEffect = transform.Find ("BlastEffect").gameObject;
-		blastSound = GetComponent<AudioSource> ();
+		audioPlayer = GetComponent<AudioSource> ();
 		bulletLine = GetComponent<LineRenderer> ();
 
 		hasHitSomething = false;
@@ -78,8 +80,9 @@ public class BlastBullet : MonoBehaviour {
 		explosionEffect.transform.position = transform.position;
 		explosionEffect.GetComponent<ParticleSystem>().Play();
 
-		if (!blastSound.isPlaying) {
-			blastSound.Play ();
+		if (!audioPlayer.isPlaying) {
+			audioPlayer.clip = audio [0];
+			audioPlayer.Play();
 		}
 	}
 
@@ -132,6 +135,11 @@ public class BlastBullet : MonoBehaviour {
 	public void DeflectBullet(){
 		Debug.Log ("Rocket deflected");
 		isDeflected = true;
+
+		if (!audioPlayer.isPlaying) {
+			audioPlayer.clip = audio [1];
+			audioPlayer.Play();
+		}
 
 		deflectedPosition = rocket.transform.position;
 		bossTargetDirection = bossPosition - deflectedPosition;
