@@ -7,6 +7,7 @@ public class Underwater : MonoBehaviour {
 	
 	//Define variable
 	public float underwaterLevel = 7;
+	public GameObject centerEyeAnchor;
 	
 	//The scene's default fog settings
 	private bool defaultFog = RenderSettings.fog;
@@ -17,11 +18,11 @@ public class Underwater : MonoBehaviour {
 	
 	void Start () {
 		//Set the background color
-		GetComponent<Camera>().backgroundColor = new Color(0, 0.4f, 0.7f, 1);
+		centerEyeAnchor.GetComponent<Camera>().backgroundColor = new Color(0, 0.4f, 0.7f, 1);
 	}
 	
 	void Update () {
-		if (transform.position.y < underwaterLevel)
+		if (centerEyeAnchor.transform.position.y < underwaterLevel)
 		{
 			RenderSettings.fog = true;
 			RenderSettings.fogColor = new Color(0, 0.4f, 0.7f, 0.6f);

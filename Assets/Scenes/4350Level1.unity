@@ -419,6 +419,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3551ba9126a268e4eb9c2e1dc7334227, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &130229752 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 150034, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+  m_PrefabInternal: {fileID: 166385610}
 --- !u!4 &141236849 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9bbf7f83b67ff6c44adc66f3045a5e06, type: 3}
@@ -6931,6 +6935,7 @@ GameObject:
   - 82: {fileID: 2126755700}
   - 114: {fileID: 2126755699}
   - 114: {fileID: 2126755698}
+  - 114: {fileID: 2126755702}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -7061,6 +7066,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!114 &2126755702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126755697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f81f97ce599954c95f571b75809d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  underwaterLevel: -18.7999992
+  centerEyeAnchor: {fileID: 130229752}
 --- !u!1 &2145492928 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 191604, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
