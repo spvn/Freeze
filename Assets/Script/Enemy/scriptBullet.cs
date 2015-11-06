@@ -10,6 +10,7 @@ public class scriptBullet : MonoBehaviour {
 
 	public GameObject player;
 	private LevelManager levelManager;
+	private StatisticManager sm;
 	public LineRenderer bulletLine;
 
 	private Vector3 bulletDirection = Vector3.zero;
@@ -22,6 +23,7 @@ public class scriptBullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
+		sm = GameObject.Find("StatisticsManager").transform.gameObject.GetComponent<StatisticManager>();
 		player = GameObject.Find("OVRCameraRig").transform.gameObject;
 
 		playerHitBulletWhileFrozen = false;
@@ -114,6 +116,7 @@ public class scriptBullet : MonoBehaviour {
         }
         else
         {
+			sm.addProgressByStatisticName ("Bullets Dodged", 1);
             Destroy(gameObject);
         }
 	}
@@ -134,6 +137,7 @@ public class scriptBullet : MonoBehaviour {
     {
         yield return new WaitForSeconds(secondsToDestroyAfterMissing);
         Debug.Log("Destorying a bulelt that missed");
+		sm.addProgressByStatisticName ("Bullets Dodged", 1);
         Destroy(this.gameObject);
     }
 }
