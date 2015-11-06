@@ -12,6 +12,7 @@ public class ScriptTurret : MonoBehaviour {
 	public GameObject deathEffect;
 	private GameObject player;
 	private LevelManager levelManager;
+	private StatisticManager sm;
 
 	public bool isHostile = true;
 
@@ -37,7 +38,7 @@ public class ScriptTurret : MonoBehaviour {
 	void Start () {
 		turretHead = transform.Find ("TurretHead");
 		bulletShootingPt = turretHead.Find ("BulletShootingPoint");
-
+		sm = GameObject.Find("StatisticsManager").transform.gameObject.GetComponent<StatisticManager>();
 		player = GameObject.Find ("OVRCameraRig");
 		levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager>();
 		playerSpeed = player.GetComponent<script2ORMovement>().playerSpeed;
@@ -156,6 +157,7 @@ public class ScriptTurret : MonoBehaviour {
 		Vector3 deathEffectPos = transform.position - (transform.forward/2) + new Vector3(0.0f,1.0f,0.0f);
 		Instantiate (deathEffect, deathEffectPos, deathEffect.transform.rotation);
 		ScoreManager.score += 50;
+		sm.addProgressByStatisticName ("Enemies Killed", 1);
 	//	turretAudio[DYING_SOUND].Play();
 		Destroy (gameObject);
 	}

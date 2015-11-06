@@ -96,24 +96,6 @@ MonoBehaviour:
       progress: 0
       target: 3
       unlocked: 0
-  - name: Time Spent Playing
-    progress: 0
-    achievements:
-    - name: Beginner
-      description: Played for 1 minute
-      progress: 0
-      target: 60
-      unlocked: 0
-    - name: Intermediate
-      description: Played for 10 minutes
-      progress: 0
-      target: 600
-      unlocked: 0
-    - name: Expert
-      description: Played for 30 minutes
-      progress: 0
-      target: 1800
-      unlocked: 0
   - name: Deaths
     progress: 0
     achievements:
