@@ -224,7 +224,7 @@ public class script2ORMovement : MonoBehaviour {
 		if (!controller.isGrounded)
 			downDirection.y -= gravity * Time.deltaTime;
 
-		Debug.Log (downDirection.y);
+//		Debug.Log (downDirection.y);
         // Forward and lateral movement
         //Time.timeScale = 1.0f; FOR SLOWMO PURPOSES.
         float horizontal = Input.GetAxis("Horizontal");
