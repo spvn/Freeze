@@ -47,6 +47,7 @@ public class LevelManager : MonoBehaviour {
         isFrozen = true;
 		timerGUIText = canvas.transform.Find("HUD").Find ("Panel").transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
+		Debug.Log (timerGUIText.ToString ());
 	}
 
     public void restartFromCheckpoint ()
@@ -82,7 +83,7 @@ public class LevelManager : MonoBehaviour {
 		if (startedGame && !isGameOver) {
 			if (!isPause) {
 				timeElapsed += Time.deltaTime;
-				timerGUIText.GetComponent<Text> ().text = timeElapsed.ToString ("F2") + "s";
+				timerGUIText.GetComponent<Text>().text = timeElapsed.ToString ("F2") + "s";
 			}
 		}
 

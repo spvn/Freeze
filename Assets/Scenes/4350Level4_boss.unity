@@ -274,14 +274,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 437924, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11438694, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
       propertyPath: canvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 262324096}
     - target: {fileID: 11438694, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
       propertyPath: cameraOVR
+      value: 
+      objectReference: {fileID: 1332100917}
+    - target: {fileID: 11438694, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
+      propertyPath: player
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5187,7 +5191,7 @@ MonoBehaviour:
   jumpSpeed: 5
   gravity: 7
   focalPoint: {fileID: 594802629}
-  levelManager: {fileID: 0}
+  levelManager: {fileID: 1584228796}
 --- !u!114 &1332100920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6561,6 +6565,12 @@ Transform:
   - {fileID: 604998143}
   m_Father: {fileID: 244602840}
   m_RootOrder: 0
+--- !u!114 &1584228796 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11438694, guid: 3cf20d217f6594a4f94de833504010f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 63364916}
+  m_Script: {fileID: 11500000, guid: 093da01cd52a75549ae83c407be8d53f, type: 3}
 --- !u!1 &1609897334
 GameObject:
   m_ObjectHideFlags: 0
@@ -7737,7 +7747,6 @@ GameObject:
   - 4: {fileID: 1938849405}
   - 81: {fileID: 1938849408}
   - 20: {fileID: 1938849407}
-  - 114: {fileID: 1938849406}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: Untagged
@@ -7758,20 +7767,6 @@ Transform:
   - {fileID: 1399148104}
   m_Father: {fileID: 1332100918}
   m_RootOrder: 1
---- !u!114 &1938849406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11440132, guid: c901e919c9e196248824b04000b91fb4,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1938849404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f81f97ce599954c95f571b75809d64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  underwaterLevel: -18.7999992
-  centerEyeAnchor: {fileID: 0}
 --- !u!20 &1938849407
 Camera:
   m_ObjectHideFlags: 0

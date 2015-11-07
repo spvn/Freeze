@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour {
             case 2:
             case 3:
             case 4:
+			case 5:
                 Debug.Log("Attaching screens for playable level");
                 startScreen = assignUI("StartingScreen");
                 HUD = assignUI("HUD");
