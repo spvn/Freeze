@@ -17,13 +17,15 @@ public class ParticleEmmitterController : MonoBehaviour {
         {
             for (int i = 0; i < gameObjects.Length; i++)
             {
-                gameObjects[i].SetActive(false);
+                //gameObjects[i].SetActive(false);
+				gameObjects[i].GetComponent<ParticleSystem>().Stop();
             }
         } else
         {
             for (int i = 0; i < gameObjects.Length; i++)
             {
-                gameObjects[i].SetActive(true);
+                //gameObjects[i].SetActive(true);
+				gameObjects[i].GetComponent<ParticleSystem>().Play ();
             }
         }
     }
