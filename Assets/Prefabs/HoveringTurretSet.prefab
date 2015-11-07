@@ -265,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.70000005, y: 0, z: -76}
+  m_LocalPosition: {x: -1.70000005, y: 0, z: -39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 440866}
@@ -376,8 +376,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104542}
-  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -204.649994, y: 300.399994, z: -54.4300003}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -170.809998, y: 294, z: -5.42999983}
   m_LocalScale: {x: .564480364, y: .339276195, z: .0824734345}
   m_Children:
   - {fileID: 462374}
@@ -415,8 +415,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.8999996, y: 6.30999994, z: -401}
-  m_LocalScale: {x: .824629009, y: 1.37199974, z: 5.64408207}
+  m_LocalPosition: {x: 19.8999996, y: 7.56050014, z: -399.630005}
+  m_LocalScale: {x: .615055978, y: 1.02331674, z: 4.20968294}
   m_Children:
   - {fileID: 427634}
   - {fileID: 439422}
@@ -510,7 +510,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 113e26d1ececb4b4098edcb7eab306b2, type: 2}
+  - {fileID: 2100000, guid: 6bd75c50b1b9a3a4b8382a8e3fa81def, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -630,7 +630,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6bd75c50b1b9a3a4b8382a8e3fa81def, type: 2}
+  - {fileID: 2100000, guid: 113e26d1ececb4b4098edcb7eab306b2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -823,6 +823,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1.87
   MinDistance: 1
@@ -892,6 +893,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -972,7 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6990c7f62d56443468d9a0af9c762e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontUsePlayerVisibleFunction: 0
+  maxShootingDistance: 40
   bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
   shootingAnimation: {fileID: 0}
   angleOfShooting: 90
