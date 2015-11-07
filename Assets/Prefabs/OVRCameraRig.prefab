@@ -2134,7 +2134,7 @@ GameObject:
   - 33: {fileID: 3318870}
   - 23: {fileID: 2315512}
   - 65: {fileID: 6597288}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bullet Destroyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2372,8 +2372,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191228}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 39.1599998, y: -18.3339996, z: 53.5900002}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -162.869995, y: 270.200012, z: 4.46000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 468792}
@@ -4148,7 +4148,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ROOM ESCAPED
+  m_Text: ESCAPED
 --- !u!114 &11418394
 MonoBehaviour:
   m_ObjectHideFlags: 1
