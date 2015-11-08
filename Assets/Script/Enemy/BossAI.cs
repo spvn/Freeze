@@ -6,7 +6,7 @@ public class BossAI : MonoBehaviour {
 	public GameObject[] bossAttackGameObjects;
 	// 0: opening, 1: movement, 2,3: idle
 	public AudioClip[]	bossAudio;
-
+	//0: opening, 2: idle
 	private GameObject player;
 	private LevelManager levelManager;
 	private BossHealth bossHealth;
@@ -15,6 +15,7 @@ public class BossAI : MonoBehaviour {
 
 	private bool bossActivated;
 	private bool openingAnimationPlayed;
+	private bool isDead;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +31,7 @@ public class BossAI : MonoBehaviour {
 		// Make the boss model take the pose of the first frame of opening animation
 		bossAnimations.Play ("Opening", PlayMode.StopAll);
 		bossAnimations ["Opening"].speed = 0f;
+		isDead = false;
 	}
 	
 	// Update is called once per frame
@@ -55,7 +57,7 @@ public class BossAI : MonoBehaviour {
 		if (!openingAnimationPlayed){
 			PlayOpeningAnimation();
 		} else {
-			if (!bossAnimations.IsPlaying ("Opening")){
+			if (!bossAnimations.IsPlaying ("Opening") && !isDead){
 				PlayIdleAnimation();
 				ActivateAllAttacks();
 			}
@@ -100,6 +102,24 @@ public class BossAI : MonoBehaviour {
 	}
 
 	private void Die(){
+		isDead = true;
 
+		for (int i = 0; i < bossAttackGameObjects.Length; i++) {
+			if (bossAttackGameObjects[i].tag == "RocketLauncher"){
+				bossAttackGameObjects[i].GetComponentInChildren<RocketLauncher>().Die ();
+			} else if (bossAttackGameObjects[i].tag == "BossTurret"){
+				bossAttackGameObjects[i].GetComponent<ScriptBossTurret>().Die ();
+			}
+		}
+		bossAnimations.Play ("Death", PlayMode.StopAll);
+		StartCoroutine (LoadCredits());
+	}
+
+	private IEnumerator LoadCredits()
+	{
+		yield return new WaitForSeconds (2.875f);
+		Debug.Log ("LoadCredits");
+		bossAnimations.Stop ();
+		bossAudioPlayer.Stop ();
 	}
 }

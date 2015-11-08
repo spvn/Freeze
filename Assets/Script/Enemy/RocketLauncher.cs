@@ -10,6 +10,7 @@ public enum ShootTarget{
 public class RocketLauncher : MonoBehaviour {
 
 	public GameObject rocketPrefab;
+	public GameObject deathEffect;
 	public ShootTarget shootTarget;
 	public float shootCooldown = 2f;
 	public float inaccuracy = 0.2f;
@@ -94,5 +95,14 @@ public class RocketLauncher : MonoBehaviour {
 
 	public void MakeHostile(){
 		isHostile = true;
+	}
+
+	public void Die()
+	{
+		Vector3 deathEffectPos = transform.position - (transform.forward/2) + new Vector3(0.0f,1.0f,0.0f);
+		Instantiate (deathEffect, deathEffectPos, deathEffect.transform.rotation);
+		ScoreManager.score += 50;
+		//	turretAudio[DYING_SOUND].Play();
+		Destroy (gameObject);
 	}
 }

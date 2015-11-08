@@ -774,6 +774,7 @@ ModelImporter:
     4300008: pPipe2
     7400000: Opening
     7400002: Idle
+    7400004: Death
     9500000: //RootNode
     11100000: //RootNode
     13700000: riggeddude3:dude
@@ -2357,6 +2358,786 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 81
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pPipe1
+        weight: 1
+      - path: pPipe2
+        weight: 1
+      - path: riggeddude3:dude
+        weight: 1
+      - path: riggeddude3:grp_character1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_attr1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_attr1/riggeddude3:L_off_finger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_attr1/riggeddude3:L_off_finger1/riggeddude3:L_drv_finger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_attr1/riggeddude3:L_off_finger1/riggeddude3:L_drv_finger1/riggeddude3:L_ctr_finger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_attr1/riggeddude3:R_off_finger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_attr1/riggeddude3:R_off_finger1/riggeddude3:R_drv_finger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_attr1/riggeddude3:R_off_finger1/riggeddude3:R_drv_finger1/riggeddude3:R_ctr_finger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_armBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_armBend1/riggeddude3:L_drv_armBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_armBend1/riggeddude3:L_drv_armBend1/riggeddude3:L_ctr_armBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_armBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_armBend2/riggeddude3:L_drv_armBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_armBend2/riggeddude3:L_drv_armBend2/riggeddude3:L_ctr_armBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_legBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_legBend1/riggeddude3:L_drv_legBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_legBend1/riggeddude3:L_drv_legBend1/riggeddude3:L_ctr_legBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_legBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_legBend2/riggeddude3:L_drv_legBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:L_off_legBend2/riggeddude3:L_drv_legBend2/riggeddude3:L_ctr_legBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:off_neckBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:off_neckBend1/riggeddude3:drv_neckBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:off_neckBend1/riggeddude3:drv_neckBend1/riggeddude3:ctr_neckBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_armBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_armBend1/riggeddude3:R_drv_armBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_armBend1/riggeddude3:R_drv_armBend1/riggeddude3:R_ctr_armBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_armBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_armBend2/riggeddude3:R_drv_armBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_armBend2/riggeddude3:R_drv_armBend2/riggeddude3:R_ctr_armBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_legBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_legBend1/riggeddude3:R_drv_legBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_legBend1/riggeddude3:R_drv_legBend1/riggeddude3:R_ctr_legBend1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_legBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_legBend2/riggeddude3:R_drv_legBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_bendy1/riggeddude3:R_off_legBend2/riggeddude3:R_drv_legBend2/riggeddude3:R_ctr_legBend2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_clavicle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_clavicle1/riggeddude3:L_drv_clavicle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_clavicle1/riggeddude3:L_drv_clavicle1/riggeddude3:L_ctr_clavicle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_shoulderFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_shoulderFK1/riggeddude3:L_drv_shoulderFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_shoulderFK1/riggeddude3:L_drv_shoulderFK1/riggeddude3:L_ctr_shoulderFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_shoulderFK1/riggeddude3:L_drv_shoulderFK1/riggeddude3:L_ctr_shoulderFK1/riggeddude3:L_off_elbowFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_shoulderFK1/riggeddude3:L_drv_shoulderFK1/riggeddude3:L_ctr_shoulderFK1/riggeddude3:L_off_elbowFK1/riggeddude3:L_drv_elbowFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_shoulderFK1/riggeddude3:L_drv_shoulderFK1/riggeddude3:L_ctr_shoulderFK1/riggeddude3:L_off_elbowFK1/riggeddude3:L_drv_elbowFK1/riggeddude3:L_ctr_elbowFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_shoulderFK1/riggeddude3:L_drv_shoulderFK1/riggeddude3:L_ctr_shoulderFK1/riggeddude3:L_off_elbowFK1/riggeddude3:L_drv_elbowFK1/riggeddude3:L_ctr_elbowFK1/riggeddude3:L_off_wristFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_shoulderFK1/riggeddude3:L_drv_shoulderFK1/riggeddude3:L_ctr_shoulderFK1/riggeddude3:L_off_elbowFK1/riggeddude3:L_drv_elbowFK1/riggeddude3:L_ctr_elbowFK1/riggeddude3:L_off_wristFK1/riggeddude3:L_drv_wristFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:L_off_shoulderFK1/riggeddude3:L_drv_shoulderFK1/riggeddude3:L_ctr_shoulderFK1/riggeddude3:L_off_elbowFK1/riggeddude3:L_drv_elbowFK1/riggeddude3:L_ctr_elbowFK1/riggeddude3:L_off_wristFK1/riggeddude3:L_drv_wristFK1/riggeddude3:L_ctr_wristFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_clavicle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_clavicle1/riggeddude3:R_drv_clavicle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_clavicle1/riggeddude3:R_drv_clavicle1/riggeddude3:R_ctr_clavicle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_shoulderFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_shoulderFK1/riggeddude3:R_drv_shoulderFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_shoulderFK1/riggeddude3:R_drv_shoulderFK1/riggeddude3:R_ctr_shoulderFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_shoulderFK1/riggeddude3:R_drv_shoulderFK1/riggeddude3:R_ctr_shoulderFK1/riggeddude3:R_off_elbowFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_shoulderFK1/riggeddude3:R_drv_shoulderFK1/riggeddude3:R_ctr_shoulderFK1/riggeddude3:R_off_elbowFK1/riggeddude3:R_drv_elbowFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_shoulderFK1/riggeddude3:R_drv_shoulderFK1/riggeddude3:R_ctr_shoulderFK1/riggeddude3:R_off_elbowFK1/riggeddude3:R_drv_elbowFK1/riggeddude3:R_ctr_elbowFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_shoulderFK1/riggeddude3:R_drv_shoulderFK1/riggeddude3:R_ctr_shoulderFK1/riggeddude3:R_off_elbowFK1/riggeddude3:R_drv_elbowFK1/riggeddude3:R_ctr_elbowFK1/riggeddude3:R_off_wristFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_shoulderFK1/riggeddude3:R_drv_shoulderFK1/riggeddude3:R_ctr_shoulderFK1/riggeddude3:R_off_elbowFK1/riggeddude3:R_drv_elbowFK1/riggeddude3:R_ctr_elbowFK1/riggeddude3:R_off_wristFK1/riggeddude3:R_drv_wristFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_FK1/riggeddude3:R_off_shoulderFK1/riggeddude3:R_drv_shoulderFK1/riggeddude3:R_ctr_shoulderFK1/riggeddude3:R_off_elbowFK1/riggeddude3:R_drv_elbowFK1/riggeddude3:R_ctr_elbowFK1/riggeddude3:R_off_wristFK1/riggeddude3:R_drv_wristFK1/riggeddude3:R_ctr_wristFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_drv_armPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_armIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_armIK1/riggeddude3:L_drv_armIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_armIK1/riggeddude3:L_drv_armIK1/riggeddude3:L_ctr_armIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_armIK1/riggeddude3:L_drv_armIK1/riggeddude3:L_ctr_armIK1/riggeddude3:L_pIK_arm1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_elbowIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_elbowIK1/riggeddude3:L_drv_elbowIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_elbowIK1/riggeddude3:L_drv_elbowIK1/riggeddude3:L_ctr_elbowIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_kneeIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_kneeIK1/riggeddude3:L_drv_kneeIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_kneeIK1/riggeddude3:L_drv_kneeIK1/riggeddude3:L_ctr_kneeIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:L_drv_legPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:L_pIK_legPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1/riggeddude3:L_drv_toePiv1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1/riggeddude3:L_drv_toePiv1/riggeddude3:L_drv_heelPiv1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1/riggeddude3:L_drv_toePiv1/riggeddude3:L_drv_heelPiv1/riggeddude3:L_drv_heelRot1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1/riggeddude3:L_drv_toePiv1/riggeddude3:L_drv_heelPiv1/riggeddude3:L_drv_heelRot1/riggeddude3:L_drv_tipToe1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1/riggeddude3:L_drv_toePiv1/riggeddude3:L_drv_heelPiv1/riggeddude3:L_drv_heelRot1/riggeddude3:L_drv_tipToe1/riggeddude3:L_drv_ballRot1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1/riggeddude3:L_drv_toePiv1/riggeddude3:L_drv_heelPiv1/riggeddude3:L_drv_heelRot1/riggeddude3:L_drv_tipToe1/riggeddude3:L_drv_ballRot1/riggeddude3:L_pIK_leg1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1/riggeddude3:L_drv_toePiv1/riggeddude3:L_drv_heelPiv1/riggeddude3:L_drv_heelRot1/riggeddude3:L_drv_tipToe1/riggeddude3:L_drv_toeTap1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1/riggeddude3:L_drv_toePiv1/riggeddude3:L_drv_heelPiv1/riggeddude3:L_drv_heelRot1/riggeddude3:L_drv_tipToe1/riggeddude3:L_drv_toeTap1/riggeddude3:L_cIK_leg1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_off_legIK1/riggeddude3:L_drv_legIK1/riggeddude3:L_ctr_legIK1/riggeddude3:transform1/riggeddude3:L_drv_rBank1/riggeddude3:L_drv_lBank1/riggeddude3:L_drv_toePiv1/riggeddude3:L_drv_heelPiv1/riggeddude3:L_drv_heelRot1/riggeddude3:L_drv_tipToe1/riggeddude3:L_drv_toeTap1/riggeddude3:L_cIK_leg2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:L_pIK_armPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_head1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_head1/riggeddude3:drv_head1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_head1/riggeddude3:drv_head1/riggeddude3:ctr_head1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_head1/riggeddude3:drv_head1/riggeddude3:ctr_head1/riggeddude3:pIK_neck1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_hips1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_hips1/riggeddude3:drv_hips1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_hips1/riggeddude3:drv_hips1/riggeddude3:ctr_hips1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_hips1/riggeddude3:drv_hips1/riggeddude3:ctr_hips1/riggeddude3:transform3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_hips1/riggeddude3:drv_hips1/riggeddude3:ctr_hips1/riggeddude3:transform3/riggeddude3:enj_lowSpine1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineFK1/riggeddude3:drv_spineFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineFK1/riggeddude3:drv_spineFK1/riggeddude3:ctr_spineFK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineFK1/riggeddude3:drv_spineFK1/riggeddude3:ctr_spineFK1/riggeddude3:off_spineFK2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineFK1/riggeddude3:drv_spineFK1/riggeddude3:ctr_spineFK1/riggeddude3:off_spineFK2/riggeddude3:drv_spineFK2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineFK1/riggeddude3:drv_spineFK1/riggeddude3:ctr_spineFK1/riggeddude3:off_spineFK2/riggeddude3:drv_spineFK2/riggeddude3:ctr_spineFK2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineFK1/riggeddude3:drv_spineFK1/riggeddude3:ctr_spineFK1/riggeddude3:off_spineFK2/riggeddude3:drv_spineFK2/riggeddude3:ctr_spineFK2/riggeddude3:off_spineFK3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineFK1/riggeddude3:drv_spineFK1/riggeddude3:ctr_spineFK1/riggeddude3:off_spineFK2/riggeddude3:drv_spineFK2/riggeddude3:ctr_spineFK2/riggeddude3:off_spineFK3/riggeddude3:drv_spineFK3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineFK1/riggeddude3:drv_spineFK1/riggeddude3:ctr_spineFK1/riggeddude3:off_spineFK2/riggeddude3:drv_spineFK2/riggeddude3:ctr_spineFK2/riggeddude3:off_spineFK3/riggeddude3:drv_spineFK3/riggeddude3:ctr_spineFK3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineIK1/riggeddude3:drv_spineIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineIK1/riggeddude3:drv_spineIK1/riggeddude3:ctr_spineIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineIK1/riggeddude3:drv_spineIK1/riggeddude3:ctr_spineIK1/riggeddude3:transform2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:off_root1/riggeddude3:drv_root1/riggeddude3:ctr_root1/riggeddude3:off_spineIK1/riggeddude3:drv_spineIK1/riggeddude3:ctr_spineIK1/riggeddude3:transform2/riggeddude3:enj_uppSpine1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_drv_armPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_armIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_armIK1/riggeddude3:R_drv_armIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_armIK1/riggeddude3:R_drv_armIK1/riggeddude3:R_ctr_armIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_armIK1/riggeddude3:R_drv_armIK1/riggeddude3:R_ctr_armIK1/riggeddude3:R_pIK_arm1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_elbowIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_elbowIK1/riggeddude3:R_drv_elbowIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_elbowIK1/riggeddude3:R_drv_elbowIK1/riggeddude3:R_ctr_elbowIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_kneeIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_kneeIK1/riggeddude3:R_drv_kneeIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_kneeIK1/riggeddude3:R_drv_kneeIK1/riggeddude3:R_ctr_kneeIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_legPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1/riggeddude3:R_drv_toePiv1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1/riggeddude3:R_drv_toePiv1/riggeddude3:R_drv_heelPiv1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1/riggeddude3:R_drv_toePiv1/riggeddude3:R_drv_heelPiv1/riggeddude3:R_drv_heelRot1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1/riggeddude3:R_drv_toePiv1/riggeddude3:R_drv_heelPiv1/riggeddude3:R_drv_heelRot1/riggeddude3:R_drv_tipToe1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1/riggeddude3:R_drv_toePiv1/riggeddude3:R_drv_heelPiv1/riggeddude3:R_drv_heelRot1/riggeddude3:R_drv_tipToe1/riggeddude3:R_drv_ballRot1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1/riggeddude3:R_drv_toePiv1/riggeddude3:R_drv_heelPiv1/riggeddude3:R_drv_heelRot1/riggeddude3:R_drv_tipToe1/riggeddude3:R_drv_ballRot1/riggeddude3:R_pIK_leg1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1/riggeddude3:R_drv_toePiv1/riggeddude3:R_drv_heelPiv1/riggeddude3:R_drv_heelRot1/riggeddude3:R_drv_tipToe1/riggeddude3:R_drv_toeTap1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1/riggeddude3:R_drv_toePiv1/riggeddude3:R_drv_heelPiv1/riggeddude3:R_drv_heelRot1/riggeddude3:R_drv_tipToe1/riggeddude3:R_drv_toeTap1/riggeddude3:R_cIK_leg1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_drv_rBank1/riggeddude3:R_drv_lBank1/riggeddude3:R_drv_toePiv1/riggeddude3:R_drv_heelPiv1/riggeddude3:R_drv_heelRot1/riggeddude3:R_drv_tipToe1/riggeddude3:R_drv_toeTap1/riggeddude3:R_cIK_leg2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_off_legIK1/riggeddude3:R_drv_legIK1/riggeddude3:R_ctr_legIK1/riggeddude3:R_pIK_legPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_controls1/riggeddude3:grp_IK1/riggeddude3:R_pIK_armPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_drj_hipPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_drj_hipPV1/riggeddude3:L_drj_anklePV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_hpTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_hpTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_hpTwist3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1/riggeddude3:L_jnt_ankle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1/riggeddude3:L_jnt_ankle1/riggeddude3:L_jnt_ball1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1/riggeddude3:L_jnt_ankle1/riggeddude3:L_jnt_ball1/riggeddude3:L_enj_toe1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1/riggeddude3:L_jnt_anTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1/riggeddude3:L_jnt_anTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1/riggeddude3:L_jnt_anTwist3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1/riggeddude3:L_jnt_knee2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1/riggeddude3:L_loc_anTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_jnt_knee1/riggeddude3:L_loc_anTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_loc_hpTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:L_jnt_hip1/riggeddude3:L_loc_hpTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_drj_hipPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_drj_hipPV1/riggeddude3:R_drj_anklePV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_hpTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_hpTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_hpTwist3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1/riggeddude3:R_jnt_ankle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1/riggeddude3:R_jnt_ankle1/riggeddude3:R_jnt_ball1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1/riggeddude3:R_jnt_ankle1/riggeddude3:R_jnt_ball1/riggeddude3:R_enj_toe1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1/riggeddude3:R_jnt_anTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1/riggeddude3:R_jnt_anTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1/riggeddude3:R_jnt_anTwist3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1/riggeddude3:R_jnt_knee2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1/riggeddude3:R_loc_anTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_jnt_knee1/riggeddude3:R_loc_anTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_loc_hpTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_hips1/riggeddude3:R_jnt_hip1/riggeddude3:R_loc_hpTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:drj_neck1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:drj_neck1/riggeddude3:jnt_neck2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:drj_neck1/riggeddude3:jnt_neTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:drj_neck1/riggeddude3:jnt_neTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:drj_neck1/riggeddude3:jnt_neTwist3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:drj_neck1/riggeddude3:loc_neTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:drj_neck1/riggeddude3:loc_neTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_drj_wrist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_elbow2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger1/riggeddude3:L_jnt_Bfinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger1/riggeddude3:L_jnt_Bfinger1/riggeddude3:L_jnt_Cfinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger1/riggeddude3:L_jnt_Bfinger1/riggeddude3:L_jnt_Cfinger1/riggeddude3:L_enj_finger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger2/riggeddude3:L_jnt_Bfinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger2/riggeddude3:L_jnt_Bfinger2/riggeddude3:L_jnt_Cfinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger2/riggeddude3:L_jnt_Bfinger2/riggeddude3:L_jnt_Cfinger2/riggeddude3:L_enj_finger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger3/riggeddude3:L_jnt_Bfinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger3/riggeddude3:L_jnt_Bfinger3/riggeddude3:L_jnt_Cfinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger3/riggeddude3:L_jnt_Bfinger3/riggeddude3:L_jnt_Cfinger3/riggeddude3:L_enj_finger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger4/riggeddude3:L_jnt_Bfinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger4/riggeddude3:L_jnt_Bfinger4/riggeddude3:L_jnt_Cfinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger4/riggeddude3:L_jnt_Bfinger4/riggeddude3:L_jnt_Cfinger4/riggeddude3:L_enj_finger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger5/riggeddude3:L_jnt_Bfinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger5/riggeddude3:L_jnt_Bfinger5/riggeddude3:L_jnt_Cfinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrist1/riggeddude3:L_jnt_Afinger5/riggeddude3:L_jnt_Bfinger5/riggeddude3:L_jnt_Cfinger5/riggeddude3:L_enj_finger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_jnt_wrTwist3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_loc_wrTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulder1/riggeddude3:L_jnt_elbow1/riggeddude3:L_loc_wrTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulderPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_drj_shoulderPV1/riggeddude3:L_drj_wristPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_jnt_shoulder1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_jnt_shoulder1/riggeddude3:L_jnt_shTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_jnt_shoulder1/riggeddude3:L_jnt_shTwist1/riggeddude3:L_jnt_bicep1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_jnt_shoulder1/riggeddude3:L_jnt_shTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_jnt_shoulder1/riggeddude3:L_jnt_shTwist2/riggeddude3:L_jnt_bicep2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_jnt_shoulder1/riggeddude3:L_jnt_shTwist3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_jnt_shoulder1/riggeddude3:L_jnt_shTwist3/riggeddude3:L_jnt_bicep3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_jnt_shoulder1/riggeddude3:L_loc_shTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:L_jnt_clavicle1/riggeddude3:L_jnt_shoulder1/riggeddude3:L_loc_shTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_drj_wrist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_elbow2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger1/riggeddude3:R_jnt_Bfinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger1/riggeddude3:R_jnt_Bfinger1/riggeddude3:R_jnt_Cfinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger1/riggeddude3:R_jnt_Bfinger1/riggeddude3:R_jnt_Cfinger1/riggeddude3:R_enj_finger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger2/riggeddude3:R_jnt_Bfinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger2/riggeddude3:R_jnt_Bfinger2/riggeddude3:R_jnt_Cfinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger2/riggeddude3:R_jnt_Bfinger2/riggeddude3:R_jnt_Cfinger2/riggeddude3:R_enj_finger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger3/riggeddude3:R_jnt_Bfinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger3/riggeddude3:R_jnt_Bfinger3/riggeddude3:R_jnt_Cfinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger3/riggeddude3:R_jnt_Bfinger3/riggeddude3:R_jnt_Cfinger3/riggeddude3:R_enj_finger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger4/riggeddude3:R_jnt_Bfinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger4/riggeddude3:R_jnt_Bfinger4/riggeddude3:R_jnt_Cfinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger4/riggeddude3:R_jnt_Bfinger4/riggeddude3:R_jnt_Cfinger4/riggeddude3:R_enj_finger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger5/riggeddude3:R_jnt_Bfinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger5/riggeddude3:R_jnt_Bfinger5/riggeddude3:R_jnt_Cfinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrist1/riggeddude3:R_jnt_Afinger5/riggeddude3:R_jnt_Bfinger5/riggeddude3:R_jnt_Cfinger5/riggeddude3:R_enj_finger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_jnt_wrTwist3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_loc_wrTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulder1/riggeddude3:R_jnt_elbow1/riggeddude3:R_loc_wrTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulderPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_drj_shoulderPV1/riggeddude3:R_drj_wristPV1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_jnt_shoulder1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_jnt_shoulder1/riggeddude3:R_jnt_shTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_jnt_shoulder1/riggeddude3:R_jnt_shTwist1/riggeddude3:R_jnt_bicep1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_jnt_shoulder1/riggeddude3:R_jnt_shTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_jnt_shoulder1/riggeddude3:R_jnt_shTwist2/riggeddude3:R_jnt_bicep2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_jnt_shoulder1/riggeddude3:R_jnt_shTwist3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_jnt_shoulder1/riggeddude3:R_jnt_shTwist3/riggeddude3:R_jnt_bicep3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_jnt_shoulder1/riggeddude3:R_loc_shTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:enj_root1/riggeddude3:jnt_spine1/riggeddude3:jnt_spine2/riggeddude3:jnt_spine3/riggeddude3:R_jnt_clavicle1/riggeddude3:R_jnt_shoulder1/riggeddude3:R_loc_shTwist2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_LeftHip
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_LeftHip/riggeddude3:b_LeftKnee1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_LeftHip/riggeddude3:b_LeftKnee1/riggeddude3:b_LeftAnkle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_LeftHip/riggeddude3:b_LeftKnee1/riggeddude3:b_LeftAnkle/riggeddude3:b_LeftBall
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_LeftHip/riggeddude3:b_LeftKnee1/riggeddude3:b_LeftShinTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_LeftHip/riggeddude3:b_LeftThighTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_RightHip
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_RightHip/riggeddude3:b_RightKnee1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_RightHip/riggeddude3:b_RightKnee1/riggeddude3:b_RightAnkle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_RightHip/riggeddude3:b_RightKnee1/riggeddude3:b_RightAnkle/riggeddude3:b_RightBall
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_RightHip/riggeddude3:b_RightKnee1/riggeddude3:b_RightShinTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_RightHip/riggeddude3:b_RightThighTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftForeArmTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger1/riggeddude3:b_LeftMidFinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger1/riggeddude3:b_LeftMidFinger1/riggeddude3:b_LeftTipFinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger2/riggeddude3:b_LeftMidFinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger2/riggeddude3:b_LeftMidFinger2/riggeddude3:b_LeftTipFinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger3/riggeddude3:b_LeftMidFinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger3/riggeddude3:b_LeftMidFinger3/riggeddude3:b_LeftTipFinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger4/riggeddude3:b_LeftMidFinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger4/riggeddude3:b_LeftMidFinger4/riggeddude3:b_LeftTipFinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger5/riggeddude3:b_LeftMidFinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_LeftClavicle/riggeddude3:b_LeftShoulder/riggeddude3:b_LeftElbow1/riggeddude3:b_LeftWrist/riggeddude3:b_LeftBaseFinger5/riggeddude3:b_LeftMidFinger5/riggeddude3:b_LeftTipFinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_Neck
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_Neck/riggeddude3:b_Head
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightForeArmTwist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger1/riggeddude3:b_RightMidFinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger1/riggeddude3:b_RightMidFinger1/riggeddude3:b_RightTipFinger1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger2/riggeddude3:b_RightMidFinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger2/riggeddude3:b_RightMidFinger2/riggeddude3:b_RightTipFinger2
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger3/riggeddude3:b_RightMidFinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger3/riggeddude3:b_RightMidFinger3/riggeddude3:b_RightTipFinger3
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger4/riggeddude3:b_RightMidFinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger4/riggeddude3:b_RightMidFinger4/riggeddude3:b_RightTipFinger4
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger5/riggeddude3:b_RightMidFinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_joints1/riggeddude3:Reference/riggeddude3:b_Hips/riggeddude3:b_Spine1/riggeddude3:b_Spine2/riggeddude3:b_Spine3/riggeddude3:b_RightClavicle/riggeddude3:b_RightShoulder/riggeddude3:b_RightElbow1/riggeddude3:b_RightWrist/riggeddude3:b_RightBaseFinger5/riggeddude3:b_RightMidFinger5/riggeddude3:b_RightTipFinger5
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:L_loc_foot1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:L_loc_hip1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:L_loc_shoulder1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:L_loc_wrist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:loc_chest1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:loc_head1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:loc_hips1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:R_loc_foot1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:R_loc_hip1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:R_loc_shoulder1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:ctr_mover1/riggeddude3:grp_locators1/riggeddude3:R_loc_wrist1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_extraNodes1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_extraNodes1/riggeddude3:L_crv_armIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_extraNodes1/riggeddude3:L_crv_legIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_extraNodes1/riggeddude3:R_crv_armIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_extraNodes1/riggeddude3:R_crv_legIK1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_PVclusters1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_PVclusters1/riggeddude3:L_cst_armIK1Handle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_PVclusters1/riggeddude3:L_cst_armIK2Handle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_PVclusters1/riggeddude3:L_cst_legIK1Handle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_PVclusters1/riggeddude3:L_cst_legIK2Handle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_PVclusters1/riggeddude3:R_cst_armIK1Handle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_PVclusters1/riggeddude3:R_cst_armIK2Handle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_PVclusters1/riggeddude3:R_cst_legIK1Handle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_PVclusters1/riggeddude3:R_cst_legIK2Handle
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_sIKspine1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_sIKspine1/riggeddude3:crv_spine1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_hiddenNodes1/riggeddude3:grp_sIKspine1/riggeddude3:sIK_spine1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_mesh1
+        weight: 1
+      - path: riggeddude3:grp_character1/riggeddude3:grp_mesh1/riggeddude3:grp_scaleGeo1
+        weight: 1
+      - path: subtool1
+        weight: 1
+      - path: wing:subtool1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -2393,8 +3174,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

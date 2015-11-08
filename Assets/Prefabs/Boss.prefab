@@ -602,14 +602,13 @@ GameObject:
   - 135: {fileID: 13516222}
   - 82: {fileID: 8204240}
   - 114: {fileID: 11411924}
-  - 114: {fileID: 11425534}
   m_Layer: 12
   m_Name: StaionaryFloatingTurret (2)
   m_TagString: BossTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &110716
 GameObject:
   m_ObjectHideFlags: 1
@@ -2599,8 +2598,6 @@ GameObject:
   - 135: {fileID: 13529146}
   - 82: {fileID: 8261598}
   - 114: {fileID: 11447490}
-  - 114: {fileID: 11471172}
-  - 114: {fileID: 11415796}
   m_Layer: 12
   m_Name: StaionaryFloatingTurret
   m_TagString: BossTurret
@@ -3764,7 +3761,6 @@ GameObject:
   - 82: {fileID: 8258588}
   - 135: {fileID: 13574576}
   - 82: {fileID: 8294318}
-  - 114: {fileID: 11475516}
   - 114: {fileID: 11422220}
   m_Layer: 12
   m_Name: StaionaryFloatingTurret (3)
@@ -11045,7 +11041,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155994}
-  m_LocalRotation: {x: -.637552202, y: .305822134, z: -.29533422, w: .642477751}
+  m_LocalRotation: {x: -.637552261, y: .305822164, z: -.29533425, w: .64247781}
   m_LocalPosition: {x: 26.2975063, y: 120.115547, z: -1.35996854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11580,7 +11576,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134246}
-  m_LocalRotation: {x: -.637552202, y: .305822134, z: -.29533422, w: .642477751}
+  m_LocalRotation: {x: -.637552261, y: .305822164, z: -.29533425, w: .64247781}
   m_LocalPosition: {x: 20.5273991, y: 127.069, z: -1.21188998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14246,6 +14242,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 81b45603fa248f245ae4928091048c9f, type: 3}
   - {fileID: 7400002, guid: 81b45603fa248f245ae4928091048c9f, type: 3}
+  - {fileID: 7400004, guid: 81b45603fa248f245ae4928091048c9f, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -14406,7 +14403,7 @@ MonoBehaviour:
   inaccuracyY: .5
   deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
   isHostile: 1
-  intervalShootTime: 5
+  intervalShootTime: 2
 --- !u!114 &11414198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14418,26 +14415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477b336cdb0b59a4dbd85f1536464193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11415796
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de1513407aa1a8748a486c72aafe0197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxShootingDistance: 40
-  bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
-  shootingAnimation: {fileID: 0}
-  angleOfShooting: 90
-  inaccuracy: .200000003
-  inaccuracyY: .5
-  deathEffect: {fileID: 0}
-  isHostile: 1
-  intervalShootTime: 2
 --- !u!114 &11418590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14455,26 +14432,6 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de1513407aa1a8748a486c72aafe0197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxShootingDistance: 40
-  bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
-  shootingAnimation: {fileID: 0}
-  angleOfShooting: 90
-  inaccuracy: .200000003
-  inaccuracyY: .5
-  deathEffect: {fileID: 0}
-  isHostile: 1
-  intervalShootTime: 2
---- !u!114 &11425534
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110582}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de1513407aa1a8748a486c72aafe0197, type: 3}
@@ -14522,9 +14479,9 @@ MonoBehaviour:
   angleOfShooting: 90
   inaccuracy: .200000003
   inaccuracyY: .5
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
   isHostile: 1
-  intervalShootTime: 5
+  intervalShootTime: 2
 --- !u!114 &11454666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14574,42 +14531,6 @@ MonoBehaviour:
   shootCooldown: 4
   inaccuracy: .200000003
   inaccuracyY: .5
---- !u!114 &11471172
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69c56c65665034149a9f0c943023a37f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rocketPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
-  shootTarget: 0
-  shootCooldown: 2
-  inaccuracy: .200000003
-  inaccuracyY: .5
---- !u!114 &11475516
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de1513407aa1a8748a486c72aafe0197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxShootingDistance: 40
-  bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
-  shootingAnimation: {fileID: 0}
-  angleOfShooting: 90
-  inaccuracy: .200000003
-  inaccuracyY: .5
-  deathEffect: {fileID: 0}
-  isHostile: 1
-  intervalShootTime: 5
 --- !u!114 &11491996
 MonoBehaviour:
   m_ObjectHideFlags: 1
