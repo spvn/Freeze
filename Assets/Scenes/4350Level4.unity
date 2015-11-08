@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 8
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 2100000, guid: 11282ab1e1441d44c909d5c347974988, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b8f20d5ca50d16143afc11f5e4af6fc1, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -65,7 +65,6 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
@@ -85,6 +84,9 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!127 &5
+LevelGameManager:
+  m_ObjectHideFlags: 0
 --- !u!1001 &63364916
 Prefab:
   m_ObjectHideFlags: 0
@@ -314,7 +316,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1 &836250755 stripped
+--- !u!1 &836250755
 GameObject:
   m_PrefabParentObject: {fileID: 191228, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_PrefabInternal: {fileID: 628882290}
@@ -372,7 +374,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffe7e72c6d6a8f849a6d8521994756f3, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &889029688 stripped
+--- !u!1 &889029688
 GameObject:
   m_PrefabParentObject: {fileID: 125082, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_PrefabInternal: {fileID: 628882290}
@@ -418,11 +420,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ca0a5b0388ae3441bb10904af80d858, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1414542773 stripped
+--- !u!1 &1414542773
 GameObject:
   m_PrefabParentObject: {fileID: 191228, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_PrefabInternal: {fileID: 1937452070}
---- !u!4 &1414542774 stripped
+--- !u!4 &1414542774
 Transform:
   m_PrefabParentObject: {fileID: 412308, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_PrefabInternal: {fileID: 1937452070}
