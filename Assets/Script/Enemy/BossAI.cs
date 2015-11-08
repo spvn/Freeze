@@ -123,5 +123,7 @@ public class BossAI : MonoBehaviour {
 		bossAnimations.Stop ();
 		bossAudioPlayer.Stop ();
 		playerFadeBox.SetActive (true);
+		yield return new WaitForSeconds (3f);
+		levelManager.LoadNextLevel ();
 	}
 }

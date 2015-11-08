@@ -35,6 +35,9 @@ public class UIEventScript : MonoBehaviour {
 			case "strafe":
 				canvasEventText.GetComponent<Text>().text = "STRAFE: A/D";
 				break;
+			case "deflect":
+				canvasEventText.GetComponent<Text>().text = "USE PULSE TO DEFLECT ROCKETS";
+				break;
 			default:
 				break;
 			}
