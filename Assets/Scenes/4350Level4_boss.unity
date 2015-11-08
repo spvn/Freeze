@@ -4031,6 +4031,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 113e26d1ececb4b4098edcb7eab306b2, type: 2}
+    - target: {fileID: 11461962, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: bossAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2af20f8362cf8ce47bc7d3f7e9715f64, type: 3}
+    - target: {fileID: 11461962, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: bossAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9debd324da273d642b594c0e9a7d7818, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
   m_IsPrefabParent: 0
