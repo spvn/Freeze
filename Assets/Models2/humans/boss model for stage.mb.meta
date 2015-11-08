@@ -757,6 +757,7 @@ ModelImporter:
     3300000: pCylinder1
     4300000: riggeddude3:dude
     4300002: pCylinder1
+    6400000: pCylinder1
     7400000: Take 001
     9500000: //RootNode
     13700000: riggeddude3:dude
@@ -785,7 +786,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
