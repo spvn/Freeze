@@ -89,7 +89,8 @@ public class BossAI : MonoBehaviour {
 			if (bossAttackGameObjects[i].tag == "RocketLauncher"){
 				bossAttackGameObjects[i].GetComponentInChildren<RocketLauncher>().MakeHostile();
 			} else if (bossAttackGameObjects[i].tag == "BossTurret"){
-				bossAttackGameObjects[i].GetComponent<ScriptTurret>().isHostile = true;
+				bossAttackGameObjects[i].SetActive(true);
+				bossAttackGameObjects[i].GetComponent<ScriptBossTurret>().isHostile = true;
 			}
 		}
 	}

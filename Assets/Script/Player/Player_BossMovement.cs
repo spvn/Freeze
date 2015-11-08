@@ -5,6 +5,7 @@ using UnityStandardAssets.ImageEffects;
 public class Player_BossMovement : MonoBehaviour {
 
     public float rotationSpeed = 1.0f;
+	public float playerSpeed = 0.0f;
     public float jumpSpeed = 10f;
     public float gravity = 1.81f;
     public GameObject focalPoint;
