@@ -46,9 +46,7 @@ public class MainMenuButton : MonoBehaviour {
 			ba.playButtonSelectedAudio();
 			selectButton (currSelectionIndex);
 		}
-
-		Debug.Log(Input.GetAxis("Vertical"));
-		Debug.Log(v_isAxisInUse);
+		
 		checkAxisInUse ();
 	}
 
@@ -107,13 +105,13 @@ public class MainMenuButton : MonoBehaviour {
 			v_isAxisInUse = false;
 		}
 
-		if (Input.GetAxisRaw ("Horizontal") != 0) {
+		if (Input.GetAxis ("Horizontal") != 0) {
 			if (h_isAxisInUse == false) {
 				// Call your event function here.
 				h_isAxisInUse = true;
 			}
 		}
-		if (Input.GetAxisRaw ("Horizontal") == 0) {
+		if (Input.GetAxis ("Horizontal") == 0) {
 			h_isAxisInUse = false;
 		}    
 	}

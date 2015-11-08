@@ -14,6 +14,7 @@ public class PauseMenuButton : MonoBehaviour
 	private GameManager gm;
     private int currSelectionIndex = 0;
 	private ButtonAudio ba;
+	private bool h_isAxisInUse, v_isAxisInUse = false;
 
 	// Use this for initialization
     void Start()
@@ -31,14 +32,15 @@ public class PauseMenuButton : MonoBehaviour
     void Update()
     {
 		if (lm.isPause) {
-			if (Input.GetKeyDown(KeyCode.DownArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
+			//if (Input.GetKeyDown(KeyCode.DownArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
+			if ((Input.GetAxis("Vertical") < 0 && !v_isAxisInUse))
 			{
 				incrementCurrSelectionIndex();
 				ba.playButtonHighlightAudio();
 				highlightButton(currSelectionIndex);
 			}
 			
-			if (Input.GetKeyDown(KeyCode.UpArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
+			if ((Input.GetAxis("Vertical") > 0 && !v_isAxisInUse))
 			{
 				decrementCurrSelectionIndex();
 				ba.playButtonHighlightAudio();
@@ -52,7 +54,9 @@ public class PauseMenuButton : MonoBehaviour
 				selectButton(currSelectionIndex);
 			}
 		}
-    }
+		checkAxisInUse ();
+
+	}
 
     private void incrementCurrSelectionIndex()
     {
@@ -117,5 +121,27 @@ public class PauseMenuButton : MonoBehaviour
 				lm.PauseGame();
 				break;
 		}
+	}
+
+	private void checkAxisInUse() {
+		if (Input.GetAxis ("Vertical") != 0) {
+			if (v_isAxisInUse == false) {
+				// Call your event function here.
+				v_isAxisInUse = true;
+			}
+		}
+		if (Input.GetAxis ("Vertical") == 0) {
+			v_isAxisInUse = false;
+		}
+		
+		if (Input.GetAxis ("Horizontal") != 0) {
+			if (h_isAxisInUse == false) {
+				// Call your event function here.
+				h_isAxisInUse = true;
+			}
+		}
+		if (Input.GetAxis ("Horizontal") == 0) {
+			h_isAxisInUse = false;
+		}    
 	}
 }
