@@ -5923,7 +5923,7 @@ Transform:
   m_PrefabParentObject: {fileID: 485388, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 340991039}
-  m_LocalRotation: {x: -.637552261, y: .305822164, z: -.29533425, w: .64247781}
+  m_LocalRotation: {x: -.637552202, y: .305822134, z: -.29533422, w: .642477751}
   m_LocalPosition: {x: 20.5273991, y: 127.069, z: -1.21188998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7130,7 +7130,7 @@ MonoBehaviour:
   shootTarget: 1
   shootCooldown: 4
   inaccuracy: .200000003
-  inaccuracyY: .5
+  inaccuracyY: .400000006
 --- !u!111 &457059786
 Animation:
   m_ObjectHideFlags: 0
@@ -7322,7 +7322,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 473251067}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf96de38efe38a24fabc43ef797e9968, type: 3}
   m_Name: 
@@ -8083,7 +8083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76daec058a8ef4441a743989d4b8ac65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
 --- !u!114 &512230431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9396,7 +9396,7 @@ Transform:
   m_PrefabParentObject: {fileID: 477094, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 654815862}
-  m_LocalRotation: {x: -.637552261, y: .305822164, z: -.29533425, w: .64247781}
+  m_LocalRotation: {x: -.637552202, y: .305822134, z: -.29533422, w: .642477751}
   m_LocalPosition: {x: 26.2975063, y: 120.115547, z: -1.35996854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17190,7 +17190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cab12369969734faa36eeb082223b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: .300000012
+  rotationSpeed: .200000003
   playerSpeed: 0
   jumpSpeed: 5
   gravity: 7
@@ -19698,7 +19698,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1565922453}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf96de38efe38a24fabc43ef797e9968, type: 3}
   m_Name: 
@@ -24379,7 +24379,7 @@ MonoBehaviour:
   shootTarget: 0
   shootCooldown: 4
   inaccuracy: .200000003
-  inaccuracyY: .5
+  inaccuracyY: .400000006
 --- !u!111 &1961299762
 Animation:
   m_ObjectHideFlags: 0
@@ -27213,7 +27213,7 @@ MonoBehaviour:
   shootTarget: 2
   shootCooldown: 4
   inaccuracy: .200000003
-  inaccuracyY: .5
+  inaccuracyY: .400000006
 --- !u!111 &2104521352
 Animation:
   m_ObjectHideFlags: 0

@@ -5874,6 +5874,22 @@ Prefab:
       propertyPath: playerSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11419700, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11435534, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402160, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404946, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_IsPrefabParent: 0
@@ -6230,7 +6246,7 @@ Transform:
   - {fileID: 55103746}
   - {fileID: 1581973420}
   m_Father: {fileID: 2029553171}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &1640487010
 GameObject:
   m_ObjectHideFlags: 0
@@ -7607,9 +7623,9 @@ Transform:
   - {fileID: 2029408075}
   - {fileID: 772531560}
   - {fileID: 36013031}
+  - {fileID: 1621668861}
   - {fileID: 1294145459}
   - {fileID: 1090097794}
-  - {fileID: 1621668861}
   - {fileID: 73032741}
   - {fileID: 1482750885}
   - {fileID: 265203558}

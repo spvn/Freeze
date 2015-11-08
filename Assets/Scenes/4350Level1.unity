@@ -614,6 +614,14 @@ Prefab:
       propertyPath: lateralSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11402160, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404946, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_IsPrefabParent: 0
