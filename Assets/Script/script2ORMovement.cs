@@ -166,7 +166,10 @@ public class script2ORMovement : MonoBehaviour {
 
 		//if is freefall node, dont need to rotate
 		if (!isFreefall) {
-			Quaternion targetRotation = Quaternion.LookRotation (destinationNode.position - transform.position);
+			Vector3 destinationNodePosition = destinationNode.position;
+			destinationNodePosition.y = transform.position.y;
+			Quaternion targetRotation = Quaternion.LookRotation (destinationNodePosition - transform.position);
+			Debug.Log (targetRotation);
 			StartCoroutine (RotateTowards (targetRotation));
 		}
         currentNode = destinationNode;
