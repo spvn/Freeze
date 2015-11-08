@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661856d1ec89f8f4c8eb765ddce81062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 010000000200000003000000040000000500000001000000
+  nextLevel: 01000000020000000300000004000000050000000600000001000000
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -49,7 +49,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: nextLevel.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: nextLevel.Array.data[2]
@@ -65,7 +65,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: nextLevel.Array.data[5]
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
