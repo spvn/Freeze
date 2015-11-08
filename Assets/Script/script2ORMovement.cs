@@ -76,7 +76,7 @@ public class script2ORMovement : MonoBehaviour {
 
 
         // Player can do these actions if game is not paused
-        if (controller.isGrounded && Input.GetKeyDown(KeyCode.LeftAlt))
+		if (controller.isGrounded && (Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetKeyDown(KeyCode.JoystickButton2)))
         {
             jump();
         }

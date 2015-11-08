@@ -1145,6 +1145,14 @@ Prefab:
       propertyPath: m_Name
       value: StaionaryFloatingTurret (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -3208,7 +3216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalScale.x
@@ -3229,6 +3237,14 @@ Prefab:
     - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_Name
       value: StaionaryFloatingTurret (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
@@ -3412,7 +3428,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalScale.x
@@ -3428,6 +3444,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11450478, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: isHostile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4608,7 +4632,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1001 &1087128823
 Prefab:
   m_ObjectHideFlags: 0
@@ -6493,7 +6517,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!4 &1298107702 stripped
 Transform:
   m_PrefabParentObject: {fileID: 453386, guid: 71a0842cbd5818c4b961cacf324f01b3, type: 2}
@@ -6535,7 +6559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalScale.x
@@ -6555,6 +6579,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11450478, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: isHostile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6677,7 +6709,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalScale.x
@@ -6698,6 +6730,14 @@ Prefab:
     - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_Name
       value: StaionaryFloatingTurret (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
@@ -8943,6 +8983,18 @@ Prefab:
       propertyPath: destinationNode
       value: 
       objectReference: {fileID: 1409562618}
+    - target: {fileID: 11491768, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: playerSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491768, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: lateralSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491768, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: jumpSpeed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_IsPrefabParent: 0
