@@ -5354,15 +5354,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412308, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11491768, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
       propertyPath: destinationNode
       value: 
       objectReference: {fileID: 393455732}
-    - target: {fileID: 11491768, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: playerSpeed
-      value: 8
+    - target: {fileID: 22425892, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.000762939977
+      objectReference: {fileID: 0}
+    - target: {fileID: 22425892, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.2029915
+      objectReference: {fileID: 0}
+    - target: {fileID: 22425892, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -6.59963608
+      objectReference: {fileID: 0}
+    - target: {fileID: 22425892, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+      propertyPath: m_Pivot.x
+      value: .450253665
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
