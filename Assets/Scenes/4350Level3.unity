@@ -2344,7 +2344,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 294
+      value: 293.339996
       objectReference: {fileID: 0}
     - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2966,7 +2966,7 @@ MonoBehaviour:
   inaccuracyY: 0
   deathEffect: {fileID: 0}
   isHostile: 1
-  intervalShootTime: 1.29999995
+  intervalShootTime: 1
 --- !u!1001 &901367902
 Prefab:
   m_ObjectHideFlags: 0
@@ -3156,7 +3156,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 126234, guid: fd04e19c55259ea419bbb46d2fdcb3e3, type: 2}
       propertyPath: m_Name
-      value: ALMOST THERE (1)
+      value: THIS IS IT
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd04e19c55259ea419bbb46d2fdcb3e3, type: 2}
@@ -4320,6 +4320,10 @@ Prefab:
     - target: {fileID: 405962, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_LocalPosition.z
       value: -48.4000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 462374, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.29999995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
@@ -5524,7 +5528,7 @@ MonoBehaviour:
   inaccuracyY: 0
   deathEffect: {fileID: 0}
   isHostile: 1
-  intervalShootTime: 1.79999995
+  intervalShootTime: 1.5
 --- !u!1001 &1392372970
 Prefab:
   m_ObjectHideFlags: 0
@@ -6187,7 +6191,7 @@ MonoBehaviour:
   inaccuracyY: 0
   deathEffect: {fileID: 0}
   isHostile: 1
-  intervalShootTime: 1.29999995
+  intervalShootTime: 1.10000002
 --- !u!1 &1621668860
 GameObject:
   m_ObjectHideFlags: 0
@@ -6226,7 +6230,7 @@ Transform:
   - {fileID: 55103746}
   - {fileID: 1581973420}
   m_Father: {fileID: 2029553171}
-  m_RootOrder: 17
+  m_RootOrder: 7
 --- !u!1 &1640487010
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,7 +6369,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 190056, guid: a1831d2d146218141837704fbee69fc4, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11444062, guid: a1831d2d146218141837704fbee69fc4, type: 2}
       propertyPath: selfDestruct
@@ -7041,7 +7045,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 294
+      value: 293.339996
       objectReference: {fileID: 0}
     - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7161,7 +7165,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -480.119995
+      value: -477.589996
       objectReference: {fileID: 0}
     - target: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7568,7 +7572,7 @@ MonoBehaviour:
   inaccuracyY: 0
   deathEffect: {fileID: 0}
   isHostile: 1
-  intervalShootTime: 1.70000005
+  intervalShootTime: 1.39999998
 --- !u!4 &2029408075 stripped
 Transform:
   m_PrefabParentObject: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
@@ -7605,6 +7609,7 @@ Transform:
   - {fileID: 36013031}
   - {fileID: 1294145459}
   - {fileID: 1090097794}
+  - {fileID: 1621668861}
   - {fileID: 73032741}
   - {fileID: 1482750885}
   - {fileID: 265203558}
@@ -7615,7 +7620,6 @@ Transform:
   - {fileID: 169313907}
   - {fileID: 871321001}
   - {fileID: 1961670406}
-  - {fileID: 1621668861}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1001 &2031192545

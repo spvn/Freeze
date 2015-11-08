@@ -123,12 +123,12 @@ public class LevelManager : MonoBehaviour {
 			PauseGame();
         }
 
-		if (canvas.gameObject.transform.Find ("GameOverScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
+		if (canvas.gameObject.transform.Find ("GameOverScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
             restartFromCheckpoint();
             //RestartLevel();
         }
 	
-		if (canvas.gameObject.transform.Find ("WinScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton5))) {
+		if (canvas.gameObject.transform.Find ("WinScreen").gameObject.activeSelf && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
 			gm.currentLevelCleared();
 			LoadNextLevel();
 		}

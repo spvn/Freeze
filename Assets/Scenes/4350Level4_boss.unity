@@ -8083,7 +8083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76daec058a8ef4441a743989d4b8ac65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
 --- !u!114 &512230431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17190,7 +17190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cab12369969734faa36eeb082223b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 1
+  rotationSpeed: .300000012
   playerSpeed: 0
   jumpSpeed: 5
   gravity: 7
@@ -24030,7 +24030,7 @@ Transform:
   m_LocalScale: {x: .870407045, y: .870407164, z: .870407164}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 15
 --- !u!1 &1950553706
 GameObject:
   m_ObjectHideFlags: 0

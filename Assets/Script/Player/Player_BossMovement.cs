@@ -29,23 +29,23 @@ public class Player_BossMovement : MonoBehaviour {
             return;
         }
         
-        if ( Input.GetKeyDown(KeyCode.J) )
+		if ( Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.JoystickButton0) )
         {
             StartCoroutine(glitchEffect());
         }
 
-        if ( Input.GetKeyDown(KeyCode.K) )
+		if ( Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.JoystickButton1))
         {
             PulseAttack attack = gameObject.GetComponent<PulseAttack>();
             attack.Pulse();
         }
 
-	    if ( Input.GetKey(KeyCode.A) && controller.isGrounded )
+	    if (( Input.GetKey(KeyCode.A) || Input.GetAxis("Horizontal") < 0) && controller.isGrounded )
         {
             continueRotation = rotationSpeed; // will be used to continue rotation in the air if player jumps
             focalPoint.transform.Rotate(new Vector3(0, rotationSpeed, 0));
         }
-        else if ( Input.GetKey(KeyCode.D) && controller.isGrounded )
+		else if ( ( Input.GetKey(KeyCode.D) || Input.GetAxis("Horizontal") > 0) && controller.isGrounded )
         {
             continueRotation = -rotationSpeed; // will be used to continue rotation in the air if player jumps
             focalPoint.transform.Rotate(new Vector3(0, -rotationSpeed, 0));
@@ -54,7 +54,7 @@ public class Player_BossMovement : MonoBehaviour {
             continueRotation = 0; // no rotation by default if player jumps without moving
         }
 
-        if (controller.isGrounded && Input.GetKeyDown(KeyCode.LeftAlt))
+		if (controller.isGrounded && (Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetKeyDown(KeyCode.JoystickButton2)))
         {
             downDirection = new Vector3(0, jumpSpeed, 0);
         }
