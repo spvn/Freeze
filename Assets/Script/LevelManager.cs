@@ -42,9 +42,11 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gm = GameManager.getManager();
-        gm.updateCurrentLevel();
-        isFrozen = true;
+		gm = GameManager.getManager ();
+		gm.updateCurrentLevel ();
+		if (Application.loadedLevel != 5) {
+			isFrozen = true;
+		}
 		timerGUIText = canvas.transform.Find("HUD").Find ("Panel").transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
 		Debug.Log (timerGUIText.ToString ());

@@ -16,18 +16,18 @@ public class Player_BossMovement : MonoBehaviour {
     private float continueRotation;
 
     void Start () {
-        continueRotation = rotationSpeed; // to be used while in the air
+        continueRotation = 0; // to be used while in the air
         nsObjects = GetComponentsInChildren<NoiseAndScratches>();
         controller = GetComponent<CharacterController>();
     }
 
 	void Update () {
-        /*
+		Debug.Log (controller.isGrounded);
         if (levelManager.isGameOver || levelManager.isFrozen || levelManager.isPause)
         {
             return;
         }
-        */
+        
         if ( Input.GetKeyDown(KeyCode.J) )
         {
             StartCoroutine(glitchEffect());
