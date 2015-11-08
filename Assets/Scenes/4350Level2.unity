@@ -1153,6 +1153,30 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -1408,6 +1432,10 @@ Prefab:
     - target: {fileID: 11476844, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: intervalShootTime
       value: 1.60000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11476844, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
+      propertyPath: inaccuracyY
+      value: .400000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
@@ -1949,6 +1977,10 @@ Prefab:
       propertyPath: MiddleDestinationNode
       value: 
       objectReference: {fileID: 850796770}
+    - target: {fileID: 11487138, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+      propertyPath: isCheckpoint
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
   m_IsPrefabParent: 0
@@ -3246,6 +3278,34 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: isHostile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -3308,6 +3368,10 @@ Prefab:
       propertyPath: MiddleDestinationNode
       value: 
       objectReference: {fileID: 1114209806}
+    - target: {fileID: 11487138, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+      propertyPath: isCheckpoint
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
   m_IsPrefabParent: 0
@@ -3454,6 +3518,30 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.89999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -3575,6 +3663,10 @@ Prefab:
       propertyPath: MiddleDestinationNode
       value: 
       objectReference: {fileID: 541674409}
+    - target: {fileID: 11487138, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+      propertyPath: isCheckpoint
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
   m_IsPrefabParent: 0
@@ -4171,9 +4263,9 @@ Transform:
   - {fileID: 396276764}
   - {fileID: 545533188}
   - {fileID: 1212923671}
-  - {fileID: 202455662}
   - {fileID: 867118679}
   - {fileID: 839452085}
+  - {fileID: 202455662}
   - {fileID: 1311200220}
   - {fileID: 1326712620}
   - {fileID: 275259830}
@@ -4390,6 +4482,10 @@ Prefab:
       propertyPath: MiddleDestinationNode
       value: 
       objectReference: {fileID: 886581349}
+    - target: {fileID: 11487138, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+      propertyPath: isCheckpoint
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
   m_IsPrefabParent: 0
@@ -4797,6 +4893,10 @@ Prefab:
       propertyPath: MiddleDestinationNode
       value: 
       objectReference: {fileID: 382753448}
+    - target: {fileID: 11487138, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
+      propertyPath: isCheckpoint
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
   m_IsPrefabParent: 0
@@ -6589,6 +6689,22 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -6738,6 +6854,22 @@ Prefab:
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
@@ -8300,7 +8432,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11476844, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: intervalShootTime
-      value: 1.20000005
+      value: 1.39999998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}

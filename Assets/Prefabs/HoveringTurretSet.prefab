@@ -265,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.70000005, y: 0, z: -39}
+  m_LocalPosition: {x: -9.22000027, y: 0, z: 324.600006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 440866}
@@ -376,9 +376,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104542}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -170.809998, y: 294, z: -5.42999983}
-  m_LocalScale: {x: .564480364, y: .339276195, z: .0824734345}
+  m_LocalRotation: {x: 0, y: -.655625582, z: 0, w: .755086184}
+  m_LocalPosition: {x: -180.880005, y: 294, z: -53.2200012}
+  m_LocalScale: {x: .564480126, y: .339276195, z: .0824733973}
   m_Children:
   - {fileID: 462374}
   - {fileID: 405962}
@@ -415,8 +415,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.8999996, y: 7.56050014, z: -399.630005}
-  m_LocalScale: {x: .615055978, y: 1.02331674, z: 4.20968294}
+  m_LocalPosition: {x: 19.691, y: 8.1843996, z: -389.579987}
+  m_LocalScale: {x: .510496438, y: .849352896, z: 3.49403667}
   m_Children:
   - {fileID: 427634}
   - {fileID: 439422}
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6990c7f62d56443468d9a0af9c762e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShootingDistance: 40
+  maxShootingDistance: 50
   bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
   shootingAnimation: {fileID: 0}
   angleOfShooting: 90
@@ -982,7 +982,7 @@ MonoBehaviour:
   inaccuracyY: .5
   deathEffect: {fileID: 153170, guid: cf286f8dec4097b4294f9bec5dd43349, type: 2}
   isHostile: 1
-  intervalShootTime: 1
+  intervalShootTime: 1.5
 --- !u!114 &11493306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -997,7 +997,7 @@ MonoBehaviour:
   hoveringTurret: {fileID: 162710}
   direction: 0
   speed: 15
-  distance: 20
+  distance: 13
 --- !u!136 &13613178
 CapsuleCollider:
   m_ObjectHideFlags: 1

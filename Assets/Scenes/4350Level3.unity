@@ -330,7 +330,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_LocalScale.x
@@ -536,7 +536,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_Name
@@ -549,6 +549,46 @@ Prefab:
     - target: {fileID: 11450478, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: maxShootingDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
@@ -683,7 +723,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_LocalScale.x
@@ -1308,7 +1348,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11476844, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: intervalShootTime
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11476844, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: inaccuracy
@@ -1664,7 +1704,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_RootOrder
-      value: 26
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_Name
@@ -1689,6 +1729,46 @@ Prefab:
     - target: {fileID: 11450478, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: maxShootingDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
@@ -1816,7 +1896,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11476844, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: inaccuracyY
-      value: .200000003
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
@@ -2416,6 +2496,46 @@ Prefab:
       propertyPath: maxShootingDistance
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -2576,7 +2696,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 410252, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 113604, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: m_Name
@@ -2584,7 +2704,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11476844, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: intervalShootTime
-      value: 1.5
+      value: 1.29999995
       objectReference: {fileID: 0}
     - target: {fileID: 410252, guid: 32875e7d52c8d804a8045ae1ee40a629, type: 2}
       propertyPath: m_LocalScale.x
@@ -2650,7 +2770,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_Name
@@ -2667,6 +2787,50 @@ Prefab:
     - target: {fileID: 11450478, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: maxShootingDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: isHostile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
@@ -4822,6 +4986,46 @@ Prefab:
       propertyPath: isHostile
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -5076,7 +5280,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_Name
@@ -5093,6 +5297,46 @@ Prefab:
     - target: {fileID: 11450478, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: maxShootingDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.60000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
@@ -5314,6 +5558,46 @@ Prefab:
       propertyPath: isHostile
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -5511,6 +5795,46 @@ Prefab:
     - target: {fileID: 11450478, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: maxShootingDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
@@ -5852,6 +6176,46 @@ Prefab:
     - target: {fileID: 11450478, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: isHostile
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
@@ -6208,6 +6572,50 @@ Prefab:
       propertyPath: maxShootingDistance
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: isHostile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -6340,45 +6748,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
-      propertyPath: m_LocalScale.x
-      value: .564480126
-      objectReference: {fileID: 0}
-    - target: {fileID: 440866, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .0824733973
-      objectReference: {fileID: 0}
     - target: {fileID: 104542, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
       propertyPath: m_Name
       value: HoveringTurretSet (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 405962, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 324.600006
-      objectReference: {fileID: 0}
-    - target: {fileID: 405962, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -9.22000027
-      objectReference: {fileID: 0}
-    - target: {fileID: 462374, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -390
-      objectReference: {fileID: 0}
-    - target: {fileID: 462374, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 19.7000008
-      objectReference: {fileID: 0}
-    - target: {fileID: 11493306, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
-      propertyPath: distance
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 11444570, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
-      propertyPath: intervalShootTime
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11444570, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
-      propertyPath: maxShootingDistance
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23ab66405f96aba4c8e5be62c70440d1, type: 2}
@@ -6646,6 +7018,46 @@ Prefab:
       propertyPath: maxShootingDistance
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
   m_IsPrefabParent: 0
@@ -6862,13 +7274,13 @@ Transform:
   - {fileID: 1052681874}
   - {fileID: 8940315}
   - {fileID: 170676623}
-  - {fileID: 169313907}
   - {fileID: 1390523582}
   - {fileID: 265432631}
   - {fileID: 887110504}
-  - {fileID: 871321001}
   - {fileID: 517371234}
   - {fileID: 196841280}
+  - {fileID: 169313907}
+  - {fileID: 871321001}
   - {fileID: 1961670406}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -7641,6 +8053,46 @@ Prefab:
     - target: {fileID: 11450478, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: isHostile
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129856, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490354, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.89999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: inaccuracyY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: maxShootingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471364, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
+      propertyPath: angleOfShooting
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
