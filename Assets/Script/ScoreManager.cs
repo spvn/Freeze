@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
 
     void Update ()
     {
-        currentScore.text = "Score: " + score;
+        currentScore.text = "" + score;
 		StatisticManager sm = StatisticManager.getManager ();
 		if (sm.getProgressByStatisticName("High Score") < score) {
 			sm.setProgressByStatisticName("High Score", score);
