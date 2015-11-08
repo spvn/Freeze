@@ -7,6 +7,7 @@ public class BossAI : MonoBehaviour {
 	// 0: opening, 1: movement, 2,3: idle
 	public AudioClip[]	bossAudio;
 	//0: opening, 2: idle
+	public GameObject playerFadeBox;
 	private GameObject player;
 	private LevelManager levelManager;
 	private BossHealth bossHealth;
@@ -121,5 +122,6 @@ public class BossAI : MonoBehaviour {
 		Debug.Log ("LoadCredits");
 		bossAnimations.Stop ();
 		bossAudioPlayer.Stop ();
+		playerFadeBox.SetActive (true);
 	}
 }
