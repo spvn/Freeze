@@ -186,5 +186,6 @@ public class GameManager : MonoBehaviour {
         lsScreen.SetActive(false);
         achieveScreen.SetActive(false);
         mmScreen.SetActive(true);
+		mmScreen.GetComponent<MainMenuButton> ().highlightButton (1);
     }
 }

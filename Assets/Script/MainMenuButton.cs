@@ -9,7 +9,7 @@ public class MainMenuButton : MonoBehaviour {
 	public Button exitGameButt;
 
     private GameManager gm;
-	private int currSelectionIndex = 0;
+	private int currSelectionIndex = 1;
 	private ButtonAudio ba;
 	private bool h_isAxisInUse, v_isAxisInUse = false;
 
@@ -20,9 +20,9 @@ public class MainMenuButton : MonoBehaviour {
 		exitGameButt = exitGameButt.GetComponent<Button> ();
         gm = GameManager.getManager();
 		ba = GameObject.Find("OVRCameraRig").GetComponent<ButtonAudio> ();
-		highlightButton(currSelectionIndex);
+		highlightButton(1);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -64,7 +64,7 @@ public class MainMenuButton : MonoBehaviour {
 			currSelectionIndex--;
 	}
 
-	private void highlightButton (int index) {
+	public void highlightButton (int index) {
 
 		switch (index) {
 		case 1:
