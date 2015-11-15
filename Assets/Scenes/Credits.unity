@@ -2609,7 +2609,7 @@ MonoBehaviour:
   m_Text: "Thank you for playing\nFREEZE!\n\n\n\n\n\n\n\n\nYou have come a long\nway
     since the start\nand so have we!\n\nYour escape would not\nhave been possible
     \nwithout the help of:\n\nKang-An (Level Design)\nOoh Jing (Level Design)\nMatthew
-    (Mechanics)\nWanling (AI)\nChris (Model & Animation)\nTerrence (Code Quality)\nAbel
+    (Mechanics)\nWanling (AI)\nChris (Model & Animation)\nTerence (Mechanics & Stats)\nAbel
     (UI & Sound)\n\nSpecial Thanks to:\nDr Cheng Holun \n\n\n\nPress SPACE to return
     to \nMain Menu"
 --- !u!222 &1074324493
