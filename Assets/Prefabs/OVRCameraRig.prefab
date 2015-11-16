@@ -4709,7 +4709,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ec8463fcda6f66a47bacf24ac1e94bc1, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 3f0e991719f06084292a8e15759d4fe4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4958,7 +4958,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ec8463fcda6f66a47bacf24ac1e94bc1, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 3f0e991719f06084292a8e15759d4fe4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5568,7 +5568,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: ec8463fcda6f66a47bacf24ac1e94bc1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f0e991719f06084292a8e15759d4fe4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5864,7 +5864,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: ec8463fcda6f66a47bacf24ac1e94bc1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f0e991719f06084292a8e15759d4fe4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6394,7 +6394,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8a9ce16b8d3c16d408b0f61a928299ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b082920d4d63ace4bb6611c3f7763345, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
