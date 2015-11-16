@@ -18,15 +18,15 @@ public class ParticleEmmitterController : MonoBehaviour {
             for (int i = 0; i < gameObjects.Length; i++)
             {
                 //gameObjects[i].SetActive(false);
-				gameObjects[i].GetComponent<ParticleSystem>().Stop();
+				gameObjects[i].GetComponent<ParticleEmitter>().enabled = false;
             }
         } else
         {
             for (int i = 0; i < gameObjects.Length; i++)
             {
                 //gameObjects[i].SetActive(true);
-				gameObjects[i].GetComponent<ParticleSystem>().Play ();
-            }
+				gameObjects[i].GetComponent<ParticleEmitter>().enabled = true;
+			}
         }
     }
 }
