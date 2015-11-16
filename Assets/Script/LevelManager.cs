@@ -23,6 +23,7 @@ public class LevelManager : MonoBehaviour {
     private GameManager gm;
 	private bool isFrozenWhenPaused = false;
     public GameObject playerCheckpoint;
+	private AudioSource audio;
 
 	void Awake()
 	{
@@ -49,6 +50,7 @@ public class LevelManager : MonoBehaviour {
 		}
 		timerGUIText = canvas.transform.Find("HUD").Find ("Panel").transform.Find ("TimerText").gameObject;
 		timerGUIText.GetComponent<Text> ().text = "0.00s";
+		audio = this.GetComponent<AudioSource> ();
 		Debug.Log (timerGUIText.ToString ());
 	}
 
@@ -200,6 +202,10 @@ public class LevelManager : MonoBehaviour {
 		isAttacking = !isAttacking;
 	}
 
+	public void stopBgm () {
+		audio.Stop ();
+	}
+
 	public static LevelManager getLevelManager()
 	{
 		if (_instance == null)
@@ -211,5 +217,10 @@ public class LevelManager : MonoBehaviour {
 		{
 			return _instance;
 		}
+	}
+
+	public void turnOffPanelAndShowWinScreen (){
+		canvas.transform.Find("HUD").gameObject.SetActive(false);
+		canvas.gameObject.transform.Find ("WinScreen").gameObject.SetActive(true);
 	}
 }

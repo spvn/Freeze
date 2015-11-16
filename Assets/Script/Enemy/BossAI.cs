@@ -18,6 +18,7 @@ public class BossAI : MonoBehaviour {
 	private bool openingAnimationPlayed;
 	private bool isDead;
 
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("OVRCameraRig");
@@ -104,7 +105,6 @@ public class BossAI : MonoBehaviour {
 
 	private void Die(){
 		isDead = true;
-
 		for (int i = 0; i < bossAttackGameObjects.Length; i++) {
 			if (bossAttackGameObjects[i].tag == "RocketLauncher"){
 				bossAttackGameObjects[i].GetComponentInChildren<RocketLauncher>().Die ();
@@ -113,17 +113,21 @@ public class BossAI : MonoBehaviour {
 			}
 		}
 		bossAnimations.Play ("Death", PlayMode.StopAll);
+		levelManager.stopBgm ();
+		bossAudioPlayer.clip = bossAudio [2];
+		bossAudioPlayer.Play ();
 		StartCoroutine (LoadCredits());
 	}
 
 	private IEnumerator LoadCredits()
 	{
+		levelManager.turnOffPanelAndShowWinScreen ();
 		yield return new WaitForSeconds (2.875f);
 		Debug.Log ("LoadCredits");
 		bossAnimations.Stop ();
-		bossAudioPlayer.Stop ();
 		playerFadeBox.SetActive (true);
-		yield return new WaitForSeconds (3f);
+		yield return new WaitForSeconds (10f);
+		bossAudioPlayer.Stop ();
 		levelManager.LoadNextLevel ();
 	}
 }
