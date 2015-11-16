@@ -10,7 +10,7 @@ public class Credits : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/){
+		if (Input.GetKeyDown(KeyCode.Space)  || Input.GetKeyDown (KeyCode.JoystickButton7)){
 			Application.LoadLevel(0);
 		} 
 	}

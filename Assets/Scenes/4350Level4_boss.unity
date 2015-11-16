@@ -4923,6 +4923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resumeGameButt: {fileID: 685175155}
+  controlsGameButt: {fileID: 0}
   exitGameButt: {fileID: 371437439}
   yesExitButt: {fileID: 474375657}
   noExitButt: {fileID: 1542560461}
@@ -5999,7 +6000,7 @@ Transform:
   m_PrefabParentObject: {fileID: 485388, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 340991039}
-  m_LocalRotation: {x: -.637552202, y: .305822134, z: -.29533422, w: .642477751}
+  m_LocalRotation: {x: -.637552261, y: .305822164, z: -.29533425, w: .64247781}
   m_LocalPosition: {x: 20.5273991, y: 127.069, z: -1.21188998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9472,7 +9473,7 @@ Transform:
   m_PrefabParentObject: {fileID: 477094, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 654815862}
-  m_LocalRotation: {x: -.637552202, y: .305822134, z: -.29533422, w: .642477751}
+  m_LocalRotation: {x: -.637552261, y: .305822164, z: -.29533425, w: .64247781}
   m_LocalPosition: {x: 26.2975063, y: 120.115547, z: -1.35996854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20856,6 +20857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resumeGameButt: {fileID: 474375657}
+  controlsGameButt: {fileID: 0}
   exitGameButt: {fileID: 1542560461}
   yesExitButt: {fileID: 0}
   noExitButt: {fileID: 0}
