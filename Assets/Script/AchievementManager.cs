@@ -20,7 +20,7 @@ public class Achievement {
 	public void setProgress (float progress) 
 	{
 		this.progress = progress;
-		Debug.Log ("Achievement \"" + this.name + "\" has been updated! (" + progress + "/" + target + ")");
+		//Debug.Log ("Achievement \"" + this.name + "\" has been updated! (" + progress + "/" + target + ")");
 		this.updateUnlockStatus ();
 	}
 

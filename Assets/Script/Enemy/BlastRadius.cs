@@ -33,6 +33,8 @@ public class BlastRadius : MonoBehaviour {
 			bossHealth.TakeDamage(Random.Range(damage*0.8f, damage*1.2f));
 			Debug.Log ("Boss took damage. Current health: " + bossHealth.getCurrentHealth());
 		}
+
+		Debug.Log (other.gameObject.name);
 	}
 
 }
