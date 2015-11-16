@@ -3103,12 +3103,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6b0f3a0e67eb9f34a98426ce25fe981e, type: 3}
   m_PrefabInternal: {fileID: 936278511}
---- !u!114 &953452289 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11413074, guid: dcbac01c86f0b654f86655f81207810e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1437789648}
-  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &968501129
 Prefab:
   m_ObjectHideFlags: 0
@@ -5868,10 +5862,6 @@ Prefab:
       propertyPath: destinationNode
       value: 
       objectReference: {fileID: 393455732}
-    - target: {fileID: 11405024, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: noExitButt
-      value: 
-      objectReference: {fileID: 953452289}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_IsPrefabParent: 0
