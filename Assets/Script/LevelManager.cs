@@ -219,8 +219,11 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
-	public void turnOffPanelAndShowWinScreen (){
+	public void turnOffPanel(){
 		canvas.transform.Find("HUD").gameObject.SetActive(false);
+	}
+
+	public void turnOnWinScreen (){
 		canvas.gameObject.transform.Find ("WinScreen").gameObject.SetActive(true);
 	}
 }

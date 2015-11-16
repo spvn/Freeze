@@ -121,12 +121,14 @@ public class BossAI : MonoBehaviour {
 
 	private IEnumerator LoadCredits()
 	{
-		levelManager.turnOffPanelAndShowWinScreen ();
 		yield return new WaitForSeconds (2.875f);
 		Debug.Log ("LoadCredits");
 		bossAnimations.Stop ();
+		levelManager.turnOffPanel();
 		playerFadeBox.SetActive (true);
-		yield return new WaitForSeconds (10f);
+		yield return new WaitForSeconds (3.0f);
+		levelManager.turnOnWinScreen ();
+		yield return new WaitForSeconds (8.5f);
 		bossAudioPlayer.Stop ();
 		levelManager.LoadNextLevel ();
 	}
