@@ -92,7 +92,6 @@ public class LevelManager : MonoBehaviour {
 		if (!isGameOver && (Input.GetKeyDown (KeyCode.J) || Input.GetKeyDown (KeyCode.JoystickButton0))) {
 
 			if (!isPause) {
-				//Debug.Log("Pressed Freeze " + isFrozen );
 				if(isChoosingPath)
 				{
 					return; // player cannot un-freeze when choosing a path to go
@@ -148,6 +147,7 @@ public class LevelManager : MonoBehaviour {
         }
         else
         {
+			Debug.Log ("isFrozenWhenPause is " + isFrozenWhenPaused);
 			isFrozen = isFrozenWhenPaused;
             cameraOVR.transform.Find("Fade Box").gameObject.SetActive(false);
             gm.unpauseGame();

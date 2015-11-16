@@ -61,7 +61,8 @@ public class script2ORMovement : MonoBehaviour {
 
         if (!levelManager.isGameOver && (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.JoystickButton0)))
         {
-            StartCoroutine(glitchEffect());
+            if (!levelManager.isPause)
+				StartCoroutine(glitchEffect());
         }
 
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton5)))

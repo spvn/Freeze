@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
     private GameObject HUD;
     private GameObject pauseScreen;
     private GameObject exitScreen;
+	private GameObject controlsScreen;
 
     void Awake()
     {
@@ -108,6 +109,7 @@ public class GameManager : MonoBehaviour {
                 winScreen = assignUI("WinScreen");
                 pauseScreen = assignUI("PauseScreen");
                 exitScreen = assignUI("ExitScreen");
+				controlsScreen = assignUI ("ControlsScreen");
                 break;
         }
     }
@@ -165,6 +167,7 @@ public class GameManager : MonoBehaviour {
     {
         HUD.SetActive(false);
         pauseScreen.SetActive(true);
+		controlsScreen.SetActive(false);
         exitScreen.SetActive(false);
     }
 
@@ -173,6 +176,7 @@ public class GameManager : MonoBehaviour {
         HUD.SetActive(true);
         pauseScreen.SetActive(false);
         exitScreen.SetActive(false);
+		controlsScreen.SetActive(false);
     }
     
     public void exitToMainMenu()

@@ -6,6 +6,7 @@ public class PauseMenuButton : MonoBehaviour
 {
 
     public Button resumeGameButt;
+	public Button controlsGameButt;
     public Button exitGameButt;
 	public Button yesExitButt;
 	public Button noExitButt;
@@ -20,9 +21,10 @@ public class PauseMenuButton : MonoBehaviour
     void Start()
     {
         resumeGameButt = resumeGameButt.GetComponent<Button>();
+		controlsGameButt = controlsGameButt.GetComponent<Button>();
         exitGameButt = exitGameButt.GetComponent<Button>();
-        yesExitButt = resumeGameButt.GetComponent<Button>();
-        noExitButt = exitGameButt.GetComponent<Button>();
+		yesExitButt = yesExitButt.GetComponent<Button>();
+		noExitButt = noExitButt.GetComponent<Button>();
         lm = LevelManager.getLevelManager();
 		gm = GameManager.getManager ();
 		ba = GameObject.Find("ORCanvas").GetComponent<ButtonAudio> ();
@@ -31,27 +33,32 @@ public class PauseMenuButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if (!lm.isPause)
+			currSelectionIndex = 0;
+
 		if (lm.isPause) {
 			//if (Input.GetKeyDown(KeyCode.DownArrow) /* || Input.GetKeyDown(KeyCode.JoystickButton0)*/)
-			if ((Input.GetAxis("Vertical") < 0 && !v_isAxisInUse))
-			{
-				incrementCurrSelectionIndex();
-				ba.playButtonHighlightAudio();
-				highlightButton(currSelectionIndex);
-			}
-			
-			if ((Input.GetAxis("Vertical") > 0 && !v_isAxisInUse))
-			{
-				decrementCurrSelectionIndex();
-				ba.playButtonHighlightAudio();
-				highlightButton(currSelectionIndex);
-			}
-			
-			if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton0))
-			{
-				Debug.Log("selected ENTER");
-				ba.playButtonSelectedAudio();
-				selectButton(currSelectionIndex);
+			if (currSelectionIndex != 5) {
+				if ((Input.GetAxis("Vertical") < 0 && !v_isAxisInUse))
+				{
+					incrementCurrSelectionIndex();
+					ba.playButtonHighlightAudio();
+					highlightButton(currSelectionIndex);
+				}
+				
+				if ((Input.GetAxis("Vertical") > 0 && !v_isAxisInUse))
+				{
+					decrementCurrSelectionIndex();
+					ba.playButtonHighlightAudio();
+					highlightButton(currSelectionIndex);
+				}
+				
+				if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton0))
+				{
+					Debug.Log("selected ENTER");
+					ba.playButtonSelectedAudio();
+					selectButton(currSelectionIndex);
+				}
 			}
 		}
 		checkAxisInUse ();
@@ -60,7 +67,7 @@ public class PauseMenuButton : MonoBehaviour
 
     private void incrementCurrSelectionIndex()
     {
-        if (currSelectionIndex == 0 || currSelectionIndex == 2)
+        if (currSelectionIndex == 0 || currSelectionIndex == 3)
 			currSelectionIndex = 1;
 		else if (currSelectionIndex == 6 || currSelectionIndex == 8)
 			currSelectionIndex = 7;
@@ -71,7 +78,7 @@ public class PauseMenuButton : MonoBehaviour
     private void decrementCurrSelectionIndex()
     {
         if (currSelectionIndex == 0 || currSelectionIndex == 1)
-			currSelectionIndex = 2;
+			currSelectionIndex = 3;
 		else if (currSelectionIndex == 6 || currSelectionIndex == 7)
 			currSelectionIndex = 8;
         else
@@ -88,7 +95,10 @@ public class PauseMenuButton : MonoBehaviour
 				
                 break;
             case 2:
-                exitGameButt.Select();
+                controlsGameButt.Select();
+				break;
+			case 3:
+				exitGameButt.Select();
 				
                 break;
 			case 7:
@@ -106,9 +116,15 @@ public class PauseMenuButton : MonoBehaviour
         switch (index)
         {
             case 1:
+				currSelectionIndex = 0;
                 lm.PauseGame();
                 break;
-            case 2:
+			case 2:
+				lm.canvas.transform.Find("PauseScreen").gameObject.SetActive(false);
+				lm.canvas.transform.Find("ControlsScreen").gameObject.SetActive(true);
+				currSelectionIndex = 5;
+				break;
+			case 3:
 				lm.canvas.transform.Find("PauseScreen").gameObject.SetActive(false);
 				lm.canvas.transform.Find("ExitScreen").gameObject.SetActive(true);
 				currSelectionIndex = 6;
