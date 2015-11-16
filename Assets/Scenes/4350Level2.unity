@@ -2967,10 +2967,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6990c7f62d56443468d9a0af9c762e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShootingDistance: 30
+  maxShootingDistance: 40
   bulletPrefab: {fileID: 189722, guid: 98ded340b8652404c9f78e0c95974619, type: 2}
   shootingAnimation: {fileID: 0}
-  angleOfShooting: 180
+  angleOfShooting: 160
   inaccuracy: .200000003
   inaccuracyY: .200000003
   deathEffect: {fileID: 0}
@@ -7821,7 +7821,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .707106829
+      value: .687622964
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalRotation.z
@@ -7829,7 +7829,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106709
+      value: .72606802
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_RootOrder
@@ -8869,7 +8869,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -7.67000008
+      value: -8.89999962
       objectReference: {fileID: 0}
     - target: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
       propertyPath: m_LocalRotation.x
