@@ -2245,6 +2245,22 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b3172586e6869a849b7e74445bf4107c, type: 2}
+    - target: {fileID: 6400010, guid: 7462b1fb545b30046a437b8b84b19878, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400010, guid: 7462b1fb545b30046a437b8b84b19878, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400008, guid: 7462b1fb545b30046a437b8b84b19878, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400008, guid: 7462b1fb545b30046a437b8b84b19878, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7462b1fb545b30046a437b8b84b19878, type: 3}
   m_IsPrefabParent: 0
@@ -2956,7 +2972,7 @@ MonoBehaviour:
   shootingAnimation: {fileID: 0}
   angleOfShooting: 180
   inaccuracy: .200000003
-  inaccuracyY: .5
+  inaccuracyY: .200000003
   deathEffect: {fileID: 0}
   isHostile: 1
   intervalShootTime: 1.39999998
@@ -4562,7 +4578,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.300000012
+      value: .300000012
       objectReference: {fileID: 0}
     - target: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4628,7 +4644,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.300000012
+      value: .300000012
       objectReference: {fileID: 0}
     - target: {fileID: 489226, guid: 5cd038f122dbca246b99d8f5b68cdd11, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7789,7 +7805,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.70000005
+      value: -2.69000006
       objectReference: {fileID: 0}
     - target: {fileID: 424402, guid: f8498585b3e3c6747aaf53338e5b63cd, type: 2}
       propertyPath: m_LocalPosition.y

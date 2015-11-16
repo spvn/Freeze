@@ -42,8 +42,10 @@ public class scriptBullet : MonoBehaviour {
 		Vector3 lineFirstPoint = this.transform.position + (bulletDirection);
 		this.transform.localPosition = lineFirstPoint;
 		firstPoint = this.transform.localPosition;
+		bulletLine.SetVertexCount (2);
 		bulletLine.SetPosition (0, lineFirstPoint);
 		bulletLine.SetPosition (1, targetPoint + (bulletDirection * 100));
+
 	}
 	// Update is called once per frame
 	void Update () {
@@ -119,12 +121,20 @@ public class scriptBullet : MonoBehaviour {
 			sm.addProgressByStatisticName ("Bullets Dodged", 1);
             Destroy(gameObject);
         }
+
+
 	}
 
 	void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject.layer == 9 && playerHitBulletWhileFrozen){
 			playerHitBulletWhileFrozen = false;
+		}
+	}
+	void OnCollisionEnter(Collision other) {
+		if (other.gameObject.layer == 0) {
+			Debug.Log ("Bullet hit level");
+			Destroy (gameObject);
 		}
 	}
 
