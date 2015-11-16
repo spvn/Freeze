@@ -165,6 +165,8 @@ public class GameManager : MonoBehaviour {
 
     public void pauseGame()
     {
+		startScreen.SetActive (false);
+		goScreen.SetActive (false);
         HUD.SetActive(false);
         pauseScreen.SetActive(true);
 		controlsScreen.SetActive(false);

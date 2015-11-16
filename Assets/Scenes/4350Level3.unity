@@ -1470,6 +1470,14 @@ Prefab:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11438694, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
+      propertyPath: isPause
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438694, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
+      propertyPath: isFrozen
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3cf20d217f6594a4f94de833504010f8, type: 2}
   m_IsPrefabParent: 0
@@ -5854,56 +5862,7 @@ Prefab:
       propertyPath: destinationNode
       value: 
       objectReference: {fileID: 393455732}
-    - target: {fileID: 22425892, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -.000762939977
-      objectReference: {fileID: 0}
-    - target: {fileID: 22425892, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -10.2029915
-      objectReference: {fileID: 0}
-    - target: {fileID: 22425892, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -6.59963608
-      objectReference: {fileID: 0}
-    - target: {fileID: 22425892, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_Pivot.x
-      value: .450253665
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491768, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: playerSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 11419700, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11435534, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402160, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404946, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8231538, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 163954, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114276, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11471284, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcbac01c86f0b654f86655f81207810e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1444132514

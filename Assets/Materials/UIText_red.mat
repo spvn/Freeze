@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: UITransparent
-  m_Shader: {fileID: 4800000, guid: f89ad0827e40a7e4c87692540cd34206, type: 3}
+  m_Name: UIText_red
+  m_Shader: {fileID: 4800000, guid: a98fee05e306bdd42a08755fd134dd7b, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 4000
+  m_CustomRenderQueue: 4001
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -127,30 +127,6 @@ Material:
         first:
           name: _Metallic
         second: 0
-      data:
-        first:
-          name: _Stencil
-        second: 0
-      data:
-        first:
-          name: _StencilComp
-        second: 8
-      data:
-        first:
-          name: _StencilOp
-        second: 0
-      data:
-        first:
-          name: _StencilReadMask
-        second: 255
-      data:
-        first:
-          name: _StencilWriteMask
-        second: 255
-      data:
-        first:
-          name: _ColorMask
-        second: 15
     m_Colors:
       data:
         first:
@@ -159,4 +135,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 0}
+        second: {r: 1, g: .0206896551, b: 0, a: 1}
