@@ -4,9 +4,8 @@ using System.Collections;
 
 public class PauseMenuButton : MonoBehaviour
 {
-
-    public Button resumeGameButt;
 	public Button controlsGameButt;
+    public Button checkpointGameButt;
     public Button exitGameButt;
 	public Button yesExitButt;
 	public Button noExitButt;
@@ -20,7 +19,7 @@ public class PauseMenuButton : MonoBehaviour
 	// Use this for initialization
     void Start()
     {
-        resumeGameButt = resumeGameButt.GetComponent<Button>();
+		checkpointGameButt = checkpointGameButt.GetComponent<Button>();
 		controlsGameButt = controlsGameButt.GetComponent<Button>();
         exitGameButt = exitGameButt.GetComponent<Button>();
 		yesExitButt = yesExitButt.GetComponent<Button>();
@@ -91,11 +90,10 @@ public class PauseMenuButton : MonoBehaviour
         switch (index)
         {
             case 1:
-                resumeGameButt.Select();
-				
+				controlsGameButt.Select();   
                 break;
             case 2:
-                controlsGameButt.Select();
+				checkpointGameButt.Select();
 				break;
 			case 3:
 				exitGameButt.Select();
@@ -116,13 +114,16 @@ public class PauseMenuButton : MonoBehaviour
         switch (index)
         {
             case 1:
-				currSelectionIndex = 0;
-                lm.PauseGame();
-                break;
-			case 2:
 				lm.canvas.transform.Find("PauseScreen").gameObject.SetActive(false);
 				lm.canvas.transform.Find("ControlsScreen").gameObject.SetActive(true);
 				currSelectionIndex = 5;
+                break;
+			case 2:
+				lm.restartFromCheckpoint ();
+				lm.canvas.transform.Find("PauseScreen").gameObject.SetActive(false);
+				lm.canvas.transform.Find("ControlsScreen").gameObject.SetActive(false);
+				lm.canvas.transform.Find("ExitScreen").gameObject.SetActive(false);
+				lm.PauseGame ();
 				break;
 			case 3:
 				lm.canvas.transform.Find("PauseScreen").gameObject.SetActive(false);

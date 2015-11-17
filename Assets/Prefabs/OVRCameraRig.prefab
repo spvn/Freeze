@@ -936,7 +936,7 @@ GameObject:
   - 114: {fileID: 11449926}
   - 114: {fileID: 11465030}
   m_Layer: 5
-  m_Name: Resume Button
+  m_Name: Checkpoint Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2575,7 +2575,7 @@ GameObject:
   - 222: {fileID: 22280278}
   - 114: {fileID: 11405118}
   m_Layer: 5
-  m_Name: Resume Text
+  m_Name: Checkpoint Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4392,8 +4392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bae2e4abc732cc4894fea26d6524e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resumeGameButt: {fileID: 11465030}
   controlsGameButt: {fileID: 11488798}
+  checkpointGameButt: {fileID: 11465030}
   exitGameButt: {fileID: 11482142}
   yesExitButt: {fileID: 11449958}
   noExitButt: {fileID: 11413074}
@@ -4428,7 +4428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'RESUME
+  m_Text: 'CHECKPOINT
 
 '
 --- !u!114 &11407694
@@ -8502,8 +8502,8 @@ RectTransform:
   - {fileID: 22431648}
   - {fileID: 22454080}
   - {fileID: 22413932}
-  - {fileID: 22499382}
   - {fileID: 22470318}
+  - {fileID: 22499382}
   - {fileID: 22489184}
   - {fileID: 22487536}
   - {fileID: 22425496}
@@ -9114,10 +9114,10 @@ RectTransform:
   m_Children:
   - {fileID: 22453646}
   m_Father: {fileID: 22429948}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -.300000012, y: -27.2999992}
+  m_AnchoredPosition: {x: -.300000012, y: -18.1000004}
   m_SizeDelta: {x: 158.699997, y: 26.5}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22470536
@@ -9479,10 +9479,10 @@ RectTransform:
   m_Children:
   - {fileID: 22478214}
   m_Father: {fileID: 22429948}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -.400000006, y: -17.7999992}
+  m_AnchoredPosition: {x: -.400000006, y: -27.2000008}
   m_SizeDelta: {x: 158.699997, y: 26.5}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22499456
