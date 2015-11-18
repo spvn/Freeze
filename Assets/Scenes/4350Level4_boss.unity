@@ -1982,8 +1982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bae2e4abc732cc4894fea26d6524e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resumeGameButt: {fileID: 685175155}
   controlsGameButt: {fileID: 1437447730}
+  checkpointGameButt: {fileID: 0}
   exitGameButt: {fileID: 938098171}
   yesExitButt: {fileID: 474375657}
   noExitButt: {fileID: 1497943126}
@@ -3452,6 +3452,86 @@ Prefab:
     - target: {fileID: 6497420, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474504, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474504, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440432, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: shootCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468808, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: shootCooldown
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401774, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: shootCooldown
+      value: 3.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411924, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422220, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: intervalShootTime
+      value: 1.60000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 194502, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 190346, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 155934, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422220, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422220, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411924, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411924, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411924, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: angleOfShooting
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422220, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: angleOfShooting
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474504, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: angleOfShooting
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404806, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: angleOfShooting
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404806, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: inaccuracy
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404806, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
+      propertyPath: inaccuracyY
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e889cfdf0081ab847ba6babb4b4725df, type: 2}
@@ -6254,10 +6334,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cab12369969734faa36eeb082223b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: .200000003
+  rotationSpeed: .100000001
   playerSpeed: 0
-  jumpSpeed: 5
-  gravity: 7
+  jumpSpeed: 4
+  gravity: 9.81000042
   focalPoint: {fileID: 594802629}
   levelManager: {fileID: 1584228796}
 --- !u!114 &1332100920
@@ -7969,8 +8049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bae2e4abc732cc4894fea26d6524e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resumeGameButt: {fileID: 474375657}
   controlsGameButt: {fileID: 0}
+  checkpointGameButt: {fileID: 0}
   exitGameButt: {fileID: 0}
   yesExitButt: {fileID: 0}
   noExitButt: {fileID: 0}
