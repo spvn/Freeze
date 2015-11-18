@@ -22,6 +22,7 @@ public class script2ORMovement : MonoBehaviour {
     private Vector3 forwardDirection;
 	private Vector3 downDirection = new Vector3(0, 0, 0);
 	private float tempPlayerSpeed;
+    private float previousFrameHorizontal;
 
     // Essential GameObjects 
     private LevelManager levelManager;
@@ -229,11 +230,19 @@ public class script2ORMovement : MonoBehaviour {
         // Gravity for downward movement
 		if (!controller.isGrounded)
 			downDirection.y -= gravity * Time.deltaTime;
-
-//		Debug.Log (downDirection.y);
         // Forward and lateral movement
         //Time.timeScale = 1.0f; FOR SLOWMO PURPOSES.
         float horizontal = Input.GetAxis("Horizontal");
+        // Track previous frame side direction
+        if (controller.isGrounded)
+        {
+            previousFrameHorizontal = horizontal; // grounded: track horizontal
+        }
+        else
+        {
+            horizontal = previousFrameHorizontal; // in the air: use last frame's horizontal to prevent strafing in air
+        }
+
         if (canStrafe == false)
         {
             horizontal = 0; // strafe disabled
@@ -241,7 +250,6 @@ public class script2ORMovement : MonoBehaviour {
         sideDirection = new Vector3(horizontal, 0, 0);
         sideDirection = transform.rotation * sideDirection;
 
-        //controller.Move(downDirection * Time.deltaTime);
 		controller.Move ((forwardDirection * playerSpeed * Time.deltaTime) + (sideDirection * lateralSpeed * Time.deltaTime) + (downDirection * Time.deltaTime));
     }
 
