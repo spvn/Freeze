@@ -1245,7 +1245,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6400000, guid: 9bbf7f83b67ff6c44adc66f3045a5e06, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bbf7f83b67ff6c44adc66f3045a5e06, type: 3}
